@@ -9,5 +9,5 @@
 - **APIs**:
   - https://sos2021-00.herokuapp.com/api/v1/my-awesome-resource-1/docs (developed by Jose Mª González Rodríguez)
   - https://sos2021-00.herokuapp.com/api/v1/my-awesome-resource-2/docs (developed by Manuel Segura Rodríguez)
-  - https://sos2021-00.herokuapp.com/api/v1/my-awesome-resource-3/docs (developed by Antonio Parra Diaz)
+  - https://sos2021-00.herokuapp.com/api/v1/my-awesome-resource-3/docs (developed by Antonio Parra Dia)
 
