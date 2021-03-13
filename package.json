@@ -1,0 +1,22 @@
+{
+  "name": "sos2021-22",
+  "version": "1.0.0",
+  "description": "- **Team**\r   - [Jose Mª González Rodríguez](https://github.com/josgonrod7)\r   - [Manuel Segura Rodríguez](https://github.com/mansegrod)\r   - Student 3\r - **Project description**: Grupos de musica con mas grammys en la historia de los premios\r - **Repository** [gti-sos/SOS2021-22](https://github.com/gti-sos/SOS2021) \r - **URL**: http://sos2021-00.herokuapp.com\r - **APIs**:\r   - https://sos2021-00.herokuapp.com/api/v1/my-awesome-resource-1/docs (developed by Jose Mª González Rodríguez)\r   - https://sos2021-00.herokuapp.com/api/v1/my-awesome-resource-2/docs (developed by Manuel Segura Rodríguez)\r   - https://sos2021-00.herokuapp.com/api/v1/my-awesome-resource-3/docs (developed by Student 3)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gti-sos/SOS2021-22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gti-sos/SOS2021-22/issues"
+  },
+  "homepage": "https://github.com/gti-sos/SOS2021-22#readme",
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4"
+  }
+}
