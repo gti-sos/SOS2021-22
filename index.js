@@ -1,3 +1,13 @@
-var cool = require("cool-ascii-faces");
+var cool = require('cool-ascii-faces');
+var express = require('express');
+var app = express();
+var port = 10000;
 
-console.log(cool());
+app.get('/cool', (request, response) => {
+    response.send(cool());
+    console.log('New request to /cool has arrived');
+});
+
+app.listen(port, () => {
+    console.log('Server ready listenig on port ' + port);
+});
