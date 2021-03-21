@@ -18,6 +18,16 @@ app.get('/index', (request, response) => {
     console.log('New request to /idex has arrived');
 });
 
+app.get('/info/paawards', (request, response) => {
+    response.send(`<!DOCTYPE html>
+	</html>
+
+	<head>
+        <title>PAAWARDS</title>
+    </head>
+	`);
+    console.log('New request to /idex has arrived');
+});
 app.get('/info/richpp', (request, response) => {
     response.send(`<!DOCTYPE html>
     <html>
