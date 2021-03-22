@@ -458,7 +458,7 @@ app.get('/info/richpp', (request, response) => {
     console.log('New request to /idex has arrived');
 });
 app.get('/info/grmys', (request, response) => {
-    response.send(`<!DOCTYPE html>ç
+    response.send(`<!DOCTYPE html>
 	<html>
     
     <head>
