@@ -457,7 +457,280 @@ app.get('/info/richpp', (request, response) => {
     </html>`);
     console.log('New request to /idex has arrived');
 });
-
+app.get('/info/grmys', (request, response) => {
+    response.send(`<!DOCTYPE html>ç
+	<html>
+    
+    <head>
+        <title>GRMYS</title>
+    </head>
+	<body>
+	<table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+	<col class="col0">
+	<col class="col1">
+	<col class="col2">
+	<col class="col3">
+	<col class="col4">
+	<col class="col5">
+	<col class="col6">
+	<col class="col7">
+	<tbody>
+	  <tr class="row0">
+		<td class="column0 style3 s">ranking</td>
+		<td class="column1 style3 s">names</td>
+		<td class="column2 style3 s">awards</td>
+		<td class="column3 style1 s">country</td>
+		<td class="column4 style3 s">group members</td>
+		<td class="column5 style3 s">style</td>
+		<td class="column6 style4 s">foundation year</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row1">
+		<td class="column0 style5 n">1</td>
+		<td class="column1 style5 s">the beatles</td>
+		<td class="column2 style5 n">28</td>
+		<td class="column3 style2 s">england</td>
+		<td class="column4 style5 n">4</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1960</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row2">
+		<td class="column0 style5 n">2</td>
+		<td class="column1 style5 s">U2</td>
+		<td class="column2 style5 n">22</td>
+		<td class="column3 style2 s">england</td>
+		<td class="column4 style5 n">4</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1976</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row3">
+		<td class="column0 style5 n">3</td>
+		<td class="column1 style5 s">dixie chicks</td>
+		<td class="column2 style5 n">13</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">3</td>
+		<td class="column5 style5 s">country</td>
+		<td class="column6 style5 n">1989</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row4">
+		<td class="column0 style5 n">4</td>
+		<td class="column1 style5 s">foo fighters</td>
+		<td class="column2 style5 n">12</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">3</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1994</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row5">
+		<td class="column0 style5 n">5</td>
+		<td class="column1 style5 s">pat metheny group</td>
+		<td class="column2 style5 n">10</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">4</td>
+		<td class="column5 style5 s">jazz</td>
+		<td class="column6 style5 n">1977</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row6">
+		<td class="column0 style5 n">6</td>
+		<td class="column1 style5 s">the manhattan transfer</td>
+		<td class="column2 style5 n">9</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">3</td>
+		<td class="column5 style5 s">folk</td>
+		<td class="column6 style5 n">1972</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row7">
+		<td class="column0 style5 n">7</td>
+		<td class="column1 style5 s">the Blackwood brother</td>
+		<td class="column2 style5 n">8</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">5</td>
+		<td class="column5 style5 s">gospel</td>
+		<td class="column6 style5 n">1934</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row8">
+		<td class="column0 style5 n">8</td>
+		<td class="column1 style5 s">Metallica</td>
+		<td class="column2 style5 n">8</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">4</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1983</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row9">
+		<td class="column0 style5 n">9</td>
+		<td class="column1 style5 s">santana</td>
+		<td class="column2 style5 n">8</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">9</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1966</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row10">
+		<td class="column0 style5 n">10</td>
+		<td class="column1 style5 s">take 6</td>
+		<td class="column2 style5 n">8</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">6</td>
+		<td class="column5 style5 s">gospel</td>
+		<td class="column6 style5 n">1985</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row11">
+		<td class="column0 style5 n">11</td>
+		<td class="column1 style5 s">coldplay</td>
+		<td class="column2 style5 n">7</td>
+		<td class="column3 style2 s">england</td>
+		<td class="column4 style5 n">5</td>
+		<td class="column5 style5 s">pop</td>
+		<td class="column6 style5 n">1996</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row12">
+		<td class="column0 style5 n">12</td>
+		<td class="column1 style5 s">kentucky thunders</td>
+		<td class="column2 style5 n">7</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">6</td>
+		<td class="column5 style5 s">bluegrass</td>
+		<td class="column6 style5 n">1997</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row13">
+		<td class="column0 style5 n">13</td>
+		<td class="column1 style5 s">toto</td>
+		<td class="column2 style5 n">7</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">2</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1977</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row14">
+		<td class="column0 style5 n">14</td>
+		<td class="column1 style5 s">lady antebellum</td>
+		<td class="column2 style5 n">7</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">3</td>
+		<td class="column5 style5 s">country</td>
+		<td class="column6 style5 n">2006</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row15">
+		<td class="column0 style5 n">15</td>
+		<td class="column1 style5 s">simon &amp; garfunkel</td>
+		<td class="column2 style5 n">7</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">2</td>
+		<td class="column5 style5 s">folk</td>
+		<td class="column6 style5 n">1957</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row16">
+		<td class="column0 style5 n">16</td>
+		<td class="column1 style5 s">the 5th dimension</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">5</td>
+		<td class="column5 style5 s">pop</td>
+		<td class="column6 style5 n">1966</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row17">
+		<td class="column0 style5 n">17</td>
+		<td class="column1 style5 s">the black eyed peas</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">4</td>
+		<td class="column5 style5 s">pop</td>
+		<td class="column6 style5 n">1992</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row18">
+		<td class="column0 style5 n">18</td>
+		<td class="column1 style5 s">the chieftains</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style2 s">ireland</td>
+		<td class="column4 style5 n">6</td>
+		<td class="column5 style5 s">celta</td>
+		<td class="column6 style5 n">1963</td>
+		<td class="column7">&nbsp;</td>
+	  </tr>
+	  <tr class="row19">
+		<td class="column0 style5 n">19</td>
+		<td class="column1 style5 s">eagles</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">3</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1971</td>
+		<td class="column7 style6 null"></td>
+	  </tr>
+	  <tr class="row20">
+		<td class="column0 style5 n">20</td>
+		<td class="column1 style5 s">earth,wind &amp; fire</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">9</td>
+		<td class="column5 style5 s">fusion</td>
+		<td class="column6 style5 n">1970</td>
+		<td class="column7 style6 null"></td>
+	  </tr>
+	  <tr class="row21">
+		<td class="column0 style5 n">21</td>
+		<td class="column1 style5 s">outkast</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">2</td>
+		<td class="column5 style5 s">hip-hop</td>
+		<td class="column6 style5 n">1992</td>
+		<td class="column7 style6 null"></td>
+	  </tr>
+	  <tr class="row22">
+		<td class="column0 style5 n">22</td>
+		<td class="column1 style5 s">the police</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style2 s">england</td>
+		<td class="column4 style5 n">3</td>
+		<td class="column5 style5 s">pop</td>
+		<td class="column6 style5 n">1977</td>
+		<td class="column7 style6 null"></td>
+	  </tr>
+	  <tr class="row23">
+		<td class="column0 style5 n">23</td>
+		<td class="column1 style5 s">red hot chili peppers</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style5 s">EE.UU</td>
+		<td class="column4 style5 n">4</td>
+		<td class="column5 style5 s">rock</td>
+		<td class="column6 style5 n">1983</td>
+		<td class="column7 style6 null"></td>
+	  </tr>
+	  <tr class="row24">
+		<td class="column0 style5 n">24</td>
+		<td class="column1 style5 s">daft punk</td>
+		<td class="column2 style5 n">6</td>
+		<td class="column3 style2 s">french</td>
+		<td class="column4 style5 n">2</td>
+		<td class="column5 style5 s">pop</td>
+		<td class="column6 style5 n">1993</td>
+		<td class="column7 style6 null"></td>
+	  </tr>
+	</tbody>
+</table>
+</body>
+</html>`);
+console.log('New request to /idex has arrived');
+});
 app.listen(port, () => {
     console.log(`Server ready listenig on port ${port}`);
 });
