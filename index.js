@@ -1,25 +1,68 @@
 var cool = require('cool-ascii-faces');
 var express = require('express');
+var bodyParser = require('body-parser');
+
 var path = require('path');
 
 var app = express();
 
 var port = (process.env.PORT || 10000);
+var BASE_API_PATH = '/api/v1';
 
+app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, 'public')));
+
 /*
 app.get('/cool', (request, response) => {
-    response.send(cool());
-    console.log('New request to /cool has arrived');
+	response.send(cool());
+	console.log('New request to /cool has arrived');
 });
 */
 app.get('/index', (request, response) => {
-    response.send(express());
-    console.log('New request to /idex has arrived');
+	response.send(express());
+	console.log('New request to /index has arrived');
+});
+
+var richpp = [];
+
+app.get(BASE_API_PATH + '/richpp', (request, response) => {
+	response.send(JSON.stringify(richpp, null, 2));
+});
+
+var initRichpp = [
+	{
+		"top": 1,
+		"name": "Jeff Bezos",
+		"fortune (billions of dollars)": 113,
+		"age": 56,
+		"country": "EEUU",
+		"year": 2020,
+		"company": "Amazon"
+	},
+	{
+		"top": 2,
+		"name": "Bill Gates",
+		"fortune (billions of dollars)": 98,
+		"age": 64,
+		"country": "EEUU",
+		"year": 2020,
+		"company": "Microsoft"
+	},
+];
+
+app.get(BASE_API_PATH + '/richpp/loadInitialData', (request, response) => {
+	response.send(JSON.stringify(initRichpp, null, 2));
+});
+
+app.post(BASE_API_PATH + '/richpp', (request, response) => {
+	var newRichMan = request.body;
+	console.log(`New rich man to be added: <${JSON.stringify(newRichMan, null, 2)}>`);
+	richpp.push(newRichMan);
+	response.sendStatus(201);
 });
 
 app.get('/info/paawards', (request, response) => {
-    response.send(`<!DOCTYPE html>
+	response.send(`<!DOCTYPE html>
 	</html>
 
 	<head>
@@ -265,11 +308,11 @@ app.get('/info/paawards', (request, response) => {
     	</table>
 	</body>
 	</html>`);
-    console.log('New request to /idex has arrived');
+	console.log('New request to /idex has arrived');
 });
 
 app.get('/info/richpp', (request, response) => {
-    response.send(`<!DOCTYPE html>
+	response.send(`<!DOCTYPE html>
     <html>
     
     <head>
@@ -411,7 +454,7 @@ app.get('/info/richpp', (request, response) => {
                 <td>3</td>
                 <td>Jeff Bezos</td>
                 <td>72,8 $</td>
-                <tdÇ>53</td>
+                <td>53</td>
                 <td>EEUU</td>
                 <td>2017</td>
                 <td>Amazon</td>
@@ -455,10 +498,11 @@ app.get('/info/richpp', (request, response) => {
     </body>
     
     </html>`);
-    console.log('New request to /idex has arrived');
+	console.log('New request to /idex has arrived');
 });
+
 app.get('/info/grmys', (request, response) => {
-    response.send(`<!DOCTYPE html>
+	response.send(`<!DOCTYPE html>
 	<html>
     
     <head>
@@ -729,8 +773,9 @@ app.get('/info/grmys', (request, response) => {
 </table>
 </body>
 </html>`);
-console.log('New request to /idex has arrived');
+	console.log('New request to /idex has arrived');
 });
+
 app.listen(port, () => {
-    console.log(`Server ready listenig on port ${port}`);
+	console.log(`Server ready listenig on port ${port}`);
 });
