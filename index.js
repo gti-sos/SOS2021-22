@@ -57,8 +57,8 @@ app.get(BASE_API_PATH + '/paawards/loadInitialData', (request, response) => {
 
 app.post(BASE_API_PATH + '/paawards', (request, response) => {
 	var newPaaward = request.body;
-	console.log(`New rich man to be added: <${JSON.stringify(newPaaward, null, 2)}>`);
-	richpp.push(newPaaward);
+	console.log(`New paaward to be added: <${JSON.stringify(newPaaward, null, 2)}>`);
+	paawards.push(newPaaward);
 	response.sendStatus(201);
 });
 
