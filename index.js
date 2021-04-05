@@ -137,7 +137,7 @@ app.post(BASE_API_PATH + '/grmys', (request, response) => {
     response.sendStatus(201);
 });
 
-app.get(BASE_API_PATH + '/paawards', (request, response) => {
+app.get('/info/paawards', (request, response) => {
 	response.send(`<!DOCTYPE html>
 	</html>
 
@@ -387,7 +387,7 @@ app.get(BASE_API_PATH + '/paawards', (request, response) => {
 	console.log('New request to /idex has arrived');
 });
 
-app.get(BASE_API_PATH + '/richpp', (request, response) => {
+app.get('/info/richpp', (request, response) => {
 	response.send(`<!DOCTYPE html>
     <html>
     
@@ -577,7 +577,7 @@ app.get(BASE_API_PATH + '/richpp', (request, response) => {
 	console.log('New request to /idex has arrived');
 });
 
-app.get(BASE_API_PATH +'/grmys', (request, response) => {
+app.get('/info/grmys', (request, response) => {
 	response.send(`<!DOCTYPE html>
 	<html>
     
