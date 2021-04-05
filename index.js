@@ -26,7 +26,7 @@ app.get('/index', (request, response) => {
 /*Codigo --- Antonio*/
 var paawards = [];
 
-app.get(BASE_API_PATH + '/richpp', (request, response) => {
+app.get(BASE_API_PATH + '/paawards', (request, response) => {
 	response.send(JSON.stringify(paawards, null, 2));
 });
 
