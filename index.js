@@ -23,6 +23,46 @@ app.get('/index', (request, response) => {
 	console.log('New request to /index has arrived');
 });
 
+/*Codigo --- Antonio*/
+var paawards = [];
+
+app.get(BASE_API_PATH + '/richpp', (request, response) => {
+	response.send(JSON.stringify(paawards, null, 2));
+});
+
+var initPaawards = [
+	{
+		"name": "Carlos Sainz",
+		"year": 2020,
+		"sport": "Rally",
+		"country": "Spain",
+		"age": 58,
+		"gender": "Masculino",
+		"trophy": 10
+	},
+	{
+		"name": "Lindsey Vonn",
+		"year": 2019,
+		"sport": "Esqui alpino",
+		"country": "EE.UU",
+		"age": 35,
+		"gender": "Femenino",
+		"trophy": 7
+	},
+];
+
+app.get(BASE_API_PATH + '/paawards/loadInitialData', (request, response) => {
+	response.send(JSON.stringify(initPaawards, null, 2));
+});
+
+app.post(BASE_API_PATH + '/paawards', (request, response) => {
+	var newPaaward = request.body;
+	console.log(`New rich man to be added: <${JSON.stringify(newPaaward, null, 2)}>`);
+	richpp.push(newPaaward);
+	response.sendStatus(201);
+});
+
+/*Codigo --- Manuel*/
 var richpp = [];
 
 app.get(BASE_API_PATH + '/richpp', (request, response) => {
@@ -59,6 +99,42 @@ app.post(BASE_API_PATH + '/richpp', (request, response) => {
 	console.log(`New rich man to be added: <${JSON.stringify(newRichMan, null, 2)}>`);
 	richpp.push(newRichMan);
 	response.sendStatus(201);
+});
+
+/*Codigo --- Jose Manuel*/
+var grmys = [];
+app.get(BASE_API_PATH + '/grmys', (request, response) => {
+    response.send(JSON.stringify(grmys, null, 2));
+});
+var initGrmys = [
+    {
+        "ranking": 1,
+        "names": "the beatles",
+        "awards": 28,
+        "country": "england",
+        "group member": 4,
+        "style": "rock",
+        "foundation year": 1960
+    },
+    {
+        "ranking": 2,
+        "names": "u2",
+        "awards": 22,
+        "country": "england",
+        "group member": 4,
+        "style": "rock",
+        "foundation year": 1976
+    },
+];
+app.get(BASE_API_PATH + '/grmys/loadInitialData', (request, response) => {
+    response.send(JSON.stringify(initGrmys, null, 2));
+});
+
+app.post(BASE_API_PATH + '/grmys', (request, response) => {
+    var newGrmys = request.body;
+    console.log(`New rich man to be added: <${JSON.stringify(newGrmys, null, 2)}>`);
+    grmys.push(newGrmys);
+    response.sendStatus(201);
 });
 
 app.get('/info/paawards', (request, response) => {
