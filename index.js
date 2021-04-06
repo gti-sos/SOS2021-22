@@ -133,7 +133,7 @@ app.get(BASE_API_PATH + '/grmys/loadInitialData', (request, response) => {
 app.post(BASE_API_PATH + '/grmys', (request, response) => {
     var newGrmys = request.body;
     console.log(`New grmy to be added: <${JSON.stringify(newGrmys, null, 2)}>`);
-    grmys.push(newGrmys);
+    initGrmys.push(newGrmys);
     response.sendStatus(201);
 });
 
