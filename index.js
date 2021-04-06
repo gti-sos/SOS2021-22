@@ -122,7 +122,7 @@ var initGrmys = [
         "name": "the beatles",
         "award": 28,
         "country": "england",
-        "group member": 4,
+        "group-member": 4,
         "style": "rock",
         "year": 1960
     },
@@ -131,7 +131,7 @@ var initGrmys = [
         "name": "u2",
         "award": 22,
         "country": "england",
-        "group member": 4,
+        "group-member": 4,
         "style": "rock",
         "year": 1976
     },
@@ -638,7 +638,7 @@ app.get('/info/grmys', (request, response) => {
 		<td class="column1 style3 s">name</td>
 		<td class="column2 style3 s">award</td>
 		<td class="column3 style1 s">country</td>
-		<td class="column4 style3 s">group members</td>
+		<td class="column4 style3 s">group-member</td>
 		<td class="column5 style3 s">style</td>
 		<td class="column6 style4 s">year</td>
 		<td class="column7">&nbsp;</td>
