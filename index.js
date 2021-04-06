@@ -109,8 +109,8 @@ app.get(BASE_API_PATH + '/grmys', (request, response) => {
 var initGrmys = [
     {
         "ranking": 1,
-        "names": "the beatles",
-        "awards": 28,
+        "name": "the beatles",
+        "award": 28,
         "country": "england",
         "group member": 4,
         "style": "rock",
@@ -118,8 +118,8 @@ var initGrmys = [
     },
     {
         "ranking": 2,
-        "names": "u2",
-        "awards": 22,
+        "name": "u2",
+        "award": 22,
         "country": "england",
         "group member": 4,
         "style": "rock",
@@ -597,8 +597,8 @@ app.get('/info/grmys', (request, response) => {
 	<tbody>
 	  <tr class="row0">
 		<td class="column0 style3 s">ranking</td>
-		<td class="column1 style3 s">names</td>
-		<td class="column2 style3 s">awards</td>
+		<td class="column1 style3 s">name</td>
+		<td class="column2 style3 s">award</td>
 		<td class="column3 style1 s">country</td>
 		<td class="column4 style3 s">group members</td>
 		<td class="column5 style3 s">style</td>
