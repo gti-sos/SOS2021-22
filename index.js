@@ -102,7 +102,7 @@ app.post(BASE_API_PATH + '/richpp', (request, response) => {
 });
 
 /*Codigo --- Jose Manuel*/
-var grmys = [];
+
 app.get(BASE_API_PATH + '/grmys', (request, response) => {
     response.send(JSON.stringify(initGrmys, null, 2));
 });
