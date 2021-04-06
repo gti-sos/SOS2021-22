@@ -124,7 +124,7 @@ var initGrmys = [
         "country": "england",
         "group member": 4,
         "style": "rock",
-        "foundation year": 1960
+        "year": 1960
     },
     {
         "ranking": 2,
@@ -133,7 +133,7 @@ var initGrmys = [
         "country": "england",
         "group member": 4,
         "style": "rock",
-        "foundation year": 1976
+        "year": 1976
     },
 ];
 app.get(BASE_API_PATH + '/grmys/loadInitialData', (request, response) => {
@@ -147,7 +147,34 @@ app.post(BASE_API_PATH + '/grmys', (request, response) => {
     response.sendStatus(201);
 });
 
+app.get(BASE_API_PATH + '/grmys/:country/:year', (request, response) => {
+	var country=request.params.country;
+	var year=parseInt(request.params.year);
+	console.log(`GET stat by country: <${country}> and foundation-year: <${year}>`);
+	for(var stat of initGrmys){
+		if (stat.country === country && stat.year === year) {
+			
+			return response.status(200).json(stat);
+		  }
+	}
+	
+	
 
+    return response.sendStatus(404);
+});
+/*app.delete(BASE_API_PATH + '/grmys/:country/:year', (request, response) => {
+	var country=request.params.country;
+	var year=parseInt(request.params.year);
+  
+	for (var i = 0; i < initGrmys.length; i++) {
+	  if (initGrmys[i]["country"] === country && initGrmys[i]["year"] === year) {
+		initGrmys.splice(i, 1);
+		return res.sendStatus(200);
+	  }
+	}
+  
+	return res.sendStatus(404);
+  });*/
 app.get('/info/paawards', (request, response) => {
 	response.send(`<!DOCTYPE html>
 	</html>
@@ -613,7 +640,7 @@ app.get('/info/grmys', (request, response) => {
 		<td class="column3 style1 s">country</td>
 		<td class="column4 style3 s">group members</td>
 		<td class="column5 style3 s">style</td>
-		<td class="column6 style4 s">foundation year</td>
+		<td class="column6 style4 s">year</td>
 		<td class="column7">&nbsp;</td>
 	  </tr>
 	  <tr class="row1">
