@@ -44,12 +44,20 @@ var initPaawards = [
 		"age": 35,
 		"gender": "Femenino",
 		"trophy": 7
-	},
+	}
 ];
 
 //GET a la lista de recursos
 app.get(BASE_API_PATH + '/paawards', (request, response) => {
-	response.send(JSON.stringify(paawards, null, 2));
+	if (paawards.length!=0){
+		console.log("Get Paawards")
+		response.send(JSON.stringify(paawards, null, 2));
+	}
+	else {
+		console.log("Paawards is empty");
+		return response.sendStatus(404);	
+	}
+	
 });
 app.get(BASE_API_PATH + '/paawards/loadInitialData', (request, response) => {
 	response.send(JSON.stringify(initPaawards, null, 2));
@@ -58,7 +66,9 @@ app.get(BASE_API_PATH + '/paawards/loadInitialData', (request, response) => {
 //POST a la lista de recursos
 app.post(BASE_API_PATH + '/paawards', (request, response) => {
 	var newPaaward = request.body;
-	console.log(`New paaward to be added: <${JSON.stringify(newPaaward, null, 2)}>`);
+	for (var newp of newPaaward){
+		console.log(`New paaward to be added: ${newp.name}`);
+	}
 	paawards.push(newPaaward);
 	response.sendStatus(201);
 });
@@ -68,7 +78,7 @@ app.get(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
 	var country=request.params.country;
 	var year=parseInt(request.params.year);
 	console.log(`GET to a resource given a country(${country}) and a year(${year})`);
-	for(var resource of paawards){
+	for(var resource of paawards[0]){
 		if (resource.country == country && resource.year == year) {
 			return response.status(200).json(resource);
 		}
@@ -77,17 +87,20 @@ app.get(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
 });
 
 //DELETE a un recurso
-/*app.delete(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
+app.delete(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
 	var country=request.params.country;
 	var year=parseInt(request.params.year);
 	console.log(`DELETE a resource given a country(${country}) and a year(${year})`);
-	for(var resource of paawards){
-		if (resource.country == country && resource.year == year) {
-			paawards.sp
-			return response.status(200);
+	if (paawards.length!=0){
+		for(var i=0;i<paawards[0].length;i++){
+			if (paawards[0][i]["country"] == country && paawards[0][i]["year"] == year) {
+				paawards[0].splice(i,1);
+				return response.status(200);
+			}
 		}
 	}
-});*/
+});
+
 //PUT a un recurso
 
 //POST a un recurso (error)
@@ -95,6 +108,15 @@ app.get(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
 //PUT a la lista de recursos (error)
 
 //DELETE a la lista de recursos
+app.delete(BASE_API_PATH + '/paawards', (request, response) => {;
+	console.log(`DELETE paawards`);
+	if (paawards.length!=0){
+		paawards[0].splice(0,paawards[0].length);
+		return response.status(200);
+		
+	}
+	
+});
 
 /*Codigo --- Manuel*/
 var richpp = [];
