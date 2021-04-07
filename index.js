@@ -26,10 +26,6 @@ app.get('/index', (request, response) => {
 /*Codigo --- Antonio*/
 var paawards = [];
 
-app.get(BASE_API_PATH + '/paawards', (request, response) => {
-	response.send(JSON.stringify(paawards, null, 2));
-});
-
 var initPaawards = [
 	{
 		"name": "Carlos Sainz",
@@ -51,16 +47,54 @@ var initPaawards = [
 	},
 ];
 
+//GET a la lista de recursos
+app.get(BASE_API_PATH + '/paawards', (request, response) => {
+	response.send(JSON.stringify(paawards, null, 2));
+});
 app.get(BASE_API_PATH + '/paawards/loadInitialData', (request, response) => {
 	response.send(JSON.stringify(initPaawards, null, 2));
 });
 
+//POST a la lista de recursos
 app.post(BASE_API_PATH + '/paawards', (request, response) => {
 	var newPaaward = request.body;
 	console.log(`New paaward to be added: <${JSON.stringify(newPaaward, null, 2)}>`);
 	paawards.push(newPaaward);
 	response.sendStatus(201);
 });
+
+//GET a un recurso
+app.get(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
+	var country=request.params.country;
+	var year=parseInt(request.params.year);
+	console.log(`GET to a resource given a country(${country}) and a year(${year})`);
+	for(var resource of paawards){
+		if (resource.country == country && resource.year == year) {
+			return response.status(200).json(resource);
+		}
+	}
+    return response.sendStatus(404);
+});
+
+//DELETE a un recurso
+/*app.delete(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
+	var country=request.params.country;
+	var year=parseInt(request.params.year);
+	console.log(`DELETE a resource given a country(${country}) and a year(${year})`);
+	for(var resource of paawards){
+		if (resource.country == country && resource.year == year) {
+			paawards.sp
+			return response.status(200);
+		}
+	}
+});*/
+//PUT a un recurso
+
+//POST a un recurso (error)
+
+//PUT a la lista de recursos (error)
+
+//DELETE a la lista de recursos
 
 /*Codigo --- Manuel*/
 var richpp = [];
