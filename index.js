@@ -58,7 +58,7 @@ var initPaawards = [
 app.get(BASE_API_PATH + '/paawards', (request, response) => {
 	if (paawards.length!=0){
 		console.log("Get Paawards")
-		response.send(JSON.stringify(paawards, null, 2));
+		response.send(JSON.stringify(initPaawards, null, 2));
 	}
 	else {
 		console.log("Paawards is empty");
