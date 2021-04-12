@@ -223,12 +223,12 @@ app.get(BASE_API_PATH + '/grmys', (request, response) => {
     
 });
 var initGrmys = [
-    {
+	{
 		"ranking": "1",
 		"name": "the beatles",
 		"award": "28",
 		"country": "england",
-		"groupMembers": "4",
+		"groupMember": "4",
 		"style": "rock",
 		"year": "1960"
 	},
@@ -237,7 +237,7 @@ var initGrmys = [
 		"name": "U2",
 		"award": "22",
 		"country": "england",
-		"groupMembers": "4",
+		"groupMember": "4",
 		"style": "rock",
 		"year": "1976"
 	},
@@ -246,7 +246,7 @@ var initGrmys = [
 		"name": "dixie chicks",
 		"award": "13",
 		"country": "EE.UU",
-		"groupMembers": "3",
+		"groupMember": "3",
 		"style": "country",
 		"year": "1989"
 	},
@@ -255,7 +255,7 @@ var initGrmys = [
 		"name": "foo fighters",
 		"award": "12",
 		"country": "EE.UU",
-		"groupMembers": "3",
+		"groupMember": "3",
 		"style": "rock",
 		"year": "1994"
 	},
@@ -264,7 +264,7 @@ var initGrmys = [
 		"name": "pat metheny group",
 		"award": "10",
 		"country": "EE.UU",
-		"groupMembers": "4",
+		"groupMember": "4",
 		"style": "jazz",
 		"year": "1977"
 	},
@@ -273,7 +273,7 @@ var initGrmys = [
 		"name": "the manhattan transfer",
 		"award": "9",
 		"country": "EE.UU",
-		"groupMembers": "3",
+		"groupMember": "3",
 		"style": "folk",
 		"year": "1972"
 	},
@@ -282,7 +282,7 @@ var initGrmys = [
 		"name": "the Blackwood brother",
 		"award": "8",
 		"country": "EE.UU",
-		"groupMembers": "5",
+		"groupMember": "5",
 		"style": "gospel",
 		"year": "1934"
 	},
@@ -291,7 +291,7 @@ var initGrmys = [
 		"name": "Metallica",
 		"award": "8",
 		"country": "EE.UU",
-		"groupMembers": "4",
+		"groupMember": "4",
 		"style": "rock",
 		"year": "1983"
 	},
@@ -300,7 +300,7 @@ var initGrmys = [
 		"name": "santana",
 		"award": "8",
 		"country": "EE.UU",
-		"groupMembers": "9",
+		"groupMember": "9",
 		"style": "rock",
 		"year": "1966"
 	},
@@ -309,7 +309,7 @@ var initGrmys = [
 		"name": "take 6",
 		"award": "8",
 		"country": "EE.UU",
-		"groupMembers": "6",
+		"groupMember": "6",
 		"style": "gospel",
 		"year": "1985"
 	},
@@ -318,7 +318,7 @@ var initGrmys = [
 		"name": "coldplay",
 		"award": "7",
 		"country": "england",
-		"groupMembers": "5",
+		"groupMember": "5",
 		"style": "pop",
 		"year": "1996"
 	},
@@ -327,7 +327,7 @@ var initGrmys = [
 		"name": "kentucky thunders",
 		"award": "7",
 		"country": "EE.UU",
-		"groupMembers": "6",
+		"groupMember": "6",
 		"style": "bluegrass",
 		"year": "1997"
 	},
@@ -336,7 +336,7 @@ var initGrmys = [
 		"name": "toto",
 		"award": "7",
 		"country": "EE.UU",
-		"groupMembers": "2",
+		"groupMember": "2",
 		"style": "rock",
 		"year": "1977"
 	},
@@ -345,7 +345,7 @@ var initGrmys = [
 		"name": "lady antebellum",
 		"award": "7",
 		"country": "EE.UU",
-		"groupMembers": "3",
+		"groupMember": "3",
 		"style": "country",
 		"year": "2006"
 	},
@@ -354,7 +354,7 @@ var initGrmys = [
 		"name": "simon & garfunkel",
 		"award": "7",
 		"country": "EE.UU",
-		"groupMembers": "2",
+		"groupMember": "2",
 		"style": "folk",
 		"year": "1957"
 	},
@@ -363,7 +363,7 @@ var initGrmys = [
 		"name": "the 5th dimension",
 		"award": "6",
 		"country": "EE.UU",
-		"groupMembers": "5",
+		"groupMember": "5",
 		"style": "pop",
 		"year": "1966"
 	},
@@ -372,7 +372,7 @@ var initGrmys = [
 		"name": "the black eyed peas",
 		"award": "6",
 		"country": "EE.UU",
-		"groupMembers": "4",
+		"groupMember": "4",
 		"style": "pop",
 		"year": "1992"
 	},
@@ -381,7 +381,7 @@ var initGrmys = [
 		"name": "the chieftains",
 		"award": "6",
 		"country": "ireland",
-		"groupMembers": "6",
+		"groupMember": "6",
 		"style": "celta",
 		"year": "1963"
 	},
@@ -390,7 +390,7 @@ var initGrmys = [
 		"name": "eagles",
 		"award": "6",
 		"country": "EE.UU",
-		"groupMembers": "3",
+		"groupMember": "3",
 		"style": "rock",
 		"year": "1971"
 	},
@@ -399,7 +399,7 @@ var initGrmys = [
 		"name": "earth,wind & fire",
 		"award": "6",
 		"country": "EE.UU",
-		"groupMembers": "9",
+		"groupMember": "9",
 		"style": "fusion",
 		"year": "1970"
 	},
@@ -408,7 +408,7 @@ var initGrmys = [
 		"name": "outkast",
 		"award": "6",
 		"country": "EE.UU",
-		"groupMembers": "2",
+		"groupMember": "2",
 		"style": "hip-hop",
 		"year": "1992"
 	},
@@ -417,7 +417,7 @@ var initGrmys = [
 		"name": "the police",
 		"award": "6",
 		"country": "england",
-		"groupMembers": "3",
+		"groupMember": "3",
 		"style": "pop",
 		"year": "1977"
 	},
@@ -426,7 +426,7 @@ var initGrmys = [
 		"name": "red hot chili peppers",
 		"award": "6",
 		"country": "EE.UU",
-		"groupMembers": "4",
+		"groupMember": "4",
 		"style": "rock",
 		"year": "1983"
 	},
@@ -435,7 +435,7 @@ var initGrmys = [
 		"name": "daft punk",
 		"award": "6",
 		"country": "french",
-		"groupMembers": "2",
+		"groupMember": "2",
 		"style": "pop",
 		"year": "1993"
 	}
