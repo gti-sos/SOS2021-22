@@ -56,7 +56,7 @@ var initPaawards = [
 
 //GET a la lista de recursos
 app.get(BASE_API_PATH + '/paawards', (request, response) => {
-	if (paawards.length!=0){
+	if (initPaawards.length!=0){
 		console.log("Get Paawards")
 		response.send(JSON.stringify(initPaawards, null, 2));
 	}
