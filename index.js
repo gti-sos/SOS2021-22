@@ -51,7 +51,7 @@ var initPaawards = [
 	{"name":"Tour de Francia","year":2003,"sport":"Ciclismo","country":"Francia","age":100,"gender":"Masculino","trophy":0},
 	{"name":"Seleccion de futbol de Brasil","year":2002,"sport":"Futbol","country":"Brasil","age":88,"gender":"Masculino","trophy":21},
 	{"name":"Manel Estiarte","year":2001,"sport":"Waterpolo","country":"Spain","age":40,"gender":"Masculino","trophy":26},
-	{"name":"Lance Armstrong","year":2000,"sport":"Ciclismo","country":"EE.UU","age":29,"gender":"Masculino","trophy":11}
+	{"name":"Lance Armstrong","year":2000,"sport":"Ciclismo","country":"EE.UU","age":29,"gender":"Masculino","trophy":11},
 ];
 
 //GET a la lista de recursos
@@ -75,8 +75,8 @@ app.post(BASE_API_PATH + '/paawards', (request, response) => {
 	var newPaaward = request.body;
 	for (var newp of newPaaward){
 		console.log(`New paaward to be added: ${newp.name}`);
+		initPaawards.push(newp);
 	}
-	paawards.push(newPaaward);
 	response.sendStatus(201);
 });
 
@@ -97,14 +97,20 @@ app.get(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
 app.delete(BASE_API_PATH + '/paawards/:country/:year', (request, response) => {
 	var country=request.params.country;
 	var year=parseInt(request.params.year);
-	console.log(`DELETE a resource given a country(${country}) and a year(${year})`);
-	if (paawards.length!=0){
-		for(var i=0;i<paawards[0].length;i++){
-			if (paawards[0][i]["country"] == country && paawards[0][i]["year"] == year) {
-				paawards[0].splice(i,1);
-				return response.status(200);
-			}
+	if (initPaawards.length!=0){
+		for (var i=0; i<initPaawards.length;i++){
+			if(initPaawards[i]["country"]==country && initPaawards[i]["year"]==year){
+				console.log(`DELETE a resource given a country(${country}) and a year(${year})`);
+				initPaawards.splice(i,1)
+				return response.sendStatus(200);
+			} 
 		}
+		console.log (`Not data with country(${country}) and year(${year})`);
+		return response.sendStatus(404);
+	}
+	else {
+		console.log ('Paawards is empty');
+		return response.sendStatus(404);
 	}
 });
 
