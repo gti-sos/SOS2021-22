@@ -24,7 +24,9 @@ app.get('/index', (request, response) => {
 	console.log('New request to /index has arrived');
 });
 
-
+/*Codigo --- Antonio*/
+var paawardsAPI = require("./paawardsAPI");
+paawardsAPI.register(app);
 
 /*Codigo --- Manuel*/
 var richpp = [];
