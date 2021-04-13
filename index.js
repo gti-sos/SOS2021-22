@@ -1,20 +1,13 @@
 var cool = require('cool-ascii-faces');
 var express = require('express');
 var bodyParser = require('body-parser');
-
 var path = require('path');
 const { request } = require('express');
-
-var ApiGrmys=require("./ApiGrmys");
 var app = express();
-
-ApiGrmys.register(app);
-
 var port = (process.env.PORT || 10000);
-
-
 app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, 'public')));
+var BASE_API_PATH = '/api/v1';
 
 /*
 app.get('/cool', (request, response) => {
@@ -30,6 +23,10 @@ app.get('/index', (request, response) => {
 /*Codigo --- Antonio*/
 var paawardsAPI = require("./paawardsAPI");
 paawardsAPI.register(app);
+
+/*Codigo --- Chuma*/
+var ApiGrmys=require("./ApiGrmys");
+ApiGrmys.register(app);
 
 /*Codigo --- Manuel*/
 var richpp = [];

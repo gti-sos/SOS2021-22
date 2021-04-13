@@ -1,17 +1,7 @@
-var BASE_API_PATH = '/api/v1';
+var BASE_API_PATH_GRMYS = '/api/v1';
 var initGrmys=[];
 
-app.get(BASE_API_PATH + '/grmys', (request, response) => {
-	if(initGrmys.length!=0){
-		return response.send(JSON.stringify(initGrmys, null, 2));
-	}else {
-		console.log("No data found");
-		return response.sendStatus(404);
-	  }
 
-	  return response.sendStatus(200)
-    
-});
 var initGrmys = [
 	{
 		"ranking": "1",
@@ -232,18 +222,18 @@ var initGrmys = [
 ];
 
   module.exports.register=(app)=>{
-    app.get(BASE_API_PATH + '/grmys/loadInitialData', (request, response) => {
+    app.get(BASE_API_PATH_GRMYS + '/grmys/loadInitialData', (request, response) => {
         response.send(JSON.stringify(initGrmys, null, 2));
     });
     
-    app.post(BASE_API_PATH + '/grmys', (request, response) => {
+    app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         var newGrmys = request.body;
         console.log(`New grmy to be added: <${JSON.stringify(newGrmys, null, 2)}>`);
         initGrmys.push(newGrmys);
         response.sendStatus(201);
     });
     
-    app.get(BASE_API_PATH + '/grmys/:country/:year', (request, response) => {
+    app.get(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
         var country=request.params.country;
         var year=parseInt(request.params.year);
         console.log(`GET stat by country: <${country}> and foundation-year: <${year}>`);
@@ -258,7 +248,7 @@ var initGrmys = [
     
         return response.sendStatus(404);
     });
-    app.delete(BASE_API_PATH + '/grmys/:country/:year', (request, response) => {
+    app.delete(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
         var country=request.params.country;
         var year=parseInt(request.params.year);
       
@@ -279,4 +269,15 @@ var initGrmys = [
         }
         
       });
+	  app.get(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
+		if(initGrmys.length!=0){
+			return response.send(JSON.stringify(initGrmys, null, 2));
+		}else {
+			console.log("No data found");
+			return response.sendStatus(404);
+		  }
+	
+		  return response.sendStatus(200)
+		
+	});
   }
