@@ -44,17 +44,17 @@ module.exports.register = (app) => {
     });
 
     //POST a la lista de recursos
-    app.post(BASE_API_PATH_RICHMAN + '/richpp', (request, response) => {
+    app.post(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
         var newRichpp = request.body;
-        for (var newp of newRichpp){
-            console.log(`New richpp to be added: ${newp.name}`);
-            initRichpp.push(newp);
+        for (var resource of newRichpp){
+            console.log(`New richpp to be added: ${resource.name}`);
+            initRichpp.push(resource);
         }
         response.sendStatus(201);
     });
 
     //GET a un recurso
-    app.get(BASE_API_PATH_RICHMAN + '/richpp/:country/:year', (request, response) => {
+    app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         var country = request.params.country;
         var year = parseInt(request.params.year);
         console.log(`GET to a resource given a country(${country}) and a year(${year})`);
@@ -67,7 +67,7 @@ module.exports.register = (app) => {
     });
 
     //DELETE a un recurso
-    app.delete(BASE_API_PATH_RICHMAN + '/richpp/:country/:year', (request, response) => {
+    app.delete(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         var country = request.params.country;
         var year = parseInt(request.params.year);
         if (initRichpp.length != 0){
@@ -88,7 +88,7 @@ module.exports.register = (app) => {
     });
 
     //PUT a un recurso
-    app.put(BASE_API_PATH_RICHMAN + '/richpp/:country/:year', (request, response) => {
+    app.put(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         var country = request.params.country;
         var year = parseInt(request.params.year);
         var putRichpp = request.body;
@@ -127,19 +127,19 @@ module.exports.register = (app) => {
     });
 
     //POST a un recurso (error)
-    app.post(BASE_API_PATH_RICHMAN + '/richpp/:country/:year', (request, response) => {
+    app.post(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         console.log("POST a resource is not allowed");
         return response.sendStatus(405);
     });
 
     //PUT a la lista de recursos (error)
-    app.put(BASE_API_PATH_RICHMAN + '/richpp', (request, response) => {
+    app.put(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
         console.log("PUT a resource list is not allowed");
         return response.sendStatus(405);
     });
 
     //DELETE a la lista de recursos
-    app.delete(BASE_API_PATH_RICHMAN + '/richpp', (request, response) => {;
+    app.delete(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {;
         console.log(`DELETE richpp`);
         if (richpp.length!=0){
             richpp[0].splice(0, richpp[0].length);
