@@ -233,7 +233,48 @@ var initGrmys = [
         response.sendStatus(201);
     });
     
-    app.get(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
+	app.get(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
+       
+        var query = request.query;
+
+        var limit = parseInt(query.limit);
+        var offset = parseInt(query.offset)
+        console.log("--------------------------------")
+        var lista = [];
+
+
+        //Parseo de paremetros de la busqueda
+        for (d in query) {
+            var queryObject = {};
+            if (d == 'name') {
+                queryObject[d] = query[d];
+            } else if (d == 'award') {
+                queryObject[d] = query[d];
+            } else if (d == 'country') {
+                queryObject[d] = query[d];
+            } else if (d == 'groupmember') {
+                queryObject[d] = query[d];
+            } else if (d == 'style') {
+                queryObject[d] = query[d];
+            } else if (d == 'year') {
+                queryObject[d] = query[d];
+            } 
+            if (d != 'limit' && d != 'offset') {
+                lista.push(queryObject);
+            }
+
+
+        }
+        console.log("Lista: " + JSON.stringify(lista, null, 2));
+        
+		
+
+    
+        return response.sendStatus(404);
+    });
+
+	
+	app.get(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
         var country=request.params.country;
         var year=parseInt(request.params.year);
         console.log(`GET stat by country: <${country}> and foundation-year: <${year}>`);
@@ -269,7 +310,7 @@ var initGrmys = [
         }
         
       });
-	  app.get(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
+	app.get(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
 		if(initGrmys.length!=0){
 			return response.send(JSON.stringify(initGrmys, null, 2));
 		}else {
