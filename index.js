@@ -29,46 +29,8 @@ var ApiGrmys=require("./ApiGrmys");
 ApiGrmys.register(app);
 
 /*Codigo --- Manuel*/
-var richpp = [];
-
-app.get(BASE_API_PATH + '/richpp', (request, response) => {
-	response.send(JSON.stringify(richpp, null, 2));
-});
-
-var initRichpp = [
-	{
-		"top": 1,
-		"name": "Jeff Bezos",
-		"fortune (billions of dollars)": 113,
-		"age": 56,
-		"country": "EEUU",
-		"year": 2020,
-		"company": "Amazon"
-	},
-	{
-		"top": 2,
-		"name": "Bill Gates",
-		"fortune (billions of dollars)": 98,
-		"age": 64,
-		"country": "EEUU",
-		"year": 2020,
-		"company": "Microsoft"
-	},
-];
-
-app.get(BASE_API_PATH + '/richpp/loadInitialData', (request, response) => {
-	response.send(JSON.stringify(initRichpp, null, 2));
-});
-
-app.post(BASE_API_PATH + '/richpp', (request, response) => {
-	var newRichMan = request.body;
-	console.log(`New rich man to be added: <${JSON.stringify(newRichMan, null, 2)}>`);
-	richpp.push(newRichMan);
-	response.sendStatus(201);
-});
-
-/*Codigo --- Jose Manuel*/
-
+var richpp = require("./richpp");
+richpp.register(app);
 
 app.get('/info/paawards', (request, response) => {
 	response.send(`<!DOCTYPE html>
