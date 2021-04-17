@@ -1,3 +1,9 @@
+var Datastore = require("nedb");
+var path = require("path");
+
+var dbfile = path.join(__dirname, "grmys.db");
+var db = new Datastore({filename: dbfile, autoload: true});
+
 var BASE_API_PATH_GRMYS = '/api/v1';
 var initGrmys=[];
 
@@ -235,42 +241,52 @@ var initGrmys = [
     
 	app.get(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
        
-        var query = request.query;
+		var query = req.query;
 
-        var limit = parseInt(query.limit);
-        var offset = parseInt(query.offset)
-        console.log("--------------------------------")
-        var lista = [];
+        //Obtenemos los offset y limit de la query, si estan vacios devuelven null (NaN)
+        var offset = query.offset;
+        var limit = query.limit;
 
+        //Los quitamos de la query para no tener que parsearlos
+        delete query.offset;
+        delete query.limit;
 
-        //Parseo de paremetros de la busqueda
-        for (d in query) {
-            var queryObject = {};
-            if (d == 'name') {
-                queryObject[d] = query[d];
-            } else if (d == 'award') {
-                queryObject[d] = query[d];
-            } else if (d == 'country') {
-                queryObject[d] = query[d];
-            } else if (d == 'groupmember') {
-                queryObject[d] = query[d];
-            } else if (d == 'style') {
-                queryObject[d] = query[d];
-            } else if (d == 'year') {
-                queryObject[d] = query[d];
-            } 
-            if (d != 'limit' && d != 'offset') {
-                lista.push(queryObject);
-            }
-
-
-        }
-        console.log("Lista: " + JSON.stringify(lista, null, 2));
+        //Si la query contiene alguno de los atributos numerico, hay que pasarlos de string a int
+        //Primero comprobamos si la query tiene alguno de estos atributos
         
-		
+       /* if(query.hasOwnProperty("year")){
+            query.year = parseInt(query.year);
+        }
+        if(query.hasOwnProperty("percent-children-employment-m")){
+            query.percent_children_employment_m = parseInt(query.percent_children_employment_m);
+        }
+        if(query.hasOwnProperty("percent-children-employment-f")){
+            query.percent_children_employment_f = parseInt(query.percent_children_employment_f);
+        }
+        if(query.hasOwnProperty("percent-children-employment-t")){
+            query.percent_children_employment_t = parseInt(query.percent_children_employment_t);
+        }*/
 
-    
-        return response.sendStatus(404);
+
+        db.find(query).skip(offset).limit(limit).exec((err, data) => {
+            if(err){
+                console.error("ERROR accesing DB in GET");
+                res.sendStatus(500);
+            }
+            else{
+                if(data.length == 0){
+                    console.error("No data found");
+                    res.sendStatus(404);
+                }
+                else{
+                    data.forEach( (d) =>{
+                    delete d._id;
+                    });
+                    res.send(JSON.stringify(data, null, 2));
+                    console.log("Data sent:"+JSON.stringify(data, null, 2));
+                }
+            }
+        });
     });
 
 	
