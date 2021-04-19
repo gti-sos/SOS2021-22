@@ -30,7 +30,7 @@ var ApiGrmys=require("./ApiGrmys");
 ApiGrmys.register(app);
 
 /*Codigo --- Manuel*/
-var richpp = require("./richpp");
+var richpp = require("./richppAPI");
 richpp.register(app);
 
 app.get('/info/paawards', (request, response) => {
