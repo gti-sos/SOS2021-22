@@ -276,7 +276,7 @@
         var ranking = request.body.ranking;
         var name = request.body.name;
 
-        db.find({"country":country, "year":year}).exec((err, data)=>{
+        db.find({"ranking":ranking, "name":name}).exec((err, data)=>{
             if(err){
                 console.error("ERROR accesing DB in GET");
                 response.sendStatus(500);
