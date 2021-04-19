@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "200d4c2a-e5ce-434f-b84d-b0c844496348",
-		"name": "paawards-localhost",
+		"_postman_id": "3a3ec02f-2af7-4718-aa4d-3014173b85a5",
+		"name": "paawards-heroku",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -24,11 +24,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/loadInitialData",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/loadInitialData",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
@@ -58,11 +60,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
@@ -91,17 +95,19 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/Spain/2021",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2020",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
 						"paawards",
 						"Spain",
-						"2021"
+						"2020"
 					]
 				}
 			},
@@ -135,11 +141,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
@@ -177,11 +185,50 @@
 					}
 				},
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/Spain/2021",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"paawards",
+						"Spain",
+						"2021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE RECURSO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
 					"path": [
 						"api",
 						"v1",
@@ -212,50 +259,17 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
 						"paawards"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DELETE RECURSO",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/Spain/2021",
-					"host": [
-						"{{HOST}}"
-					],
-					"port": "{{PORT}}",
-					"path": [
-						"api",
-						"v1",
-						"paawards",
-						"Spain",
-						"2021"
 					]
 				}
 			},
@@ -280,11 +294,13 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/Spain/2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2020",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
@@ -315,11 +331,13 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
