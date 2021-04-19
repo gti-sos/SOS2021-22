@@ -230,6 +230,8 @@
   module.exports.register=(app)=>{
 	
 	db.remove({}, {multi: true});
+
+	//cargamos los datos de la base de datos
     app.get(BASE_API_PATH_GRMYS + '/grmys/loadInitialData', (request, response) => {
 		db.insert(initGrmys);
         console.log(`Initial data: <${JSON.stringify(initGrmys, null, 2)}>`);
@@ -237,7 +239,7 @@
     });
     
   
-    
+    //get usando nedb para todos los campos
 	app.get(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
 		
 		var query = request.query;
@@ -270,6 +272,7 @@
             }
         });
     });
+	//POST usando nedb 
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response)=> {
         
         var newData = request.body;
@@ -306,6 +309,31 @@
 
         });
 	});
+
+	app.delete(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
+        
+        var country = request.params.country;
+        var year = request.params.year;
+
+
+        db.remove({country: country, year: year}, {multi:true}, (err, numRemoved) =>{
+            if(err){
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            }
+            else{
+		        if(numRemoved == 0){
+			        response.sendStatus(404);
+			        console.log("There is no such data in the database");
+	    	    }
+		        else{
+			        response.sendStatus(200);
+			        console.log("Object removed");
+		        }
+            }
+	    });
+    });
+	//-----------------------------------------------------------------------------------//
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         var newGrmys = request.body;
         console.log(`New grmy to be added: <${JSON.stringify(newGrmys, null, 2)}>`);
