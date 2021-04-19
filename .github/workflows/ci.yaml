@@ -12,7 +12,7 @@ jobs:
       - run: npm install
       - run: npm start &
       - run: npx newman run tests/integration-grmys.json
-      - run: npx newman run tests/integration-paawards.json
+      
       
       
       

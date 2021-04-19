@@ -1,5 +1,5 @@
 module.exports.register = (app) => {
-
+	//- run: npx newman run tests/integration-paawards.json
 	var BASE_API_PATH_PAAWARDS = '/api/v1';
 	var Datastore = require("nedb");
 	var path = require ("path");
