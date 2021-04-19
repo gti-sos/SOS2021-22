@@ -535,7 +535,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/england/1960",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/spain/1960",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -546,7 +546,7 @@
 						"api",
 						"v1",
 						"grmys",
-						"england",
+						"spain",
 						"1960"
 					]
 				}
@@ -666,7 +666,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\t\"ranking\": \"1\",\r\n\t\t\t\"name\": \"the beatles\",\r\n\t\t\t\"award\": \"30\",\r\n\t\t\t\"country\": \"england\",\r\n\t\t\t\"groupmember\": \"4\",\r\n\t\t\t\"style\": \"rock\",\r\n\t\t\t\"year\": \"1960\"\r\n}",
+					"raw": "{\r\n\t\t\"ranking\": \"1\",\r\n\t\t\"name\": \"the beatles\",\r\n\t\t\"award\": \"30\",\r\n\t\t\"country\": \"england\",\r\n\t\t\"groupmember\": \"4\",\r\n\t\t\"style\": \"rock\",\r\n        \"year\": \"1960\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
