@@ -77,43 +77,6 @@
 			"response": []
 		},
 		{
-			"name": "GET RECURSO",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2020",
-					"protocol": "https",
-					"host": [
-						"sos2021-22",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"v1",
-						"paawards",
-						"Spain",
-						"2020"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "GET RECURSO (name)",
 			"event": [
 				{

@@ -87,7 +87,7 @@ module.exports.register = (app) => {
 		var country=request.params.country;
 		var year=parseInt(request.params.year);
 		
-		dbPaawards.find({"country" : country, "year" : year},(err, paawardsDB) => { 
+		dbPaawards.find({"country":country,"year":year},(err, paawardsDB) => { 
 			if (err){
 				console.error("Error accessing DB in GET: "+err);
 				res.sendStatus(500);
