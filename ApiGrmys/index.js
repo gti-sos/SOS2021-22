@@ -309,7 +309,7 @@
 
         });
 	});
-
+    //DELETE
 	app.delete(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
         
         var country = request.params.country;
@@ -343,10 +343,10 @@
 		if (!newData.ranking
 			|| !newData.name
 			|| !newData['award']
-			|| !newData["country"] 
+			|| !newData['country'] 
 			|| !newData['groupmember'] 
 			|| !newData['style'] 
-			|| !newData["year"]                        
+			|| !newData['year']                        
 			|| Object.keys(newData).length != 7){
 
             console.log("The data is not correctly provided");
@@ -372,6 +372,23 @@
             });
         }
     });
+	app.delete(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
+        
+        
+        db.remove({}, {multi: true },  (err, remove)=> {
+            if (err) {
+                console.error("ERROR deleting DB resources");
+                response.sendStatus(500);
+            } else {
+                if (remove == 0) {
+                    console.error("ERROR resources not found");
+                    response.sendStatus(404);
+                } else {
+                    response.sendStatus(200);
+                }
+            }
+        });
+	});
 	//-----------------------------------------------------------------------------------//
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         var newGrmys = request.body;
