@@ -1,46 +1,44 @@
+var BASE_API_PATH_PAAWARDS = '/api/v1';
+var Datastore = require("nedb");
+var path = require ("path");
+var db = new Datastore();
+const dbFile = path.join(__dirname,"./paawards.db");   
+const dbPaawards = new Datastore({
+    filename: dbFile,
+    autoload:true
+});
+
+var paawards = [];
+var initialPaawards = [
+	{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10},
+	{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7},
+	{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0},
+	{"name":"Krzysztof Wielicki","year":2018,"sport":"Alpinismo","country":"Polonia","age":68,"gender":"Masculino","trophy":0},
+	{"name":"Seleccion de rugby de Nueva Zelanda","year":2017,"sport":"Rugby","country":"Nueva Zelanda","age":125,"gender":"Masculino","trophy":100},
+	{"name":"Javier Gomez Noya","year":2016,"sport":"Triatlon","country":"Spain","age":33,"gender":"Masculino","trophy":12},
+	{"name":"Pau Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":35,"gender":"Masculino","trophy":19},
+	{"name":"Marc Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":30,"gender":"Masculino","trophy":7},
+	{"name":"Maraton de Nueva York","year":2014,"sport":"Atletismo","country":"EE.UU","age":44,"gender":"Mixto","trophy":0},
+	{"name":"Jose Maria Olazabal","year":2013,"sport":"Golf","country":"Spain","age":47,"gender":"Masculino","trophy":29},
+	{"name":"Iker Casillas","year":2012,"sport":"Futbol","country":"Spain","age":31,"gender":"Masculino","trophy":26},
+	{"name":"Xavi Hernandez","year":2012,"sport":"Futbol","country":"Spain","age":32,"gender":"Masculino","trophy":35},
+	{"name":"Haile Gebrselassie","year":2011,"sport":"Atletismo","country":"Etiopia","age":38,"gender":"Masculino","trophy":6},
+	{"name":"Seleccion de futbol de España","year":2010,"sport":"Futbol","country":"Spain","age":90,"gender":"Masculino","trophy":4},
+	{"name":"Yelena Isinbayeva","year":2009,"sport":"Atletismo","country":"Rusia","age":27,"gender":"Femenino","trophy":6},
+	{"name":"Rafael Nadal","year":2008,"sport":"Tenis","country":"Spain","age":22,"gender":"Masculino","trophy":86},
+	{"name":"Michael Schumacher","year":2007,"sport":"Automovilismo","country":"Alemania","age":38,"gender":"Masculino","trophy":7},
+	{"name":"Seleccion de baloncesto de España","year":2006,"sport":"Baloncesto","country":"Spain","age":72,"gender":"Masculino","trophy":8},
+	{"name":"Fernando Alonso","year":2005,"sport":"Automovilismo","country":"Spain","age":24,"gender":"Masculino","trophy":6},
+	{"name":"Hicham El Guerrouj","year":2004,"sport":"Atletismo","country":"Marruecos","age":30,"gender":"Masculino","trophy":6},
+	{"name":"Tour de Francia","year":2003,"sport":"Ciclismo","country":"Francia","age":100,"gender":"Masculino","trophy":0},
+	{"name":"Seleccion de futbol de Brasil","year":2002,"sport":"Futbol","country":"Brasil","age":88,"gender":"Masculino","trophy":21},
+	{"name":"Manel Estiarte","year":2001,"sport":"Waterpolo","country":"Spain","age":40,"gender":"Masculino","trophy":26},
+	{"name":"Lance Armstrong","year":2000,"sport":"Ciclismo","country":"EE.UU","age":29,"gender":"Masculino","trophy":11},
+];
+
 module.exports.register = (app) => {
-	//- run: npx newman run tests/integration-paawards.json
-	var BASE_API_PATH_PAAWARDS = '/api/v1';
-	var Datastore = require("nedb");
-	var path = require ("path");
-	var db = new Datastore();
-
-	const dbFile = path.join(__dirname,"./paawards.db");   
-    const dbPaawards = new Datastore({
-        filename: dbFile,
-        autoload:true
-    });
-
-	//----------------------------------------------------------------------
 	
-	var paawards = [];
-
-	var initialPaawards = [
-		{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10},
-		{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7},
-		{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0},
-		{"name":"Krzysztof Wielicki","year":2018,"sport":"Alpinismo","country":"Polonia","age":68,"gender":"Masculino","trophy":0},
-		{"name":"Seleccion de rugby de Nueva Zelanda","year":2017,"sport":"Rugby","country":"Nueva Zelanda","age":125,"gender":"Masculino","trophy":100},
-		{"name":"Javier Gomez Noya","year":2016,"sport":"Triatlon","country":"Spain","age":33,"gender":"Masculino","trophy":12},
-		{"name":"Pau Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":35,"gender":"Masculino","trophy":19},
-		{"name":"Marc Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":30,"gender":"Masculino","trophy":7},
-		{"name":"Maraton de Nueva York","year":2014,"sport":"Atletismo","country":"EE.UU","age":44,"gender":"Mixto","trophy":0},
-		{"name":"Jose Maria Olazabal","year":2013,"sport":"Golf","country":"Spain","age":47,"gender":"Masculino","trophy":29},
-		{"name":"Iker Casillas","year":2012,"sport":"Futbol","country":"Spain","age":31,"gender":"Masculino","trophy":26},
-		{"name":"Xavi Hernandez","year":2012,"sport":"Futbol","country":"Spain","age":32,"gender":"Masculino","trophy":35},
-		{"name":"Haile Gebrselassie","year":2011,"sport":"Atletismo","country":"Etiopia","age":38,"gender":"Masculino","trophy":6},
-		{"name":"Seleccion de futbol de España","year":2010,"sport":"Futbol","country":"Spain","age":90,"gender":"Masculino","trophy":4},
-		{"name":"Yelena Isinbayeva","year":2009,"sport":"Atletismo","country":"Rusia","age":27,"gender":"Femenino","trophy":6},
-		{"name":"Rafael Nadal","year":2008,"sport":"Tenis","country":"Spain","age":22,"gender":"Masculino","trophy":86},
-		{"name":"Michael Schumacher","year":2007,"sport":"Automovilismo","country":"Alemania","age":38,"gender":"Masculino","trophy":7},
-		{"name":"Seleccion de baloncesto de España","year":2006,"sport":"Baloncesto","country":"Spain","age":72,"gender":"Masculino","trophy":8},
-		{"name":"Fernando Alonso","year":2005,"sport":"Automovilismo","country":"Spain","age":24,"gender":"Masculino","trophy":6},
-		{"name":"Hicham El Guerrouj","year":2004,"sport":"Atletismo","country":"Marruecos","age":30,"gender":"Masculino","trophy":6},
-		{"name":"Tour de Francia","year":2003,"sport":"Ciclismo","country":"Francia","age":100,"gender":"Masculino","trophy":0},
-		{"name":"Seleccion de futbol de Brasil","year":2002,"sport":"Futbol","country":"Brasil","age":88,"gender":"Masculino","trophy":21},
-		{"name":"Manel Estiarte","year":2001,"sport":"Waterpolo","country":"Spain","age":40,"gender":"Masculino","trophy":26},
-		{"name":"Lance Armstrong","year":2000,"sport":"Ciclismo","country":"EE.UU","age":29,"gender":"Masculino","trophy":11},
-	];
+	dbPaawards.remove({}, { multi: true });
 
 	//----------------------------------------------------------------------
 
@@ -111,21 +109,27 @@ module.exports.register = (app) => {
 	app.post(BASE_API_PATH_PAAWARDS + '/paawards', (request, response) => {
 		var newPaaward = request.body;
 		
-		db.find({"name" : newPaaward.name},(err, paawardsDB) => { 
+		dbPaawards.find(newPaaward,(err, paawardsDB) => { 
 			if (err){
 				console.error("Error accessing DB in POST: "+err);
 				res.sendStatus(500);
 			}
 			else {
 				if (paawardsDB.length == 0){
-					dbPaawards.insert(newPaaward);
-					response.sendStatus(201);
-					console.log(`New paaward to be added: ${JSON.stringify(newPaaward,null,2)}`);
+					if (!newPaaward['name'] || !newPaaward['year'] || !newPaaward['sport'] || !newPaaward['county'] ||
+						!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy']) {
+						console.log("The resource is not well built");
+						response.sendStatus(400);
+					}
+					else {
+						dbPaawards.insert(newPaaward);
+						response.sendStatus(201);
+						console.log(`New paaward to be added: ${JSON.stringify(newPaaward,null,2)}`);
+					}
 				}
 				else {
 					response.sendStatus(409);
-				}
-				 
+				}	 
 			}	
 		});
 	});
@@ -134,7 +138,7 @@ module.exports.register = (app) => {
 	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
 		var country=request.params.country;
 		var year=parseInt(request.params.year);
-		var putPaaward = request.body;
+		var newPaaward = request.body;
 		dbPaawards.update({"country":country,"year":year}, putPaaward, (err, paawardsRemoved) => {
 			if (err){
 				console.error("Error accessing DB in PUT: "+err);
@@ -142,8 +146,15 @@ module.exports.register = (app) => {
 			}
 			else {
 				if (paawardsRemoved!=0) {
-					response.sendStatus(200);
-					console.log(`PUT a resource given a country(${country}) and a year(${year})`);
+					if (!newPaaward['name'] || !newPaaward['year'] || !newPaaward['sport'] || !newPaaward['county'] ||
+						!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy']) {
+						console.log("The resource is not well built");
+						response.sendStatus(400);
+					}
+					else {
+						response.sendStatus(200);
+						console.log(`PUT a resource given a country(${country}) and a year(${year})`);
+					}
 				}
 				else {
 					response.sendStatus(404);
