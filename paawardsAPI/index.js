@@ -1,7 +1,6 @@
 var BASE_API_PATH_PAAWARDS = '/api/v1';
 var Datastore = require("nedb");
 var path = require ("path");
-var db = new Datastore();
 const dbFile = path.join(__dirname,"./paawards.db");   
 const dbPaawards = new Datastore({
     filename: dbFile,
@@ -86,7 +85,6 @@ module.exports.register = (app) => {
 	app.get(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
 		var country=request.params.country;
 		var year=parseInt(request.params.year);
-		
 		dbPaawards.find({"country":country,"year":year},(err, paawardsDB) => { 
 			if (err){
 				console.error("Error accessing DB in GET: "+err);
@@ -110,8 +108,7 @@ module.exports.register = (app) => {
 		var newPaaward = request.body;
 		var name = request.body.name;
 		var year = parseInt(request.body.year);
-		
-		dbPaawards.find({"name": name,"year": year}).exec((err, paawardsDB) => { 
+		dbPaawards.find({"name": name,"year": year}, (err, paawardsDB) => {
 			if (err){
 				console.error("Error accessing DB in POST: "+err);
 				res.sendStatus(500);
