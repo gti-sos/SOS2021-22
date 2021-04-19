@@ -372,7 +372,10 @@
             });
         }
     });
-
+	app.put(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
+        console.log("metodo no permitido");
+        return response.sendStatus(405);
+    })
 	//DELETE ALL
 	app.delete(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         
