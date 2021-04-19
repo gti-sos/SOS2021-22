@@ -282,13 +282,13 @@
                 res.sendStatus(500);
             }else {
                 if(data.length == 0){
-                    if (!newData.country 
-                        || !newData.year 
-                        || !newData['groupmember'] 
-                        || !newData['style'] 
-                        || !newData['award']
+                    if (!newData['ranking']
 						|| !newData['name']
-						|| !newData['ranking']
+						|| !newData['award']
+						|| !newData.country 
+						|| !newData['groupmember'] 
+						|| !newData['style'] 
+                        || !newData.year                        
                         || Object.keys(newData).length != 7){
                         console.log("The data is not correctly provided");
                         return res.sendStatus(400);
