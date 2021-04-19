@@ -272,14 +272,14 @@
     });
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response)=> {
         
-        var newData = req.body;
-        var ranking = req.body.ranking;
-        var name = req.body.name;
+        var newData = request.body;
+        var ranking = request.body.ranking;
+        var name = request.body.name;
 
         db.find({"country":country, "year":year}).exec((err, data)=>{
             if(err){
                 console.error("ERROR accesing DB in GET");
-                res.sendStatus(500);
+                response.sendStatus(500);
             }else {
                 if(data.length == 0){
                     if (!newData.ranking
@@ -291,15 +291,15 @@
                         || !newData["year"]                        
                         || Object.keys(newData).length != 7){
                         console.log("The data is not correctly provided");
-                        return res.sendStatus(400);
+                        return response.sendStatus(400);
                     }else{
                         console.log("Data imput:"+JSON.stringify(newData, null, 2));
                         db.insert(newData);
-                        res.sendStatus(201);
+                        response.sendStatus(201);
                     }
 
                 }else{
-                    res.sendStatus(409);
+                    response.sendStatus(409);
                     console.log("There is already a resource with that country and year in the DB");
                 }
             }
