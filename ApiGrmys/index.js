@@ -1,6 +1,4 @@
-
-  module.exports.register=(app)=>{
-	var Datastore = require("nedb");
+    var Datastore = require("nedb");
 	var path = require("path");
 	
 	var dbfile = path.join(__dirname, "grmys.db");
@@ -16,7 +14,7 @@
 			"name": "the beatles",
 			"award": "28",
 			"country": "england",
-			"groupMember": "4",
+			"groupmember": "4",
 			"style": "rock",
 			"year": "1960"
 		},
@@ -25,7 +23,7 @@
 			"name": "U2",
 			"award": "22",
 			"country": "england",
-			"groupMember": "4",
+			"groupmember": "4",
 			"style": "rock",
 			"year": "1976"
 		},
@@ -34,7 +32,7 @@
 			"name": "dixie chicks",
 			"award": "13",
 			"country": "EE.UU",
-			"groupMember": "3",
+			"groupmember": "3",
 			"style": "country",
 			"year": "1989"
 		},
@@ -43,7 +41,7 @@
 			"name": "foo fighters",
 			"award": "12",
 			"country": "EE.UU",
-			"groupMember": "3",
+			"groupmember": "3",
 			"style": "rock",
 			"year": "1994"
 		},
@@ -52,7 +50,7 @@
 			"name": "pat metheny group",
 			"award": "10",
 			"country": "EE.UU",
-			"groupMember": "4",
+			"groupmember": "4",
 			"style": "jazz",
 			"year": "1977"
 		},
@@ -61,7 +59,7 @@
 			"name": "the manhattan transfer",
 			"award": "9",
 			"country": "EE.UU",
-			"groupMember": "3",
+			"groupmember": "3",
 			"style": "folk",
 			"year": "1972"
 		},
@@ -70,7 +68,7 @@
 			"name": "the Blackwood brother",
 			"award": "8",
 			"country": "EE.UU",
-			"groupMember": "5",
+			"groupmember": "5",
 			"style": "gospel",
 			"year": "1934"
 		},
@@ -79,7 +77,7 @@
 			"name": "Metallica",
 			"award": "8",
 			"country": "EE.UU",
-			"groupMember": "4",
+			"groupmember": "4",
 			"style": "rock",
 			"year": "1983"
 		},
@@ -88,7 +86,7 @@
 			"name": "santana",
 			"award": "8",
 			"country": "EE.UU",
-			"groupMember": "9",
+			"groupmember": "9",
 			"style": "rock",
 			"year": "1966"
 		},
@@ -97,7 +95,7 @@
 			"name": "take 6",
 			"award": "8",
 			"country": "EE.UU",
-			"groupMember": "6",
+			"groupmember": "6",
 			"style": "gospel",
 			"year": "1985"
 		},
@@ -106,7 +104,7 @@
 			"name": "coldplay",
 			"award": "7",
 			"country": "england",
-			"groupMember": "5",
+			"groupmember": "5",
 			"style": "pop",
 			"year": "1996"
 		},
@@ -115,7 +113,7 @@
 			"name": "kentucky thunders",
 			"award": "7",
 			"country": "EE.UU",
-			"groupMember": "6",
+			"groupmember": "6",
 			"style": "bluegrass",
 			"year": "1997"
 		},
@@ -124,7 +122,7 @@
 			"name": "toto",
 			"award": "7",
 			"country": "EE.UU",
-			"groupMember": "2",
+			"groupmember": "2",
 			"style": "rock",
 			"year": "1977"
 		},
@@ -133,7 +131,7 @@
 			"name": "lady antebellum",
 			"award": "7",
 			"country": "EE.UU",
-			"groupMember": "3",
+			"groupmember": "3",
 			"style": "country",
 			"year": "2006"
 		},
@@ -142,7 +140,7 @@
 			"name": "simon & garfunkel",
 			"award": "7",
 			"country": "EE.UU",
-			"groupMember": "2",
+			"groupmember": "2",
 			"style": "folk",
 			"year": "1957"
 		},
@@ -151,7 +149,7 @@
 			"name": "the 5th dimension",
 			"award": "6",
 			"country": "EE.UU",
-			"groupMember": "5",
+			"groupmember": "5",
 			"style": "pop",
 			"year": "1966"
 		},
@@ -160,7 +158,7 @@
 			"name": "the black eyed peas",
 			"award": "6",
 			"country": "EE.UU",
-			"groupMember": "4",
+			"groupmember": "4",
 			"style": "pop",
 			"year": "1992"
 		},
@@ -169,7 +167,7 @@
 			"name": "the chieftains",
 			"award": "6",
 			"country": "ireland",
-			"groupMember": "6",
+			"groupmember": "6",
 			"style": "celta",
 			"year": "1963"
 		},
@@ -178,7 +176,7 @@
 			"name": "eagles",
 			"award": "6",
 			"country": "EE.UU",
-			"groupMember": "3",
+			"groupmember": "3",
 			"style": "rock",
 			"year": "1971"
 		},
@@ -187,7 +185,7 @@
 			"name": "earth,wind & fire",
 			"award": "6",
 			"country": "EE.UU",
-			"groupMember": "9",
+			"groupmember": "9",
 			"style": "fusion",
 			"year": "1970"
 		},
@@ -196,7 +194,7 @@
 			"name": "outkast",
 			"award": "6",
 			"country": "EE.UU",
-			"groupMember": "2",
+			"groupmember": "2",
 			"style": "hip-hop",
 			"year": "1992"
 		},
@@ -205,7 +203,7 @@
 			"name": "the police",
 			"award": "6",
 			"country": "england",
-			"groupMember": "3",
+			"groupmember": "3",
 			"style": "pop",
 			"year": "1977"
 		},
@@ -214,7 +212,7 @@
 			"name": "red hot chili peppers",
 			"award": "6",
 			"country": "EE.UU",
-			"groupMember": "4",
+			"groupmember": "4",
 			"style": "rock",
 			"year": "1983"
 		},
@@ -223,11 +221,14 @@
 			"name": "daft punk",
 			"award": "6",
 			"country": "french",
-			"groupMember": "2",
+			"groupmember": "2",
 			"style": "pop",
 			"year": "1993"
 		}
 	];
+  
+  module.exports.register=(app)=>{
+	
 	db.remove({}, {multi: true});
     app.get(BASE_API_PATH_GRMYS + '/grmys/loadInitialData', (request, response) => {
 		db.insert(initGrmys);
@@ -269,7 +270,7 @@
             }
         });
     });
-	/*app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response)=> {
+	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response)=> {
         
         var newData = req.body;
         var country = req.body.country;
@@ -304,7 +305,7 @@
             }
 
         });
-	});*/
+	});
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         var newGrmys = request.body;
         console.log(`New grmy to be added: <${JSON.stringify(newGrmys, null, 2)}>`);
