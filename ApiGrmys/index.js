@@ -333,7 +333,7 @@
             }
 	    });
     });
-	app.put(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response)=>{
+	app.put(BASE_API_PATH_GRMYS + '/grmys/:ranking/:name', (request, response)=>{
         
         var newData = request.body;
         var ranking = request.body.ranking;
