@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "0affba01-ef3b-4233-a8c3-42ed4576c26f",
-		"name": "SOS2021-22",
+		"_postman_id": "200d4c2a-e5ce-434f-b84d-b0c844496348",
+		"name": "paawards-localhost",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "GET Paawards",
+			"name": "LOAD INITIAL DATA",
 			"event": [
 				{
 					"listen": "test",
@@ -20,16 +20,43 @@
 					}
 				}
 			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/loadInitialData",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"paawards",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET COLECCION",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
 				"url": {
 					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards",
 					"host": [
@@ -46,7 +73,42 @@
 			"response": []
 		},
 		{
-			"name": "POST Paawards",
+			"name": "GET RECURSO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/Spain/2021",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"paawards",
+						"Spain",
+						"2021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
 			"event": [
 				{
 					"listen": "test",
@@ -65,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n{\r\n\"name\": \"Antonio Parra\",\r\n\"year\": 2021,\r\n\"sport\": \"Tenis\",\r\n\"country\": \"Spain\",\r\n\"age\": 21,\r\n\"gender\": \"Masculino\",\r\n\"trophy\": 1\r\n}\r\n]",
+					"raw": "{\r\n\"name\": \"Antonio\",\r\n\"year\": 2021,\r\n\"sport\": \"Tenis\",\r\n\"country\": \"Spain\",\r\n\"age\": 20,\r\n\"gender\": \"Masculino\",\r\n\"trophy\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -88,7 +150,84 @@
 			"response": []
 		},
 		{
-			"name": "DELETE Paawards",
+			"name": "PUT RECURSO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Antonio\",\r\n\"year\": 2021,\r\n\"sport\": \"Tenis\",\r\n\"country\": \"Spain\",\r\n\"age\": 21,\r\n\"gender\": \"Masculino\",\r\n\"trophy\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/Spain/2021",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"paawards",
+						"Spain",
+						"2021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE COLECCION",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"paawards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE RECURSO",
 			"event": [
 				{
 					"listen": "test",
@@ -117,6 +256,74 @@
 						"paawards",
 						"Spain",
 						"2021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST RECURSO (error)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards/Spain/2020",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"paawards",
+						"Spain",
+						"2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT a la lista de recursos (error)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/api/v1/paawards",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"paawards"
 					]
 				}
 			},
