@@ -108,8 +108,10 @@ module.exports.register = (app) => {
 	//POST a la lista de recursos
 	app.post(BASE_API_PATH_PAAWARDS + '/paawards', (request, response) => {
 		var newPaaward = request.body;
+		var name = request.body.name;
+		var year = parseInt(request.body.year);
 		
-		dbPaawards.find(newPaaward).exec((err, paawardsDB) => { 
+		dbPaawards.find({"name": name,"year": year}).exec((err, paawardsDB) => { 
 			if (err){
 				console.error("Error accessing DB in POST: "+err);
 				res.sendStatus(500);
