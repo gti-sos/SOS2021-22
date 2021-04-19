@@ -372,6 +372,8 @@
             });
         }
     });
+
+	//DELETE ALL
 	app.delete(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         
         
@@ -389,6 +391,8 @@
             }
         });
 	});
+
+	
 	//-----------------------------------------------------------------------------------//
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         var newGrmys = request.body;

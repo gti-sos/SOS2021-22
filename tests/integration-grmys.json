@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "GET",
+			"name": "GET-heroku-load",
 			"event": [
 				{
 					"listen": "test",
@@ -24,11 +24,49 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/loadInitialData",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"v1",
+						"grmys",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-heroku-grmys",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
 					"path": [
 						"api",
 						"v1",
@@ -39,14 +77,266 @@
 			"response": []
 		},
 		{
-			"name": "POST",
+			"name": "GET-awards",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 201\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?award=28",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					],
+					"query": [
+						{
+							"key": "award",
+							"value": "28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?year=1970",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "1970"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?country=england",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "england"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-groupmember",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?groupmember=4",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					],
+					"query": [
+						{
+							"key": "groupmember",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-style",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?style=rock",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					],
+					"query": [
+						{
+							"key": "style",
+							"value": "rock"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-style not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?style=rap",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					],
+					"query": [
+						{
+							"key": "style",
+							"value": "rap"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?offset=0&limit=5",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-camela",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -58,7 +348,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"ranking\": \"27\",\r\n\"name\": \"camela\",\r\n\"award\": \"1\",\r\n\"country\": \"spain\",\r\n\"groupMember\": \"4\",\r\n\"style\": \"rock\",\r\n\"year\": \"1960\"\r\n}",
+					"raw": "{\r\n\"ranking\": \"25\",\r\n\"name\": \"camela\",\r\n\"award\": \"28\",\r\n\"country\": \"spain\",\r\n\"groupmember\": \"2\",\r\n\"style\": \"flamenco\",\r\n\"year\": \"1960\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -66,11 +356,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
@@ -81,7 +373,142 @@
 			"response": []
 		},
 		{
-			"name": "DELETE",
+			"name": "POST-camela-Conflict",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"ranking\": \"25\",\r\n\"name\": \"camela\",\r\n\"award\": \"28\",\r\n\"country\": \"spain\",\r\n\"groupmember\": \"2\",\r\n\"style\": \"flamenco\",\r\n\"year\": \"1960\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-el kanka-errorFormat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"ranking\": \"26\",\r\n\"name\": \"el kanka\",\r\n\"award\": \"15\",\r\n\"country\": \"spain\",\r\n\"groupmember\": \"1\",\r\n\"style\": \"flamenco\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-after POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE-resource",
 			"event": [
 				{
 					"listen": "test",
@@ -100,7 +527,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"ranking\": \"27\",\r\n\"name\": \"camela\",\r\n\"award\": \"1\",\r\n\"country\": \"spain\",\r\n\"groupMember\": \"4\",\r\n\"style\": \"rock\",\r\n\"year\": \"1960\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -108,17 +535,293 @@
 					}
 				},
 				"url": {
-					"raw": "{{HOST}}:{{PORT}}/api/v1/grmys/spain/1960",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/england/1960",
+					"protocol": "https",
 					"host": [
-						"{{HOST}}"
+						"sos2021-22",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{PORT}}",
 					"path": [
 						"api",
 						"v1",
 						"grmys",
-						"spain",
+						"england",
 						"1960"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE-resource not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/england/1989",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys",
+						"england",
+						"1989"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-after delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT-thebeatles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"ranking\": \"1\",\r\n\t\t\t\"name\": \"the beatles\",\r\n\t\t\t\"award\": \"30\",\r\n\t\t\t\"country\": \"england\",\r\n\t\t\t\"groupmember\": \"4\",\r\n\t\t\t\"style\": \"rock\",\r\n\t\t\t\"year\": \"1960\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/1/the beatles",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys",
+						"1",
+						"the beatles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT-not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-afterput",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE-all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys"
 					]
 				}
 			},
