@@ -372,10 +372,16 @@
             });
         }
     });
+	//put metodo no permitido
 	app.put(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         console.log("metodo no permitido");
         return response.sendStatus(405);
-    })
+    });
+	//post metodo no permitido
+	app.post(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
+        console.log("Method not allowed");
+        return response.sendStatus(405);
+    });
 	//DELETE ALL
 	app.delete(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
         
