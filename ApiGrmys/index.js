@@ -272,6 +272,7 @@
             }
         });
     });
+	//GET /country/year/
 	app.get(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
         
         var country = request.params.country;

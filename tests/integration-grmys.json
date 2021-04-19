@@ -297,6 +297,55 @@
 			"response": []
 		},
 		{
+			"name": "GET-con barras",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/england/1960",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys",
+						"england",
+						"1960"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET-Pagination",
 			"request": {
 				"method": "GET",
@@ -455,6 +504,52 @@
 						"api",
 						"v1",
 						"grmys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-no permitido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"ranking\": \"26\",\r\n\"name\": \"el kanka\",\r\n\"award\": \"15\",\r\n\"country\": \"spain\",\r\n\"groupmember\": \"1\",\r\n\"style\": \"flamenco\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/spain/1960",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys",
+						"spain",
+						"1960"
 					]
 				}
 			},
@@ -693,14 +788,60 @@
 			"response": []
 		},
 		{
-			"name": "PUT-not found",
+			"name": "PUT-error",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 404\", function () {\r",
-							"    pm.response.to.have.status(404);\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"ranking\": \"1\",\r\n\t\t\"name\": \"the beatles\",\r\n\t\t\"award\": \"30\",\r\n\t\t\"country\": \"england\",\r\n\t\t\"groupmember\": \"4\",\r\n\t\t\"style\": \"rock\"\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/1/the beatles",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"grmys",
+						"1",
+						"the beatles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT-no permitido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
 							"});"
 						],
 						"type": "text/javascript"
