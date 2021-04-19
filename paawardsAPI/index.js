@@ -1,7 +1,7 @@
 var BASE_API_PATH_PAAWARDS = '/api/v1';
 var Datastore = require("nedb");
 var path = require ("path");
-const dbFile = path.join(__dirname,"./paawards.db");   
+const dbFile = path.join(__dirname,"paawards.db");   
 const dbPaawards = new Datastore({
     filename: dbFile,
     autoload:true
