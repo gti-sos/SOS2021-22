@@ -273,8 +273,8 @@
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response)=> {
         
         var newData = req.body;
-        var country = req.body.country;
-        var year = req.body.year;
+        var ranking = req.body.ranking;
+        var name = req.body.name;
 
         db.find({"country":country, "year":year}).exec((err, data)=>{
             if(err){
@@ -282,13 +282,13 @@
                 res.sendStatus(500);
             }else {
                 if(data.length == 0){
-                    if (!newData['ranking']
-						|| !newData['name']
+                    if (!newData.ranking
+						|| !newData.name
 						|| !newData['award']
-						|| !newData.country 
+						|| !newData["country"] 
 						|| !newData['groupmember'] 
 						|| !newData['style'] 
-                        || !newData.year                        
+                        || !newData["year"]                        
                         || Object.keys(newData).length != 7){
                         console.log("The data is not correctly provided");
                         return res.sendStatus(400);
