@@ -134,7 +134,7 @@ module.exports.register = (app) => {
 	});
 
 	//PUT a un recurso
-	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
+	/*app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
 		var year=parseInt(request.body.year);
 		var country=request.body.country;
 		var newData = request.body;
@@ -158,8 +158,8 @@ module.exports.register = (app) => {
                 }
             });
         }
-    });
-	/*
+    });*/
+	
 	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
 		
 		dbPaawards.find({}, (err, paawardsDB) => {
@@ -210,7 +210,7 @@ module.exports.register = (app) => {
 				}
 			}
 		});
-	});*/
+	});
 
 	//POST a un recurso (error)
 	app.post(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
