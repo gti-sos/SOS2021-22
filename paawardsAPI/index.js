@@ -135,9 +135,33 @@ module.exports.register = (app) => {
 
 	//PUT a un recurso
 	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
-		var yearPUT=parseInt(request.params.year);
-		var countryPUT=request.params.country;
-		var newPaaward = request.body;
+		var year=parseInt(request.body.year);
+		var country=request.body.country;
+		var newData = request.body;
+        var query = { "year": year, "country": country };
+
+        if (!newData['name'] || !newData.year || !newData['sport'] || !newData.country || !newData['age']
+            || !newData['gender'] || !newData['trophy'] || Object.keys(newData).length != 7) {
+            console.log("The data is not correctly provided");
+            return response.sendStatus(400);
+        } else {
+            dbPaawards.update(query, newData, (err, datoCambio) => {
+                if (err) {
+                    console.error("ERROR accesing DB in PUT");
+                    response.sendStatus(500);
+                } else if (datoCambio == 0) {
+                    response.sendStatus(404);
+                    console.log("There is no such data in the database");
+                } else {
+                    response.sendStatus(200);
+                    console.log("Database updated");
+                }
+            });
+        }
+    });
+	/*
+	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
+		
 		dbPaawards.find({}, (err, paawardsDB) => {
 			if(err){
 				console.error("Error accessing DB in PUT: "+err);
@@ -186,7 +210,7 @@ module.exports.register = (app) => {
 				}
 			}
 		});
-	});
+	});*/
 
 	//POST a un recurso (error)
 	app.post(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
