@@ -110,7 +110,7 @@ module.exports.register = (app) => {
         var year = parseInt(request.body.year);
         var query = { "top": top, "year": year };
 
-        if (!newData.top || !newData.['name'] || !newData['fortune'] || !newData["age"] || !newData['country']
+        if (!newData.top || !newData['name'] || !newData['fortune'] || !newData["age"] || !newData['country']
             || !newData.year || !newData["company"] || Object.keys(newData).length != 7) {
             console.log("The data is not correctly provided");
             return response.sendStatus(400);
