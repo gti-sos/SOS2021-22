@@ -37,7 +37,7 @@ var initialPaawards = [
 
 module.exports.register = (app) => {
 	
-	//dbPaawards.remove({}, { multi: true });
+	dbPaawards.remove({}, { multi: true });
 
 	//----------------------------------------------------------------------
 
@@ -138,7 +138,6 @@ module.exports.register = (app) => {
 		var yearPUT=parseInt(request.params.year);
 		var countryPUT=request.params.country;
 		var newPaaward = request.body;
-		var query = {country: countryPUT, year: yearPUT };
 		dbPaawards.find({}, (err, paawardsDB) => {
 			if(err){
 				console.error("Error accessing DB in PUT: "+err);
