@@ -107,11 +107,11 @@ module.exports.register = (app) => {
         console.log('-------------------------------------');
         var newData = request.body;
         var top = parseInt(request.body.top);
-        var name = request.body.name;
-        var query = { "top": top, "name": name };
+        var year = parseInt(request.body.year);
+        var query = { "top": top, "year": year };
 
-        if (!newData.top || !newData.name || !newData['fortune'] || !newData["age"] || !newData['country']
-            || !newData['year'] || !newData["company"] || Object.keys(newData).length != 7) {
+        if (!newData.top || !newData.['name'] || !newData['fortune'] || !newData["age"] || !newData['country']
+            || !newData.year || !newData["company"] || Object.keys(newData).length != 7) {
             console.log("The data is not correctly provided");
             return response.sendStatus(400);
         } else {
@@ -152,14 +152,14 @@ module.exports.register = (app) => {
         });
     });
 
-    //POST a un recurso (error 405)
+    //POST a un recurso (error)
     app.post(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         console.log('-------------------------------------');
         console.log("POST a resource is not allowed");
         return response.sendStatus(405);
     });
 
-    //PUT a la lista de recursos (error 405)
+    //PUT a la lista de recursos (error)
     app.put(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
         console.log('-------------------------------------');
         console.log("PUT a resource list is not allowed");
