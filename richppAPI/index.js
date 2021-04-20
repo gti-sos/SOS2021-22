@@ -58,7 +58,7 @@ module.exports.register = (app) => {
         console.log('-------------------------------------');
         console.log("POST a initRichpp");
         var newData = request.body;
-        var top = request.body.top;
+        var top = parseInt(request.body.top);
         var name = request.body.name;
 
         db.find({ "top": top, "name": name }).exec((err, data) => {
@@ -86,7 +86,7 @@ module.exports.register = (app) => {
     app.delete(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         console.log('-------------------------------------');
         var country = request.params.country;
-        var year = request.params.year;
+        var year = parseInt(request.params.year);
 
         db.remove({ country: country, year: year }, { multi: true }, (err, numRemoved) => {
             if (err) {
@@ -106,7 +106,7 @@ module.exports.register = (app) => {
     app.put(BASE_API_PATH_RICHPP + '/richpp/:top/:year', (request, response) => {
         console.log('-------------------------------------');
         var newData = request.body;
-        var top = request.body.top;
+        var top = parseInt(request.body.top);
         var name = request.body.name;
         var query = { "top": top, "name": name };
 
@@ -134,7 +134,7 @@ module.exports.register = (app) => {
     app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         console.log('-------------------------------------');
         var country = request.params.country;
-        var year = request.params.year;
+        var year = parseInt(request.params.year);
         var query = { "country": country, "year": year };
 
         db.find(query).exec((err, data) => {
@@ -251,7 +251,7 @@ module.exports.register = (app) => {
             console.log(`Not data with country(${country}) and year(${year})`);
             return response.sendStatus(404);
         } else {
-            console.log('Paawards is empty');
+            console.log('Richpp is empty');
             return response.sendStatus(404);
         }
     });
