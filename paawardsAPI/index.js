@@ -115,8 +115,8 @@ module.exports.register = (app) => {
 			}
 			else {
 				if (paawardsDB.length == 0){
-					if (!newPaaward['name'] || !newPaaward['year'] || !newPaaward['sport'] || !newPaaward['country'] ||
-						!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy']) {
+					if (!newPaaward.name || !newPaaward.year || !newPaaward['sport'] || !newPaaward['country'] ||
+						!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy'] || Object.keys(newPaaward).length != 7) {
 						console.log("The resource is not well built");
 						response.sendStatus(400);
 					}
@@ -138,12 +138,13 @@ module.exports.register = (app) => {
 		var name=request.params.name;
 		var year=parseInt(request.params.year);
 		var newPaaward = request.body;
+		var query = { "name": name, "year": year };
 		if (!newPaaward.name || !newPaaward.year || !newPaaward['sport'] || !newPaaward['country'] ||
 			!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy'] || Object.keys(newPaaward).length != 7) {
 				console.log("The resource is not well built");
 				response.sendStatus(400);
 		}
-		dbPaawards.update({"name":name,"year":year}, newPaaward, (err, paawardsRemoved) => {
+		dbPaawards.update(query, newPaaward, (err, paawardsRemoved) => {
 			if (err){
 				console.error("Error accessing DB in PUT: "+err);
 				response.sendStatus(500);
