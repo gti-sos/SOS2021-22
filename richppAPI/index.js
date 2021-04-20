@@ -10,21 +10,21 @@ var BASE_API_PATH_RICHPP = '/api/v1';
 var richpp = [];
 
 var initRichpp = [
-    { "top": 1, "name": "Jeff Bezos", "fortune": 113, "age": 56, "country": "EEUU", "year": 2020, "company": "Amazon" },
-    { "top": 2, "name": "Bill Gates", "fortune": 98, "age": 64, "country": "EEUU", "year": 2020, "company": "Microsoft" },
-    { "top": 3, "name": "Bernard Arnault", "fortune": 76, "age": 71, "country": "France", "year": 2020, "company": "LVMH" },
-    { "top": 1, "name": "Jeff Bezos", "fortune": 131, "age": 55, "country": "EEUU", "year": 2019, "company": "Amazon" },
-    { "top": 2, "name": "Bill Gates", "fortune": 96.5, "age": 63, "country": "EEUU", "year": 2019, "company": "Microsoft" },
-    { "top": 3, "name": "Warren Buffett", "fortune": 82.5, "age": 88, "country": "EEUU", "year": 2019, "company": "Berkshire Hathaway" },
-    { "top": 1, "name": "Jeff Bezos", "fortune": 112, "age": 54, "country": "EEUU", "year": 2018, "company": "Amazon" },
-    { "top": 2, "name": "Bill Gates", "fortune": 90, "age": 62, "country": "EEUU", "year": 2018, "company": "Microsoft" },
-    { "top": 3, "name": "Warren Buffett", "fortune": 84, "age": 87, "country": "EEUU", "year": 2018, "company": "Berkshire Hathaway" },
-    { "top": 1, "name": "Bill Gates", "fortune": 86, "age": 61, "country": "EEUU", "year": 2017, "company": "Microsoft" },
-    { "top": 2, "name": "Warren Buffett", "fortune": 75.6, "age": 86, "country": "EEUU", "year": 2017, "company": "Berkshire Hathaway" },
-    { "top": 3, "name": "Jeff Bezos", "fortune": 72.8, "age": 53, "country": "EEUU", "year": 2017, "company": "Amazon" },
-    { "top": 1, "name": "Bill Gates", "fortune": 75, "age": 60, "country": "EEUU", "year": 2016, "company": "Microsoft" },
-    { "top": 2, "name": "Amancio Ortega", "fortune": 67, "age": 79, "country": "Spain", "year": 2016, "company": "Inditex" },
-    { "top": 3, "name": "Warren Buffett", "fortune": 60.8, "age": 85, "country": "EEUU", "year": 2016, "company": "Berkshire Hathaway" }
+    { "top": "1", "name": "Jeff Bezos", "fortune": "113", "age": "56", "country": "EEUU", "year": "2020", "company": "Amazon" },
+    { "top": "2", "name": "Bill Gates", "fortune": "98", "age": "64", "country": "EEUU", "year": "2020", "company": "Microsoft" },
+    { "top": "3", "name": "Bernard Arnault", "fortune": "76", "age": "71", "country": "France", "year": "2020", "company": "LVMH" },
+    { "top": "1", "name": "Jeff Bezos", "fortune": "131", "age": "55", "country": "EEUU", "year": "2019", "company": "Amazon" },
+    { "top": "2", "name": "Bill Gates", "fortune": "96.5", "age": "63", "country": "EEUU", "year": "2019", "company": "Microsoft" },
+    { "top": "3", "name": "Warren Buffett", "fortune": "82.5", "age": "88", "country": "EEUU", "year": "2019", "company": "Berkshire Hathaway" },
+    { "top": "1", "name": "Jeff Bezos", "fortune": "112", "age": "54", "country": "EEUU", "year": "2018", "company": "Amazon" },
+    { "top": "2", "name": "Bill Gates", "fortune": "90", "age": "62", "country": "EEUU", "year": "2018", "company": "Microsoft" },
+    { "top": "3", "name": "Warren Buffett", "fortune": "84", "age": "87", "country": "EEUU", "year": "2018", "company": "Berkshire Hathaway" },
+    { "top": "1", "name": "Bill Gates", "fortune": "86", "age": "61", "country": "EEUU", "year": "2017", "company": "Microsoft" },
+    { "top": "2", "name": "Warren Buffett", "fortune": "75.6", "age": "86", "country": "EEUU", "year": "2017", "company": "Berkshire Hathaway" },
+    { "top": "3", "name": "Jeff Bezos", "fortune": "72.8", "age": "53", "country": "EEUU", "year": "2017", "company": "Amazon" },
+    { "top": "1", "name": "Bill Gates", "fortune": "75", "age": "60", "country": "EEUU", "year": "2016", "company": "Microsoft" },
+    { "top": "2", "name": "Amancio Ortega", "fortune": "67", "age": "79", "country": "Spain", "year": "2016", "company": "Inditex" },
+    { "top": "3", "name": "Warren Buffett", "fortune": "60.8", "age": "85", "country": "EEUU", "year": "2016", "company": "Berkshire Hathaway" }
 ];
 
 module.exports.register = (app) => {
@@ -74,7 +74,7 @@ module.exports.register = (app) => {
     app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         console.log('-------------------------------------');
         var country = request.params.country;
-        var year = parseInt(request.params.year);
+        var year = request.params.year;
         var query = { "country": country, "year": year };
 
         db.find(query).exec((err, data) => {
@@ -97,7 +97,7 @@ module.exports.register = (app) => {
         console.log('-------------------------------------');
         console.log("POST a initRichpp");
         var newData = request.body;
-        var top = parseInt(request.body.top);
+        var top = request.body.top;
         var name = request.body.name;
 
         db.find({ "top": top, "name": name }).exec((err, data) => {
@@ -125,7 +125,7 @@ module.exports.register = (app) => {
     app.delete(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         console.log('-------------------------------------');
         var country = request.params.country;
-        var year = parseInt(request.params.year);
+        var year = request.params.year;
 
         db.remove({ country: country, year: year }, { multi: true }, (err, numRemoved) => {
             if (err) {
@@ -145,8 +145,8 @@ module.exports.register = (app) => {
     app.put(BASE_API_PATH_RICHPP + '/richpp/:top/:year', (request, response) => {
         console.log('-------------------------------------');
         var newData = request.body;
-        var top = parseInt(request.body.top);
-        var year = parseInt(request.body.year);
+        var top = request.body.top;
+        var year = request.body.year;
         var query = { "top": top, "year": year };
 
         if (!newData.top || !newData['name'] || !newData['fortune'] || !newData["age"] || !newData['country']
@@ -212,7 +212,7 @@ module.exports.register = (app) => {
     //GET a un recurso (obtener dato por pais y año)
     app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         var country = request.params.country;
-        var year = parseInt(request.params.year);
+        var year = request.params.year;
         console.log(`GET stat by country: <${country}> and foundation-year: <${year}>`);
         for (var stat of initRichpp) {
             if (stat.country === country && stat.year === year) {
@@ -225,7 +225,7 @@ module.exports.register = (app) => {
     //DELETE a un recurso (eliminar dato por pais y año)
     app.delete(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         var country = request.params.country;
-        var year = parseInt(request.params.year);
+        var year = request.params.year;
 
         if (initRichpp.length != 0) {
             for (var i = 0; i < initRichpp.length; i++) {
