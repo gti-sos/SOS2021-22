@@ -40,17 +40,56 @@ module.exports.register = (app) => {
         response.sendStatus(200);
     });
 
-    //GET a richhpp
+    //GET recursos por columna usando nedb
     app.get(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
         console.log('-------------------------------------');
-        if (initRichpp.length != 0) {
-            console.log("GET a richpp");
-            response.send(JSON.stringify(initRichpp, null, 2));
-            return response.sendStatus(200);
-        } else {
-            console.log("Richpp is empty");
-            return response.sendStatus(404);
-        }
+        var query = request.query;
+
+        //Obtenemos los offset y limit de la query
+        var offset = query.offset;
+        var limit = query.limit;
+
+        //Los quitamos de la query 
+        delete query.offset;
+        delete query.limit;
+
+        db.find(query).skip(offset).limit(limit).exec((err, data) => {
+            if (err) {
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            } else if (data.length == 0) {
+                console.error("No data found");
+                response.sendStatus(404);
+            } else {
+                data.forEach((d) => {
+                    delete d._id;
+                });
+                response.send(JSON.stringify(data, null, 2));
+                console.log("Data sent:" + JSON.stringify(data, null, 2));
+            }
+        });
+    });
+
+    //GET a un recurso (obtener dato por pais y año) usando nedb
+    app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
+        console.log('-------------------------------------');
+        var country = request.params.country;
+        var year = parseInt(request.params.year);
+        var query = { "country": country, "year": year };
+
+        db.find(query).exec((err, data) => {
+            if (err) {
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            } else if (data.length >= 1) {
+                delete data[0]._id;
+                response.status(200).send(JSON.stringify(data[0], null, 2));
+                console.log("Data sent:" + JSON.stringify(data[0], null, 2));
+            } else {
+                response.sendStatus(404);
+                console.log("The data requested is empty");
+            }
+        });
     });
 
     //POST a richhpp usando nedb
@@ -130,39 +169,17 @@ module.exports.register = (app) => {
         }
     });
 
-    //GET a un recurso (obtener dato por pais y año) usando nedb
-    app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
-        console.log('-------------------------------------');
-        var country = request.params.country;
-        var year = parseInt(request.params.year);
-        var query = { "country": country, "year": year };
-
-        db.find(query).exec((err, data) => {
-            if (err) {
-                console.error("ERROR accesing DB in GET");
-                response.sendStatus(500);
-            } else if (data.length >= 1) {
-                delete data[0]._id;
-                response.status(200).send(JSON.stringify(data[0], null, 2));
-                console.log("Data sent:" + JSON.stringify(data[0], null, 2));
-            } else {
-                response.sendStatus(404);
-                console.log("The data requested is empty");
-            }
-        });
-    });
-
-    //POST a un recurso (error)
-    app.post(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
-        console.log('-------------------------------------');
-        console.log("POST a resource is not allowed");
-        return response.sendStatus(405);
-    });
-
-    //PUT a la lista de recursos (error)
+    //PUT (metodo no permitido)
     app.put(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
         console.log('-------------------------------------');
         console.log("PUT a resource list is not allowed");
+        return response.sendStatus(405);
+    });
+
+    //POST a un recurso (metodo no permitido)
+    app.post(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
+        console.log('-------------------------------------');
+        console.log("POST a resource is not allowed");
         return response.sendStatus(405);
     });
 
@@ -180,36 +197,6 @@ module.exports.register = (app) => {
                 } else {
                     response.sendStatus(200);
                 }
-            }
-        });
-    });
-
-    //GET recursos por columna
-    app.get(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
-        console.log('-------------------------------------');
-        var query = request.query;
-
-        //Obtenemos los offset y limit de la query
-        var offset = query.offset;
-        var limit = query.limit;
-
-        //Los quitamos de la query 
-        delete query.offset;
-        delete query.limit;
-
-        db.find(query).skip(offset).limit(limit).exec((err, data) => {
-            if (err) {
-                console.error("ERROR accesing DB in GET");
-                response.sendStatus(500);
-            } else if (data.length == 0) {
-                console.error("No data found");
-                response.sendStatus(404);
-            } else {
-                data.forEach((d) => {
-                    delete d._id;
-                });
-                response.send(JSON.stringify(data, null, 2));
-                console.log("Data sent:" + JSON.stringify(data, null, 2));
             }
         });
     });
@@ -252,6 +239,19 @@ module.exports.register = (app) => {
             return response.sendStatus(404);
         } else {
             console.log('Richpp is empty');
+            return response.sendStatus(404);
+        }
+    });
+
+    //GET a richhpp
+    app.get(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
+        console.log('-------------------------------------');
+        if (initRichpp.length != 0) {
+            console.log("GET a richpp");
+            response.send(JSON.stringify(initRichpp, null, 2));
+            return response.sendStatus(200);
+        } else {
+            console.log("Richpp is empty");
             return response.sendStatus(404);
         }
     });
