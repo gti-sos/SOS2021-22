@@ -503,8 +503,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 201\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -597,7 +597,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"name\": \"Antonio\",\r\n\"year\": 2021,\r\n\"sport\": \"Tenis\",\r\n\"country\": \"Spain\",\r\n\"age\": 21,\r\n\"gender\": \"Masculino\",\r\n\"trophy\": 7\r\n}",
+					"raw": "{\r\n\"name\": \"Antonio Parra\",\r\n\"year\": 2021,\r\n\"sport\": \"Tenis\",\r\n\"country\": \"Spain\",\r\n\"age\": 21,\r\n\"gender\": \"Masculino\",\r\n\"trophy\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -605,7 +605,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Antonio Parra/2021",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -616,7 +616,7 @@
 						"api",
 						"v1",
 						"paawards",
-						"Spain",
+						"Antonio Parra",
 						"2021"
 					]
 				}
@@ -651,7 +651,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Antonio Parra/2021",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -662,7 +662,7 @@
 						"api",
 						"v1",
 						"paawards",
-						"Spain",
+						"Antonio Parra",
 						"2021"
 					]
 				}
@@ -697,7 +697,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Antonio Parra/2021",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -708,7 +708,7 @@
 						"api",
 						"v1",
 						"paawards",
-						"Spain",
+						"Antonio Parra",
 						"2021"
 					]
 				}
