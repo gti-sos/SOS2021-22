@@ -14,6 +14,3 @@ jobs:
       - run: npx newman run tests/integration-grmys.json
       - run: npx newman run tests/integration-paawards.json
       - run: npx newman run tests/integration-richpp.json
-      
-      
-      

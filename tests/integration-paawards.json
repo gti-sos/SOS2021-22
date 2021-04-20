@@ -1,10 +1,45 @@
 {
 	"info": {
-		"_postman_id": "3a3ec02f-2af7-4718-aa4d-3014173b85a5",
+		"_postman_id": "05286f60-8f63-4b1e-a423-df967529a51e",
 		"name": "paawards-heroku",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "RESTART",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"paawards"
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "LOAD INITIAL DATA",
 			"event": [
@@ -177,7 +212,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards?sport=Waterpolo",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards?sport=Tenis",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -192,7 +227,7 @@
 					"query": [
 						{
 							"key": "sport",
-							"value": "Waterpolo"
+							"value": "Tenis"
 						}
 					]
 				}
@@ -341,7 +376,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards?trophy=4",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards?trophy=7",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -356,7 +391,7 @@
 					"query": [
 						{
 							"key": "trophy",
-							"value": "4"
+							"value": "7"
 						}
 					]
 				}
@@ -605,7 +640,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Antonio Parra/2021",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -616,53 +651,7 @@
 						"api",
 						"v1",
 						"paawards",
-						"Antonio Parra",
-						"2021"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "PUT RECURSO ERROR REPETIDO",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 409\", function () {\r",
-							"    pm.response.to.have.status(409);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"name\": \"Antonio\",\r\n\"year\": 2021,\r\n\"sport\": \"Tenis\",\r\n\"country\": \"Spain\",\r\n\"age\": 21,\r\n\"gender\": \"Masculino\",\r\n\"trophy\": 7\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Antonio Parra/2021",
-					"protocol": "https",
-					"host": [
-						"sos2021-22",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"v1",
-						"paawards",
-						"Antonio Parra",
+						"Spain",
 						"2021"
 					]
 				}
@@ -697,7 +686,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Antonio Parra/2021",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -708,7 +697,7 @@
 						"api",
 						"v1",
 						"paawards",
-						"Antonio Parra",
+						"Spain",
 						"2021"
 					]
 				}
@@ -821,43 +810,6 @@
 						"paawards",
 						"Spain",
 						"2025"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET ANTONIO (AFTER DELETE)",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/paawards/Spain/2021",
-					"protocol": "https",
-					"host": [
-						"sos2021-22",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"v1",
-						"paawards",
-						"Spain",
-						"2021"
 					]
 				}
 			},

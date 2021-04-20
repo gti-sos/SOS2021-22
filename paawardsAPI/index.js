@@ -37,7 +37,7 @@ var initialPaawards = [
 
 module.exports.register = (app) => {
 	
-	dbPaawards.remove({}, { multi: true });
+	//dbPaawards.remove({}, { multi: true });
 
 	//----------------------------------------------------------------------
 
@@ -134,30 +134,58 @@ module.exports.register = (app) => {
 	});
 
 	//PUT a un recurso
-	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:name/:year', (request, response) => {
-		var name=request.params.name;
-		var year=parseInt(request.params.year);
+	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
+		var yearPUT=parseInt(request.params.year);
+		var countryPUT=request.params.country;
 		var newPaaward = request.body;
-		var query = { "name": name, "year": year };
-		if (!newPaaward.name || !newPaaward.year || !newPaaward['sport'] || !newPaaward['country'] ||
-			!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy'] || Object.keys(newPaaward).length != 7) {
-				console.log("The resource is not well built");
-				response.sendStatus(400);
-		}
-		dbPaawards.update(query, newPaaward, (err, paawardsRemoved) => {
-			if (err){
+		var query = {country: countryPUT, year: yearPUT };
+		dbPaawards.find({}, (err, paawardsDB) => {
+			if(err){
 				console.error("Error accessing DB in PUT: "+err);
 				response.sendStatus(500);
+			}else{
+				if(paawardsDB==0){
+					console.error("Database is empty");
+					return response.sendStatus(404);
+				}else{
+					if(!newPaaward.name || !newPaaward.year || !newPaaward.sport || !newPaaward.country || !newPaaward.age || !newPaaward.gender || !newPaaward.trophy){
+						console.log("The resource is not well built");
+						response.sendStatus(400);;
+					}
+					else{
+						dbPaawards.find({"year": yearPUT, "country": countryPUT},(err,paawardsDB)=>{
+							if(err){
+								console.error("ERROR 404");
+								response.sendStatus(404);
+							}
+							if (paawardsDB.length==0){
+								console.log("There is no resource with the specified data");
+								response.sendStatus(404);
+							}else{
+								dbPaawards.update({"year": yearPUT, "country": countryPUT},
+									{
+										"name": request.body.name,
+										"year": yearPUT,
+										"sport": request.body.sport,
+										"country": countryPUT,
+										"age": parseInt(request.body.age),
+										"gender": request.body.gender,
+										"trophy": parseInt(request.body.trophy)
+									}, 
+									(err,paawardUpdated)=>{
+										if(err){
+											console.error("Error 404");
+											response.sendStatus(404);
+										}else{
+											console.log(`PUT a resource given a country(${countryPUT}) and a year(${yearPUT})`);
+											response.sendStatus(200);
+										}
+									});
+							}
+						});
+					}
+				}
 			}
-			else {
-				if (paawardsRemoved!=0) {
-					response.sendStatus(200);
-					console.log(`PUT a resource given a name(${name}) and a year(${year})`);
-				}
-				else {
-					response.sendStatus(404);
-				}
-			}	
 		});
 	});
 
@@ -215,4 +243,3 @@ module.exports.register = (app) => {
 	});
 
 }
-
