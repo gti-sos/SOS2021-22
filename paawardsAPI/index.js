@@ -140,7 +140,7 @@ module.exports.register = (app) => {
 		var newData = request.body;
         var query = { "year": year, "country": country };
 
-        if (!newData['name'] || !newData.yearPUT || !newData['sport'] || !newData.country || !newData['age']
+        if (!newData['name'] || !newData.year || !newData['sport'] || !newData.country || !newData['age']
             || !newData['gender'] || !newData['trophy'] || Object.keys(newData).length != 7) {
             console.log("The data is not correctly provided");
             return response.sendStatus(400);
