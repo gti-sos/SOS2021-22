@@ -115,8 +115,8 @@ module.exports.register = (app) => {
 			}
 			else {
 				if (paawardsDB.length == 0){
-					if (!newPaaward['name'] || !newPaaward['year'] || !newPaaward['sport'] || !newPaaward['county'] ||
-						!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy']) {
+					if (!newPaaward.name || !newPaaward.year || !newPaaward['sport'] || !newPaaward['country'] ||
+						!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy'] || Object.keys(newPaaward).length != 7) {
 						console.log("The resource is not well built");
 						response.sendStatus(400);
 					}
@@ -134,26 +134,25 @@ module.exports.register = (app) => {
 	});
 
 	//PUT a un recurso
-	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
-		var country=request.params.country;
+	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:name/:year', (request, response) => {
+		var name=request.params.name;
 		var year=parseInt(request.params.year);
 		var newPaaward = request.body;
-		dbPaawards.update({"country":country,"year":year}, putPaaward, (err, paawardsRemoved) => {
+		var query = { "name": name, "year": year };
+		if (!newPaaward.name || !newPaaward.year || !newPaaward['sport'] || !newPaaward['country'] ||
+			!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy'] || Object.keys(newPaaward).length != 7) {
+				console.log("The resource is not well built");
+				response.sendStatus(400);
+		}
+		dbPaawards.update(query, newPaaward, (err, paawardsRemoved) => {
 			if (err){
 				console.error("Error accessing DB in PUT: "+err);
 				response.sendStatus(500);
 			}
 			else {
 				if (paawardsRemoved!=0) {
-					if (!newPaaward['name'] || !newPaaward['year'] || !newPaaward['sport'] || !newPaaward['county'] ||
-						!newPaaward['age'] || !newPaaward['gender'] || !newPaaward['trophy']) {
-						console.log("The resource is not well built");
-						response.sendStatus(400);
-					}
-					else {
-						response.sendStatus(200);
-						console.log(`PUT a resource given a country(${country}) and a year(${year})`);
-					}
+					response.sendStatus(200);
+					console.log(`PUT a resource given a name(${name}) and a year(${year})`);
 				}
 				else {
 					response.sendStatus(404);
