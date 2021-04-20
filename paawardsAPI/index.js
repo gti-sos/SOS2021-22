@@ -161,7 +161,7 @@ module.exports.register = (app) => {
     });*/
 	
 	app.put(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
-		
+		var newPaaward = request.body;
 		dbPaawards.find({}, (err, paawardsDB) => {
 			if(err){
 				console.error("Error accessing DB in PUT: "+err);
@@ -176,7 +176,7 @@ module.exports.register = (app) => {
 						response.sendStatus(400);;
 					}
 					else{
-						dbPaawards.find({"year": yearPUT, "country": countryPUT},(err,paawardsDB)=>{
+						dbPaawards.find({"year": parseInt(request.params.year), "country": request.params.country},(err,paawardsDB)=>{
 							if(err){
 								console.error("ERROR 404");
 								response.sendStatus(404);
@@ -185,12 +185,12 @@ module.exports.register = (app) => {
 								console.log("There is no resource with the specified data");
 								response.sendStatus(404);
 							}else{
-								dbPaawards.update({"year": yearPUT, "country": countryPUT},
+								dbPaawards.update({"year": parseInt(request.params.year), "country": request.params.country},
 									{
 										"name": request.body.name,
-										"year": yearPUT,
+										"year": parseInt(request.params.year),
 										"sport": request.body.sport,
-										"country": countryPUT,
+										"country": request.params.country,
 										"age": parseInt(request.body.age),
 										"gender": request.body.gender,
 										"trophy": parseInt(request.body.trophy)
@@ -200,7 +200,7 @@ module.exports.register = (app) => {
 											console.error("Error 404");
 											response.sendStatus(404);
 										}else{
-											console.log(`PUT a resource given a country(${countryPUT}) and a year(${yearPUT})`);
+											console.log(`PUT a resource given a country(${request.params.country}) and a year(${parseInt(request.params.year)})`);
 											response.sendStatus(200);
 										}
 									});

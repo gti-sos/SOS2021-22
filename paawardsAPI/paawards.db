@@ -1,0 +1,101 @@
+{"name":"Fernando Alonso","year":2005,"sport":"Automovilismo","country":"Spain","age":24,"gender":"Masculino","trophy":6,"_id":"0DZjhWsYvEWd5dzA"}
+{"name":"Michael Schumacher","year":2007,"sport":"Automovilismo","country":"Alemania","age":38,"gender":"Masculino","trophy":7,"_id":"5ZPUr29TOu5dW2yh"}
+{"name":"Haile Gebrselassie","year":2011,"sport":"Atletismo","country":"Etiopia","age":38,"gender":"Masculino","trophy":6,"_id":"8BLGMrCFzeY0PyMh"}
+{"name":"Rafael Nadal","year":2008,"sport":"Tenis","country":"Spain","age":22,"gender":"Masculino","trophy":86,"_id":"AzkuVY6Yw4LwoEzS"}
+{"name":"Krzysztof Wielicki","year":2018,"sport":"Alpinismo","country":"Polonia","age":68,"gender":"Masculino","trophy":0,"_id":"C4qvfo6gcmwV1bOG"}
+{"name":"Hicham El Guerrouj","year":2004,"sport":"Atletismo","country":"Marruecos","age":30,"gender":"Masculino","trophy":6,"_id":"CkJ0lUldE5KPIbvi"}
+{"name":"Iker Casillas","year":2012,"sport":"Futbol","country":"Spain","age":31,"gender":"Masculino","trophy":26,"_id":"FZjpm7sUrcZxli4U"}
+{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10,"_id":"JMnNsi70qvooHdTQ"}
+{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7,"_id":"PdwOUstE0yQIVOMR"}
+{"name":"Seleccion de futbol de España","year":2010,"sport":"Futbol","country":"Spain","age":90,"gender":"Masculino","trophy":4,"_id":"Ri3IqZg7UBr6fWUX"}
+{"name":"Yelena Isinbayeva","year":2009,"sport":"Atletismo","country":"Rusia","age":27,"gender":"Femenino","trophy":6,"_id":"ZoKDFXRkmX8zZky1"}
+{"name":"Tour de Francia","year":2003,"sport":"Ciclismo","country":"Francia","age":100,"gender":"Masculino","trophy":0,"_id":"aZBK7dToMLOiPE9e"}
+{"name":"Jose Maria Olazabal","year":2013,"sport":"Golf","country":"Spain","age":47,"gender":"Masculino","trophy":29,"_id":"dJoRMyayvaPObObI"}
+{"name":"Marc Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":30,"gender":"Masculino","trophy":7,"_id":"lOhS7Lo3EouAJFQk"}
+{"name":"Seleccion de baloncesto de España","year":2006,"sport":"Baloncesto","country":"Spain","age":72,"gender":"Masculino","trophy":8,"_id":"ly8jAM6r4VdZ1veN"}
+{"name":"Javier Gomez Noya","year":2016,"sport":"Triatlon","country":"Spain","age":33,"gender":"Masculino","trophy":12,"_id":"mXj0xmuUEb4fxCcl"}
+{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0,"_id":"n2gPGR1GrqygFoME"}
+{"name":"Seleccion de rugby de Nueva Zelanda","year":2017,"sport":"Rugby","country":"Nueva Zelanda","age":125,"gender":"Masculino","trophy":100,"_id":"rHhhe6VjK4uOo3Wp"}
+{"name":"Lance Armstrong","year":2000,"sport":"Ciclismo","country":"EE.UU","age":29,"gender":"Masculino","trophy":11,"_id":"snoXkAJyE9vz4VLv"}
+{"name":"Maraton de Nueva York","year":2014,"sport":"Atletismo","country":"EE.UU","age":44,"gender":"Mixto","trophy":0,"_id":"tnbAKRnPbfk7m6MW"}
+{"name":"Xavi Hernandez","year":2012,"sport":"Futbol","country":"Spain","age":32,"gender":"Masculino","trophy":35,"_id":"vNfu9wQXZ4VUOBu0"}
+{"name":"Manel Estiarte","year":2001,"sport":"Waterpolo","country":"Spain","age":40,"gender":"Masculino","trophy":26,"_id":"vxdUAXTKv3ko9WxN"}
+{"name":"Seleccion de futbol de Brasil","year":2002,"sport":"Futbol","country":"Brasil","age":88,"gender":"Masculino","trophy":21,"_id":"vyjf2QaAe6UnVSDD"}
+{"name":"Antonio Parra","year":2021,"sport":"Tenis","country":"Spain","age":20,"gender":"Masculino","trophy":1,"_id":"wiOxSOHhpFo2mxeg"}
+{"name":"Pau Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":35,"gender":"Masculino","trophy":19,"_id":"yOdJwWgyioDHR7OO"}
+{"$$deleted":true,"_id":"0DZjhWsYvEWd5dzA"}
+{"$$deleted":true,"_id":"5ZPUr29TOu5dW2yh"}
+{"$$deleted":true,"_id":"8BLGMrCFzeY0PyMh"}
+{"$$deleted":true,"_id":"AzkuVY6Yw4LwoEzS"}
+{"$$deleted":true,"_id":"C4qvfo6gcmwV1bOG"}
+{"$$deleted":true,"_id":"CkJ0lUldE5KPIbvi"}
+{"$$deleted":true,"_id":"FZjpm7sUrcZxli4U"}
+{"$$deleted":true,"_id":"JMnNsi70qvooHdTQ"}
+{"$$deleted":true,"_id":"PdwOUstE0yQIVOMR"}
+{"$$deleted":true,"_id":"Ri3IqZg7UBr6fWUX"}
+{"$$deleted":true,"_id":"ZoKDFXRkmX8zZky1"}
+{"$$deleted":true,"_id":"aZBK7dToMLOiPE9e"}
+{"$$deleted":true,"_id":"dJoRMyayvaPObObI"}
+{"$$deleted":true,"_id":"lOhS7Lo3EouAJFQk"}
+{"$$deleted":true,"_id":"ly8jAM6r4VdZ1veN"}
+{"$$deleted":true,"_id":"mXj0xmuUEb4fxCcl"}
+{"$$deleted":true,"_id":"n2gPGR1GrqygFoME"}
+{"$$deleted":true,"_id":"rHhhe6VjK4uOo3Wp"}
+{"$$deleted":true,"_id":"snoXkAJyE9vz4VLv"}
+{"$$deleted":true,"_id":"tnbAKRnPbfk7m6MW"}
+{"$$deleted":true,"_id":"vNfu9wQXZ4VUOBu0"}
+{"$$deleted":true,"_id":"vxdUAXTKv3ko9WxN"}
+{"$$deleted":true,"_id":"vyjf2QaAe6UnVSDD"}
+{"$$deleted":true,"_id":"wiOxSOHhpFo2mxeg"}
+{"$$deleted":true,"_id":"yOdJwWgyioDHR7OO"}
+{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10,"_id":"LqkMeRZfvbQgAV5B"}
+{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7,"_id":"bdI2rdEtquMn2e2u"}
+{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0,"_id":"5S5Kum1V7HLTaD5M"}
+{"name":"Krzysztof Wielicki","year":2018,"sport":"Alpinismo","country":"Polonia","age":68,"gender":"Masculino","trophy":0,"_id":"FPxI3hYy8hLFo5vN"}
+{"name":"Seleccion de rugby de Nueva Zelanda","year":2017,"sport":"Rugby","country":"Nueva Zelanda","age":125,"gender":"Masculino","trophy":100,"_id":"IH8uwr9NmDgj95Z5"}
+{"name":"Javier Gomez Noya","year":2016,"sport":"Triatlon","country":"Spain","age":33,"gender":"Masculino","trophy":12,"_id":"QqBNrrLG6GVFy084"}
+{"name":"Pau Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":35,"gender":"Masculino","trophy":19,"_id":"IspPxI0bwEQ4aN0Z"}
+{"name":"Marc Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":30,"gender":"Masculino","trophy":7,"_id":"MWWwM4jqXw9BWgmK"}
+{"name":"Maraton de Nueva York","year":2014,"sport":"Atletismo","country":"EE.UU","age":44,"gender":"Mixto","trophy":0,"_id":"Jba0s02ctOfkawZM"}
+{"name":"Jose Maria Olazabal","year":2013,"sport":"Golf","country":"Spain","age":47,"gender":"Masculino","trophy":29,"_id":"82LEv1bdu4qaJjnn"}
+{"name":"Iker Casillas","year":2012,"sport":"Futbol","country":"Spain","age":31,"gender":"Masculino","trophy":26,"_id":"nICCkDsQbNC9zR00"}
+{"name":"Xavi Hernandez","year":2012,"sport":"Futbol","country":"Spain","age":32,"gender":"Masculino","trophy":35,"_id":"LwLeRJNcDtATILiI"}
+{"name":"Haile Gebrselassie","year":2011,"sport":"Atletismo","country":"Etiopia","age":38,"gender":"Masculino","trophy":6,"_id":"xMJwCoQAWpULvY8p"}
+{"name":"Seleccion de futbol de España","year":2010,"sport":"Futbol","country":"Spain","age":90,"gender":"Masculino","trophy":4,"_id":"QZ1O4rgekF1Dmk6Z"}
+{"name":"Yelena Isinbayeva","year":2009,"sport":"Atletismo","country":"Rusia","age":27,"gender":"Femenino","trophy":6,"_id":"Ur20NiVyuxS0HgrQ"}
+{"name":"Rafael Nadal","year":2008,"sport":"Tenis","country":"Spain","age":22,"gender":"Masculino","trophy":86,"_id":"wiIup2YLbn4D7DZl"}
+{"name":"Michael Schumacher","year":2007,"sport":"Automovilismo","country":"Alemania","age":38,"gender":"Masculino","trophy":7,"_id":"Sy1ksrlRYH960tKt"}
+{"name":"Seleccion de baloncesto de España","year":2006,"sport":"Baloncesto","country":"Spain","age":72,"gender":"Masculino","trophy":8,"_id":"Ijq5HLrIKt8KmqoH"}
+{"name":"Fernando Alonso","year":2005,"sport":"Automovilismo","country":"Spain","age":24,"gender":"Masculino","trophy":6,"_id":"uXKHJnAjzkl5jB4C"}
+{"name":"Hicham El Guerrouj","year":2004,"sport":"Atletismo","country":"Marruecos","age":30,"gender":"Masculino","trophy":6,"_id":"GYqThrUDNPx6gbnl"}
+{"name":"Tour de Francia","year":2003,"sport":"Ciclismo","country":"Francia","age":100,"gender":"Masculino","trophy":0,"_id":"AfkGhfdhmRE4GXh7"}
+{"name":"Seleccion de futbol de Brasil","year":2002,"sport":"Futbol","country":"Brasil","age":88,"gender":"Masculino","trophy":21,"_id":"f4Y2eHT05IdHpYC5"}
+{"name":"Manel Estiarte","year":2001,"sport":"Waterpolo","country":"Spain","age":40,"gender":"Masculino","trophy":26,"_id":"bAAnTrxf8MMKB8HN"}
+{"name":"Lance Armstrong","year":2000,"sport":"Ciclismo","country":"EE.UU","age":29,"gender":"Masculino","trophy":11,"_id":"vHsAayzeTA3imwOM"}
+{"name":"Antonio Parra","year":2021,"sport":"Tenis","country":"Spain","age":20,"gender":"Masculino","trophy":1,"_id":"wzcWCYnM7CIAfPVx"}
+{"name":"Antonio Parra","year":2021,"sport":"Tenis","country":"Spain","age":21,"gender":"Masculino","trophy":1,"_id":"wzcWCYnM7CIAfPVx"}
+{"$$deleted":true,"_id":"wzcWCYnM7CIAfPVx"}
+{"$$deleted":true,"_id":"5S5Kum1V7HLTaD5M"}
+{"$$deleted":true,"_id":"82LEv1bdu4qaJjnn"}
+{"$$deleted":true,"_id":"AfkGhfdhmRE4GXh7"}
+{"$$deleted":true,"_id":"FPxI3hYy8hLFo5vN"}
+{"$$deleted":true,"_id":"GYqThrUDNPx6gbnl"}
+{"$$deleted":true,"_id":"IH8uwr9NmDgj95Z5"}
+{"$$deleted":true,"_id":"Ijq5HLrIKt8KmqoH"}
+{"$$deleted":true,"_id":"IspPxI0bwEQ4aN0Z"}
+{"$$deleted":true,"_id":"Jba0s02ctOfkawZM"}
+{"$$deleted":true,"_id":"LqkMeRZfvbQgAV5B"}
+{"$$deleted":true,"_id":"LwLeRJNcDtATILiI"}
+{"$$deleted":true,"_id":"MWWwM4jqXw9BWgmK"}
+{"$$deleted":true,"_id":"QZ1O4rgekF1Dmk6Z"}
+{"$$deleted":true,"_id":"QqBNrrLG6GVFy084"}
+{"$$deleted":true,"_id":"Sy1ksrlRYH960tKt"}
+{"$$deleted":true,"_id":"Ur20NiVyuxS0HgrQ"}
+{"$$deleted":true,"_id":"bAAnTrxf8MMKB8HN"}
+{"$$deleted":true,"_id":"bdI2rdEtquMn2e2u"}
+{"$$deleted":true,"_id":"f4Y2eHT05IdHpYC5"}
+{"$$deleted":true,"_id":"nICCkDsQbNC9zR00"}
+{"$$deleted":true,"_id":"uXKHJnAjzkl5jB4C"}
+{"$$deleted":true,"_id":"vHsAayzeTA3imwOM"}
+{"$$deleted":true,"_id":"wiIup2YLbn4D7DZl"}
+{"$$deleted":true,"_id":"xMJwCoQAWpULvY8p"}
