@@ -1,0 +1,978 @@
+{
+	"info": {
+		"_postman_id": "cbbce41c-5449-4cf2-91b7-f8c7a9f0f367",
+		"name": "SOS2021-22-RICHPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "heroku loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/loadInitialData",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "heroku richpp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?top=1",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "top",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?name=Amancio Ortega",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Amancio Ortega"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fortune",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?fortune=113",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "fortune",
+							"value": "113"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "age",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?age=56",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=Spain",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Spain"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "country not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"\tpm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=Andorra",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Andorra"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?year=2020",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "year not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"\tpm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?year=2010",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2010"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?company=Inditex",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "company",
+							"value": "Inditex"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paginacion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?offset=0&limit=5",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "country y year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=France&year=2020",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "France"
+						},
+						{
+							"key": "year",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top y year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?top=1&year=2020",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "top",
+							"value": "1"
+						},
+						{
+							"key": "year",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "homer simpson",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"\tpm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"top\": \"3\",\r\n\"name\": \"Homer\",\r\n\"fortune\": \"1\",\r\n\"age\": \"50\",\r\n\"country\": \"Spain\",\r\n\"year\": \"2020\",\r\n\"company\": \"The Simpson SL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"\tpm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"top\": 3,\r\n    \"name\": \"Homer\",\r\n    \"age\": 50,\r\n    \"country\": \"Spain\",\r\n    \"year\": 2020,\r\n    \"company\": \"The Simpson SL\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Spain/2020 no permitido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"\tpm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"top\": 3,\r\n    \"name\": \"Homer\",\r\n    \"age\": 50,\r\n    \"country\": \"Spain\",\r\n    \"year\": 2020,\r\n    \"company\": \"The Simpson SL\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/Spain/2020",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp",
+						"Spain",
+						"2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top y year /3/2020",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"top\": \"3\",\r\n\"name\": \"Bernard Arnault\",\r\n\"fortune\": \"78\",\r\n\"age\": \"85\",\r\n\"country\": \"France\",\r\n\"year\": \"2020\",\r\n\"company\": \"LVMH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/3/2020",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp",
+						"3",
+						"2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top y year /2/2020 no permitido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"\tpm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"top\": 2,\r\n\"name\": \"Bill Gates\",\r\n\"fortune\": 100,\r\n\"age\": 64,\r\n\"country\": \"EEUU\",\r\n\"year\": 2020,\r\n\"company\": \"Microsoft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/2/2020",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp",
+						"2",
+						"2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "erro 405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"\tpm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"top\": 1,\r\n\"name\": \"Bart\",\r\n\"fortune (billions of dollars)\": 1000,\r\n\"age\": 12,\r\n\"country\": \"Spain\",\r\n\"year\": 2021,\r\n\"company\": \"The Simpson SL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "country y year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=France&year=2020",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "France"
+						},
+						{
+							"key": "year",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "france y 2020",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"\tpm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"top\": \"3\",\r\n\"name\": \"Bernard Arnault\",\r\n\"fortune\": \"78\",\r\n\"age\": \"85\",\r\n\"country\": \"France\",\r\n\"year\": \"2020\",\r\n\"company\": \"LVMH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "richpp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"protocol": "https",
+					"host": [
+						"sos2021-22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"richpp"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
