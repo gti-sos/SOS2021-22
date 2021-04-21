@@ -134,7 +134,24 @@ module.exports.register = (app) => {
 	});
 
 	//PUT a un recurso
-	app.put(BASE_API_PATH_PAAWARDS+'/paawards/:country/:year', (request,response)=>{ 
+	app.put(BASE_API_PATH_PAAWARDS+"/paawards/:country/:year", (req, res) =>{
+  
+		var country = req.params.country;
+	  var year =  parseInt(req.params.year);
+	  var updatePaaward = req.body;
+	
+  
+		  dbPaawards.update({country: country, year: year}, updatePaaward, (error, numRemoved) => {
+			  // Checking if any data has been updated (numRemoved>=1)
+			  if (numRemoved == 0) {
+				  res.sendStatus(404, "NOT FOUND");
+			  } else {
+				  res.sendStatus(200, "OK");
+			  }
+		  });
+  
+	  });
+	/*app.put(BASE_API_PATH_PAAWARDS+'/paawards/:country/:year', (request,response)=>{ 
 
         dbPaawards.find({},(err,paawardsDB1)=>{
             if(err){
@@ -190,7 +207,7 @@ module.exports.register = (app) => {
                 }
             }
         });
-    });
+    });*/
 
 	//POST a un recurso (error)
 	app.post(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
