@@ -135,79 +135,25 @@ module.exports.register = (app) => {
 
 	//PUT a un recurso
 	app.put(BASE_API_PATH_PAAWARDS+"/paawards/:country/:year", (req, res) =>{
-  
 		var country = req.params.country;
-	  var year =  parseInt(req.params.year);
-	  var updatePaaward = req.body;
+	  	var year =  parseInt(req.params.year);
+	  	var updatePaaward = req.body;
 	
-  
-		  dbPaawards.update({country: country, year: year}, updatePaaward, (error, numRemoved) => {
-			  // Checking if any data has been updated (numRemoved>=1)
-			  if (numRemoved == 0) {
-				  res.sendStatus(404, "NOT FOUND");
-			  } else {
-				  res.sendStatus(200, "OK");
-			  }
-		  });
-  
-	  });
-	/*app.put(BASE_API_PATH_PAAWARDS+'/paawards/:country/:year', (request,response)=>{ 
-
-        dbPaawards.find({},(err,paawardsDB1)=>{
-            if(err){
+		dbPaawards.update({country: country, year: year}, updatePaaward, (err, numRemoved) => {
+			if(err){
                 console.error("Cannot update the resource using PUT" + err);
                 response.sendStatus(500);
-            }else{
-                if(paawardsDB1==0){
-                    console.log(`Database is empty`);
-                    return response.sendStatus(404);
-                }
-				else{
-                    if(!request.body.name &
-                        !request.body.year &
-                        !request.body.sport &
-                        !request.body.country &
-                        !request.body.age &
-                        !request.body.gender &
-                        !request.body.trophy){
-                        console.log(`Incorrect number of resources`);
-                        return response.sendStatus(400);
-                    }else{
-                        dbPaawards.find({"year": parseInt(request.params.year),"country": request.params.country},(err,paawardsDB2)=>{
-                            if(err){
-                                console.error("Ops, something went wrong");
-                                response.sendStatus(404);
-                            }
-                            if (paawardsDB2.length==0){
-                                console.log("Cannot find the resource with that information");
-                                response.sendStatus(404);
-                            }else{
-                                dbPaawards.update({"year": parseInt(request.params.year),"country": request.params.country},
-                                    {
-                                        "name": request.body.name,
-                                        "year": parseInt(request.params.year),
-                                        "sport": request.body.sport,
-                                        "country": request.params.country,
-                                        "age": parseInt(request.body.age),
-                                        "gender": request.body.gender,
-										"trophy": parseInt(request.body.trophy)
-                                    }, 
-                                    (err,dataUpdated)=>{
-                                        if(err){
-                                            console.error("Ops, something went wrong");
-                                            response.sendStatus(404);
-                                        }else{
-                                            console.log("Resource updated");
-                                            response.sendStatus(200);
-                                        }
-                                    });
-                            }
-                        });
-                    }
-                }
             }
-        });
-    });*/
+			else {
+				if (numRemoved == 0) {
+					res.sendStatus(404);
+				} else {
+					console.log("Resource updated");
+					res.sendStatus(200);
+				}
+			}	  
+		});
+	});
 
 	//POST a un recurso (error)
 	app.post(BASE_API_PATH_PAAWARDS + '/paawards/:country/:year', (request, response) => {
