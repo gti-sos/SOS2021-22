@@ -99,6 +99,29 @@
             >
           </Card>
         </Col>
+        <Col xs="auto">
+          <Card class="mb-3">
+            <CardHeader>
+              <CardTitle><h5>Richpp</h5></CardTitle>
+            </CardHeader>
+            <CardBody>
+              <CardSubtitle />
+              <CardText />
+              <a href="https://sos2021-22.herokuapp.com/api/v1/richpp"
+                ><Button color="primary">Backend</Button></a
+              >
+              <Button color="primary">Frontend</Button>
+              <a href="https://documenter.getpostman.com/view/15457127/TzJu9cgP"
+                ><Button color="info">Postman Documentation</Button></a
+              >
+            </CardBody>
+            <CardFooter
+              >developed by
+              <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a
+              ></CardFooter
+            >
+          </Card>
+        </Col>
       </Container>
     
     
