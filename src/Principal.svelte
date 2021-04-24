@@ -76,6 +76,29 @@
             >
           </Card>
         </Col>
+        <Col xs="auto">
+          <Card class="mb-3">
+            <CardHeader>
+              <CardTitle><h5>Paawards</h5></CardTitle>
+            </CardHeader>
+            <CardBody>
+              <CardSubtitle />
+              <CardText />
+              <a href="https://sos2021-22.herokuapp.com/api/v1/paawards"
+                ><Button color="primary">Backend</Button></a
+              >
+              <Button color="primary">Frontend</Button>
+              <a href="https://documenter.getpostman.com/view/9778361/TzJvdGUf"
+                ><Button color="info">Postman Documentation</Button></a
+              >
+            </CardBody>
+            <CardFooter
+              >developed by
+              <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a
+              ></CardFooter
+            >
+          </Card>
+        </Col>
       </Container>
     
     
