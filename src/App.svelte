@@ -4,7 +4,6 @@
   	import grmys from "./grmys-api.svelte";
 	import Principal from './Principal.svelte';
 	
-
 </script>
 
 <main>
