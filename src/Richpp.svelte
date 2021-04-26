@@ -1,27 +1,81 @@
-<script lang="ts">
-    import { onMount } from "svelte";
-    import { Table } from "sveltestrap";
+<script>
+    import {
+        Nav,
+        NavItem,
+        NavLink,
+        Button,
+        Table,
+        UncontrolledAlert,
+    } from "sveltestrap";
 
     let richmen = [];
+    let error = null;
+
+    const botonCargar = () => {
+        loadRichmen();
+    };
+
+    const botonBorrar = () => {
+        deleteRichmen();
+    };
+
+    async function loadRichmen() {
+        console.log("Loading richmen");
+        const res = await fetch("api/v1/richpp/loadInitialData").then(function (res) {
+            if (res.ok) {
+                console.log("Ok");
+                getRichmen();
+            } else {
+                error = 404;
+                console.log("Error");
+            }
+        });
+    }
 
     async function getRichmen() {
-        console.log("Recopilando datos de personas ricas...");
-        const res = await fetch("/richmen");
+        console.log("Fetching richmen...");
+        const res = await fetch("api/v1/richpp/");
 
         if (res.ok) {
             console.log("OK.");
             const json = await res.json();
             richmen = json;
-            console.log(`Tenemos ${richmen.length} richmen`);
+            console.log(`We have received ${richmen.length} richmen`);
         } else {
             console.log("Error!");
         }
     }
 
-    onMount(getRichmen);
+    async function deleteRichmen() {
+        console.log("Deleting data...");
+        const res = await fetch("api/v1/richpp", {
+            method: "DELETE",
+        }).then(function (res) {
+            if (res.ok) {
+                console.log("OK");
+                richmen = [];
+            } else {
+                console.log("Error");
+            }
+        });
+    }
 </script>
 
 <main>
+    <Nav>
+        <NavItem>
+            <NavLink href="/">Volver</NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink href="#" on:click={botonCargar}>Cargar richmen</NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink href="#" on:click={botonBorrar}>Borrar richmen</NavLink>
+        </NavItem>
+    </Nav>
+
+    <h2>RICHPP</h2>
+
     <Table bordered>
         <thead>
             <tr>
@@ -51,4 +105,10 @@
 </main>
 
 <style>
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: 100;
+    }
 </style>

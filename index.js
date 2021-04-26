@@ -33,11 +33,6 @@ ApiGrmys.register(app);
 var richpp = require("./richppAPI");
 richpp.register(app);
 
-var richmen = [{top: '1', name: 'Amancio'}, {top: '2', name: 'Jeff'}];
-app.get('/richmen', (request, response) =>{
-	response.send(richmen);
-});
-
 app.get('/info/paawards', (request, response) => {
 	response.send(`<!DOCTYPE html>
 	</html>

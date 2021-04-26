@@ -6,12 +6,12 @@
         Table,
         UncontrolledAlert} from "sveltestrap";
 
-    const botonCargar = () => {
+       const botonCargar = () => {
         loadPaawards();
     };
     const botonBorrar = () => {
         deletePaawards();
-    };        
+    };     
     let paawards = [];
     let error = null;
     async function loadPaawards() {

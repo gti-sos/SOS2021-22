@@ -7,9 +7,9 @@
 	import Richpp from './Richpp.svelte';
 	const routes = {
 		"/":Home,
-		"/paawards": paawards
+		"/paawards": paawards,
 		//"/grmys": grmys,
-		//"/richpp": Richpp,
+		"/richpp": Richpp,
 		//"/paawards": paawards,
 		//"*":NotFound
     };
