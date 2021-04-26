@@ -17,105 +17,167 @@
 
 <main>
   <h1>SOS2021-22</h1>
-
-  <h2>Team</h2>
   <Container>
-    <Col>
-      <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
-    </Col>
-    <Col>
-      <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
-    </Col>
-    <Col>
-      <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
+    <Col xs="auto">
+      <Card class="mb-3">
+        <CardHeader class="bg-secondary">
+          <CardTitle><h2>Team</h2></CardTitle>
+        </CardHeader>
+        <CardBody>
+          <Col>
+            <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
+          </Col>
+          <Col>
+            <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
+          </Col>
+          <Col>
+            <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
+          </Col>
+        </CardBody>
+      </Card>
     </Col>
   </Container>
 
-  <h2>Project description</h2>
-  <p>
-    Grupos de musica con mas grammys de la historia, personas más ricas del
-    mundo en el último lustro y ganadores del premio princesa de Asturias desde
-    el año 2000
-  </p>
-
   <Container>
-    <Col>
-      <a href="http://github.com/gti-sos/SOS2021-22"><b>Repository: </b>http://github.com/gti-sos/SOS2021-22</a>
-    </Col>
-    <Col>
-      <a href="http://sos2021-22.herokuapp.com"><b>URL: </b>http://sos2021-22.herokuapp.com</a>
+    <Col xs="auto">
+      <Card class="mb-3">
+        <CardHeader class="bg-secondary">
+          <CardTitle><h2>Project description</h2></CardTitle>
+        </CardHeader>
+        <CardBody>
+          <ul>
+            <li>Grupos de musica con mas grammys de la historia</li>
+            <li>Personas más ricas del mundo en el último lustro</li>
+            <li>Ganadores del premio princesa de Asturias desde el año 2000</li>
+          </ul>
+        </CardBody>
+      </Card>
     </Col>
   </Container>
 
-  <h2>APIs</h2>
   <Container>
     <Col xs="auto">
       <Card class="mb-3">
-        <CardHeader>
-          <CardTitle><h5>Grmys</h5></CardTitle>
+        <CardHeader class="bg-secondary">
+          <CardTitle><h2>Repository</h2></CardTitle>
         </CardHeader>
         <CardBody>
-          <CardSubtitle />
-          <CardText />
-          <a href="https://sos2021-22.herokuapp.com/api/v1/grmys">
-            <Button color="primary">Backend</Button>
-          </a>
-          <a href="/#/grmys">
-            <Button color="primary">Frontend</Button>
-          </a>
-          <a href="https://documenter.getpostman.com/view/15364149/TzJoFgNA">
-            <Button color="info">Postman Documentation</Button>
-          </a>
+          <a href="http://github.com/gti-sos/SOS2021-22">http://github.com/gti-sos/SOS2021-22</a>
         </CardBody>
-        <CardFooter >developed by
-          <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
-        </CardFooter>
       </Card>
     </Col>
+  </Container>
+
+  <Container>
     <Col xs="auto">
       <Card class="mb-3">
-        <CardHeader>
-          <CardTitle><h5>Paawards</h5></CardTitle>
+        <CardHeader class="bg-secondary">
+          <CardTitle><h2>Heroku</h2></CardTitle>
         </CardHeader>
         <CardBody>
-          <CardSubtitle />
-          <CardText />
-          <a href="https://sos2021-22.herokuapp.com/api/v1/paawards">
-            <Button color="primary">Backend</Button>
-          </a>
-          <a href="/#/paawards">
-            <Button color="primary">Frontend</Button>
-          </a>
-          <a href="https://documenter.getpostman.com/view/9778361/TzJvdGUf">
-            <Button color="info">Postman Documentation</Button>
-          </a>
+          <a href="http://sos2021-22.herokuapp.com">http://sos2021-22.herokuapp.com</a>
         </CardBody>
-        <CardFooter> developed by
-          <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
-        </CardFooter>
       </Card>
     </Col>
+  </Container>
+
+  <Container>
     <Col xs="auto">
       <Card class="mb-3">
-        <CardHeader>
-          <CardTitle><h5>Richpp</h5></CardTitle>
+        <CardHeader class="bg-secondary">
+          <CardTitle><h2>APIs</h2></CardTitle>
         </CardHeader>
         <CardBody>
-          <CardSubtitle />
-          <CardText />
-          <a href="https://sos2021-22.herokuapp.com/api/v1/richpp">
-            <Button color="primary">Backend</Button>
-          </a>
-          <a href="/#/richpp">
-            <Button color="primary">Frontend</Button>
-          </a>
-          <a href="https://documenter.getpostman.com/view/15457127/TzJu9cgP">
-            <Button color="info">Postman Documentation</Button>
-          </a>
+          <div class="row">
+            <div class="col-sm">
+              <Card class="mb-3">
+                <CardHeader class="bg-secondary">
+                  <CardTitle><h2>API Grmys</h2></CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <div class="row">
+                    <div class="col-md">
+                      <a href="https://sos2021-22.herokuapp.com/api/v1/grmys">
+                        <Button color="dark">Backend</Button>
+                      </a>
+                      <a href="/#/grmys">
+                        <Button color="dark">Frontend</Button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md p-1">
+                      <a href="https://documenter.getpostman.com/view/15364149/TzJoFgNA">
+                        <Button color="danger">Postman Documentation</Button>
+                      </a>
+                    </div>
+                  </div>
+                </CardBody>
+                <CardFooter >Developed by
+                  <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
+                </CardFooter>
+              </Card>
+            </div>
+            <div class="col-sm">
+              <Card class="mb-3">
+                <CardHeader class="bg-secondary">
+                  <CardTitle><h2>API Richpp</h2></CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <div class="row">
+                    <div class="col-md">
+                      <a href="https://sos2021-22.herokuapp.com/api/v1/richpp">
+                        <Button color="dark">Backend</Button>
+                      </a>
+                      <a href="/#/richpp">
+                        <Button color="dark">Frontend</Button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md p-1">
+                      <a href="https://documenter.getpostman.com/view/15457127/TzJu9cgP">
+                        <Button color="danger">Postman Documentation</Button>
+                      </a>
+                    </div>
+                  </div>
+                </CardBody>
+                <CardFooter>Developed by
+                  <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
+                </CardFooter>
+              </Card>
+            </div>
+            <div class="col-sm">
+              <Card class="mb-3">
+                <CardHeader class="bg-secondary">
+                  <CardTitle><h2>API Paawards</h2></CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <div class="row">
+                    <div class="col-md">
+                      <a href="https://sos2021-22.herokuapp.com/api/v1/paawards">
+                        <Button color="dark">Backend</Button>
+                      </a>
+                      <a href="/#/paawards">
+                        <Button color="dark">Frontend</Button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md p-1">
+                      <a href="https://documenter.getpostman.com/view/9778361/TzJvdGUf">
+                        <Button color="danger">Postman Documentation</Button>
+                      </a>
+                    </div>
+                  </div>
+                </CardBody>
+                <CardFooter>Developed by
+                  <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
+                </CardFooter>
+              </Card>
+            </div>
+          </div>
         </CardBody>
-        <CardFooter> developed by
-          <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
-        </CardFooter>
       </Card>
     </Col>
   </Container>
@@ -129,10 +191,13 @@
     margin: 0 auto;
   }
   h1 {
-    color: #ff3e00;
+    color: #ff9900;
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
+  }
+  h2 {
+    color: #000000;
   }
   b {
     color: #00c1ff;
