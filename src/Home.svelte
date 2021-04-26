@@ -13,7 +13,7 @@
         Container,
         Row,
       } from "sveltestrap";
-    </script>
+</script>
     
     
     <main>
@@ -87,7 +87,7 @@
               <a href="https://sos2021-22.herokuapp.com/api/v1/paawards"
                 ><Button color="primary">Backend</Button></a
               >
-              <Button color="primary">Frontend</Button>
+              <a href="/#/paawards"><Button color="primary">Frontend</Button></a>
               <a href="https://documenter.getpostman.com/view/9778361/TzJvdGUf"
                 ><Button color="info">Postman Documentation</Button></a
               >
