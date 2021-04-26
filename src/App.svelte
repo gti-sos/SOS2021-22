@@ -8,9 +8,8 @@
 	const routes = {
 		"/":Home,
 		"/paawards": paawards,
-		//"/grmys": grmys,
+		"/grmys": grmys,
 		"/richpp": Richpp,
-		//"/paawards": paawards,
 		//"*":NotFound
     };
 </script>

@@ -80,15 +80,15 @@
             </tr>
         </thead>
         <tbody>
-            {#each grmys as grmy}
+            {#each grmys as gramy}
                 <tr>
-                    <td>{grmys}</td>
-                    <td>{grmy.year}</td>
-                    <td>{grmy.sport}</td>
-                    <td>{grmy.country}</td>
-                    <td>{grmy.age}</td>
-                    <td>{grmy.gender}</td>
-                    <td>{grmy.trophy}</td>
+                    <td>{gramy.ranking}</td>
+                    <td>{gramy.name}</td>
+                    <td>{gramy.award}</td>
+                    <td>{gramy.country}</td>
+                    <td>{gramy.groupmember}</td>
+                    <td>{gramy.style}</td>
+                    <td>{gramy.year}</td>
                 </tr>
             {/each}
         </tbody>

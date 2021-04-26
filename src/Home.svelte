@@ -60,7 +60,9 @@
           <a href="https://sos2021-22.herokuapp.com/api/v1/grmys">
             <Button color="primary">Backend</Button>
           </a>
-          <Button color="primary">Frontend</Button>
+          <a href="/#/grmys">
+            <Button color="primary">Frontend</Button>
+          </a>
           <a href="https://documenter.getpostman.com/view/15364149/TzJoFgNA">
             <Button color="info">Postman Documentation</Button>
           </a>
