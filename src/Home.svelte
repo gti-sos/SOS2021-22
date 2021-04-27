@@ -21,7 +21,7 @@
     <Col xs="auto">
       <Card class="mb-3">
         <CardHeader class="bg-secondary">
-          <CardTitle><h2>Team</h2></CardTitle>
+          <CardTitle><h2>Equipo</h2></CardTitle>
         </CardHeader>
         <CardBody>
           <Col>
@@ -42,7 +42,7 @@
     <Col xs="auto">
       <Card class="mb-3">
         <CardHeader class="bg-secondary">
-          <CardTitle><h2>Project description</h2></CardTitle>
+          <CardTitle><h2>Descripcion Proyecto</h2></CardTitle>
         </CardHeader>
         <CardBody>
           <ul>
@@ -59,7 +59,7 @@
     <Col xs="auto">
       <Card class="mb-3">
         <CardHeader class="bg-secondary">
-          <CardTitle><h2>Repository</h2></CardTitle>
+          <CardTitle><h2>Repositorio</h2></CardTitle>
         </CardHeader>
         <CardBody>
           <a href="http://github.com/gti-sos/SOS2021-22">http://github.com/gti-sos/SOS2021-22</a>
@@ -108,12 +108,12 @@
                   <div class="row">
                     <div class="col-md p-1">
                       <a href="https://documenter.getpostman.com/view/15364149/TzJoFgNA">
-                        <Button color="danger">Postman Documentation</Button>
+                        <Button color="danger">Documentacion Postman</Button>
                       </a>
                     </div>
                   </div>
                 </CardBody>
-                <CardFooter >Developed by
+                <CardFooter >desarrollado por
                   <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
                 </CardFooter>
               </Card>
@@ -137,12 +137,12 @@
                   <div class="row">
                     <div class="col-md p-1">
                       <a href="https://documenter.getpostman.com/view/15457127/TzJu9cgP">
-                        <Button color="danger">Postman Documentation</Button>
+                        <Button color="danger">Documentacion Postman</Button>
                       </a>
                     </div>
                   </div>
                 </CardBody>
-                <CardFooter>Developed by
+                <CardFooter>desarrollado por
                   <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
                 </CardFooter>
               </Card>
@@ -166,12 +166,12 @@
                   <div class="row">
                     <div class="col-md p-1">
                       <a href="https://documenter.getpostman.com/view/9778361/TzJvdGUf">
-                        <Button color="danger">Postman Documentation</Button>
+                        <Button color="danger">Documentacion Postman</Button>
                       </a>
                     </div>
                   </div>
                 </CardBody>
-                <CardFooter>Developed by
+                <CardFooter>desarrollado por
                   <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
                 </CardFooter>
               </Card>
