@@ -70,13 +70,13 @@
     <Table>
         <thead>
             <tr>
-                <td>Ranking</td>
-                <td>Name</td>
-                <td>Award</td>
-                <td>Country</td>
-                <td>groupmember</td>
-                <td>Style</td>
-                <td>Year</td>
+                <td>clasificacion</td>
+                <td>Nombre</td>
+                <td>Premios</td>
+                <td>Pais</td>
+                <td>Miembros</td>
+                <td>Estilo</td>
+                <td>Año</td>
             </tr>
         </thead>
         <tbody>
