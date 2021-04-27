@@ -79,13 +79,13 @@
     <Table bordered>
         <thead>
             <tr>
-                <td>Top</td>
-                <td>Name</td>
-                <td>Fortune</td>
-                <td>Age</td>
-                <td>Country</td>
-                <td>Year</td>
-                <td>Company</td>
+                <td>Clasificación</td>
+                <td>Nombre</td>
+                <td>Fortuna</td>
+                <td>Edad</td>
+                <td>País</td>
+                <td>Año</td>
+                <td>Empresa</td>
             </tr>
         </thead>
         <tbody>
