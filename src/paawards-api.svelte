@@ -70,13 +70,13 @@
     <Table>
         <thead>
             <tr>
-                <td>Name</td>
-                <td>Year</td>
-                <td>Sport</td>
-                <td>Country</td>
-                <td>Age</td>
-                <td>Gender</td>
-                <td>Trophy</td>
+                <td>Nombre</td>
+                <td>Año</td>
+                <td>Deporte</td>
+                <td>Pais</td>
+                <td>Edad</td>
+                <td>Genero</td>
+                <td>Trofeos</td>
             </tr>
         </thead>
         <tbody>
