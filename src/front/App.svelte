@@ -2,11 +2,13 @@
 	
 	import Router from 'svelte-spa-router';
 	import Home from "./Home.svelte";
-	import grmys from './grmysApi.svelte';
-	import paawards from './paawards-api.svelte';
-	import Richpp from './Richpp.svelte';
+	import info from "./info.svelte";
+	import grmys from './grmysApi/grmysApi.svelte';
+	import paawards from './paawardsApi/paawards-api.svelte';
+	import Richpp from './richppApi/Richpp.svelte';
 	const routes = {
 		"/":Home,
+		"/info":info,
 		"/paawards": paawards,
 		"/grmys": grmys,
 		"/richpp": Richpp,

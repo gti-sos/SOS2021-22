@@ -33,6 +33,11 @@
           <Col>
             <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
           </Col>
+          <Col> <a href="/#/info">
+            <Button color="dark">info</Button>
+          </a>
+          </Col>
+         
         </CardBody>
       </Card>
     </Col>

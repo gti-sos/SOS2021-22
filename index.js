@@ -26,7 +26,7 @@ var paawardsAPI = require("./paawardsAPI");
 paawardsAPI.register(app);
 
 /*Codigo --- Chuma*/
-var ApiGrmys=require("./ApiGrmys");
+var ApiGrmys=require("./src/back/grmysApi");
 ApiGrmys.register(app);
 
 /*Codigo --- Manuel*/
