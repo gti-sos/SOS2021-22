@@ -92,6 +92,26 @@ module.exports.register = (app) => {
         });
     });
 
+     //GET a un recurso (obtener dato nombre) usando nedb
+     app.get(BASE_API_PATH_RICHPP + '/richpp/:name', (request, response) => {
+        console.log('-------------------------------------');
+        var name = request.params.name;
+
+        db.find({ name: name }).exec((err, data) => {
+            if (err) {
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            } else if (data.length >= 1) {
+                delete data[0]._id;
+                response.status(200).send(JSON.stringify(data[0], null, 2));
+                console.log("Data sent:" + JSON.stringify(data[0], null, 2));
+            } else {
+                response.sendStatus(404);
+                console.log("The data requested is empty");
+            }
+        });
+    });
+
     //POST a richhpp usando nedb
     app.post(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
         console.log('-------------------------------------');
@@ -141,6 +161,26 @@ module.exports.register = (app) => {
         });
     });
 
+    //DELETE a un recurso (eliminar dato por nombre) usando nedb
+    app.delete(BASE_API_PATH_RICHPP + '/richpp/:name', (request, response) => {
+        console.log('-------------------------------------');
+        var name = request.params.name;
+
+
+        db.remove({ name: name }, (err, numRemoved) => {
+            if (err) {
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            } else if (numRemoved == 0) {
+                response.sendStatus(404);
+                console.log("There is no such data in the database");
+            } else {
+                response.sendStatus(200);
+                console.log("Object removed");
+            }
+        });
+    });
+
     //PUT a un recurso (actualizar dato por top y año)
     app.put(BASE_API_PATH_RICHPP + '/richpp/:top/:year', (request, response) => {
         console.log('-------------------------------------');
@@ -168,6 +208,33 @@ module.exports.register = (app) => {
             });
         }
     });
+
+    //PUT a un recurso (actualizar dato por nombre)
+    app.put(BASE_API_PATH_RICHPP + '/richpp/:name', (request, response) => {
+        console.log('-------------------------------------');
+        var newData = request.body;
+        var name = request.body.name;
+        var query = { "name": name };
+
+        if (!newData['top'] || !newData.name || !newData['fortune'] || !newData["age"] || !newData['country']
+            || !newData['year'] || !newData["company"] || Object.keys(newData).length != 7) {
+            console.log("The data is not correctly provided");
+            return response.sendStatus(400);
+        } else {
+            db.update(query, newData, (err, datoCambio) => {
+                if (err) {
+                    console.error("ERROR accesing DB in PUT");
+                    response.sendStatus(500);
+                } else if (datoCambio == 0) {
+                    response.sendStatus(404);
+                    console.log("There is no such data in the database");
+                } else {
+                    response.sendStatus(200);
+                    console.log("Database updated");
+                }
+            });
+        }
+    })
 
     //PUT (metodo no permitido)
     app.put(BASE_API_PATH_RICHPP + '/richpp', (request, response) => {
