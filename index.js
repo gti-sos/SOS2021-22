@@ -22,7 +22,7 @@ app.get('/index', (request, response) => {
 });
 
 /*Codigo --- Antonio*/
-var paawardsAPI = require("./paawardsAPI");
+var paawardsAPI = require("./src/back/paawardsAPI");
 paawardsAPI.register(app);
 
 /*Codigo --- Chuma*/

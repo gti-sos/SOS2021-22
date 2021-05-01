@@ -1,18 +1,29 @@
 <script>
-    import {Nav,
-            NavItem,
-            NavLink,
-        Button,
-        Table,
-        UncontrolledAlert} from "sveltestrap";
+    //Imports sveltestrap
+    import {Nav,NavItem,NavLink,Button,Table} from "sveltestrap";
 
-       const botonCargar = () => {
+    //Botones
+    const botonCargar = () => {
         loadPaawards();
     };
     const botonBorrar = () => {
         deletePaawards();
-    };     
+    };  
+    const botonInsertar = () => {
+        insertPaaward();
+    };
+    
+    
     let paawards = [];
+    let newPaaward = {
+                        name: "",
+                        year: "",
+                        sport: "",
+                        country: "",
+                        age: "",
+                        gender: "",
+                        trophy: ""
+                    };
     let error = null;
     async function loadPaawards() {
         console.log("Loading paawards");
@@ -52,6 +63,27 @@
             }
         });
     }
+
+    async function insertPaaward(){
+        console.log("Inserting paaward "+JSON.stringify(newPaaward));
+        const res = await fetch("api/v1/paawards",
+                    {
+                        method : "POST",
+                        body: JSON.stringify(newPaaward),
+                        headers:{                               
+                            "Content-Type": "application/json"
+                        }
+                    }
+        ).then(function(res){
+            if (res.ok) {
+                console.log("OK");
+                paawards.push(newPaaward);
+                getPaawards();
+            } else {
+                console.log("Error");
+            }
+        });
+    }
 </script>
 
 <main>
@@ -67,7 +99,7 @@
         </NavItem>
     </Nav>
     <h2>PAAWARDS</h2>
-    <Table>
+    <Table bordered>
         <thead>
             <tr>
                 <td>Nombre</td>
@@ -77,9 +109,20 @@
                 <td>Edad</td>
                 <td>Genero</td>
                 <td>Trofeos</td>
+                <td>Acciones</td>
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td><input bind:value="{newPaaward.name}"></td>
+                <td><input bind:value="{newPaaward.year}"></td>
+                <td><input bind:value="{newPaaward.sport}"></td>
+                <td><input bind:value="{newPaaward.country}"></td>
+                <td><input bind:value="{newPaaward.age}"></td>
+                <td><input bind:value="{newPaaward.gender}"></td>
+                <td><input bind:value="{newPaaward.trophy}"></td>
+                <td><Button on:click={botonInsertar}>Insertar</Button></td>
+            </tr>
             {#each paawards as paaward}
                 <tr>
                     <td>{paaward.name}</td>
