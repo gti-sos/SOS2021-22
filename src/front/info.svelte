@@ -96,7 +96,7 @@
                       </div>
                     </div>
                   </CardBody>
-                  <CardFooter >desarrollado por
+                  <CardFooter >Desarrollado por
                     <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
                   </CardFooter>
                 </Card>
@@ -125,7 +125,7 @@
                       </div>
                     </div>
                   </CardBody>
-                  <CardFooter>desarrollado por
+                  <CardFooter>Desarrollado por
                     <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
                   </CardFooter>
                 </Card>
@@ -154,7 +154,7 @@
                       </div>
                     </div>
                   </CardBody>
-                  <CardFooter>desarrollado por
+                  <CardFooter>Desarrollado por
                     <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
                   </CardFooter>
                 </Card>
