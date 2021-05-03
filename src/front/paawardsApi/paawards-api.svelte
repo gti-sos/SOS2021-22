@@ -1,6 +1,7 @@
 <script>
     //Imports sveltestrap
     import {Nav,NavItem,NavLink,Button,Table} from "sveltestrap";
+    import {push} from "svelte-spa-router";
 
     //Botones
     const botonCargar = () => {
@@ -12,7 +13,6 @@
     const botonInsertar = () => {
         insertPaaward();
     };
-    
     
     let paawards = [];
     let newPaaward = {
@@ -84,6 +84,20 @@
             }
         });
     }
+
+    async function deletePaaward(paaward) {
+        console.log(`Deleting paaward whose country is ${paaward.country} and year is ${paaward.year}`);
+        const res = await fetch("api/v1/paawards/"+paaward.country+"/"+paaward.year, {
+            method: "DELETE",
+        }).then(function (res) {
+            if (res.ok) {
+                console.log("OK");
+                getPaawards();
+            } else {
+                console.log("Error");
+            }
+        });
+    }
 </script>
 
 <main>
@@ -93,6 +107,9 @@
         </NavItem>
         <NavItem>
             <NavLink href="#" on:click={botonCargar}>Cargar paawards</NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink href="#/paawards/editPaawards">Editar paawards</NavLink>
         </NavItem>
         <NavItem>
             <NavLink href="#" on:click={botonBorrar}>Borrar paawards</NavLink>
@@ -132,6 +149,7 @@
                     <td>{paaward.age}</td>
                     <td>{paaward.gender}</td>
                     <td>{paaward.trophy}</td>
+                    <td><Button on:click={deletePaaward(paaward)}>Borrar</Button></td>
                 </tr>
             {/each}
         </tbody>

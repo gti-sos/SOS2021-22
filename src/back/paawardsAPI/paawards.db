@@ -1,0 +1,20 @@
+{"name":"Antonio","year":"2021","sport":"Tenis","country":"Spain","age":"20","gender":"Masculino","trophy":"1","_id":"29uXyIetXu3IhMG8"}
+{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0,"_id":"7Cy1aXPNvFuIAqGp"}
+{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7,"_id":"N0N5OKH1Dmqtti1V"}
+{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10,"_id":"emb77NIZCkY7UtDv"}
+{"$$deleted":true,"_id":"29uXyIetXu3IhMG8"}
+{"$$deleted":true,"_id":"7Cy1aXPNvFuIAqGp"}
+{"$$deleted":true,"_id":"N0N5OKH1Dmqtti1V"}
+{"$$deleted":true,"_id":"emb77NIZCkY7UtDv"}
+{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10,"_id":"cJmRkW3JSmBsVekC"}
+{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7,"_id":"jNMPb6pvwlaMQ1nR"}
+{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0,"_id":"LQ16Du9rc4V01IxW"}
+{"$$deleted":true,"_id":"LQ16Du9rc4V01IxW"}
+{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10,"_id":"eaPctZ0dn5vAJZXf"}
+{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7,"_id":"lHqtWDkDRIMe5pEt"}
+{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0,"_id":"v6MJN6wBghXTgskT"}
+{"$$deleted":true,"_id":"cJmRkW3JSmBsVekC"}
+{"$$deleted":true,"_id":"eaPctZ0dn5vAJZXf"}
+{"$$deleted":true,"_id":"jNMPb6pvwlaMQ1nR"}
+{"$$deleted":true,"_id":"lHqtWDkDRIMe5pEt"}
+{"$$deleted":true,"_id":"v6MJN6wBghXTgskT"}
