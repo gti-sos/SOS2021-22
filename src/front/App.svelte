@@ -6,7 +6,8 @@
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import paawards from './paawardsApi/paawards-api.svelte';
-	import paawardEdit from './paawardsApi/paawardsEdit.svelte';
+	import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
+	//import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
