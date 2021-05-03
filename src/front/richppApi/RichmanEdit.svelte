@@ -71,6 +71,12 @@
 </script>
 
 <main>
+    <Nav>
+        <NavItem>
+            <NavLink href="/#/richpp/">Volver</NavLink>
+        </NavItem>
+    </Nav>
+
     <h3>Editar Richman <strong>{params.name}</strong></h3>
 
     <Table bordered>
