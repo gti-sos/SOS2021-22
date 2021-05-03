@@ -109,7 +109,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="https://sos2021-22.herokuapp.com/api/v1/richpp">
+                        <a href="https://sos2021-22.herokuapp.com/api/v2/richpp">
                           <Button color="dark">Backend</Button>
                         </a>
                         <a href="/#/richpp">

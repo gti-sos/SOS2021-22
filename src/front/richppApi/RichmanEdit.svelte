@@ -20,7 +20,7 @@
     let updateYear = "X";
     let updateCompany = "X";
 
-    const BASE_API_PATH = "/api/v1";
+    const BASE_API_PATH = "/api/2";
 
     onMount(getRichman);
 

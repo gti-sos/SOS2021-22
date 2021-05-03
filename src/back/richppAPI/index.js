@@ -4,7 +4,7 @@ var path = require("path");
 var dbfile = path.join(__dirname, "richpp.db");
 var db = new Datastore({ filename: dbfile, autoload: true });
 
-var BASE_API_PATH_RICHPP = '/api/v1';
+var BASE_API_PATH_RICHPP = '/api/v21';
 
 /*Codigo --- Manuel*/
 var richpp = [];
