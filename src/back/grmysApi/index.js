@@ -380,31 +380,7 @@ module.exports.register = (app) => {
 			}
 		});
 	});
-	/*app.put(BASE_API_PATH_GRMYS + '/grmys/:name', (request, response) => {
-        console.log('-------------------------------------');
-        var newData = request.body;
-        var name = request.body.name;
-        var query = { "name": name };
-
-        if (!newData['ranking'] || !newData.name || !newData['award'] || !newData["country"] || !newData['groupmember']
-            || !newData['style'] || !newData["year"] || Object.keys(newData).length != 7) {
-            console.log("The data is not correctly provided");
-            return response.sendStatus(400);
-        } else {
-            db.update(query, newData, (err, datoCambio) => {
-                if (err) {
-                    console.error("ERROR accesing DB in PUT");
-                    response.sendStatus(500);
-                } else if (datoCambio == 0) {
-                    response.sendStatus(404);
-                    console.log("There is no such data in the database");
-                } else {
-                    response.sendStatus(200);
-                    console.log("Database updated");
-                }
-            });
-        }
-    })*/
+	
 	app.put(BASE_API_PATH_GRMYS + '/grmys/:ranking/:name', (request, response) => {
 
 		var newData = request.body;

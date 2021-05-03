@@ -25,11 +25,13 @@
     const botonBorrar = () => {
         deleteGrmys();
     };   
-    let isOpen=false;  
-    let visible=false;
-    let pag = 1;
+    
+    
+    let page = 1;
+    let last_page = 1;
+    let total = 0;
     let datos=5;
-    let color = "danger";
+    
     let grmys = [];
     let newGrmys = {
 		ranking: "",
@@ -52,7 +54,6 @@
         const res = await fetch("api/v1/grmys/loadInitialData").then(function (res) {
             if (res.ok) {
                 console.log("Ok");
-                color = "success";
                 okMSG = "Datos cargados correctamente";
                 getGrmys();
             } 
@@ -65,7 +66,7 @@
     }
     async function getGrmys() {
         console.log("Fetching Grmys");
-        const res = await fetch("api/v1/grmys?limit=5&offset=1");
+        const res = await fetch("api/v1/grmys?limit=10&offset=1");
         if (res.ok) {
             console.log("Ok");
             const json = await res.json();
@@ -91,18 +92,15 @@
                  if(res.status == 201){
                      getGrmys();
                      console.log("Dato introducido");
-                     color = "success";
                      okMSG="Entrada introducida correctamente a la base de datos";
                  }
                  else if(res.status == 400){
                      console.log("ERROR Data was not correctly introduced");
-                     color = "danger";
                      errorMSG= "Los datos de la entrada no fueron introducidos correctamente";
                  }
                  else if(res.status == 409){
                      console.log("ERROR There is already a data with that country and year in the da tabase");
-                     color = "danger";
-                     errorMSG= "Ya existe una entrada en la base de datos con la fecha y el país introducido";
+                     errorMSG= "Ya existe una entrada en la base de datos con los mismos datos";
                  }
              });	
          }
@@ -161,14 +159,14 @@
         </NavItem>
     </Nav>
     <h2>GRAMYS</h2>
-    <Alert color={color} >
+    
         {#if errorMSG}
         <p style="color: red">ERROR: {errorMSG}</p>
         {/if}
         {#if okMSG}
         <p style="color: green">{okMSG}</p>
         {/if}
-    </Alert>
+    
     
     
     <Table bordered>
