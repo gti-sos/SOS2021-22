@@ -24,7 +24,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/loadInitialData",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp/loadInitialData",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -33,7 +33,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp",
 						"loadInitialData"
 					]
@@ -60,7 +60,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -69,7 +69,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					]
 				}
@@ -95,7 +95,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?top=1",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?top=1",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -104,7 +104,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -136,7 +136,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?name=Amancio Ortega",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?name=Amancio Ortega",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -145,7 +145,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -177,7 +177,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?fortune=113",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?fortune=113",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -186,7 +186,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -218,7 +218,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?age=56",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?age=56",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -227,7 +227,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -259,7 +259,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=Spain",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?country=Spain",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -268,7 +268,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -300,7 +300,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=Andorra",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?country=Andorra",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -309,7 +309,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -341,7 +341,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?year=2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?year=2020",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -350,7 +350,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -382,7 +382,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?year=2010",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?year=2010",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -391,7 +391,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -423,7 +423,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?company=Inditex",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?company=Inditex",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -432,7 +432,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -464,7 +464,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?offset=0&limit=5",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?offset=0&limit=5",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -473,7 +473,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -509,7 +509,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=France&year=2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?country=France&year=2020",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -518,7 +518,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -554,7 +554,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?top=1&year=2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?top=1&year=2020",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -563,7 +563,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -608,7 +608,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -617,7 +617,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					]
 				}
@@ -652,7 +652,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -661,7 +661,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					]
 				}
@@ -696,7 +696,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/Spain/2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp/Spain/2020",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -705,7 +705,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp",
 						"Spain",
 						"2020"
@@ -742,7 +742,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/3/2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp/3/2020",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -751,7 +751,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp",
 						"3",
 						"2020"
@@ -788,7 +788,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp/2/2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp/2/2020",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -797,7 +797,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp",
 						"2",
 						"2020"
@@ -834,7 +834,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -843,7 +843,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					]
 				}
@@ -869,7 +869,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp?country=France&year=2020",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp?country=France&year=2020",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -878,7 +878,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					],
 					"query": [
@@ -923,7 +923,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -932,7 +932,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					]
 				}
@@ -958,7 +958,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/richpp",
+					"raw": "https://sos2021-22.herokuapp.com/api/v2/richpp",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -967,7 +967,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"richpp"
 					]
 				}
