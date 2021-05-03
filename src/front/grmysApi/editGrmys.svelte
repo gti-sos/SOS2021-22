@@ -19,14 +19,16 @@
     onMount(getGrmys);
 
     async function getGrmys() {
-      console.log("Fetching stat..." + params.name);
-      const res = await fetch(BASE_API_PATH +
-        "/grmys/" + params.name);
+        console.log("Fetching stat..." + params.ranking + " " + params.name);
+      const res = await fetch(BASE_API_PATH + 
+        "/grmys/" + params.ranking +"/" + params.name
+      );
       if (res.ok) {
         console.log("Ok:");
+        
         const json = await res.json();
         grmys = json;
-        UDranking = grmys["ranking"];
+        UDranking = grmys.ranking;
         UDname = grmys.name;
         UDawards = grmys["award"];
         UDcountry = grmys["country"];
@@ -46,17 +48,18 @@
       }
     }
     async function updateGrmys() {
-  console.log("Updating grmys..." + JSON.stringify(params.name));
-  const res = await fetch(BASE_API_PATH + "/grmys/"+ params.name, {
+        console.log("Updating grmys..." + JSON.stringify(params.ranking)+JSON.stringify(params.name));
+        
+  const res = await fetch(BASE_API_PATH +"/grmys/" + params.ranking + "/" + params.name, {
       method: "PUT",
       body: JSON.stringify({
-          "ranking": UDranking,
-          "name": params.name,
-          "awards":UDawards,
-          "country": UDcountry,
-          "groupmember": UDgroupmember,
-          "style":UDstyle,
-          "year":UDyear
+          ranking: params.ranking,
+          name: params.name,
+          award:UDawards,
+          country: UDcountry,
+          groupmember: UDgroupmember,
+          style:UDstyle,
+          year:UDyear
       }),
       headers: {
           "Content-Type": "application/json"
@@ -81,7 +84,7 @@
       }
   });
     }
-   
+    
   </script>
   
   <main>

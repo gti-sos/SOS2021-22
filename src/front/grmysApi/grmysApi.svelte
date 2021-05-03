@@ -206,7 +206,7 @@
                     <td>{gramy.year}</td>
                     <td><Button outline color="danger" on:click={deleteGrmysdata(gramy.country,gramy.year)}>Borrar</Button></td>
                         <td>
-                            <a href="#/grmys/{gramy.name}">
+                            <a href="#/grmys/{gramy.ranking}/{gramy.name}">
                              <Button color="primary">Editar</Button>
                             </a>
                         </td> 

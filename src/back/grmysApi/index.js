@@ -270,6 +270,30 @@ module.exports.register = (app) => {
 			}
 		});
 	});
+	app.get(BASE_API_PATH_GRMYS + '/grmys/:ranking/:name', (request, response) => {
+
+		var name = request.params.name;
+		var ranking = request.params.ranking;
+		var query = { "ranking": ranking, "name": name };
+
+		db.find(query).exec((err, data) => {
+			if (err) {
+				console.error("ERROR accesing DB in GET");
+				response.sendStatus(500);
+			}
+			else {
+				if (data.length >= 1) {
+					delete data[0]._id;
+					response.status(200).send(JSON.stringify(data[0], null, 2));
+					console.log("Data sent:" + JSON.stringify(data[0], null, 2));
+				}
+				else {
+					response.sendStatus(404);
+					console.log("The data requested is empty");
+				}
+			}
+		});
+	});
 	//GET /country/year/
 	app.get(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
 
@@ -356,7 +380,7 @@ module.exports.register = (app) => {
 			}
 		});
 	});
-	app.put(BASE_API_PATH_GRMYS + '/grmys/:name', (request, response) => {
+	/*app.put(BASE_API_PATH_GRMYS + '/grmys/:name', (request, response) => {
         console.log('-------------------------------------');
         var newData = request.body;
         var name = request.body.name;
@@ -380,7 +404,7 @@ module.exports.register = (app) => {
                 }
             });
         }
-    })
+    })*/
 	app.put(BASE_API_PATH_GRMYS + '/grmys/:ranking/:name', (request, response) => {
 
 		var newData = request.body;

@@ -16,7 +16,7 @@
 		"/grmys": grmys,
 		"/richpp": Richpp,
 		"/richman/:name": RichmanEdit,
-		"/grmys/:name": editGrmys,
+		"/grmys/:ranking/:name": editGrmys,
 		"*":NotFound
     };
 </script>
