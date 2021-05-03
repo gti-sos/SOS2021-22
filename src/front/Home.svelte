@@ -204,9 +204,6 @@
   h2 {
     color: #000000;
   }
-  b {
-    color: #00c1ff;
-  }
   @media (min-width: 640px) {
     main {
       max-width: none;

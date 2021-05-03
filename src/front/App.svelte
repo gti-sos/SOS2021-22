@@ -6,7 +6,7 @@
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import paawards from './paawardsApi/paawards-api.svelte';
-	import paawardsEdit from './paawardsApi/paawardsEdit.svelte';
+	import paawardEdit from './paawardsApi/paawardsEdit.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
@@ -14,7 +14,7 @@
 		"/":Home,
 		"/info":info,
 		"/paawards": paawards,
-		"/paawards/editPaawards": paawardsEdit,
+		"/paawards/:country/:year": paawardEdit,
 		"/grmys": grmys,
 		"/richpp": Richpp,
 		"/richman/:name": RichmanEdit,
