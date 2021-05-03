@@ -1,5 +1,6 @@
 <script>
-    //Imports sveltestrap
+    //Imports svelte
+    import { onMount } from "svelte";
     import {Nav,NavItem,NavLink,Button,Table} from "sveltestrap";
 
     //Botones
@@ -25,30 +26,33 @@
                     };
     let error = null;
     async function loadPaawards() {
-        console.log("Loading paawards");
-        const res = await fetch("api/v1/paawards/loadInitialData").then(function (res) {
-            if (res.ok) {
-                console.log("Ok");
-                getPaawards();
-            } 
-            else {
-                error = 404;
-                console.log("Error");
-            }
-        });
-    }
-    async function getPaawards() {
-        console.log("Fetching paawards");
-        const res = await fetch("api/v1/paawards/");
-        if (res.ok) {
-            console.log("Ok");
-            const json = await res.json();
-            paawards = json;
-            console.log(`We have received ${paawards.length} resources.`);
-        } else {
-            console.log("Error");
+        if(paawards.length==0){
+            console.log("Loading paawards");
+            const res = await fetch("api/v1/paawards/loadInitialData").then(function (res) {
+                if (res.ok) {
+                    console.log("Ok");
+                    getPaawards();
+                } 
+                else {
+                    error = 404;
+                    console.log("Error");
+                }
+            });
         }
     }
+    async function getPaawards() {
+            console.log("Fetching paawards");
+            const res = await fetch("api/v1/paawards/");
+            if (res.ok) {
+                console.log("Ok");
+                const json = await res.json();
+                paawards = json;
+                console.log(`We have received ${paawards.length} resources.`);
+            } else {
+                console.log("Error");
+            }
+    }
+    onMount(getPaawards);
     async function deletePaawards() {
         console.log("Deleting paaward...");
         const res = await fetch("api/v1/paawards", {
@@ -56,7 +60,7 @@
         }).then(function (res) {
             if (res.ok) {
                 console.log("OK");
-                paawards = [];
+                getPaawards();
             } else {
                 console.log("Error");
             }
