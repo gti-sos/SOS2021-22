@@ -8,7 +8,7 @@
 	import paawards from './paawardsApi/paawards-api.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
-	
+	import editGrmys from './grmysApi/editGrmys.svelte';
 	const routes = {
 		"/":Home,
 		"/info":info,
@@ -16,6 +16,7 @@
 		"/grmys": grmys,
 		"/richpp": Richpp,
 		"/richman/:name": RichmanEdit,
+		"/grmys/:name": editGrmys,
 		"*":NotFound
     };
 </script>
