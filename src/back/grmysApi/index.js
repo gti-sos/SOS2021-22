@@ -295,7 +295,7 @@ module.exports.register = (app) => {
 		});
 	});
 	//GET /country/year/
-	app.get(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
+	/*app.get(BASE_API_PATH_GRMYS + '/grmys/:country/:year', (request, response) => {
 
 		var country = request.params.country;
 		var year = request.params.year;
@@ -318,7 +318,7 @@ module.exports.register = (app) => {
 				}
 			}
 		});
-	});
+	});*/
 	//POST usando nedb 
 	app.post(BASE_API_PATH_GRMYS + '/grmys', (request, response) => {
 

@@ -353,7 +353,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/england/1960",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/1/the beatles",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -364,8 +364,8 @@
 						"api",
 						"v1",
 						"grmys",
-						"england",
-						"1960"
+						"1",
+						"the beatles"
 					]
 				}
 			},
