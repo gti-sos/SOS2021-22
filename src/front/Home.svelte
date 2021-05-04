@@ -25,7 +25,7 @@
           </CardHeader>
           <CardBody>
             <Col>
-              <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
+              <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez </a>
             </Col>
             <Col>
               <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
@@ -33,7 +33,6 @@
             <Col>
               <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
             </Col>
-             
           </CardBody>
         </Card>
     </Col>
