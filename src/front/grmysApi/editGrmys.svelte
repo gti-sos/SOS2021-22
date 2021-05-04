@@ -13,7 +13,7 @@
     let UDstyle = "xxxx";
     let UDyear = "99";
     
-    const BASE_API_PATH = "/api/v2";
+    const BASE_API_PATH = "/api/v1";
     let errorMsg = "";
     let okMsg = "";
     onMount(getGrmys);
