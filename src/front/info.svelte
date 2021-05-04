@@ -80,7 +80,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="https://sos2021-22.herokuapp.com/api/v1/grmys">
+                        <a href="https://sos2021-22.herokuapp.com/api/v2/grmys">
                           <Button color="dark">Backend</Button>
                         </a>
                         <a href="/#/grmys">
@@ -91,9 +91,12 @@
                     <div class="row">
                       <div class="col-md p-1">
                         <a href="https://documenter.getpostman.com/view/15364149/TzJoFgNA">
-                          <Button color="danger">Documentacion Postman</Button>
+                          <Button color="danger">Documentacion Postman v2</Button>
                         </a>
-                        <a href="https://documenter.getpostman.com/view/15364149/TzJoFgNA">
+                       
+                      </div>
+                      <div class="col-md p-1">
+                        <a href="https://documenter.getpostman.com/view/15364149/TzRNFVj4">
                           <Button color="danger">Documentacion Postman v1</Button>
                         </a>
                       </div>

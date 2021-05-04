@@ -43,7 +43,7 @@
         year:""
 
 	}
-    const BASE_API_PATH = "/api/v1";
+    const BASE_API_PATH = "/api/v2";
     let error = null;
     let errorMSG="";
     let okMSG="";
