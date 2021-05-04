@@ -80,7 +80,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="https://sos2021-22.herokuapp.com/api/v1/grmys">
+                        <a href="https://sos2021-22.herokuapp.com/api/v2/grmys">
                           <Button color="dark">Backend</Button>
                         </a>
                         <a href="/#/grmys">
