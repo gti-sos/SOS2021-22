@@ -33,7 +33,6 @@
             <Col>
               <a href="https://github.com/antonioparra7">Antonio Parra Diaz (PaawardsAPI)</a>
             </Col>
-             
           </CardBody>
         </Card>
     </Col>
