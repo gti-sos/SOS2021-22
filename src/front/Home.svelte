@@ -25,13 +25,13 @@
           </CardHeader>
           <CardBody>
             <Col>
-              <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez</a>
+              <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez (GramysAPI)</a>
             </Col>
             <Col>
-              <a href="https://github.com/mansegrod">Manuel Segura Rodríguez</a>
+              <a href="https://github.com/mansegrod">Manuel Segura Rodríguez (RichppAPI)</a>
             </Col>
             <Col>
-              <a href="https://github.com/antonioparra7">Antonio Parra Diaz</a>
+              <a href="https://github.com/antonioparra7">Antonio Parra Diaz (PaawardsAPI)</a>
             </Col>
              
           </CardBody>
