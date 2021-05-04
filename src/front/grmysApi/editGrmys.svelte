@@ -111,11 +111,11 @@
         <tr>
          <td><input bind:value="{UDranking}"></td>
                 <td>{params.name}</td>
-                <td><input bind:value="{UDawards}"></td>
-                <td><input bind:value="{UDcountry}"></td>
-                <td><input bind:value="{UDgroupmember}"></td>
-                <td><input bind:value="{UDstyle}"></td>
-                <td><input bind:value="{UDyear}"></td>
+                <td><input bind:value="{UDawards}" size="10"></td>
+                <td><input bind:value="{UDcountry}" size="10"></td>
+                <td><input bind:value="{UDgroupmember}" size="10"></td>
+                <td><input bind:value="{UDstyle}" size="10"></td>
+                <td><input bind:value="{UDyear}" size="10"></td>
                 <td>
                     <Button outline color="primary" on:click={updateGrmys}>Actualizar</Button>
                 </td>

@@ -180,17 +180,18 @@
                 <td>Estilo</td>
                 <td>Año</td>
                 <td>Acciones</td>
+                <td>Acciones</td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><input bind:value={newGrmys.ranking}></td>
-                <td><input bind:value={newGrmys.name}></td>
-                <td><input bind:value={newGrmys.award}></td> 
-                <td><input bind:value={newGrmys.country}></td>    
-                <td><input bind:value={newGrmys.groupmember}></td>  
-                <td><input bind:value={newGrmys.style}></td> 
-                <td><input bind:value={newGrmys.year}></td>   
+                <td><input bind:value={newGrmys.ranking} size="10"></td>
+                <td><input bind:value={newGrmys.name} size="10"></td>
+                <td><input bind:value={newGrmys.award} size="10"></td> 
+                <td><input bind:value={newGrmys.country} size="10"></td>    
+                <td><input bind:value={newGrmys.groupmember} size="10"></td>  
+                <td><input bind:value={newGrmys.style} size="10"></td> 
+                <td><input bind:value={newGrmys.year} size="10"></td>   
                 <td><Button outline color="primary" on:click={insertGrmys}>Insertar</Button></td>           
             </tr>
             {#each grmys as gramy}

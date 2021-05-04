@@ -1,144 +1,120 @@
-{"ranking":"16","name":"the 5th dimension","award":"6","country":"EE.UU","groupmember":"5","style":"pop","year":"1966","_id":"1gRX8jte7SdZKdc0"}
-{"ranking":"24","name":"daft punk","award":"6","country":"french","groupmember":"2","style":"pop","year":"1993","_id":"2q2dpETZ4CB92zFS"}
-{"ranking":"13","name":"toto","award":"7","country":"EE.UU","groupmember":"2","style":"rock","year":"1977","_id":"3fVkYgZjRUGk1fjh"}
-{"ranking":"23","name":"red hot chili peppers","award":"6","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"3iLXfZWmwvGeViyc"}
-{"ranking":"20","name":"earth,wind & fire","award":"6","country":"EE.UU","groupmember":"9","style":"fusion","year":"1970","_id":"42KUdSVXyUhIlcXW"}
-{"ranking":"15","name":"simon & garfunkel","award":"7","country":"EE.UU","groupmember":"2","style":"folk","year":"1957","_id":"46x0ssb3nSUOMi8t"}
-{"ranking":"5","name":"pat metheny group","award":"10","country":"EE.UU","groupmember":"4","style":"jazz","year":"1977","_id":"4ha89bafuzdz0HTR"}
-{"ranking":"13","name":"toto","award":"7","country":"EE.UU","groupmember":"2","style":"rock","year":"1977","_id":"5Vkp9VKU3bW6afeH"}
-{"ranking":"11","name":"coldplay","award":"7","country":"england","groupmember":"5","style":"pop","year":"1996","_id":"6QLENEb7dxEmNZhj"}
-{"ranking":"2","name":"U2","award":"22","country":"england","groupmember":"4","style":"rock","year":"1976","_id":"6bvd8mX5GmGo6x8g"}
-{"ranking":"22","name":"the police","award":"6","country":"england","groupmember":"3","style":"pop","year":"1977","_id":"7cZ2rVR8o6iiyVK2"}
-{"ranking":"8","name":"Metallica","award":"8","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"8uVsDzh8omEKL5bI"}
-{"ranking":"4","name":"foo fighters","award":"12","country":"EE.UU","groupmember":"3","style":"rock","year":"1994","_id":"A2aiBaEJXZZduuCs"}
-{"ranking":"7","name":"the Blackwood brother","award":"8","country":"EE.UU","groupmember":"5","style":"gospel","year":"1934","_id":"AN4UtiVzwiCdjUDF"}
-{"ranking":"23","name":"red hot chili peppers","award":"6","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"B8GSe0shKtf4hnNV"}
-{"ranking":"12","name":"kentucky thunders","award":"7","country":"EE.UU","groupmember":"6","style":"bluegrass","year":"1997","_id":"BZZBrP62OAXCJD4a"}
-{"ranking":"21","name":"outkast","award":"6","country":"EE.UU","groupmember":"2","style":"hip-hop","year":"1992","_id":"CfBMQjDXdMixTKbk"}
-{"ranking":"14","name":"lady antebellum","award":"7","country":"EE.UU","groupmember":"3","style":"country","year":"2006","_id":"CzzuNT0zpGv8O3uG"}
-{"ranking":"11","name":"coldplay","award":"7","country":"england","groupmember":"5","style":"pop","year":"1996","_id":"Gjp3vb0SW4pphJ0Y"}
-{"ranking":"6","name":"the manhattan transfer","award":"9","country":"EE.UU","groupmember":"3","style":"folk","year":"1972","_id":"JMGZIljUt8RhZhri"}
-{"ranking":"2","name":"U2","award":"22","country":"england","groupmember":"4","style":"rock","year":"1976","_id":"K8pv5rlDNhuTOD1q"}
-{"ranking":"20","name":"earth,wind & fire","award":"6","country":"EE.UU","groupmember":"9","style":"fusion","year":"1970","_id":"LCxGPSQkbZLAsao3"}
-{"ranking":"17","name":"the black eyed peas","award":"6","country":"EE.UU","groupmember":"4","style":"pop","year":"1992","_id":"Ls3JYCMKarIQGWfp"}
-{"ranking":"5","name":"pat metheny group","award":"10","country":"EE.UU","groupmember":"4","style":"jazz","year":"1977","_id":"NiVDF14WMZa5qAlq"}
-{"ranking":"7","name":"the Blackwood brother","award":"8","country":"EE.UU","groupmember":"5","style":"gospel","year":"1934","_id":"OWh08S4EVF09Tpmg"}
-{"ranking":"4","name":"foo fighters","award":"12","country":"EE.UU","groupmember":"3","style":"rock","year":"1994","_id":"QTbJ2TzCNo7VcwjM"}
-{"ranking":"3","name":"dixie chicks","award":"13","country":"EE.UU","groupmember":"3","style":"country","year":"1989","_id":"Rw1nDYpabAG2BIaF"}
-{"ranking":"10","name":"take 6","award":"8","country":"EE.UU","groupmember":"6","style":"gospel","year":"1985","_id":"V2fsQWTnbIquDtfs"}
-{"ranking":"9","name":"santana","award":"8","country":"EE.UU","groupmember":"9","style":"rock","year":"1966","_id":"VCTEMNO5bRigLfpE"}
-{"ranking":"8","name":"Metallica","award":"8","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"YFZ9Lp2tIGplkuNf"}
-{"ranking":"15","name":"simon & garfunkel","award":"7","country":"EE.UU","groupmember":"2","style":"folk","year":"1957","_id":"bvvyZENQQOWYIQme"}
-{"ranking":"16","name":"the 5th dimension","award":"6","country":"EE.UU","groupmember":"5","style":"pop","year":"1966","_id":"cgxjCEdxYqr66cqo"}
-{"ranking":"19","name":"eagles","award":"6","country":"EE.UU","groupmember":"3","style":"rock","year":"1971","_id":"dqSNyHTYLPqnpa2P"}
-{"ranking":"19","name":"eagles","award":"6","country":"EE.UU","groupmember":"3","style":"rock","year":"1971","_id":"irtajkLGdkXMbKP5"}
-{"ranking":"9","name":"santana","award":"8","country":"EE.UU","groupmember":"9","style":"rock","year":"1966","_id":"ivKllzk8QdqE7cWz"}
-{"ranking":"12","name":"kentucky thunders","award":"7","country":"EE.UU","groupmember":"6","style":"bluegrass","year":"1997","_id":"jnqetin1N7YoAGyV"}
-{"ranking":"18","name":"the chieftains","award":"6","country":"ireland","groupmember":"6","style":"celta","year":"1963","_id":"lP23nSg2w6RiaTpj"}
-{"ranking":"14","name":"lady antebellum","award":"7","country":"EE.UU","groupmember":"3","style":"country","year":"2006","_id":"noifIVN7TaCAuMyP"}
-{"ranking":"21","name":"outkast","award":"6","country":"EE.UU","groupmember":"2","style":"hip-hop","year":"1992","_id":"npxkl4pbPSFrtUfV"}
-{"ranking":"17","name":"the black eyed peas","award":"6","country":"EE.UU","groupmember":"4","style":"pop","year":"1992","_id":"o4eR9qQT3FfmeeSz"}
-{"ranking":"6","name":"the manhattan transfer","award":"9","country":"EE.UU","groupmember":"3","style":"folk","year":"1972","_id":"qUHlWlKSzMiFd1a5"}
-{"ranking":"1","name":"the beatles","award":"28","country":"england","groupmember":"4","style":"rock","year":"1960","_id":"reoGNekY1mXHjNqZ"}
-{"ranking":"10","name":"take 6","award":"8","country":"EE.UU","groupmember":"6","style":"gospel","year":"1985","_id":"t3Rx1m3ZbngyhIYz"}
-{"ranking":"22","name":"the police","award":"6","country":"england","groupmember":"3","style":"pop","year":"1977","_id":"wUoYQHfQva7oDzYp"}
-{"ranking":"3","name":"dixie chicks","award":"13","country":"EE.UU","groupmember":"3","style":"country","year":"1989","_id":"wxgI5Bfy9pjvkpZq"}
-{"ranking":"18","name":"the chieftains","award":"6","country":"ireland","groupmember":"6","style":"celta","year":"1963","_id":"xdSLC5xbdXvy7FGm"}
-{"ranking":"1","name":"the beatles","award":"28","country":"england","groupmember":"4","style":"rock","year":"1960","_id":"z2n0yjqPwUZXY37o"}
-{"ranking":"24","name":"daft punk","award":"6","country":"french","groupmember":"2","style":"pop","year":"1993","_id":"zi2ckkd0VRsoKxek"}
-{"$$deleted":true,"_id":"1gRX8jte7SdZKdc0"}
-{"$$deleted":true,"_id":"2q2dpETZ4CB92zFS"}
-{"$$deleted":true,"_id":"3fVkYgZjRUGk1fjh"}
-{"$$deleted":true,"_id":"3iLXfZWmwvGeViyc"}
-{"$$deleted":true,"_id":"42KUdSVXyUhIlcXW"}
-{"$$deleted":true,"_id":"46x0ssb3nSUOMi8t"}
-{"$$deleted":true,"_id":"4ha89bafuzdz0HTR"}
-{"$$deleted":true,"_id":"5Vkp9VKU3bW6afeH"}
-{"$$deleted":true,"_id":"6QLENEb7dxEmNZhj"}
-{"$$deleted":true,"_id":"6bvd8mX5GmGo6x8g"}
-{"$$deleted":true,"_id":"7cZ2rVR8o6iiyVK2"}
-{"$$deleted":true,"_id":"8uVsDzh8omEKL5bI"}
-{"$$deleted":true,"_id":"A2aiBaEJXZZduuCs"}
-{"$$deleted":true,"_id":"AN4UtiVzwiCdjUDF"}
-{"$$deleted":true,"_id":"B8GSe0shKtf4hnNV"}
-{"$$deleted":true,"_id":"BZZBrP62OAXCJD4a"}
-{"$$deleted":true,"_id":"CfBMQjDXdMixTKbk"}
-{"$$deleted":true,"_id":"CzzuNT0zpGv8O3uG"}
-{"$$deleted":true,"_id":"Gjp3vb0SW4pphJ0Y"}
-{"$$deleted":true,"_id":"JMGZIljUt8RhZhri"}
-{"$$deleted":true,"_id":"K8pv5rlDNhuTOD1q"}
-{"$$deleted":true,"_id":"LCxGPSQkbZLAsao3"}
-{"$$deleted":true,"_id":"Ls3JYCMKarIQGWfp"}
-{"$$deleted":true,"_id":"NiVDF14WMZa5qAlq"}
-{"$$deleted":true,"_id":"OWh08S4EVF09Tpmg"}
-{"$$deleted":true,"_id":"QTbJ2TzCNo7VcwjM"}
-{"$$deleted":true,"_id":"Rw1nDYpabAG2BIaF"}
-{"$$deleted":true,"_id":"V2fsQWTnbIquDtfs"}
-{"$$deleted":true,"_id":"VCTEMNO5bRigLfpE"}
-{"$$deleted":true,"_id":"YFZ9Lp2tIGplkuNf"}
-{"$$deleted":true,"_id":"bvvyZENQQOWYIQme"}
-{"$$deleted":true,"_id":"cgxjCEdxYqr66cqo"}
-{"$$deleted":true,"_id":"dqSNyHTYLPqnpa2P"}
-{"$$deleted":true,"_id":"irtajkLGdkXMbKP5"}
-{"$$deleted":true,"_id":"ivKllzk8QdqE7cWz"}
-{"$$deleted":true,"_id":"jnqetin1N7YoAGyV"}
-{"$$deleted":true,"_id":"lP23nSg2w6RiaTpj"}
-{"$$deleted":true,"_id":"noifIVN7TaCAuMyP"}
-{"$$deleted":true,"_id":"npxkl4pbPSFrtUfV"}
-{"$$deleted":true,"_id":"o4eR9qQT3FfmeeSz"}
-{"$$deleted":true,"_id":"qUHlWlKSzMiFd1a5"}
-{"$$deleted":true,"_id":"reoGNekY1mXHjNqZ"}
-{"$$deleted":true,"_id":"t3Rx1m3ZbngyhIYz"}
-{"$$deleted":true,"_id":"wUoYQHfQva7oDzYp"}
-{"$$deleted":true,"_id":"wxgI5Bfy9pjvkpZq"}
-{"$$deleted":true,"_id":"xdSLC5xbdXvy7FGm"}
-{"$$deleted":true,"_id":"z2n0yjqPwUZXY37o"}
-{"$$deleted":true,"_id":"zi2ckkd0VRsoKxek"}
-{"ranking":"1","name":"the beatles","award":"28","country":"england","groupmember":"4","style":"rock","year":"1960","_id":"xKAJJWPLqMdHaiSu"}
-{"ranking":"2","name":"U2","award":"22","country":"england","groupmember":"4","style":"rock","year":"1976","_id":"4uBWCs9YoD8kxFz2"}
-{"ranking":"3","name":"dixie chicks","award":"13","country":"EE.UU","groupmember":"3","style":"country","year":"1989","_id":"JBNvNEyPumJMGP1p"}
-{"ranking":"4","name":"foo fighters","award":"12","country":"EE.UU","groupmember":"3","style":"rock","year":"1994","_id":"OlKyg1dl0n1wZiT5"}
-{"ranking":"5","name":"pat metheny group","award":"10","country":"EE.UU","groupmember":"4","style":"jazz","year":"1977","_id":"fqE02nf82YU66MAp"}
-{"ranking":"6","name":"the manhattan transfer","award":"9","country":"EE.UU","groupmember":"3","style":"folk","year":"1972","_id":"VwXN3NiqVbGoxFMj"}
-{"ranking":"7","name":"the Blackwood brother","award":"8","country":"EE.UU","groupmember":"5","style":"gospel","year":"1934","_id":"YgqmDvFgut4s9MEg"}
-{"ranking":"8","name":"Metallica","award":"8","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"pZyn2Sepprh5w3XS"}
-{"ranking":"9","name":"santana","award":"8","country":"EE.UU","groupmember":"9","style":"rock","year":"1966","_id":"FNhkfjkdkHDsalYJ"}
-{"ranking":"10","name":"take 6","award":"8","country":"EE.UU","groupmember":"6","style":"gospel","year":"1985","_id":"Qc2W0ICNM2oQHo3A"}
-{"ranking":"11","name":"coldplay","award":"7","country":"england","groupmember":"5","style":"pop","year":"1996","_id":"Eyd9VwdrSvJ01h0W"}
-{"ranking":"12","name":"kentucky thunders","award":"7","country":"EE.UU","groupmember":"6","style":"bluegrass","year":"1997","_id":"vuoiNS6qzL1bTALC"}
-{"ranking":"13","name":"toto","award":"7","country":"EE.UU","groupmember":"2","style":"rock","year":"1977","_id":"k7Q27vG0GFzpQqlI"}
-{"ranking":"14","name":"lady antebellum","award":"7","country":"EE.UU","groupmember":"3","style":"country","year":"2006","_id":"N2nLtryLjgVgteRK"}
-{"ranking":"15","name":"simon & garfunkel","award":"7","country":"EE.UU","groupmember":"2","style":"folk","year":"1957","_id":"PIN4KR5tMTESgN8C"}
-{"ranking":"16","name":"the 5th dimension","award":"6","country":"EE.UU","groupmember":"5","style":"pop","year":"1966","_id":"sQ1tVw4p49AbJcfQ"}
-{"ranking":"17","name":"the black eyed peas","award":"6","country":"EE.UU","groupmember":"4","style":"pop","year":"1992","_id":"9EQgXQdOUbdNSruL"}
-{"ranking":"18","name":"the chieftains","award":"6","country":"ireland","groupmember":"6","style":"celta","year":"1963","_id":"s2Ybs1jaecWTqqgt"}
-{"ranking":"19","name":"eagles","award":"6","country":"EE.UU","groupmember":"3","style":"rock","year":"1971","_id":"bq4FhaL3wJ5L4FIG"}
 {"ranking":"20","name":"earth,wind & fire","award":"6","country":"EE.UU","groupmember":"9","style":"fusion","year":"1970","_id":"3Ngfxbe0VoVMsNlm"}
-{"ranking":"21","name":"outkast","award":"6","country":"EE.UU","groupmember":"2","style":"hip-hop","year":"1992","_id":"eAOWkvWTjND4zdBj"}
-{"ranking":"22","name":"the police","award":"6","country":"england","groupmember":"3","style":"pop","year":"1977","_id":"6c57RVIzoGTi6r8a"}
-{"ranking":"23","name":"red hot chili peppers","award":"6","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"i5SOhTB4HcQuDcbo"}
-{"ranking":"24","name":"daft punk","award":"6","country":"french","groupmember":"2","style":"pop","year":"1993","_id":"Pf3hcldaCYyfCm8c"}
-{"ranking":"1","name":"the beatles","award":"28","country":"england","groupmember":"4","style":"rock","year":"1960","_id":"GZRsfJiQziUgdFeq"}
-{"ranking":"2","name":"U2","award":"22","country":"england","groupmember":"4","style":"rock","year":"1976","_id":"bt5SleFtX2VD6OMo"}
-{"ranking":"3","name":"dixie chicks","award":"13","country":"EE.UU","groupmember":"3","style":"country","year":"1989","_id":"H214aCdXYNUBnhh7"}
-{"ranking":"4","name":"foo fighters","award":"12","country":"EE.UU","groupmember":"3","style":"rock","year":"1994","_id":"zNDVIOg2FWdHoGVn"}
-{"ranking":"5","name":"pat metheny group","award":"10","country":"EE.UU","groupmember":"4","style":"jazz","year":"1977","_id":"mcj1AwvMddHRBuqE"}
-{"ranking":"6","name":"the manhattan transfer","award":"9","country":"EE.UU","groupmember":"3","style":"folk","year":"1972","_id":"rf4Z3cpnjoDLkSVc"}
-{"ranking":"7","name":"the Blackwood brother","award":"8","country":"EE.UU","groupmember":"5","style":"gospel","year":"1934","_id":"MmcGX2pJBCPMPiGd"}
-{"ranking":"8","name":"Metallica","award":"8","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"JRaD7D17RRZgevIQ"}
-{"ranking":"9","name":"santana","award":"8","country":"EE.UU","groupmember":"9","style":"rock","year":"1966","_id":"iiWHXRxIrvtgjQDQ"}
-{"ranking":"10","name":"take 6","award":"8","country":"EE.UU","groupmember":"6","style":"gospel","year":"1985","_id":"vup0bXwg4B2zlkKc"}
-{"ranking":"11","name":"coldplay","award":"7","country":"england","groupmember":"5","style":"pop","year":"1996","_id":"nkT2lBXEtCGek5QB"}
-{"ranking":"12","name":"kentucky thunders","award":"7","country":"EE.UU","groupmember":"6","style":"bluegrass","year":"1997","_id":"VxBKOBLwCA9rpc60"}
-{"ranking":"13","name":"toto","award":"7","country":"EE.UU","groupmember":"2","style":"rock","year":"1977","_id":"uiqjhEI1ZOOHU7yZ"}
-{"ranking":"14","name":"lady antebellum","award":"7","country":"EE.UU","groupmember":"3","style":"country","year":"2006","_id":"WU3QTbxvCAdC1Ghv"}
-{"ranking":"15","name":"simon & garfunkel","award":"7","country":"EE.UU","groupmember":"2","style":"folk","year":"1957","_id":"GBxiU8XfrtzVIpKv"}
-{"ranking":"16","name":"the 5th dimension","award":"6","country":"EE.UU","groupmember":"5","style":"pop","year":"1966","_id":"oznupwgYqeiVWF8F"}
-{"ranking":"17","name":"the black eyed peas","award":"6","country":"EE.UU","groupmember":"4","style":"pop","year":"1992","_id":"DWKTz8KYQXCxF7jz"}
-{"ranking":"18","name":"the chieftains","award":"6","country":"ireland","groupmember":"6","style":"celta","year":"1963","_id":"oJbAmxWGTTBljSrL"}
-{"ranking":"19","name":"eagles","award":"6","country":"EE.UU","groupmember":"3","style":"rock","year":"1971","_id":"Y7mRzjtYaKNywOxZ"}
-{"ranking":"20","name":"earth,wind & fire","award":"6","country":"EE.UU","groupmember":"9","style":"fusion","year":"1970","_id":"qq6I6FDwD6mQE78h"}
-{"ranking":"21","name":"outkast","award":"6","country":"EE.UU","groupmember":"2","style":"hip-hop","year":"1992","_id":"DYYiywVWNLyD7lHZ"}
 {"ranking":"22","name":"the police","award":"6","country":"england","groupmember":"3","style":"pop","year":"1977","_id":"4cOTURyP6rV2P2Qa"}
-{"ranking":"23","name":"red hot chili peppers","award":"6","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"fjMyU6WG3TEuwVKh"}
+{"ranking":"2","name":"U2","award":"22","country":"england","groupmember":"4","style":"rock","year":"1976","_id":"4uBWCs9YoD8kxFz2"}
+{"ranking":"22","name":"the police","award":"6","country":"england","groupmember":"3","style":"pop","year":"1977","_id":"6c57RVIzoGTi6r8a"}
+{"ranking":"17","name":"the black eyed peas","award":"6","country":"EE.UU","groupmember":"4","style":"pop","year":"1992","_id":"9EQgXQdOUbdNSruL"}
+{"ranking":"17","name":"the black eyed peas","award":"6","country":"EE.UU","groupmember":"4","style":"pop","year":"1992","_id":"DWKTz8KYQXCxF7jz"}
+{"ranking":"21","name":"outkast","award":"6","country":"EE.UU","groupmember":"2","style":"hip-hop","year":"1992","_id":"DYYiywVWNLyD7lHZ"}
 {"ranking":"24","name":"daft punk","award":"6","country":"french","groupmember":"2","style":"pop","year":"1993","_id":"DvAG6cnjb2mBw6ue"}
+{"ranking":"11","name":"coldplay","award":"7","country":"england","groupmember":"5","style":"pop","year":"1996","_id":"Eyd9VwdrSvJ01h0W"}
+{"ranking":"9","name":"santana","award":"8","country":"EE.UU","groupmember":"9","style":"rock","year":"1966","_id":"FNhkfjkdkHDsalYJ"}
+{"ranking":"15","name":"simon & garfunkel","award":"7","country":"EE.UU","groupmember":"2","style":"folk","year":"1957","_id":"GBxiU8XfrtzVIpKv"}
+{"ranking":"1","name":"the beatles","award":"28","country":"england","groupmember":"4","style":"rock","year":"1960","_id":"GZRsfJiQziUgdFeq"}
+{"ranking":"3","name":"dixie chicks","award":"13","country":"EE.UU","groupmember":"3","style":"country","year":"1989","_id":"H214aCdXYNUBnhh7"}
+{"ranking":"3","name":"dixie chicks","award":"13","country":"EE.UU","groupmember":"3","style":"country","year":"1989","_id":"JBNvNEyPumJMGP1p"}
+{"ranking":"8","name":"Metallica","award":"8","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"JRaD7D17RRZgevIQ"}
+{"ranking":"7","name":"the Blackwood brother","award":"8","country":"EE.UU","groupmember":"5","style":"gospel","year":"1934","_id":"MmcGX2pJBCPMPiGd"}
+{"ranking":"14","name":"lady antebellum","award":"7","country":"EE.UU","groupmember":"3","style":"country","year":"2006","_id":"N2nLtryLjgVgteRK"}
+{"ranking":"4","name":"foo fighters","award":"12","country":"EE.UU","groupmember":"3","style":"rock","year":"1994","_id":"OlKyg1dl0n1wZiT5"}
+{"ranking":"15","name":"simon & garfunkel","award":"7","country":"EE.UU","groupmember":"2","style":"folk","year":"1957","_id":"PIN4KR5tMTESgN8C"}
+{"ranking":"24","name":"daft punk","award":"6","country":"french","groupmember":"2","style":"pop","year":"1993","_id":"Pf3hcldaCYyfCm8c"}
+{"ranking":"10","name":"take 6","award":"8","country":"EE.UU","groupmember":"6","style":"gospel","year":"1985","_id":"Qc2W0ICNM2oQHo3A"}
+{"ranking":"6","name":"the manhattan transfer","award":"9","country":"EE.UU","groupmember":"3","style":"folk","year":"1972","_id":"VwXN3NiqVbGoxFMj"}
+{"ranking":"12","name":"kentucky thunders","award":"7","country":"EE.UU","groupmember":"6","style":"bluegrass","year":"1997","_id":"VxBKOBLwCA9rpc60"}
+{"ranking":"14","name":"lady antebellum","award":"7","country":"EE.UU","groupmember":"3","style":"country","year":"2006","_id":"WU3QTbxvCAdC1Ghv"}
+{"ranking":"19","name":"eagles","award":"6","country":"EE.UU","groupmember":"3","style":"rock","year":"1971","_id":"Y7mRzjtYaKNywOxZ"}
+{"ranking":"7","name":"the Blackwood brother","award":"8","country":"EE.UU","groupmember":"5","style":"gospel","year":"1934","_id":"YgqmDvFgut4s9MEg"}
+{"ranking":"19","name":"eagles","award":"6","country":"EE.UU","groupmember":"3","style":"rock","year":"1971","_id":"bq4FhaL3wJ5L4FIG"}
+{"ranking":"2","name":"U2","award":"22","country":"england","groupmember":"4","style":"rock","year":"1976","_id":"bt5SleFtX2VD6OMo"}
+{"ranking":"21","name":"outkast","award":"6","country":"EE.UU","groupmember":"2","style":"hip-hop","year":"1992","_id":"eAOWkvWTjND4zdBj"}
+{"ranking":"23","name":"red hot chili peppers","award":"6","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"fjMyU6WG3TEuwVKh"}
+{"ranking":"5","name":"pat metheny group","award":"10","country":"EE.UU","groupmember":"4","style":"jazz","year":"1977","_id":"fqE02nf82YU66MAp"}
+{"ranking":"23","name":"red hot chili peppers","award":"6","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"i5SOhTB4HcQuDcbo"}
+{"ranking":"9","name":"santana","award":"8","country":"EE.UU","groupmember":"9","style":"rock","year":"1966","_id":"iiWHXRxIrvtgjQDQ"}
+{"ranking":"13","name":"toto","award":"7","country":"EE.UU","groupmember":"2","style":"rock","year":"1977","_id":"k7Q27vG0GFzpQqlI"}
+{"ranking":"5","name":"pat metheny group","award":"10","country":"EE.UU","groupmember":"4","style":"jazz","year":"1977","_id":"mcj1AwvMddHRBuqE"}
+{"ranking":"11","name":"coldplay","award":"7","country":"england","groupmember":"5","style":"pop","year":"1996","_id":"nkT2lBXEtCGek5QB"}
+{"ranking":"18","name":"the chieftains","award":"6","country":"ireland","groupmember":"6","style":"celta","year":"1963","_id":"oJbAmxWGTTBljSrL"}
+{"ranking":"16","name":"the 5th dimension","award":"6","country":"EE.UU","groupmember":"5","style":"pop","year":"1966","_id":"oznupwgYqeiVWF8F"}
+{"ranking":"8","name":"Metallica","award":"8","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"pZyn2Sepprh5w3XS"}
+{"ranking":"20","name":"earth,wind & fire","award":"6","country":"EE.UU","groupmember":"9","style":"fusion","year":"1970","_id":"qq6I6FDwD6mQE78h"}
+{"ranking":"6","name":"the manhattan transfer","award":"9","country":"EE.UU","groupmember":"3","style":"folk","year":"1972","_id":"rf4Z3cpnjoDLkSVc"}
+{"ranking":"18","name":"the chieftains","award":"6","country":"ireland","groupmember":"6","style":"celta","year":"1963","_id":"s2Ybs1jaecWTqqgt"}
+{"ranking":"16","name":"the 5th dimension","award":"6","country":"EE.UU","groupmember":"5","style":"pop","year":"1966","_id":"sQ1tVw4p49AbJcfQ"}
+{"ranking":"13","name":"toto","award":"7","country":"EE.UU","groupmember":"2","style":"rock","year":"1977","_id":"uiqjhEI1ZOOHU7yZ"}
+{"ranking":"12","name":"kentucky thunders","award":"7","country":"EE.UU","groupmember":"6","style":"bluegrass","year":"1997","_id":"vuoiNS6qzL1bTALC"}
+{"ranking":"10","name":"take 6","award":"8","country":"EE.UU","groupmember":"6","style":"gospel","year":"1985","_id":"vup0bXwg4B2zlkKc"}
+{"ranking":"1","name":"the beatles","award":"28","country":"england","groupmember":"4","style":"rock","year":"1960","_id":"xKAJJWPLqMdHaiSu"}
+{"ranking":"4","name":"foo fighters","award":"12","country":"EE.UU","groupmember":"3","style":"rock","year":"1994","_id":"zNDVIOg2FWdHoGVn"}
+{"$$deleted":true,"_id":"3Ngfxbe0VoVMsNlm"}
+{"$$deleted":true,"_id":"4cOTURyP6rV2P2Qa"}
+{"$$deleted":true,"_id":"4uBWCs9YoD8kxFz2"}
+{"$$deleted":true,"_id":"6c57RVIzoGTi6r8a"}
+{"$$deleted":true,"_id":"9EQgXQdOUbdNSruL"}
+{"$$deleted":true,"_id":"DWKTz8KYQXCxF7jz"}
+{"$$deleted":true,"_id":"DYYiywVWNLyD7lHZ"}
+{"$$deleted":true,"_id":"DvAG6cnjb2mBw6ue"}
+{"$$deleted":true,"_id":"Eyd9VwdrSvJ01h0W"}
+{"$$deleted":true,"_id":"FNhkfjkdkHDsalYJ"}
+{"$$deleted":true,"_id":"GBxiU8XfrtzVIpKv"}
+{"$$deleted":true,"_id":"GZRsfJiQziUgdFeq"}
+{"$$deleted":true,"_id":"H214aCdXYNUBnhh7"}
+{"$$deleted":true,"_id":"JBNvNEyPumJMGP1p"}
+{"$$deleted":true,"_id":"JRaD7D17RRZgevIQ"}
+{"$$deleted":true,"_id":"MmcGX2pJBCPMPiGd"}
+{"$$deleted":true,"_id":"N2nLtryLjgVgteRK"}
+{"$$deleted":true,"_id":"OlKyg1dl0n1wZiT5"}
+{"$$deleted":true,"_id":"PIN4KR5tMTESgN8C"}
+{"$$deleted":true,"_id":"Pf3hcldaCYyfCm8c"}
+{"$$deleted":true,"_id":"Qc2W0ICNM2oQHo3A"}
+{"$$deleted":true,"_id":"VwXN3NiqVbGoxFMj"}
+{"$$deleted":true,"_id":"VxBKOBLwCA9rpc60"}
+{"$$deleted":true,"_id":"WU3QTbxvCAdC1Ghv"}
+{"$$deleted":true,"_id":"Y7mRzjtYaKNywOxZ"}
+{"$$deleted":true,"_id":"YgqmDvFgut4s9MEg"}
+{"$$deleted":true,"_id":"bq4FhaL3wJ5L4FIG"}
+{"$$deleted":true,"_id":"bt5SleFtX2VD6OMo"}
+{"$$deleted":true,"_id":"eAOWkvWTjND4zdBj"}
+{"$$deleted":true,"_id":"fjMyU6WG3TEuwVKh"}
+{"$$deleted":true,"_id":"fqE02nf82YU66MAp"}
+{"$$deleted":true,"_id":"i5SOhTB4HcQuDcbo"}
+{"$$deleted":true,"_id":"iiWHXRxIrvtgjQDQ"}
+{"$$deleted":true,"_id":"k7Q27vG0GFzpQqlI"}
+{"$$deleted":true,"_id":"mcj1AwvMddHRBuqE"}
+{"$$deleted":true,"_id":"nkT2lBXEtCGek5QB"}
+{"$$deleted":true,"_id":"oJbAmxWGTTBljSrL"}
+{"$$deleted":true,"_id":"oznupwgYqeiVWF8F"}
+{"$$deleted":true,"_id":"pZyn2Sepprh5w3XS"}
+{"$$deleted":true,"_id":"qq6I6FDwD6mQE78h"}
+{"$$deleted":true,"_id":"rf4Z3cpnjoDLkSVc"}
+{"$$deleted":true,"_id":"s2Ybs1jaecWTqqgt"}
+{"$$deleted":true,"_id":"sQ1tVw4p49AbJcfQ"}
+{"$$deleted":true,"_id":"uiqjhEI1ZOOHU7yZ"}
+{"$$deleted":true,"_id":"vuoiNS6qzL1bTALC"}
+{"$$deleted":true,"_id":"vup0bXwg4B2zlkKc"}
+{"$$deleted":true,"_id":"xKAJJWPLqMdHaiSu"}
+{"$$deleted":true,"_id":"zNDVIOg2FWdHoGVn"}
+{"ranking":"1","name":"the beatles","award":"28","country":"england","groupmember":"4","style":"rock","year":"1960","_id":"0X5o4OKmjbeY2yTQ"}
+{"ranking":"2","name":"U2","award":"22","country":"england","groupmember":"4","style":"rock","year":"1976","_id":"iXg9xm1NiIYiodvY"}
+{"ranking":"3","name":"dixie chicks","award":"13","country":"EE.UU","groupmember":"3","style":"country","year":"1989","_id":"26KMkqnrtsvzAeaB"}
+{"ranking":"4","name":"foo fighters","award":"12","country":"EE.UU","groupmember":"3","style":"rock","year":"1994","_id":"zc6uYEOiWfPhKxU4"}
+{"ranking":"5","name":"pat metheny group","award":"10","country":"EE.UU","groupmember":"4","style":"jazz","year":"1977","_id":"YFXiOYKMZiL3of3R"}
+{"ranking":"6","name":"the manhattan transfer","award":"9","country":"EE.UU","groupmember":"3","style":"folk","year":"1972","_id":"6cysaKuaeo092V8t"}
+{"ranking":"7","name":"the Blackwood brother","award":"8","country":"EE.UU","groupmember":"5","style":"gospel","year":"1934","_id":"CariVDm8TySVQwON"}
+{"ranking":"8","name":"Metallica","award":"8","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"GqmdKMGw8vbXk0nU"}
+{"ranking":"9","name":"santana","award":"8","country":"EE.UU","groupmember":"9","style":"rock","year":"1966","_id":"ajPdkgc79TD6U3SL"}
+{"ranking":"10","name":"take 6","award":"8","country":"EE.UU","groupmember":"6","style":"gospel","year":"1985","_id":"VEQp0NwJPrLJ6Ywl"}
+{"ranking":"11","name":"coldplay","award":"7","country":"england","groupmember":"5","style":"pop","year":"1996","_id":"0jq9bIPucPdudmPo"}
+{"ranking":"12","name":"kentucky thunders","award":"7","country":"EE.UU","groupmember":"6","style":"bluegrass","year":"1997","_id":"r1YGUs52eTf3UOtt"}
+{"ranking":"13","name":"toto","award":"7","country":"EE.UU","groupmember":"2","style":"rock","year":"1977","_id":"LopqersLdT1Ea8OC"}
+{"ranking":"14","name":"lady antebellum","award":"7","country":"EE.UU","groupmember":"3","style":"country","year":"2006","_id":"mzAwqeMAQ8dagNVz"}
+{"ranking":"15","name":"simon & garfunkel","award":"7","country":"EE.UU","groupmember":"2","style":"folk","year":"1957","_id":"IGy9tYllHtlVnF0p"}
+{"ranking":"16","name":"the 5th dimension","award":"6","country":"EE.UU","groupmember":"5","style":"pop","year":"1966","_id":"AORB87ADl6JU0VfD"}
+{"ranking":"17","name":"the black eyed peas","award":"6","country":"EE.UU","groupmember":"4","style":"pop","year":"1992","_id":"z5Jy9Xlyt540TGci"}
+{"ranking":"18","name":"the chieftains","award":"6","country":"ireland","groupmember":"6","style":"celta","year":"1963","_id":"rDNZIFJEg62w5jIN"}
+{"ranking":"19","name":"eagles","award":"6","country":"EE.UU","groupmember":"3","style":"rock","year":"1971","_id":"eKucaGH5G7IQwqOH"}
+{"ranking":"20","name":"earth,wind & fire","award":"6","country":"EE.UU","groupmember":"9","style":"fusion","year":"1970","_id":"hHtV2wHSPYTa0Vwl"}
+{"ranking":"21","name":"outkast","award":"6","country":"EE.UU","groupmember":"2","style":"hip-hop","year":"1992","_id":"cT4dzyUaMS8W9Pwk"}
+{"ranking":"22","name":"the police","award":"6","country":"england","groupmember":"3","style":"pop","year":"1977","_id":"pHjYpsxnAE4iY734"}
+{"ranking":"23","name":"red hot chili peppers","award":"6","country":"EE.UU","groupmember":"4","style":"rock","year":"1983","_id":"RpL3S7Uu4btDhtgQ"}
+{"ranking":"24","name":"daft punk","award":"6","country":"french","groupmember":"2","style":"pop","year":"1993","_id":"acrhNL2hJUbQ33Dq"}
