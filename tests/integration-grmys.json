@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "05719899-9521-4c1a-a054-36d48bb20ed5",
-		"name": "sos2021-grmys",
+		"_postman_id": "43d16f5f-1e20-49ad-b502-d32375853500",
+		"name": "sos2021-grmys v1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -24,7 +24,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys/loadInitialData",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/loadInitialData",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -33,7 +33,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys",
 						"loadInitialData"
 					]
@@ -60,7 +60,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -69,7 +69,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -95,7 +95,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys?award=28",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?award=28",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -104,7 +104,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					],
 					"query": [
@@ -136,7 +136,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys?year=1970",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?year=1970",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -145,7 +145,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					],
 					"query": [
@@ -177,7 +177,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys?country=england",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?country=england",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -186,7 +186,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					],
 					"query": [
@@ -218,7 +218,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys?groupmember=4",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?groupmember=4",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -227,7 +227,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					],
 					"query": [
@@ -259,7 +259,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys?style=rock",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?style=rock",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -268,7 +268,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					],
 					"query": [
@@ -300,7 +300,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys?style=rap",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?style=rap",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -309,7 +309,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					],
 					"query": [
@@ -353,7 +353,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys/1/the beatles",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/1/the beatles",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -362,7 +362,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys",
 						"1",
 						"the beatles"
@@ -390,7 +390,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys?offset=0&limit=5",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys?offset=0&limit=5",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -399,7 +399,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					],
 					"query": [
@@ -444,7 +444,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -453,7 +453,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -488,7 +488,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -497,7 +497,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -532,7 +532,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -541,7 +541,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -576,7 +576,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys/spain/1960",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/spain/1960",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -585,7 +585,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys",
 						"spain",
 						"1960"
@@ -625,7 +625,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -634,7 +634,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -669,7 +669,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys/spain/1960",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/spain/1960",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -678,7 +678,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys",
 						"spain",
 						"1960"
@@ -715,7 +715,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys/england/1989",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/england/1989",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -724,7 +724,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys",
 						"england",
 						"1989"
@@ -764,7 +764,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -773,7 +773,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -808,7 +808,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys/1/the beatles",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/1/the beatles",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -817,7 +817,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys",
 						"1",
 						"the beatles"
@@ -854,7 +854,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys/1/the beatles",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys/1/the beatles",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -863,7 +863,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys",
 						"1",
 						"the beatles"
@@ -900,7 +900,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -909,7 +909,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -947,7 +947,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -956,7 +956,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
@@ -991,7 +991,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://sos2021-22.herokuapp.com/api/v2/grmys",
+					"raw": "https://sos2021-22.herokuapp.com/api/v1/grmys",
 					"protocol": "https",
 					"host": [
 						"sos2021-22",
@@ -1000,7 +1000,7 @@
 					],
 					"path": [
 						"api",
-						"v2",
+						"v1",
 						"grmys"
 					]
 				}
