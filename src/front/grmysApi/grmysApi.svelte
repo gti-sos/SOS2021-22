@@ -51,7 +51,7 @@
     ////////////////////////funciones///////////////////////////////////////
     async function loadGrmys() {
         console.log("Loading Grmys");
-        const res = await fetch("api/v1/grmys/loadInitialData").then(function (res) {
+        const res = await fetch("api/v2/grmys/loadInitialData").then(function (res) {
             if (res.ok) {
                 console.log("Ok");
                 okMSG = "Datos cargados correctamente";
@@ -66,7 +66,7 @@
     }
     async function getGrmys() {
         console.log("Fetching Grmys");
-        const res = await fetch("api/v1/grmys?limit=10&offset=1");
+        const res = await fetch("api/v2/grmys?limit=10&offset=1");
         if (res.ok) {
             console.log("Ok");
             const json = await res.json();
@@ -82,7 +82,7 @@
              alert("Los campos 'Pais' y 'Año' no pueden estar vacios");
          }
          else{
-             const res = await fetch("/api/v1/grmys",{
+             const res = await fetch("/api/v2/grmys",{
              method:"POST",
              body:JSON.stringify(newGrmys),
              headers:{
@@ -107,7 +107,7 @@
      }
      async function deleteGrmysdata(country, year) {
         console.log(`Deleting data with name ${country} and date ${year}`);
-        const res = await fetch("/api/v1/grmys/" + country + "/" + year, {
+        const res = await fetch("/api/v2/grmys/" + country + "/" + year, {
             method: "DELETE"
         }).then(function (res) {
             getGrmys();      
@@ -130,7 +130,7 @@
     }
     async function deleteGrmys() {
         console.log("Deleting data...");
-        const res = await fetch("api/v1/grmys", {
+        const res = await fetch("api/v2/grmys", {
             method: "DELETE",
         }).then(function (res) {
             if (res.ok) {

@@ -4,7 +4,7 @@ var path = require("path");
 var dbfile = path.join(__dirname, "grmys.db");
 var db = new Datastore({ filename: dbfile, autoload: true });
 
-var BASE_API_PATH_GRMYS = '/api/v1';
+var BASE_API_PATH_GRMYS = '/api/v2';
 var initGrmys = [];
 
 
