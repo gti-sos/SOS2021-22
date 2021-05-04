@@ -4,8 +4,12 @@
             NavLink,
             Button,
             Table,
+            Modal,
+            ModalBody,
+            ModalFooter,
+            ModalHeader,
             UncontrolledAlert,
-	    Alert,
+	        Alert,
             Pagination, 
             PaginationItem, 
             PaginationLink,
@@ -27,9 +31,14 @@
     };   
     
     
-    let page = 1;
+    //Paginacion
+    let current_offset = 0;
+    let limit = 10;
+    let current_page = 1;
     let last_page = 1;
     let total = 0;
+
+
     let datos=5;
     
     let grmys = [];
@@ -47,7 +56,7 @@
     let error = null;
     let errorMSG="";
     let okMSG="";
-    onMount(getGrmys);
+    
 
     ////////////////////////funciones///////////////////////////////////////
     async function loadGrmys() {
@@ -65,14 +74,46 @@
             }
         });
     }
+    async function getNumTotal() {
+      const res = await fetch(BASE_API_PATH + "/grmys");
+      if (res.ok) {
+        const json = await res.json();
+        total = json.length;
+        console.log("getTOTAL: " + total);
+        changePage(current_page, current_offset);
+      } else {
+        errorMSG = "No se han encontrado datos.";
+      }
+    }
+    function range(size, startAt = 0) {
+      return [...Array(size).keys()].map((i) => i + startAt);
+    }
+    function changePage(page, offset) {
+      console.log("------Change page------");
+      console.log("Params page: " + page + " offset: " + offset);
+      last_page = Math.ceil(total / 10);
+      console.log("new last page: " + last_page);
+      if (page !== current_page) {
+        console.log("enter if");
+        current_offset = offset;
+        current_page = page;
+        console.log("page: " + page);
+        console.log("current_offset: " + current_offset);
+        console.log("current_page: " + current_page);
+        getGrmys();
+      }
+      
+    }
     async function getGrmys() {
         console.log("Fetching Grmys");
-        const res = await fetch(BASE_API_PATH+"/grmys");
+        const res = await fetch(BASE_API_PATH+"/grmys?limit=" +
+          limit +"&offset=" + current_offset);
         if (res.ok) {
             console.log("Ok");
             const json = await res.json();
             grmys = json;
             console.log(`We have received ${grmys.length} resources.`);
+            getNumTotal();
         } else {
             console.log("Error");
         }
@@ -143,8 +184,8 @@
             }
         });
     }
+    onMount(getGrmys);
     
-   
 </script>
 
 <main>
@@ -213,9 +254,33 @@
                 </tr>
             {/each}
         </tbody>
-      
+        <Pagination ariaLabel="Web pagination">
+            <PaginationItem class={current_page === 1 ? "disabled" : ""}>
+              <PaginationLink
+                previous
+                href="#/grmys"
+                on:click={() => changePage(current_page - 1, current_offset - 10)}
+              />
+            </PaginationItem>
+            {#each range(last_page, 1) as page}
+              <PaginationItem class={current_page === page ? "active" : ""}>
+                <PaginationLink
+                  previous
+                  href="#/grmys"
+                  on:click={() => changePage(page, (page - 1) * 10)}
+                  >{page}</PaginationLink
+                >
+              </PaginationItem>
+            {/each}
+            <PaginationItem class={current_page === last_page ? "disabled" : ""}>
+              <PaginationLink
+                next
+                href="#/grmys"
+                on:click={() => changePage(current_page + 1, current_offset + 10)}
+              />
+            </PaginationItem>
+          </Pagination>
     </Table>
-    
 </main>
 
 <style>
