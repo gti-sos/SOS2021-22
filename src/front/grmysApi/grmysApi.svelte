@@ -38,9 +38,9 @@
     let last_page = 1;
     let total = 0;
 
-
+    let offset=0;
     let datos=5;
-    
+    let busqueda=false;
     let grmys = [];
     let newGrmys = {
 		ranking: "",
@@ -57,6 +57,15 @@
     let errorMSG="";
     let okMSG="";
     
+    let busquedaGrmys = {
+		ranking: "",
+		name: "",
+		award:"",
+		country:"",
+		groupmember:"",
+        style:"",
+        year:""
+	};
 
     ////////////////////////funciones///////////////////////////////////////
     async function loadGrmys() {
@@ -121,7 +130,8 @@
     async function insertGrmys(){
         
 	     if (newGrmys.country == "" || newGrmys.country == null || newGrmys.year == "" || newGrmys.year == null) {
-             alert("Los campos 'Pais' y 'Año' no pueden estar vacios");
+             //alert("Los campos 'Pais' y 'Año' no pueden estar vacios");
+             errorMSG= "Los campos 'Pais' y 'Año' no pueden estar vacios";
          }
          else{
              const res = await fetch(BASE_API_PATH+"/grmys",{
@@ -134,7 +144,7 @@
                  if(res.status == 201){
                      getGrmys();
                      console.log("Dato introducido");
-                     okMSG="Entrada introducida correctamente a la base de datos";
+                     okMSG= `La entrada del grupo ${newGrmys.name}  ha sido insertado correctamente`
                  }
                  else if(res.status == 400){
                      console.log("ERROR Data was not correctly introduced");
@@ -180,10 +190,19 @@
                 console.log("OK");
                 grmys = [];
             } else {
-                console.log("Error");
-            }
-        });
+                if (res.status === 404) {
+          errorMSG = "No existen datos que borrar";
+        } else if (res.status === 500) {
+          errorMSG = "No se ha podido acceder a la base de datos";
+        }
+        okMsg = "";
+        console.log("ERROR!" + errorMSG);
+      }
+            
+     });
     }
+   
+    
     onMount(getGrmys);
     
 </script>
@@ -210,7 +229,29 @@
         {/if}
     
     
-    
+        <h3>Busqueda</h3>
+        <Table borderer>
+          <tbody>
+            <tr>
+            <td>
+                <input type="text"placeholder="clasificacion" size="10"/></td>
+            <td>
+                <input type="text"placeholder="nombre"  size="10" /></td>
+            <td>
+                <input type="text"placeholder="premios" size="10"/></td>
+            <td>
+                <input type="text" placeholder="pais" size="10"/></td>
+            <td>
+                <input type="text" placeholder="miembros" size="10"/></td>
+            <td>
+                <input type="text" placeholder="estilo"  size="10"/></td>
+            <td>
+                <input type="text"placeholder="año"  size="10"/></td>
+            <td><Button color="primary" >Buscar</Button></td>
+              <td><Button color="secondary" >nueva busqueda</Button></td>
+            </tr>
+          </tbody>
+        </Table>
     <Table bordered>
         <thead>
             <tr>
