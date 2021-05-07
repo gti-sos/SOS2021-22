@@ -56,7 +56,8 @@
     let error = null;
     let errorMSG="";
     let okMSG="";
-    
+    let actualRanking="";
+    let actualname="";
     let busquedaGrmys = {
 		ranking: "",
 		name: "",
@@ -201,8 +202,36 @@
             
      });
     }
-   
-    
+    async function buscaGrmys(ranking, name) {
+		
+        var url = "/api/v2/grmys";
+        if (ranking != "" && name != "") {
+                url = url + "?ranking=" + ranking +"&name=" + name ;
+        }else if (ranking != "" && name == "") {
+                url = url + "?ranking=" + ranking;
+        }else if (ranking == "" && name != "") {
+                url = url + "?name=" + name;
+        }
+        const res = await fetch(url);
+    if (res.ok) {
+        const json = await res.json();
+        grmys = json;
+        if(name =="" && ranking==""){
+            errorMSG=("Introduce datos para iniciar la busqueda");
+        }else if(grmys.length > 0  ){
+            okMSG=("SE HA ENCONTRADO UNO O VARIOS RESULTADOS");
+        }else{
+            okMSG=("NO SE HA ENCONTRADO RESULTADOS");
+           
+        }
+    }else{
+        console.log("ERROR");
+        if(res.status){
+            errorMSG=("NO SE HA ENCONTRADO RESULTADOS");
+        }
+        
+    }
+        }
     onMount(getGrmys);
     
 </script>
@@ -210,7 +239,7 @@
 <main>
     <Nav>
         <NavItem>
-            <NavLink href="/">Volver</NavLink>
+            <Button outline  color="secondary" href="/">Volver</Button>
         </NavItem>
         <NavItem>
             <NavLink href="#" on:click={botonCargar}>Cargar Gramys</NavLink>
@@ -230,28 +259,34 @@
     
     
         <h3>Busqueda</h3>
-        <Table borderer>
-          <tbody>
-            <tr>
-            <td>
-                <input type="text"placeholder="clasificacion" size="10"/></td>
-            <td>
-                <input type="text"placeholder="nombre"  size="10" /></td>
-            <td>
-                <input type="text"placeholder="premios" size="10"/></td>
-            <td>
-                <input type="text" placeholder="pais" size="10"/></td>
-            <td>
-                <input type="text" placeholder="miembros" size="10"/></td>
-            <td>
-                <input type="text" placeholder="estilo"  size="10"/></td>
-            <td>
-                <input type="text"placeholder="año"  size="10"/></td>
-            <td><Button color="primary" >Buscar</Button></td>
-              <td><Button color="secondary" >nueva busqueda</Button></td>
-            </tr>
-          </tbody>
+        <Table bordered>
+            <tbody>
+                <tr>
+                    <td>
+                        <FormGroup style="width:50%;"> 
+                            <Label > Búsqueda por Ranking: </Label>
+                            <Input type ="text" name="selectRanking" id="selectRanking" bind:value="{actualRanking}">
+                            </Input>
+                            </FormGroup>
+                    </td>
+                    <td>
+                        <FormGroup style="width:50%;">
+                            <Label > Búsqueda por nombre </Label>
+                            <Input type ="text" name="selectName" id="selectName" bind:value="{actualname}">
+                               
+                            </Input>
+                        </FormGroup>
+                    </td>
+                    <td>
+                        <div style="text-align:center;padding-bottom: 3%;margin-top: 3%;">
+                            <Button outline  color="primary" on:click="{buscaGrmys(actualRanking, actualname)}" class="button-search" >Buscar</Button>
+                            <Button outline  color="secondary" href="javascript:location.reload()">Volver</Button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         </Table>
+        
     <Table bordered>
         <thead>
             <tr>
