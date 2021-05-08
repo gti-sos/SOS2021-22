@@ -7,7 +7,6 @@
         NavLink,
         Button,
         Table,
-        UncontrolledAlert,
     } from "sveltestrap";
 
     export let params = {};
@@ -24,7 +23,6 @@
     let errorMsg = "";
     let okMsg = "";
     
-
     const botonActualizar = () => {
         updateRichman();
     }
@@ -32,7 +30,7 @@
     async function getRichman() {
         console.log("Fetching richman..." + params.name + " " + params.year);
         const res = await fetch(
-            BASE_API_PATH + "/richpp/" + params.name + "/" + params.year
+            BASE_API_PATH + "/richpp/" + params.name
         );
 
         if (res.ok) {
@@ -57,8 +55,6 @@
             console.log("ERROR!" + errorMsg);
         }
     }
-
-    onMount(getRichman);
 
     async function updateRichman() {
         console.log(
@@ -101,6 +97,8 @@
             }
         });
     }
+    
+    onMount(getRichman);
 </script>
 
 <main>

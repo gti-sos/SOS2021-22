@@ -173,7 +173,7 @@
     async function deleteRichman(richman) {
         console.log(`Deleting richman with name ${richman.name} and year ${richman.year}`);
         const res = await fetch(
-            BASE_API_PATH + "/richpp/" + richman.name + "/" + richman.year,
+            BASE_API_PATH + "/richpp/" + richman.name,
             {
                 method: "DELETE",
             }

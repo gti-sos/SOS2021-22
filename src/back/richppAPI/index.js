@@ -99,7 +99,7 @@ module.exports.register = (app) => {
         var year = request.params.year;
         var query = { "name": name, "year": year };
 
-        db.find(query).exec((err, data) => {
+        db.find(query, { multi: true }).exec((err, data) => {
             if (err) {
                 console.error("ERROR accesing DB in GET");
                 response.sendStatus(500);
@@ -399,7 +399,7 @@ module.exports.register = (app) => {
     app.get(BASE_API_PATH_RICHPP + '/richpp/:name/:year', (request, response) => {
         var name = request.params.name;
         var year = request.params.year;
-        console.log(`GET stat by name: <${name}> and foundation-year: <${year}>`);
+        console.log(`GET stat by name: <${name}> and year: <${year}>`);
         for (var stat of initRichpp) {
             if (stat.name === name && stat.year === year) {
                 return response.status(200).json(stat);
@@ -412,7 +412,7 @@ module.exports.register = (app) => {
     app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         var country = request.params.country;
         var year = request.params.year;
-        console.log(`GET stat by country: <${country}> and foundation-year: <${year}>`);
+        console.log(`GET stat by country: <${country}> and year: <${year}>`);
         for (var stat of initRichpp) {
             if (stat.country === country && stat.year === year) {
                 return response.status(200).json(stat);
