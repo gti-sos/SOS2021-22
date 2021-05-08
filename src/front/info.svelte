@@ -17,50 +17,50 @@
   
   <main>
     <h1>Info-SOS2021-22</h1>
-    <Container>
-      <Col xs="auto">
-        <Card class="mb-3">
-          <CardHeader class="bg-secondary">
-            <CardTitle><h2>Equipo</h2></CardTitle>
-          </CardHeader>
-          <CardBody>
-            <Col>
-              <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez (GramysAPI)</a>
-            </Col>
-            <Col>
-              <a href="https://github.com/mansegrod">Manuel Segura Rodríguez (RichppAPI)</a>
-            </Col>
-            <Col>
-              <a href="https://github.com/antonioparra7">Antonio Parra Diaz (PaawardsAPI)</a>
-            </Col>
-          </CardBody>
-        </Card>
-      </Col>
-    </Container>
+    
   
     <Container>
       <Col xs="auto">
-        <Card class="mb-3">
-          <CardHeader class="bg-secondary">
-            <CardTitle><h2>Repositorio</h2></CardTitle>
-          </CardHeader>
-          <CardBody>
-            <a href="http://github.com/gti-sos/SOS2021-22">http://github.com/gti-sos/SOS2021-22</a>
-          </CardBody>
-        </Card>
-      </Col>
-    </Container>
-  
-    <Container>
-      <Col xs="auto">
-        <Card class="mb-3">
-          <CardHeader class="bg-secondary">
-            <CardTitle><h2>Heroku</h2></CardTitle>
-          </CardHeader>
-          <CardBody>
-            <a href="http://sos2021-22.herokuapp.com">http://sos2021-22.herokuapp.com</a>
-          </CardBody>
-        </Card>
+        <div class="row">
+          <div class="col-sm">
+            <Card class="mb-3">
+              <CardHeader class="bg-secondary">
+                <CardTitle><h2>Equipo</h2></CardTitle>
+              </CardHeader>
+              <CardBody>
+                <Col>
+                  <a href="https://github.com/josgonrod7">Jose Mª González Rodríguez (GramysAPI)</a>
+                </Col>
+                <Col>
+                  <a href="https://github.com/mansegrod">Manuel Segura Rodríguez (RichppAPI)</a>
+                </Col>
+                <Col>
+                  <a href="https://github.com/antonioparra7">Antonio Parra Diaz (PaawardsAPI)</a>
+                </Col>
+              </CardBody>
+            </Card>
+          </div>
+          <div class="col-sm-3">
+            <Card class="mb-3">
+              <CardHeader class="bg-secondary">
+                <CardTitle><h2>Repositorio</h2></CardTitle>
+              </CardHeader>
+              <CardBody>
+                <a href="http://github.com/gti-sos/SOS2021-22"><Button color="warning"><strong>GITHUB</strong></Button></a>
+              </CardBody>
+            </Card>
+          </div>
+          <div class="col-sm-3">
+            <Card class="mb-3">
+              <CardHeader class="bg-secondary">
+                <CardTitle><h2>Heroku</h2></CardTitle>
+              </CardHeader>
+              <CardBody>
+                <a href="http://sos2021-22.herokuapp.com"><Button color="warning"><strong>HEROKU</strong></Button></a>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
       </Col>
     </Container>
   

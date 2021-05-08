@@ -13,6 +13,9 @@
     const botonInsertar = () => {
         insertPaaward();
     };
+    const botonBuscar = () => {
+        searchPaawards();
+    };
     
     let paawards = [];
     let newPaaward = {
@@ -126,7 +129,8 @@
                 <td>Edad</td>
                 <td>Genero</td>
                 <td>Trofeos</td>
-                <td>Acciones</td>
+                <td>Acciones 1</td>
+                <td>Acciones 2</td>
             </tr>
         </thead>
         <tbody>
@@ -139,6 +143,7 @@
                 <td><input bind:value="{newPaaward.gender}"></td>
                 <td><input bind:value="{newPaaward.trophy}"></td>
                 <td><Button on:click={botonInsertar}>Insertar</Button></td>
+                <td><Button on:click={botonBuscar}>Buscar</Button></td>
             </tr>
             {#each paawards as paaward}
                 <tr>
