@@ -16,9 +16,9 @@
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
 		"/grmys": grmys,
-		"/richpp": Richpp,
-		"/richman/:name": RichmanEdit,
 		"/grmys/:ranking/:name": editGrmys,
+		"/richpp": Richpp,
+		"/richpp/:name/:year": RichmanEdit,
 		"*":NotFound
     };
 </script>

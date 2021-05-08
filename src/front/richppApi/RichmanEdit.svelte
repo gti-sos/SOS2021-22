@@ -13,20 +13,27 @@
     export let params = {};
     let richman = [];
     let updateTop = "X";
-    let updateName = "X";
-    let updateFortune = "X";
-    let updateAge = "X";
-    let updateCountry = "X";
-    let updateYear = "X";
-    let updateCompany = "X";
+    let updateName = "XXXX";
+    let updateFortune = "XXX";
+    let updateAge = "XX";
+    let updateCountry = "XXXXXXXX";
+    let updateYear = "XXXX";
+    let updateCompany = "XXXXXX";
 
     const BASE_API_PATH = "/api/v2";
+    let errorMsg = "";
+    let okMsg = "";
+    
 
-    onMount(getRichman);
+    const botonActualizar = () => {
+        updateRichman();
+    }
 
     async function getRichman() {
-        console.log("Fetching richman...");
-        const res = await fetch(BASE_API_PATH + "/richpp/" + params.name);
+        console.log("Fetching richman..." + params.name + " " + params.year);
+        const res = await fetch(
+            BASE_API_PATH + "/richpp/" + params.name + "/" + params.year
+        );
 
         if (res.ok) {
             console.log("OK.");
@@ -41,30 +48,56 @@
             updateCompany = richman.company;
             console.log(`Received richman`);
         } else {
-            console.log("Error!");
+            if (res.status === 404) {
+                errorMsg = "No se encuentra el dato solicitado";
+            } else if (res.status === 500) {
+                errorMsg = "No se han podido acceder a la base de datos";
+            }
+            okMsg = "";
+            console.log("ERROR!" + errorMsg);
         }
     }
 
+    onMount(getRichman);
+
     async function updateRichman() {
-        console.log("Updating richman..." + JSON.stringify(params.name));
-        const res = await fetch(BASE_API_PATH + "/richpp/" + params.name, {
-            method: "PUT",
-            body: JSON.stringify({
-                top: updateTop,
-                name: params.name,
-                fortune: updateFortune,
-                age: updateAge,
-                country: updateCountry,
-                year: updateYear,
-                company: updateCompany,
-            }),
-            headers: { "Content-Type": "application/json" },
-        }).then(function (res) {
+        console.log(
+            "Updating richman..." +
+                JSON.stringify(params.name) +
+                JSON.stringify(params.year)
+        );
+        const res = await fetch(
+            BASE_API_PATH + "/richpp/" + params.name + "/" + params.year,
+            {
+                method: "PUT",
+                body: JSON.stringify({
+                    top: updateTop,
+                    name: updateName,
+                    fortune: updateFortune,
+                    age: updateAge,
+                    country: updateCountry,
+                    year: updateYear,
+                    company: updateCompany,
+                }),
+                headers: { "Content-Type": "application/json" },
+            }
+        ).then(function (res) {
             if (res.ok) {
                 console.log("OK");
                 getRichman();
+                errorMsg = "";
+                okMsg = "Operación realizada correctamente";
             } else {
-                console.log("Error");
+                if (res.status === 409) {
+                    errorMsg = "El dato ya se encuentra cargado";
+                } else if (res.status === 500) {
+                    errorMsg = "No se han podido acceder a la base de datos";
+                } else if (res.status === 404) {
+                    errorMsg = "No se han encontrado el dato solicitado";
+                }
+                okMsg = "";
+                getRichman();
+                console.log("ERROR!" + errorMsg);
             }
         });
     }
@@ -94,21 +127,32 @@
         </thead>
         <tbody>
             <tr>
-                <td><input bind:value="{updateTop}"></td>
-                <td>{updateName}</td>
-                <td><input bind:value="{updateFortune}"></td>
-                <td><input bind:value="{updateAge}"></td>
-                <td><input bind:value="{updateCountry}"></td>
-                <td><input bind:value="{updateYear}"></td>
-                <td><input bind:value="{updateCompany}"></td>
+                <td><input bind:value={updateTop} size="10"/></td>
+                <td>{params.name}</td>
+                <td><input bind:value={updateFortune} size="10"/></td>
+                <td><input bind:value={updateAge} size="10"/></td>
+                <td><input bind:value={updateCountry} size="10"/></td>
+                <td><input bind:value={updateYear} size="10"/></td>
+                <td><input bind:value={updateCompany} size="10"/></td>
                 <td>
-                    <Button outline color="primary" on:click={updateRichman}>Actualizar</Button>
+                    <Button outline color="primary" on:click={botonActualizar}>Actualizar</Button>
                 </td>
             </tr>
         </tbody>
     </Table>
-    
-</main>
-<style>
 
+    {#if errorMsg}
+        <p style="color: red">ERROR: {errorMsg}</p>
+    {/if}
+    {#if okMsg}
+        <p style="color: green">{okMsg}</p>
+    {/if}
+</main>
+
+<style>
+    main{
+        text-align: center;
+        padding: 1em;
+        margin: 0 auto;
+    }
 </style>

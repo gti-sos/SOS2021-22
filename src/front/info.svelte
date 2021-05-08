@@ -126,7 +126,12 @@
                     <div class="row">
                       <div class="col-md p-1">
                         <a href="https://documenter.getpostman.com/view/15457127/TzJu9cgP">
-                          <Button color="danger">Documentacion Postman</Button>
+                          <Button color="danger">Documentacion Postman V2</Button>
+                        </a>
+                      </div>
+                      <div class="col-md p-1">
+                        <a href="https://documenter.getpostman.com/view/15457127/TzRRDTqC">
+                          <Button color="danger">Documentacion Postman V1</Button>
                         </a>
                       </div>
                     </div>

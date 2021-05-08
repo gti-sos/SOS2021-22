@@ -70,12 +70,34 @@ module.exports.register = (app) => {
         });
     });
 
-    //GET a un recurso (obtener dato por pais y año) usando nedb
-    app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
+    //GET a un recurso (obtener dato por top y nombre) usando nedb
+    app.get(BASE_API_PATH_RICHPP + '/richpp/:top/:name', (request, response) => {
         console.log('-------------------------------------');
-        var country = request.params.country;
+        var top = request.params.top;
+        var name = request.params.name;
+        var query = { "top": top, "name": name };
+
+        db.find(query, { multi: true }).exec((err, data) => {
+            if (err) {
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            } else if (data.length >= 1) {
+                delete data[0]._id;
+                response.status(200).send(JSON.stringify(data[0], null, 2));
+                console.log("Data sent:" + JSON.stringify(data[0], null, 2));
+            } else {
+                response.sendStatus(404);
+                console.log("The data requested is empty");
+            }
+        });
+    });
+
+    //GET a un recurso (obtener dato por nombre y año) usando nedb
+    app.get(BASE_API_PATH_RICHPP + '/richpp/:name/:year', (request, response) => {
+        console.log('-------------------------------------');
+        var name = request.params.name;
         var year = request.params.year;
-        var query = { "country": country, "year": year };
+        var query = { "name": name, "year": year };
 
         db.find(query).exec((err, data) => {
             if (err) {
@@ -92,8 +114,30 @@ module.exports.register = (app) => {
         });
     });
 
-     //GET a un recurso (obtener dato nombre) usando nedb
-     app.get(BASE_API_PATH_RICHPP + '/richpp/:name', (request, response) => {
+    //GET a un recurso (obtener dato por pais y año) usando nedb
+    app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
+        console.log('-------------------------------------');
+        var country = request.params.country;
+        var year = request.params.year;
+        var query = { "country": country, "year": year };
+
+        db.find(query, { multi: true }).exec((err, data) => {
+            if (err) {
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            } else if (data.length >= 1) {
+                delete data[0]._id;
+                response.status(200).send(JSON.stringify(data[0], null, 2));
+                console.log("Data sent:" + JSON.stringify(data[0], null, 2));
+            } else {
+                response.sendStatus(404);
+                console.log("The data requested is empty");
+            }
+        });
+    });
+
+    //GET a un recurso (obtener dato nombre) usando nedb
+    app.get(BASE_API_PATH_RICHPP + '/richpp/:name', (request, response) => {
         console.log('-------------------------------------');
         var name = request.params.name;
 
@@ -166,8 +210,27 @@ module.exports.register = (app) => {
         console.log('-------------------------------------');
         var name = request.params.name;
 
-
         db.remove({ name: name }, (err, numRemoved) => {
+            if (err) {
+                console.error("ERROR accesing DB in GET");
+                response.sendStatus(500);
+            } else if (numRemoved == 0) {
+                response.sendStatus(404);
+                console.log("There is no such data in the database");
+            } else {
+                response.sendStatus(200);
+                console.log("Object removed");
+            }
+        });
+    });
+
+    //DELETE a un recurso (eliminar dato por nombre y año) usando nedb
+    app.delete(BASE_API_PATH_RICHPP + '/richpp/:name/:year', (request, response) => {
+        console.log('-------------------------------------');
+        var name = request.params.name;
+        var year = request.params.year;
+
+        db.remove({ name: name, year: year }, { multi: true }, (err, numRemoved) => {
             if (err) {
                 console.error("ERROR accesing DB in GET");
                 response.sendStatus(500);
@@ -190,6 +253,62 @@ module.exports.register = (app) => {
         var query = { "top": top, "year": year };
 
         if (!newData.top || !newData['name'] || !newData['fortune'] || !newData["age"] || !newData['country']
+            || !newData.year || !newData["company"] || Object.keys(newData).length != 7) {
+            console.log("The data is not correctly provided");
+            return response.sendStatus(400);
+        } else {
+            db.update(query, newData, (err, datoCambio) => {
+                if (err) {
+                    console.error("ERROR accesing DB in PUT");
+                    response.sendStatus(500);
+                } else if (datoCambio == 0) {
+                    response.sendStatus(404);
+                    console.log("There is no such data in the database");
+                } else {
+                    response.sendStatus(200);
+                    console.log("Database updated");
+                }
+            });
+        }
+    });
+
+    //PUT a un recurso (actualizar dato por top y nombre)
+    app.put(BASE_API_PATH_RICHPP + '/richpp/:top/:name', (request, response) => {
+        console.log('-------------------------------------');
+        var newData = request.body;
+        var top = request.body.top;
+        var name = request.body.name;
+        var query = { "top": top, "name": name };
+
+        if (!newData.top || !newData.name || !newData['fortune'] || !newData["age"] || !newData['country']
+            || !newData["year"] || !newData["company"] || Object.keys(newData).length != 7) {
+            console.log("The data is not correctly provided");
+            return response.sendStatus(400);
+        } else {
+            db.update(query, newData, (err, datoCambio) => {
+                if (err) {
+                    console.error("ERROR accesing DB in PUT");
+                    response.sendStatus(500);
+                } else if (datoCambio == 0) {
+                    response.sendStatus(404);
+                    console.log("There is no such data in the database");
+                } else {
+                    response.sendStatus(200);
+                    console.log("Database updated");
+                }
+            });
+        }
+    });
+
+    //PUT a un recurso (actualizar dato por top y nombre)
+    app.put(BASE_API_PATH_RICHPP + '/richpp/:name/:year', (request, response) => {
+        console.log('-------------------------------------');
+        var newData = request.body;
+        var name = request.body.name;
+        var year = request.body.year;
+        var query = { "name": name, "year": year };
+
+        if (!newData["top"] || !newData.name || !newData['fortune'] || !newData["age"] || !newData['country']
             || !newData.year || !newData["company"] || Object.keys(newData).length != 7) {
             console.log("The data is not correctly provided");
             return response.sendStatus(400);
@@ -277,6 +396,19 @@ module.exports.register = (app) => {
     });
 
     //GET a un recurso (obtener dato por pais y año)
+    app.get(BASE_API_PATH_RICHPP + '/richpp/:name/:year', (request, response) => {
+        var name = request.params.name;
+        var year = request.params.year;
+        console.log(`GET stat by name: <${name}> and foundation-year: <${year}>`);
+        for (var stat of initRichpp) {
+            if (stat.name === name && stat.year === year) {
+                return response.status(200).json(stat);
+            }
+        }
+        return response.sendStatus(404);
+    });
+
+    //GET a un recurso (obtener dato por pais y año)
     app.get(BASE_API_PATH_RICHPP + '/richpp/:country/:year', (request, response) => {
         var country = request.params.country;
         var year = request.params.year;
@@ -303,6 +435,27 @@ module.exports.register = (app) => {
                 }
             }
             console.log(`Not data with country(${country}) and year(${year})`);
+            return response.sendStatus(404);
+        } else {
+            console.log('Richpp is empty');
+            return response.sendStatus(404);
+        }
+    });
+
+    //DELETE a un recurso (eliminar dato por nombre y año)
+    app.delete(BASE_API_PATH_RICHPP + '/richpp/:name/:year', (request, response) => {
+        var name = request.params.name;
+        var year = request.params.year;
+
+        if (initRichpp.length != 0) {
+            for (var i = 0; i < initRichpp.length; i++) {
+                if (initRichpp[i]["name"] == name && initRichpp[i]["year"] == year) {
+                    console.log(`DELETE a resource given a name(${name}) and a year(${year})`);
+                    initRichpp.splice(i, 1)
+                    return response.sendStatus(200);
+                }
+            }
+            console.log(`Not data with name(${name}) and year(${year})`);
             return response.sendStatus(404);
         } else {
             console.log('Richpp is empty');
