@@ -16,7 +16,11 @@
     const botonBuscar = () => {
         searchPaawards();
     };
+    const botonRestaurar = () => {
+        restorePaawards();
+    };
     
+    //Variables
     let paawards = [];
     let newPaaward = {
                         name: "",
@@ -28,6 +32,11 @@
                         trophy: ""
                     };
     let error = null;
+    let searchCountry = "";
+    let searchYear = "";
+    
+
+    //Funciones
     async function loadPaawards() {
         if(paawards.length==0){
             console.log("Loading paawards");
@@ -104,6 +113,29 @@
             }
         });
     }
+
+    async function searchPaawards(country,year){
+        console.log("Searching paawards: "+country+" and "+year);
+		
+		var url = "api/v1/paawards";
+		if (country != "" && year != "") {
+			url = url + "?country=" +country+ "&year=" + year; 
+		} else if (country != "" && year == "") {
+			url = url + "?country=" + country;
+		} else if (country == "" && year != "") {
+			url = url + "?year=" + year;
+		}
+		const res = await fetch(url);
+		if (res.ok) {
+			console.log("OK");
+			const json = await res.json();
+			paawards = json;			
+			console.log("were found " + paawards.length + " paawards");
+		} else {
+			console.log("ERROR");
+		}
+    }
+
 </script>
 
 <main>
@@ -122,6 +154,28 @@
     <Table bordered>
         <thead>
             <tr>
+                <td>Busqueda por pais:</td>
+                <td>Busqueda por año:</td>
+                <td>Buscar:</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input bind:value="{searchCountry}"></td>
+                <td><input bind:value="{searchYear}"></td>
+                <td>
+                    
+                    <Button on:click="{searchPaawards(searchCountry,searchYear)}">Buscar</Button>
+                    <Button href="javascript:location.reload()">Restaurar</Button>
+                </td>
+            </tr>
+        </tbody>
+
+    </Table>
+
+    <Table bordered>
+        <thead>
+            <tr>
                 <td>Nombre</td>
                 <td>Año</td>
                 <td>Deporte</td>
@@ -129,8 +183,7 @@
                 <td>Edad</td>
                 <td>Genero</td>
                 <td>Trofeos</td>
-                <td>Acciones 1</td>
-                <td>Acciones 2</td>
+                <td>Acciones</td>
             </tr>
         </thead>
         <tbody>
@@ -143,7 +196,6 @@
                 <td><input bind:value="{newPaaward.gender}"></td>
                 <td><input bind:value="{newPaaward.trophy}"></td>
                 <td><Button on:click={botonInsertar}>Insertar</Button></td>
-                <td><Button on:click={botonBuscar}>Buscar</Button></td>
             </tr>
             {#each paawards as paaward}
                 <tr>
