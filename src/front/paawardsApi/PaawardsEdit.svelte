@@ -11,6 +11,10 @@
     let updateGender = "";
     let updateTrophy = "";
 
+    let errorMessage = "";
+    let okMessage = "";
+
+
     const botonActualizar = () => {
         updatePaaward();
     };
@@ -52,9 +56,11 @@
         }).then(function (res) {
             if (res.ok) {
                 console.log("OK");
+                okMessage = "Paaward actualizado correctamente";
                 getPaaward();
             } else {
                 console.log("Error");
+                errorMessage = "Paaward no ha podido ser actualizado"
             }
         });
     }
@@ -68,6 +74,13 @@
             <NavLink href="#/paawards">Volver</NavLink>
         </NavItem>
     </Nav>
+
+    {#if errorMessage}
+        <p style="color: red">ERROR: {errorMessage}</p>
+    {/if}
+    {#if okMessage}
+        <p style="color: green">{okMessage}</p>
+    {/if}
 
     <h2>Editar Paaward: {updateName}</h2>
 
