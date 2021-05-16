@@ -245,9 +245,89 @@
             }
         }
     }
+    async function loadGraph() {
+    Highcharts.chart('container', {
+
+        title: {
+            text: 'Top3 of the world`s richest men, 2016-2020'
+        },
+
+        subtitle: {
+            text: 'Source: thesolarfoundation.com'
+        },
+
+        yAxis: {
+            title: {
+                text: 'Fortune in billions of dollars'
+            }
+        },
+
+        xAxis: {
+            accessibility: {
+                rangeDescription: 'Range: 2016 to 2020'
+            }
+        },
+
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2016
+            }
+        },
+
+        series: [{
+            name: 'Amancio Ortega',
+            data: [67, null, null, null, null]
+        }, {
+            name: 'Jeff Bezos',
+            data: [null, 72.8, 112, 131, 113]
+        }, {
+            name: 'Bill Gates',
+            data: [75, 86, 90, 96.5, 98]
+        }, {
+            name: 'Warren Buffett',
+            data: [60.8, 75.6, 84, 82.5, null]
+        }, {
+            name: 'Bernard Arnault',
+            data: [null, null, null, null, 76]
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+        });
+    }
 
     onMount(getRichmen);
 </script>
+
+<svelte:head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
+</svelte:head>
 
 <main>
     <Nav>
@@ -395,6 +475,15 @@
             </PaginationItem>
         </Pagination>
     </Table>
+
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Basic line chart showing trends in a dataset. This chart includes the
+            <code>series-label</code> module, which adds a label to each line for
+            enhanced readability.
+        </p>
+    </figure>
 </main>
 
 <style>
@@ -403,5 +492,11 @@
         text-transform: uppercase;
         font-size: 4em;
         font-weight: 100;
+    }
+
+    .highcharts-figure {
+        min-width: 360px; 
+        max-width: 800px;
+        margin: 1em auto;
     }
 </style>
