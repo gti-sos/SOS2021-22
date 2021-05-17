@@ -53,8 +53,9 @@
               <CardBody>
                 <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>Gramys</strong></Button></a>
                 <a href="#/paawards/paawardsGraphic"><Button color="warning"><strong>Paawards</strong></Button></a>
-                <a href="http://github.com/gti-sos/SOS2021-22"><Button color="warning"><strong>Richpp</strong></Button></a>
               </CardBody>
+                <a href="http://github.com/gti-sos/SOS2021-22"><Button color="warning"><strong>Richpp</strong></Button></a>
+                <a href="http://github.com/gti-sos/SOS2021-22"><Button color="warning"><strong>Grafica comun</strong></Button></a>
             </Card>
           </div>
           <div class="col-sm-3">
