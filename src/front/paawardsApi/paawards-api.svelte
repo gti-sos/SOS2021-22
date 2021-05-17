@@ -209,7 +209,7 @@
 <main>
     <Nav>
         <NavItem>
-            <NavLink href="/">Volver</NavLink>
+            <NavLink href="/#/info">Volver</NavLink>
         </NavItem>
         <NavItem>
             <NavLink href="#" on:click={botonCargar}>Cargar paawards</NavLink>
@@ -313,7 +313,7 @@
         </PaginationItem>
       </Pagination>
 
-      <Button href="#/paawards/PaawardsGraphic">Ver Gráfico</Button>
+      <Button href="/#/paawards/paawardsGraphic">Ver Gráfico</Button>
 </main>
 
 <style>
