@@ -180,7 +180,7 @@
     async function searchRichmen(top, name) {
         console.log("Searching richmen: "+ top + " and " + name);
 
-        var url = "/api/v2/richpp";
+        var url = BASE_API_PATH + "/richpp";
         if (top != "" && name != "") {
             url = url + "?top=" + top + "&name=" + name;
         } else if (top != "" && name == "") {
