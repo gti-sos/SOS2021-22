@@ -312,6 +312,8 @@
           />
         </PaginationItem>
       </Pagination>
+
+      <Button href="#/paawards/PaawardsGraphic">Ver Gráfico</Button>
 </main>
 
 <style>
