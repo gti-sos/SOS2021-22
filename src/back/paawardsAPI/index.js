@@ -45,7 +45,7 @@ module.exports.register = (app) => {
 	app.get(BASE_API_PATH_PAAWARDS + '/paawards/loadInitialData', (request, response) => {
 		dbPaawards.remove({});
         dbPaawards.insert(initialPaawards);
-        //console.log("Initial Paawards is loaded: " + JSON.stringify(initialPaawards, null, 2));
+        console.log("Initial Paawards is loaded: " + JSON.stringify(initialPaawards, null, 2));
 		response.send(JSON.stringify(initialPaawards, null, 2));
 	});
 
@@ -56,7 +56,7 @@ module.exports.register = (app) => {
 		if(request.query.trophy) request.query.trophy = parseInt(request.query.trophy);
 
 		var parametros = request.query;
-		//console.log(parametros);
+		console.log(parametros);
 	   	let offset = null;
 		let limit = null;
 

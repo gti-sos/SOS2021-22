@@ -59,7 +59,6 @@
             });
         }
     }
-    onMount(loadPaawards);
     
     //Funcion para obtener paawards
     async function getPaawards() {
@@ -76,7 +75,7 @@
             }
             
     }
-    //onMount(getPaawards);
+    onMount(getPaawards);
 
     //Funcion para borrar todos los paawards
     async function deletePaawards() {
