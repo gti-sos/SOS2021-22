@@ -39,25 +39,6 @@
               </CardBody>
             </Card>
           </div>
-        </div>
-      </Col>
-    </Container>
-    <Container>
-      <Col xs="auto">
-        <div class="row">
-          <div class="col-sm-3">
-            <Card class="mb-3">
-              <CardHeader class="bg-secondary">
-                <CardTitle><h2>Analiticas</h2></CardTitle>
-              </CardHeader>
-              <CardBody>
-                <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>Gramys</strong></Button></a>
-                <a href="#/paawards/paawardsGraphic"><Button color="warning"><strong>Paawards</strong></Button></a>
-              </CardBody>
-                <a href="http://github.com/gti-sos/SOS2021-22"><Button color="warning"><strong>Richpp</strong></Button></a>
-                <a href="http://github.com/gti-sos/SOS2021-22"><Button color="warning"><strong>Grafica comun</strong></Button></a>
-            </Card>
-          </div>
           <div class="col-sm-3">
             <Card class="mb-3">
               <CardHeader class="bg-secondary">
@@ -79,6 +60,76 @@
             </Card>
           </div>
         </div>
+      </Col>
+    </Container>
+
+    <Container>
+      <Col xs="auto">
+        <Card class="mb-3">
+          <CardHeader class="bg-secondary">
+            <CardTitle><h2>Analíticas</h2></CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div class="row">
+              <div class="col-sm">
+                <Card class="mb-3">
+                  <CardHeader class="bg-secondary">
+                    <CardTitle><h2>Grmys</h2></CardTitle>
+                  </CardHeader>
+                  <CardBody>
+                    <div class="row">
+                      <div class="col-md">
+                        <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>Gramys</strong></Button></a>
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
+              </div>
+              <div class="col-sm">
+                <Card class="mb-3">
+                  <CardHeader class="bg-secondary">
+                    <CardTitle><h2>Richpp</h2></CardTitle>
+                  </CardHeader>
+                  <CardBody>
+                    <div class="row">
+                      <div class="col-md">
+                        <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>Richpp</strong></Button></a>
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
+              </div>
+              <div class="col-sm">
+                <Card class="mb-3">
+                  <CardHeader class="bg-secondary">
+                    <CardTitle><h2>Paawards</h2></CardTitle>
+                  </CardHeader>
+                  <CardBody>
+                    <div class="row">
+                      <div class="col-md">
+                        <a href="#/paawards/paawardsGraphic"><Button color="warning"><strong>Paawards</strong></Button></a>
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
+              </div>
+              <div class="col-sm">
+                <Card class="mb-3">
+                  <CardHeader class="bg-secondary">
+                    <CardTitle><h2>Común</h2></CardTitle>
+                  </CardHeader>
+                  <CardBody>
+                    <div class="row">
+                      <div class="col-md">
+                        <a href="#/globalGraphic"><Button color="warning"><strong>Común</strong></Button></a>
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
       </Col>
     </Container>
   

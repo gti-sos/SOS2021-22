@@ -5,13 +5,15 @@
 	import info from "./info.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
+	import editGrmys from './grmysApi/editGrmys.svelte';
+	import grmysGraph from './grmysApi/grmysGraphic.svelte';
 	import paawards from './paawardsApi/paawards-api.svelte';
 	import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
 	import paawardGraph from './paawardsApi/PaawardsGraphic.svelte'
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
-	import editGrmys from './grmysApi/editGrmys.svelte';
-	import grmysGraph from './grmysApi/grmysGraphic.svelte';
+	import globalGraphic from './globalGraphic.svelte';
+
 	const routes = {
 		"/":Home,
 		"/info":info,
@@ -23,6 +25,7 @@
 		"/grmys/grmysGraphic": grmysGraph,
 		"/richpp": Richpp,
 		"/richpp/:name/:year": RichmanEdit,
+		"/globalGraphic":globalGraphic,
 		"*":NotFound
     };
 </script>
