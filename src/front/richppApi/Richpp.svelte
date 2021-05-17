@@ -23,6 +23,8 @@
         Label,
     } from "sveltestrap";
 
+    const BASE_API_PATH = "/api/v2";
+
     let richpp = [];
     let newRichman = {
         top: "",
@@ -52,14 +54,8 @@
     let current_page = 1;
     let last_page = 1;
     let total = 0;
-    let offset = 0;
-    let datos = 5;
-    let busqueda = false;
 
-    const BASE_API_PATH = "/api/v2";
-    let error = null;
-    let errorMSG = "";
-    let okMSG = "";
+    //Variables busqueda
     let actualTop = "";
     let actualName = "";
     let searchRichman = {
@@ -72,6 +68,10 @@
         company: "",
     };
 
+    //Variables errores
+    let errorMSG = "";
+    let okMSG = "";
+
     //  FUNCIONES
     async function loadRichmen() {
         console.log("Loading richmen");
@@ -79,15 +79,135 @@
             function (res) {
                 if (res.status == 200) {
                     console.log("Ok");
+                    okMSG = "Richmen cargados correctamente";
                     getRichmen();
                 } else {
                     error = 404;
                     console.log("Error");
+                    errorMSG = "Richmen no han podido ser cargados correctamente";
                 }
             }
         );
     }
+    
+    async function getRichmen() {
+        console.log("Fetching richmen...");
+        const res = await fetch(
+            BASE_API_PATH +
+                "/richpp?offset="+current_offset+"&limit="+limit
+        );
+        if (res.status == 200) {
+            const json = await res.json();
+            richpp = json;
+            console.log("Datos cargados");
+            getNumTotal();
+            console.log(`We have received ${richpp.length} resources.`);
+        } else {
+            console.log("Error");
+        }
+    }
+    onMount(getRichmen);
+    
+    async function deleteRichmen() {
+        console.log(`Deleting richmen...`);
+        const res = await fetch(
+            BASE_API_PATH + "/richpp/",
+            {
+                method: "DELETE",
+            }
+        ).then(function (res) {
+            getRichmen();
+            if (res.status == 200) {
+                errorMSG = "";
+                okMSG = "Recurso borrado correctamente";
+                console.log("OK");
+                getRichmen();
+            } else {
+                if (res.status === 404) {
+                    errorMSG = "No se ha podido ser borrado el recurso seleccionado";
+                    console.log("Richman NOT FOUND");
+                } else {
+                    errorMSG = res.status + ": " + res.statusText;
+                    console.log("ERROR!");
+                }
+            }
+        });
+    }
 
+    async function insertRichman() {
+        console.log("Inserting data " + JSON.stringify(newRichman));
+        
+        const res = await fetch(BASE_API_PATH + "/richpp", {
+            method: "POST",
+            body: JSON.stringify(newRichman),
+            headers: { "Content-Type": "application/json" },
+        }).then(function (res) {
+            if (res.status == 201) {
+                console.log("Datos insertados correctamente");
+                richpp.push(newRichman);
+                getRichmen();
+                okMSG = `La entrada del grupo ${newRichman.name} ha sido insertado correctamente`;
+            } else if (res.status == 400) {
+                console.log("ERROR! Data was not correctly introduced");
+                errorMSG = "Los datos de la entrada no fueron introducidos correctamente";
+            } else if (res.status == 409) {
+                console.log("ERROR! Object already exist");
+                errorMSG = "Los datos introducidos ya existen en la base de datos";
+            }
+        });
+    }
+
+    async function deleteRichman(richman) {
+        console.log(`Deleting richman with name ${richman.name} and year ${richman.year}`);
+        const res = await fetch(
+            BASE_API_PATH + "/richpp/" + richman.name + "/" + richman.year,
+            {
+                method: "DELETE",
+            }
+        ).then(function (res) {
+            getRichmen();
+            if (res.status == 200) {
+                okMSG = "Recurso borrado correctamente";
+                console.log("OK");
+                getRichmen();
+            } else {
+                errorMSG = "El recurso no ha podido ser borrado correctamente";
+                console.log("ERROR!");
+            }
+        });
+    }
+    
+    async function searchRichmen(top, name) {
+        console.log("Searching richmen: "+ top + " and " + name);
+
+        var url = "/api/v2/richpp";
+        if (top != "" && name != "") {
+            url = url + "?top=" + top + "&name=" + name;
+        } else if (top != "" && name == "") {
+            url = url + "?top=" + top;
+        } else if (top == "" && name != "") {
+            url = url + "?name=" + name;
+        }
+        const res = await fetch(url);
+        if (res.status == 200) {
+            console.log("OK");
+            const json = await res.json();
+            richpp = json;
+            if (top == "" && name == "") {
+                errorMSG = "Introduce datos para iniciar la busqueda";
+            } else if (richpp.length == 0) {
+                okMSG = "No se han encontrado richmen con los parametros de busqueda indicados";
+            } else {
+                okMSG = `Se han encontrado ${richpp.length} richmen`;
+            }
+        } else {
+            if (res.status) {
+                console.log("ERROR");
+                errorMSG = "No se han encontrado resultados";
+            }
+        }
+    }
+    
     async function getNumTotal() {
         const res = await fetch(BASE_API_PATH + "/richpp");
         if (res.status == 200) {
@@ -119,215 +239,9 @@
             getRichmen();
         }
     }
-
-    async function getRichmen() {
-        console.log("Fetching richmen...");
-        const res = await fetch(
-            BASE_API_PATH +
-                "/richpp?limit=" +
-                limit +
-                "&offset=" +
-                current_offset
-        );
-        if (res.status == 200) {
-            const json = await res.json();
-            richpp = json;
-            console.log("Datos cargados");
-            console.log(`We have received ${richpp.length} resources.`);
-            getNumTotal();
-        } else {
-            console.log("Error");
-        }
-    }
-
-    async function insertRichman() {
-        console.log("Inserting data...");
-        if (
-            newRichman.country == "" ||
-            newRichman.country == null ||
-            newRichman.year == "" ||
-            newRichman.year == null
-        ) {
-            errorMSG = "Los campos 'Pais' y 'Año' no pueden estar vacios";
-        } else {
-            const res = await fetch(BASE_API_PATH + "/richpp", {
-                method: "POST",
-                body: JSON.stringify(newRichman),
-                headers: { "Content-Type": "application/json" },
-            }).then(function (res) {
-                if (res.status == 200) {
-                    console.log("Datos insertados correctamente");
-                    getRichmen();
-                    okMSG = `La entrada del grupo ${newRichman.name} ha sido insertado correctamente`;
-                } else if (res.status == 400) {
-                    console.log("ERROR Data was not correctly introduced");
-                    errorMSG = "Los datos de la entrada no fueron introducidos correctamente";
-                } else if (res.status == 409) {
-                    console.log("ERROR There is already a data with that country and year in the da tabase");
-                    errorMSG = "Ya existe una entrada en la base de datos con los mismos datos";
-                }
-            });
-        }
-    }
-
-    async function deleteRichman(richman) {
-        console.log(`Deleting richman with name ${richman.name} and year ${richman.year}`);
-        const res = await fetch(
-            BASE_API_PATH + "/richpp/" + richman.name,
-            {
-                method: "DELETE",
-            }
-        ).then(function (res) {
-            getRichmen();
-            if (res.status == 200) {
-                errorMSG = "";
-                okMSG = "Recurso borrado correctamente";
-                console.log("Deleted " + richman.name);
-                getRichmen();
-            } else {
-                if (res.status === 404) {
-                    errorMSG = "No se ha encontrado el objeto " + richman.name + " en " + richman.year;
-                    console.log("Richman NOT FOUND");
-                } else {
-                    errorMSG = res.status + ": " + res.statusText;
-                    console.log("ERROR!");
-                }
-                okMsg = "";
-            }
-        });
-    }
-
-    async function deleteRichmen() {
-        console.log("Deleting data...");
-        const res = await fetch(BASE_API_PATH + "/richpp", {
-            method: "DELETE",
-        }).then(function (res) {
-            if (res.status == 200) {
-                okMSG = "Recursos borrado correctamente";
-                console.log("Todo borrado");
-                richpp = [];
-            } else {
-                if (res.status === 404) {
-                    errorMSG = "No existen datos que borrar";
-                } else if (res.status === 500) {
-                    errorMSG = "No se ha podido acceder a la base de datos";
-                }
-                okMsg = "";
-                console.log("ERROR!" + errorMSG);
-            }
-        });
-    }
-
-    async function searchRichmen(top, name) {
-        var url = "/api/v2/richpp";
-        if (top != "" && name != "") {
-            url = url + "?top=" + top + "&name=" + name;
-        } else if (top != "" && name == "") {
-            url = url + "?top=" + top;
-        } else if (top == "" && name != "") {
-            url = url + "?name=" + name;
-        }
-        const res = await fetch(url);
-        if (res.status == 200) {
-            const json = await res.json();
-            richpp = json;
-            if (name == "" && top == "") {
-                errorMSG = "Introduce datos para iniciar la busqueda";
-            } else if (richpp.length > 0) {
-                okMSG = "SE HA ENCONTRADO UNO O VARIOS RESULTADOS";
-            } else {
-                okMSG = "NO SE HA ENCONTRADO RESULTADOS";
-            }
-        } else {
-            console.log("ERROR");
-            if (res.status) {
-                errorMSG = "NO SE HA ENCONTRADO RESULTADOS";
-            }
-        }
-    }
-    async function loadGraph() {
-    Highcharts.chart('container', {
-
-        title: {
-            text: 'Top3 of the world`s richest men, 2016-2020'
-        },
-
-        subtitle: {
-            text: 'Source: thesolarfoundation.com'
-        },
-
-        yAxis: {
-            title: {
-                text: 'Fortune in billions of dollars'
-            }
-        },
-
-        xAxis: {
-            accessibility: {
-                rangeDescription: 'Range: 2016 to 2020'
-            }
-        },
-
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
-        },
-
-        plotOptions: {
-            series: {
-                label: {
-                    connectorAllowed: false
-                },
-                pointStart: 2016
-            }
-        },
-
-        series: [{
-            name: 'Amancio Ortega',
-            data: [67, null, null, null, null]
-        }, {
-            name: 'Jeff Bezos',
-            data: [null, 72.8, 112, 131, 113]
-        }, {
-            name: 'Bill Gates',
-            data: [75, 86, 90, 96.5, 98]
-        }, {
-            name: 'Warren Buffett',
-            data: [60.8, 75.6, 84, 82.5, null]
-        }, {
-            name: 'Bernard Arnault',
-            data: [null, null, null, null, 76]
-        }],
-
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                    }
-                }
-            }]
-        }
-
-        });
-    }
-
-    onMount(getRichmen);
+    
 </script>
 
-<svelte:head>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraph}"></script>
-</svelte:head>
 
 <main>
     <Nav>
@@ -342,14 +256,14 @@
         </NavItem>
     </Nav>
 
-    <h2>RICHPP</h2>
-
     {#if errorMSG}
         <p style="color: red">ERROR: {errorMSG}</p>
     {/if}
     {#if okMSG}
         <p style="color: green">{okMSG}</p>
     {/if}
+
+    <h2>RICHPP</h2>
 
     <Table bordered>
         <tbody>
@@ -389,7 +303,7 @@
                             outline
                             color="secondary"
                             href="javascript:location.reload()">
-                            Volver
+                            Reiniciar
                         </Button>
                     </div>
                 </td>
@@ -474,16 +388,9 @@
                         changePage(current_page + 1, current_offset + 10)}/>
             </PaginationItem>
         </Pagination>
-    </Table>
 
-    <figure class="highcharts-figure">
-        <div id="container"></div>
-        <p class="highcharts-description">
-            Basic line chart showing trends in a dataset. This chart includes the
-            <code>series-label</code> module, which adds a label to each line for
-            enhanced readability.
-        </p>
-    </figure>
+        <Button href="#/richpp/RichppGraphic">Ver Gráfico</Button>
+    </Table>
 </main>
 
 <style>
@@ -492,11 +399,5 @@
         text-transform: uppercase;
         font-size: 4em;
         font-weight: 100;
-    }
-
-    .highcharts-figure {
-        min-width: 360px; 
-        max-width: 800px;
-        margin: 1em auto;
     }
 </style>
