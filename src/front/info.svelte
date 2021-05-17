@@ -18,7 +18,6 @@
   <main>
     <h1>Info-SOS2021-22</h1>
     
-  
     <Container>
       <Col xs="auto">
         <div class="row">
@@ -37,6 +36,24 @@
                 <Col>
                   <a href="https://github.com/antonioparra7">Antonio Parra Diaz (PaawardsAPI)</a>
                 </Col>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      </Col>
+    </Container>
+    <Container>
+      <Col xs="auto">
+        <div class="row">
+          <div class="col-sm-3">
+            <Card class="mb-3">
+              <CardHeader class="bg-secondary">
+                <CardTitle><h2>Analiticas</h2></CardTitle>
+              </CardHeader>
+              <CardBody>
+                <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>Gramys</strong></Button></a>
+                <a href="#/paawards/paawardsGraphic"><Button color="warning"><strong>Paawards</strong></Button></a>
+                <a href="http://github.com/gti-sos/SOS2021-22"><Button color="warning"><strong>Richpp</strong></Button></a>
               </CardBody>
             </Card>
           </div>

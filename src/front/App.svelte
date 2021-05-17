@@ -11,6 +11,7 @@
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
+	import grmysGraph from './grmysApi/grmysGraphic.svelte';
 	const routes = {
 		"/":Home,
 		"/info":info,
@@ -19,6 +20,7 @@
 		"/paawards/paawardsGraphic": paawardGraph,
 		"/grmys": grmys,
 		"/grmys/:ranking/:name": editGrmys,
+		"/grmys/grmysGraphic": grmysGraph,
 		"/richpp": Richpp,
 		"/richpp/:name/:year": RichmanEdit,
 		"*":NotFound
