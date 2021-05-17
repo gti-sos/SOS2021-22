@@ -68,11 +68,12 @@
                 console.log("Ok");
                 const json = await res.json();
                 paawards = json;
+                getNumTotal();
                 console.log(`We have received ${paawards.length} resources.`);
             } else {
                 console.log("Error");
             }
-            getNumTotal();
+            
     }
     onMount(getPaawards);
 

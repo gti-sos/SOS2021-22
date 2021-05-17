@@ -7,6 +7,7 @@
 	import grmys from './grmysApi/grmysApi.svelte';
 	import paawards from './paawardsApi/paawards-api.svelte';
 	import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
+	import paawardGraph from './paawardsApi/PaawardsGraphic.svelte'
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
@@ -15,6 +16,7 @@
 		"/info":info,
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
+		"/paawards/paawardsGraphic": paawardGraph,
 		"/grmys": grmys,
 		"/grmys/:ranking/:name": editGrmys,
 		"/richpp": Richpp,
