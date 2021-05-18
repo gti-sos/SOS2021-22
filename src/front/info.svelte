@@ -93,7 +93,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>Richpp</strong></Button></a>
+                        <a href="#/richpp/richppGraphic"><Button color="warning"><strong>Richpp</strong></Button></a>
                       </div>
                     </div>
                   </CardBody>

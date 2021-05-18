@@ -32,10 +32,9 @@
             },
 
             xAxis: {
-                /*accessibility: {
+                accessibility: {
                     rangeDescription: "Rango: 2016 a 2020",
-                },*/
-                categories: ["Fortuna", "Edad"],
+                },
             },
 
             legend: {
@@ -49,11 +48,11 @@
                     label: {
                         connectorAllowed: false,
                     },
-                    //pointStart: 2016,
+                    pointStart: 2016,
                 },
             },
-            series: richppGraph,
-            /*
+            //series: richppGraph,
+            
             series: [
                 {
                     name: "Amancio Ortega",
@@ -76,7 +75,7 @@
                     data: [null, null, null, null, 76],
                 },
             ],
-*/
+
             responsive: {
                 rules: [
                     {
