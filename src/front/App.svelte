@@ -2,6 +2,7 @@
 	import Router from 'svelte-spa-router';
 	import Home from "./Home.svelte";
 	import info from "./info.svelte";
+	import about from "./about.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
@@ -16,6 +17,7 @@
 	const routes = {
 		"/":Home,
 		"/info":info,
+		"/about":about,
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
 		"/paawards/paawardsGraphic": paawardGraph,

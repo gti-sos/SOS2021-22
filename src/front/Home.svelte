@@ -1,18 +1,21 @@
 <script>
   import {
-    Button,
-    Icon,
-    Card,
-    CardBody,
-    CardFooter,
-    CardHeader,
-    CardSubtitle,
-    CardText,
-    CardTitle,
-    Col,
-    Container,
-    Row,
-  } from "sveltestrap";
+      Button,
+      Icon,
+      Card,
+      CardBody,
+      CardFooter,
+      CardHeader,
+      CardSubtitle,
+      CardText,
+      CardTitle,
+      Col,
+      Container,
+      Nav,
+      NavItem,
+      NavLink,
+      Row,
+    } from "sveltestrap";
 </script>
 
 <main>
@@ -56,9 +59,15 @@
   </Container>
 
   <Container>
-    <Col> 
-      <a href="/#/info"><Button color="dark">+Info</Button></a>
-    </Col>  
+    <Col xs="auto">
+      <div class="row">
+        <div class="col-md p-1">
+          <a href="/#/info"><Button color="dark">+Info</Button></a>
+          
+          <a href="/#/about"><Button color="warning">About</Button></a>
+        </div>
+      </div>
+    </Col>
   </Container>
 </main>
 

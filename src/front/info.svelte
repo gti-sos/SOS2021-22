@@ -11,6 +11,9 @@
       CardTitle,
       Col,
       Container,
+      Nav,
+      NavItem,
+      NavLink,
       Row,
     } from "sveltestrap";
   </script>
@@ -244,6 +247,12 @@
         </Card>
       </Col>
     </Container>
+
+    <Nav>
+      <NavItem>
+          <NavLink outline color="secondary" href="/">Volver</NavLink>
+      </NavItem>
+    </Nav>
   </main>
   
   <style>
