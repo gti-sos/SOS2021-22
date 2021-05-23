@@ -21,7 +21,7 @@
   <main>
     <Nav>
         <NavItem>
-            <NavLink href="/#/richpp">Volver</NavLink>
+            <NavLink href="/">Volver</NavLink>
         </NavItem>
     </Nav>
 

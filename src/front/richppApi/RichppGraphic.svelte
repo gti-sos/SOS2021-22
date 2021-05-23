@@ -1,21 +1,37 @@
 <script>
     import { onMount } from "svelte";
-    import {Nav,NavItem,NavLink} from "sveltestrap";
+    import { Nav, NavItem, NavLink } from "sveltestrap";
+    let BASE_API_PATH = "/api/v2";
+
+    let richpp = [];
+    let richppGraph = [];
+    let years = [];
+
+    async function getData(){
+        const res = await fetch(BASE_API_PATH + `/richpp`);
+        richpp = await res.json();
+        richpp.forEach((richman) => {
+            if (!years.includes(richman.year)){
+                years.push(richman.year);
+            }
+        });
+        loadGraph();
+    }
 
     async function loadGraph() {
-        let richppData = [];
-        let richppGraph = [];
-        let BASE_API_PATH = "/api/v2";
-
-        const data = await fetch(BASE_API_PATH + "/richpp?offset=0&limit=10");
-        richppData = await data.json();
-        richppData.forEach((richman) => {
-            richppGraph.push({
-                name: richman.name + " - " + richman.year,
-                data: [richman.fortune, richman.age],
-                pointPlacement: "on",
+        years.sort();
+        for (const year of years){
+            const res = await fetch(BASE_API_PATH + `/richpp?year=${year}`);
+            richpp = await res.json();
+            richpp.forEach((richman) => {
+                richppGraph.push({
+                    name: richman.name + " - " + richman.year,
+                    data: [parseInt(richman.fortune)],
+                    pointPlacement: 'on'
+                });
+                console.log(richman);
             });
-        });
+        }
 
         Highcharts.chart("container", {
             title: {
@@ -52,8 +68,8 @@
                     pointStart: 2016,
                 },
             },
-            //series: richppGraph,
-            
+            series: richppGraph,
+            /*
             series: [
                 {
                     name: "Amancio Ortega",
@@ -75,7 +91,7 @@
                     name: "Bernard Arnault",
                     data: [null, null, null, null, 76],
                 },
-            ],
+            ],*/
 
             responsive: {
                 rules: [
@@ -95,8 +111,6 @@
             },
         });
     }
-
-    onMount(loadGraph);
 </script>
 
 <svelte:head>
@@ -106,14 +120,13 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script
         src="https://code.highcharts.com/modules/accessibility.js"
-        on:load={loadGraph}>
-    </script>
+        on:load={getData}></script>
 </svelte:head>
 
 <main>
     <Nav>
         <NavItem>
-            <NavLink outline color="secondary" href="/#/richpp">Volver</NavLink>
+            <NavLink color="secondary" href="/#/richpp">Volver</NavLink>
         </NavItem>
     </Nav>
 
@@ -129,7 +142,7 @@
 
 <style>
     .highcharts-figure {
-        min-width: 360px; 
+        min-width: 360px;
         max-width: 800px;
         margin: 1em auto;
     }

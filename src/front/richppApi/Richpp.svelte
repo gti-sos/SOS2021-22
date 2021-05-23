@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-
     import {
         Nav,
         NavItem,
@@ -69,8 +68,8 @@
     };
 
     //Variables errores
-    let errorMSG = "";
-    let okMSG = "";
+    let errorMSG = false;
+    let okMSG = false;
 
     //  FUNCIONES
     async function loadRichmen() {
@@ -80,6 +79,7 @@
                 if (res.status == 200) {
                     console.log("Ok");
                     okMSG = "Richmen cargados correctamente";
+                    errorMSG = false;
                     getRichmen();
                 } else {
                     error = 404;
@@ -96,29 +96,29 @@
             BASE_API_PATH +
                 "/richpp?offset="+current_offset+"&limit="+limit
         );
-        if (res.status == 200) {
+        if (res.ok) {
             const json = await res.json();
             richpp = json;
             console.log("Datos cargados");
             getNumTotal();
             console.log(`We have received ${richpp.length} resources.`);
         } else {
-            console.log("Error");
+            console.log("ERROR! Datos no encontrados");
         }
     }
-    onMount(getRichmen);
     
+    onMount(getRichmen);
+
     async function deleteRichmen() {
         console.log(`Deleting richmen...`);
         const res = await fetch(
-            BASE_API_PATH + "/richpp/",
+            BASE_API_PATH + "/richpp",
             {
                 method: "DELETE",
             }
         ).then(function (res) {
-            getRichmen();
             if (res.status == 200) {
-                errorMSG = "";
+                errorMSG = false;
                 okMSG = "Recurso borrado correctamente";
                 console.log("OK");
                 getRichmen();
@@ -160,19 +160,18 @@
     async function deleteRichman(richman) {
         console.log(`Deleting richman with name ${richman.name} and year ${richman.year}`);
         const res = await fetch(
-            BASE_API_PATH + "/richpp/" + richman.name + "/" + richman.year,
+            BASE_API_PATH + "/richpp/" + richman.name,
             {
                 method: "DELETE",
             }
         ).then(function (res) {
-            getRichmen();
             if (res.status == 200) {
                 okMSG = "Recurso borrado correctamente";
                 console.log("OK");
                 getRichmen();
             } else {
                 errorMSG = "El recurso no ha podido ser borrado correctamente";
-                console.log("ERROR!");
+                console.log("ERROR! El recurso no ha podido ser borrado correctamente");
             }
         });
     }
@@ -254,20 +253,21 @@
         <NavItem>
             <NavLink href="#" on:click={botonBorrar}>Borrar Richmen</NavLink>
         </NavItem>
+        <NavItem>
+            <Button color="primary" href="#/richpp/RichppGraphic">Ver Gráfico Lineal</Button>
+        </NavItem>
     </Nav>
-
-    {#if errorMSG}
-        <p style="color: red">ERROR: {errorMSG}</p>
-    {/if}
-    {#if okMSG}
-        <p style="color: green">{okMSG}</p>
-    {/if}
 
     <h2>RICHPP</h2>
 
+    {#await richpp}
+		Cargando richmen...
+    {:then richpp}
+    {#if richpp}
+
     <Table bordered>
-        <tbody>
-            <tr>
+        <tbody >
+            <tr style="background-color: #3f3f3f;  color: rgb(255, 255, 255);">
                 <td>
                     <FormGroup style="width:50%;">
                         <Label>Búsqueda por Top:</Label>
@@ -291,17 +291,15 @@
                     </FormGroup>
                 </td>
                 <td>
-                    <div style="text-align:center; padding-bottom: 3%; margin-top: 3%;">
+                    <div style="text-align: center; padding-bottom: 3%; margin-top: 5%;">
                         <Button
-                            outline
                             color="primary"
                             on:click={searchRichmen(actualTop, actualName)}
                             class="button-search">
                             Buscar
                         </Button>
                         <Button
-                            outline
-                            color="secondary"
+                            color="warning"
                             href="javascript:location.reload()">
                             Reiniciar
                         </Button>
@@ -388,16 +386,40 @@
                         changePage(current_page + 1, current_offset + 10)}/>
             </PaginationItem>
         </Pagination>
-
-        <Button href="#/richpp/RichppGraphic">Ver Gráfico</Button>
     </Table>
+
+    {/if}
+    {/await}
+    {#if errorMSG}
+        <p style="color: red">ERROR: {errorMSG}</p>
+    {/if}
+    {#if okMSG}
+        <p style="color: green">EXITO: {okMSG}</p>
+    {/if}
+
 </main>
 
 <style>
     h2 {
+        color: red;
         text-align: center;
         text-transform: uppercase;
         font-size: 4em;
         font-weight: 100;
     }
+
+    thead {
+        background-color: #3f3f3f;
+        color: rgb(255, 255, 255);
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #cfcfcf;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #bbbbbb;
+    }
+    
+
 </style>

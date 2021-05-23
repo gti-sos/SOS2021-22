@@ -3,6 +3,7 @@
 	import Home from "./Home.svelte";
 	import info from "./info.svelte";
 	import about from "./about.svelte";
+	import integrationsRichpp from "./richppApi/integrations/integrationsRichpp.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
@@ -18,6 +19,7 @@
 		"/":Home,
 		"/info":info,
 		"/about":about,
+		"/integrationsRichpp":integrationsRichpp,
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
 		"/paawards/paawardsGraphic": paawardGraph,

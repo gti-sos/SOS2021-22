@@ -20,8 +20,8 @@
     let updateCompany = "XXXXXX";
 
     const BASE_API_PATH = "/api/v2";
-    let errorMsg = "";
-    let okMsg = "";
+    let errorMsg = false;
+    let okMsg = false;
     
     const botonActualizar = () => {
         updateRichman();
@@ -47,11 +47,13 @@
             console.log(`Received richman`);
         } else {
             if (res.status === 404) {
+                okMsg = false;
                 errorMsg = "No se encuentra el dato solicitado";
             } else if (res.status === 500) {
+                okMsg = false;
                 errorMsg = "No se han podido acceder a la base de datos";
             }
-            okMsg = "";
+            okMsg = false;
             console.log("ERROR!" + errorMsg);
         }
     }
@@ -81,17 +83,20 @@
             if (res.ok) {
                 console.log("OK");
                 getRichman();
-                errorMsg = "";
+                errorMsg = false;
                 okMsg = "Operación realizada correctamente";
             } else {
                 if (res.status === 409) {
+                    okMsg = false;
                     errorMsg = "El dato ya se encuentra cargado";
                 } else if (res.status === 500) {
+                    okMsg = false;
                     errorMsg = "No se han podido acceder a la base de datos";
                 } else if (res.status === 404) {
+                    okMsg = false;
                     errorMsg = "No se han encontrado el dato solicitado";
                 }
-                okMsg = "";
+                okMsg = false;
                 getRichman();
                 console.log("ERROR!" + errorMsg);
             }
@@ -152,5 +157,13 @@
         text-align: center;
         padding: 1em;
         margin: 0 auto;
+    }
+
+    h3 {
+        color: red;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: 100;
     }
 </style>
