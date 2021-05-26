@@ -40,9 +40,9 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                          <a href="/#/grmys"><Button color="danger"><strong>Integracion 1</strong></Button></a>
-                          <a href="/#/grmys"><Button color="danger"><strong>Integracion 2</strong></Button></a>
-                          <a href="/#/grmys"><Button color="danger"><strong>Integracion 3</strong></Button></a>
+                          <a href="/#/integrations/API-11-Smoking"><Button color="danger"><strong>Integracion Api smoking</strong></Button></a>
+                          <a href="/#/integrations/API-21-Temperatures"><Button color="danger"><strong>Integracion Api temperaturas</strong></Button></a>
+                          <a href="/#/integrations/API-28-awards"><Button color="danger"><strong>Integracion awards</strong></Button></a>
                           <a href="/#/grmys"><Button color="danger"><strong>Integracion 4</strong></Button></a>
                         </div>
                       </div>

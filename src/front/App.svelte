@@ -5,7 +5,9 @@
 	import about from "./about.svelte";
 	import integrations from "./integrations.svelte";
 	import integrationsRichpp from "./richppApi/integrations/integrationsRichpp.svelte";
-	import integrationsGrmys from "./grmysApi/integrations/integrationsGrmys.svelte";
+	import integrationsGrmys1 from "./grmysApi/integrations/API-11-Smoking.svelte";
+	import integrationsGrmys2 from "./grmysApi/integrations/API-21-Temperatures.svelte";
+	import integrationsGrmys3 from "./grmysApi/integrations/API-28-awards.svelte";
 	import integrationsPaawards from "./paawardsApi/integrations/integrationsPaawards.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
@@ -25,7 +27,9 @@
 		"/integrations":integrations,
 		"/integrations/integrationsRichpp":integrationsRichpp,
 		"/integrations/integrationsPaawards":integrationsPaawards,
-		"/integrations/integrationsGrmys":integrationsGrmys,
+		"/integrations/API-11-Smoking":integrationsGrmys1,
+		"/integrations/API-21-Temperatures":integrationsGrmys2,
+		"/integrations/API-28-awards":integrationsGrmys3,
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
 		"/paawards/paawardsGraphic": paawardGraph,
