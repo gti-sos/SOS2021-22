@@ -4,7 +4,10 @@
 	import info from "./info.svelte";
 	import about from "./about.svelte";
 	import integrations from "./integrations.svelte";
-	import integrationsRichpp from "./richppApi/integrations/integrationsRichpp.svelte";
+	import integrationLifeStats from "./richppApi/integrations/integrationLifeStats.svelte";
+	import integrationPBISP from "./richppApi/integrations/integrationPBISP.svelte";
+	import integrationExt1 from "./richppApi/integrations/integrationExt1.svelte";
+	import integrationExt2 from "./richppApi/integrations/integrationExt2.svelte";
 	import integrationsGrmys1 from "./grmysApi/integrations/API-11-Smoking.svelte";
 	import integrationsGrmys2 from "./grmysApi/integrations/API-21-Temperatures.svelte";
 	import integrationsGrmys3 from "./grmysApi/integrations/API-28-awards.svelte";
@@ -25,7 +28,10 @@
 		"/info":info,
 		"/about":about,
 		"/integrations":integrations,
-		"/integrations/integrationsRichpp":integrationsRichpp,
+		"/integrations/integrationLifeStats":integrationLifeStats,
+		"/integrations/integrationPBISP":integrationPBISP,
+		"/integrations/integrationExt1":integrationExt1,
+		"/integrations/integrationExt2":integrationExt2,
 		"/integrations/integrationsPaawards":integrationsPaawards,
 		"/integrations/API-11-Smoking":integrationsGrmys1,
 		"/integrations/API-21-Temperatures":integrationsGrmys2,

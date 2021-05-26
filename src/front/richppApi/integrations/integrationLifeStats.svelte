@@ -128,7 +128,6 @@
 </main>
 
 <style>
- 
   h2 {
     color: #ff9900;
     text-align: center;

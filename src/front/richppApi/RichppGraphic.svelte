@@ -4,34 +4,20 @@
     let BASE_API_PATH = "/api/v2";
 
     let richpp = [];
-    let richppGraph = [];
     let years = [];
+    let listNameFortune = [];
 
-    async function getData(){
+    async function loadGraph() {
         const res = await fetch(BASE_API_PATH + `/richpp`);
         richpp = await res.json();
         richpp.forEach((richman) => {
-            if (!years.includes(richman.year)){
+            if (!years.includes(richman.year)) {
                 years.push(richman.year);
             }
+            listNameFortune.push(richman.name + " - " + richman.fortune);
         });
-        loadGraph();
-    }
-
-    async function loadGraph() {
-        years.sort();
-        for (const year of years){
-            const res = await fetch(BASE_API_PATH + `/richpp?year=${year}`);
-            richpp = await res.json();
-            richpp.forEach((richman) => {
-                richppGraph.push({
-                    name: richman.name + " - " + richman.year,
-                    data: [parseInt(richman.fortune)],
-                    pointPlacement: 'on'
-                });
-                console.log(richman);
-            });
-        }
+        console.log(listNameFortune);
+        console.log(years);
 
         Highcharts.chart("container", {
             title: {
@@ -44,7 +30,7 @@
 
             yAxis: {
                 title: {
-                    text: "Fortuna en billones de dolares",
+                    text: "Fortuna (billones de dolares)",
                 },
             },
 
@@ -52,6 +38,7 @@
                 accessibility: {
                     rangeDescription: "Rango: 2016 a 2020",
                 },
+                categories: years,
             },
 
             legend: {
@@ -68,30 +55,10 @@
                     pointStart: 2016,
                 },
             },
-            series: richppGraph,
-            /*
-            series: [
-                {
-                    name: "Amancio Ortega",
-                    data: [67, null, null, null, null],
-                },
-                {
-                    name: "Jeff Bezos",
-                    data: [null, 72.8, 112, 131, 113],
-                },
-                {
-                    name: "Bill Gates",
-                    data: [75, 86, 90, 96.5, 98],
-                },
-                {
-                    name: "Warren Buffett",
-                    data: [60.8, 75.6, 84, 82.5, null],
-                },
-                {
-                    name: "Bernard Arnault",
-                    data: [null, null, null, null, 76],
-                },
-            ],*/
+            series: [   {
+                name: "Personas más ricas",
+                data: listNameFortune,
+            }],
 
             responsive: {
                 rules: [
@@ -120,7 +87,7 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script
         src="https://code.highcharts.com/modules/accessibility.js"
-        on:load={getData}></script>
+        on:load={loadGraph}></script>
 </svelte:head>
 
 <main>
