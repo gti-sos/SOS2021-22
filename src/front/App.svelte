@@ -3,7 +3,10 @@
 	import Home from "./Home.svelte";
 	import info from "./info.svelte";
 	import about from "./about.svelte";
+	import integrations from "./integrations.svelte";
 	import integrationsRichpp from "./richppApi/integrations/integrationsRichpp.svelte";
+	import integrationsGrmys from "./grmysApi/integrations/integrationsGrmys.svelte";
+	import integrationsPaawards from "./paawardsApi/integrations/integrationsPaawards.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';

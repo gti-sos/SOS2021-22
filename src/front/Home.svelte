@@ -65,6 +65,8 @@
           <a href="/#/info"><Button color="dark">+Info</Button></a>
           
           <a href="/#/about"><Button color="warning">About</Button></a>
+
+          <a href="/#/integrations"><Button color="red">Integrations</Button></a>
         </div>
       </div>
     </Col>
