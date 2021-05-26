@@ -11,7 +11,6 @@
 	import integrationsGrmys1 from "./grmysApi/integrations/API-11-Smoking.svelte";
 	import integrationsGrmys2 from "./grmysApi/integrations/API-21-Temperatures.svelte";
 	import integrationsGrmys3 from "./grmysApi/integrations/API-28-awards.svelte";
-	import integrationsPaawards from "./paawardsApi/integrations/integrationsPaawards.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
@@ -19,6 +18,7 @@
 	import paawards from './paawardsApi/paawards-api.svelte';
 	import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
 	import paawardGraph from './paawardsApi/PaawardsGraphic.svelte'
+	import integrationsPaawards1 from './paawardsApi/integrations/integrationsPaawardsFireStats.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import globalGraphic from './globalGraphic.svelte';
@@ -32,7 +32,7 @@
 		"/integrations/integrationPBISP":integrationPBISP,
 		"/integrations/integrationExt1":integrationExt1,
 		"/integrations/integrationExt2":integrationExt2,
-		"/integrations/integrationsPaawards":integrationsPaawards,
+		"/integrations/integrationsPaawardsANDFireStats":integrationsPaawards1,
 		"/integrations/API-11-Smoking":integrationsGrmys1,
 		"/integrations/API-21-Temperatures":integrationsGrmys2,
 		"/integrations/API-28-awards":integrationsGrmys3,

@@ -74,10 +74,14 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 1</strong></Button></a>
+                            <a href="/#/integrations/integrationsPaawardsANDFireStats"><Button color="danger"><strong>Fire-Stats</strong></Button></a>
+                            <br><br>
                             <a href="/#/grmys"><Button color="danger"><strong>Integracion 2</strong></Button></a>
+                            <br><br>
                             <a href="/#/grmys"><Button color="danger"><strong>Integracion 3</strong></Button></a>
+                            <br><br>
                             <a href="/#/grmys"><Button color="danger"><strong>Integracion 4</strong></Button></a>
+                            <br><br>
                         </div>
                       </div>
                     </CardBody>

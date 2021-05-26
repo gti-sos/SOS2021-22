@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/gti-sos/SOS2021-22#readme",
   "dependencies": {
+    "anychart-react": "^1.4.1",
     "body-parser": "^1.19.0",
     "cool-ascii-faces": "^1.3.4",
     "express": "^4.17.1",
