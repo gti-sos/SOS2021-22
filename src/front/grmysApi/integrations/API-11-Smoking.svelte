@@ -5,7 +5,7 @@
         let SmokingData = [];
         let SmokingDataGraph = [];
         const resData = await fetch("https://sos2021-11.herokuapp.com/api/v2/smoking_stats");
-        SmokingData = await resData
+        SmokingData = await resData.json();
         console.log(SmokingData);
         SmokingData.forEach((x) => {
             SmokingDataGraph.push({
@@ -89,7 +89,9 @@
         on:load={loadGraph}></script>
 </svelte:head>
 
+
 <main>
+    <h2>INTEGRACION DE API 11</h2>
     <figure class="highcharts-figure">
         <div id="container" />
         <p class="highcharts-description">
@@ -105,6 +107,13 @@
 </main>
 
 <style>
+     h2 {
+    color: #ff9900;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+  }
     .highcharts-figure,
     .highcharts-data-table table {
         min-width: 310px;
