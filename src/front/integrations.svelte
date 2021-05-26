@@ -57,7 +57,7 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 1</strong></Button></a>
+                            <a href="/#/integrations/integrationsRichpp"><Button color="danger"><strong>Integracion 1</strong></Button></a>
                             <a href="/#/grmys"><Button color="danger"><strong>Integracion 2</strong></Button></a>
                             <a href="/#/grmys"><Button color="danger"><strong>Integracion 3</strong></Button></a>
                             <a href="/#/grmys"><Button color="danger"><strong>Integracion 4</strong></Button></a>
