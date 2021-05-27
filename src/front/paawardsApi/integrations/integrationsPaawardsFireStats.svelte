@@ -12,12 +12,19 @@
 
     async function loadData(){
         for (var i=0; i<paisesFireStats.length; i++){
-            const res1 = await fetch(`https://sos2021-21.herokuapp.com/api/v2/fire-stats?country=${paisesFireStats[i]}`);
+            const res1 = await fetch(`https://sos2021-21.herokuapp.com/api/v2/fire-stats?country=${paisesFireStats[i]}`, {
+                'mode': 'no-cors',
+	            'headers': {
+            	    'Access-Control-Allow-Origin': '*',
+        	    }
+    	    });
             if (res1.ok) {
                 const json1 = await res1.json();
                 var suma1 = 0;
                 json1.forEach((f) => {
+                    console.log(f)
                     var fire = parseInt(f.fire_nfc);
+                    console.log(fire);
                     suma1=suma1+fire;
                 });
                 Incendios.push(suma1);
@@ -27,7 +34,13 @@
             }
         }
         for (var j=0; j<paisesPaawards.length; j++){
-            const res2 = await fetch(BASE_API_URL_PAAWARDS + `/paawards?country=${paisesPaawards[j]}`);
+            
+            const res2 = await fetch(BASE_API_URL_PAAWARDS + `/paawards?country=${paisesPaawards[j]}`,
+                {   'mode': 'no-cors',
+	                'headers': {
+            	        'Access-Control-Allow-Origin': '*',
+        	    }
+            });
             if (res2.ok) {
                 const json2 = await res2.json();
                 var suma2 = 0;
@@ -45,6 +58,7 @@
 
     anychart.onDocumentReady(function () {
       // create data set on our data
+      loadData();
       var chartData = {
         title: 'Incendios y Premios Princesa de Asturias en Estados Unidos y Brasil',
         header: ['#', 'Brasil', 'Estados Unidos'],
@@ -106,7 +120,7 @@
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/v8/js/anychart-cartesian-3d.min.js" on:load="{loadData}"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-cartesian-3d.min.js"></script>
 </svelte:head>
 
 <main>
