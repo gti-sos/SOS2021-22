@@ -82,7 +82,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>Gramys</strong></Button></a>
+                        <a href="#/grmys/grmysGraphics"><Button color="warning"><strong>Gramys</strong></Button></a>
                       </div>
                     </div>
                   </CardBody>

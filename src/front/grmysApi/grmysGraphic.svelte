@@ -14,6 +14,10 @@
         });
 
         Highcharts.chart('container', {
+            chart: {
+		        type: 'bar'
+		    },
+
             title: {
                 text: 'premios Gramys de toda la historia'
             },

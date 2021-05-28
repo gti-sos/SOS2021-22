@@ -15,6 +15,8 @@
 	import grmys from './grmysApi/grmysApi.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
 	import grmysGraph from './grmysApi/grmysGraphic.svelte';
+	import grmysGraphs from './grmysApi/grmysGraphics.svelte';
+	import grmysGraphAm from './grmysApi/grmysAmchart.svelte';
 	import paawards from './paawardsApi/paawards-api.svelte';
 	import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
 	import paawardGraph from './paawardsApi/PaawardsGraphic.svelte'
@@ -42,6 +44,8 @@
 		"/grmys": grmys,
 		"/grmys/:ranking/:name": editGrmys,
 		"/grmys/grmysGraphic": grmysGraph,
+		"/grmys/grmysGraphics": grmysGraphs,
+		"/grmys/grmysAmchart": grmysGraphAm,
 		"/richpp": Richpp,
 		"/richpp/:name/:year": RichmanEdit,
 		"/globalGraphic":globalGraphic,
