@@ -3,21 +3,39 @@
     import { Nav, NavItem, NavLink } from "sveltestrap";
     let BASE_API_PATH = "/api/v2";
 
-    let richpp = [];
-    let years = [];
-    let listNameFortune = [];
-
     async function loadGraph() {
+        let richppGraph = [];
+        let listName = [];
+        let fortuna = 0;
+        let nombre = null;
+
         const res = await fetch(BASE_API_PATH + `/richpp`);
-        richpp = await res.json();
-        richpp.forEach((richman) => {
-            if (!years.includes(richman.year)) {
-                years.push(richman.year);
+        const richpp = await res.json();
+        richpp.forEach((r) => {
+            if (!listName.includes(r.name)) {
+                listName.push(r.name);
             }
-            listNameFortune.push(richman.name + " - " + richman.fortune);
         });
-        console.log(listNameFortune);
-        console.log(years);
+        for (var name of listName) {
+            for (var year = 2016; year < 2021; year++) {
+                const res2 = await fetch(
+                    BASE_API_PATH + `/richpp?name=${name}&year=${year}`
+                );
+                if (res2.ok) {
+                    const richpp2 = await res2.json();
+                    if (richpp2 != null) {
+                        richpp2.forEach((r) => {
+                            fortuna = parseInt(r.fortune);
+                            if (fortuna != null) {
+                                richppGraph.push(fortuna);
+                            }
+                        });
+                    }
+                }
+            }
+        }
+
+        console.log(richppGraph);
 
         Highcharts.chart("container", {
             title: {
@@ -38,7 +56,6 @@
                 accessibility: {
                     rangeDescription: "Rango: 2016 a 2020",
                 },
-                categories: years,
             },
 
             legend: {
@@ -55,10 +72,12 @@
                     pointStart: 2016,
                 },
             },
-            series: [   {
-                name: "Personas más ricas",
-                data: listNameFortune,
-            }],
+            series: [
+                {
+                    name: "Hombres más ricos",
+                    data: richppGraph,
+                },
+            ],
 
             responsive: {
                 rules: [

@@ -111,7 +111,7 @@
 <main>
   <Nav>
     <NavItem>
-      <NavLink href="/#/info">Volver</NavLink>
+      <NavLink href="/#/integrations">Volver</NavLink>
     </NavItem>
   </Nav>
 

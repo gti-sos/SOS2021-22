@@ -57,10 +57,34 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                            <a href="/#/integrations/integrationsRichpp"><Button color="danger"><strong>Integracion 1</strong></Button></a>
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 2</strong></Button></a>
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 3</strong></Button></a>
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 4</strong></Button></a>
+                          <row>
+                            <a href="/#/integrations/integrationLifeStats">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API LifeStats</strong>
+                              </Button>
+                            </a>
+                          </row>
+                          <row>
+                            <a href="/#/integrations/integrationPBISP">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API PBISP</strong>
+                              </Button>
+                            </a>
+                          </row>
+                          <row>
+                            <a href="/#/integrations/integrationExt1">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API  Externa 1</strong>
+                              </Button>
+                            </a>
+                          </row>
+                          <row>
+                            <a href="/#/integrations/integrationExt2">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API Externa 2</strong>
+                              </Button>
+                            </a>
+                          </row>
                         </div>
                       </div>
                     </CardBody>
