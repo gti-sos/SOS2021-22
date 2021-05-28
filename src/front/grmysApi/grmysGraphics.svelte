@@ -19,10 +19,15 @@
   </script>
   
   <main>
-    <h1>Info-SOS2021-22</h1>
+    <h1>Visualizaciones</h1>
     
     <Container>
       <Col xs="auto">
+        <Card class="mb-3">
+        <CardHeader class="bg-secondary">
+            <CardTitle><h2>Analíticas</h2></CardTitle>
+        </CardHeader>
+        </Card>
         <div class="row">
           <div class="col-sm-3">
             <Card class="mb-3">
@@ -30,7 +35,7 @@
                 <CardTitle><h2>Highcharts</h2></CardTitle>
               </CardHeader>
               <CardBody>
-                <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>GITHUB</strong></Button></a>
+                <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>grmysGraphic</strong></Button></a>
               </CardBody>
             </Card>
           </div>
@@ -40,7 +45,7 @@
                 <CardTitle><h2>Amchart</h2></CardTitle>
               </CardHeader>
               <CardBody>
-                <a href="#/grmys/grmysAmchart"><Button color="warning"><strong>HEROKU</strong></Button></a>
+                <a href="#/grmys/grmysAmchart"><Button color="warning" ><strong>AmChart</strong></Button></a>
               </CardBody>
             </Card>
           </div>
@@ -48,3 +53,16 @@
       </Col>
     </Container>
 </main>
+<style>
+    h1 {
+    color: #ff9900;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+</style>
