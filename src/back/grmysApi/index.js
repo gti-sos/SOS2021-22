@@ -3,7 +3,7 @@ var path = require("path");
 
 var dbfile = path.join(__dirname, "grmys.db");
 var db = new Datastore({ filename: dbfile, autoload: true });
-
+const request = require("request");
 var BASE_API_PATH_GRMYS = '/api/v2';
 var initGrmys = [];
 
@@ -503,4 +503,13 @@ module.exports.register = (app) => {
 		return response.sendStatus(200)
 
 	});
+	app.use("/proxyHeroku", function(req, res) {
+
+		var apiServerHost = 'https://sos2021-28.herokuapp.com';
+		var url = apiServerHost + req.url;
+		console.log(`piped: /proxyHeroku->(${url}`);
+		
+		req.pipe(request(url)).pipe(res);
+	  });
+	  
 }
