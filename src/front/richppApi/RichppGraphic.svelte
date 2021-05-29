@@ -5,44 +5,32 @@
 
     async function loadGraph() {
         let richppGraph = [];
-        let listName = [];
-        let fortuna = 0;
-        let nombre = null;
+        let listYear = [];
 
-        const res = await fetch(BASE_API_PATH + `/richpp`);
-        const richpp = await res.json();
-        richpp.forEach((r) => {
-            if (!listName.includes(r.name)) {
-                listName.push(r.name);
-            }
-        });
-        for (var name of listName) {
-            for (var year = 2016; year < 2021; year++) {
-                const res2 = await fetch(
-                    BASE_API_PATH + `/richpp?name=${name}&year=${year}`
-                );
-                if (res2.ok) {
-                    const richpp2 = await res2.json();
-                    if (richpp2 != null) {
-                        richpp2.forEach((r) => {
-                            fortuna = parseInt(r.fortune);
-                            if (fortuna != null) {
-                                richppGraph.push(fortuna);
-                            }
+        for (var year = 2016; year < 2021; year++) {
+            const res2 = await fetch(BASE_API_PATH + `/richpp?year=${year}`);
+            if (res2.ok) {
+                const richpp2 = await res2.json();
+                if (richpp2 != null) {
+                    richpp2.forEach((r) => {
+                        listYear.push(r.year);
+                        richppGraph.push({
+                            name: r.name + " " + r.year,
+                            data: [parseInt(r.fortune)],
                         });
-                    }
+                    });
                 }
             }
         }
 
         console.log(richppGraph);
+        console.log(listYear);
 
         Highcharts.chart("container", {
-            title: {
-                text: "Top3 hombres más ricos del mundo, 2016-2020",
+            chart: {
+                type: "bar",
             },
-
-            subtitle: {
+            title: {
                 text: "",
             },
 
@@ -53,9 +41,10 @@
             },
 
             xAxis: {
-                accessibility: {
-                    rangeDescription: "Rango: 2016 a 2020",
+                title: {
+                    text: "Año",
                 },
+                categories: listYear
             },
 
             legend: {
@@ -64,20 +53,7 @@
                 verticalAlign: "middle",
             },
 
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false,
-                    },
-                    pointStart: 2016,
-                },
-            },
-            series: [
-                {
-                    name: "Hombres más ricos",
-                    data: richppGraph,
-                },
-            ],
+            series: richppGraph,
 
             responsive: {
                 rules: [
@@ -120,8 +96,7 @@
         <div id="container" />
         <p class="highcharts-description">
             Gráfico que representa el top 3 de los hombre más ricos del mundo
-            desde 2016 a 2020 junto con la edad que tienen cada año y su
-            fortuna.
+            desde 2016 junto con la edad que tienen cada año y su fortuna.
         </p>
     </figure>
 </main>
