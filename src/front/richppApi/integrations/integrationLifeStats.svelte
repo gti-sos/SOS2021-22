@@ -28,7 +28,7 @@
 
   async function loadChart() {
     const res = await fetch(
-      `https://sos2021-01-life-stats.herokuapp.com/api/v2/life-stats/`
+      `https://sos2021-01.herokuapp.com/api/v2/life-stats/`
     );
     lifeData = await res.json();
     if (res.ok) {
