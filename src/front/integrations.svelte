@@ -40,10 +40,10 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                          <a href="/#/integrations/API-11-Smoking"><Button color="danger"><strong>Integracion Api smoking</strong></Button></a>
-                          <a href="/#/integrations/API-21-Temperatures"><Button color="danger"><strong>Integracion Api temperaturas</strong></Button></a>
-                          <a href="/#/integrations/API-28-awards"><Button color="danger"><strong>Integracion awards</strong></Button></a>
-                          <a href="/#/grmys"><Button color="danger"><strong>Integracion 4</strong></Button></a>
+                          <a href="/#/integrations/API-11-Smoking"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion Api smoking</strong></Button></a>
+                          <a href="/#/integrations/API-21-Temperatures"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion Api temperaturas</strong></Button></a>
+                          <a href="/#/integrations/API-28-awards"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion awards</strong></Button></a>
+                          <a href="/#/grmys"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion 4</strong></Button></a>
                         </div>
                       </div>
                     </CardBody>

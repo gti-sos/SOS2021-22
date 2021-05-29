@@ -6,8 +6,12 @@ var path = require('path');
 const { request } = require('express');
 var app = express();
 var port = (process.env.PORT || 10000);
+var cors=require("cors");
+
+
 app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, 'public')));
+app.use(cors());
 var BASE_API_PATH = '/api/v1';
 
 /*

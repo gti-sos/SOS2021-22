@@ -21,7 +21,7 @@
     }
     async function loadChart() {
       console.log("Fetching data...");
-      const res = await fetch("https://sos2021-28.herokuapp.com/api/v1/awards");
+      const res = await fetch("proxyHeroku/api/v1/awards");
       pData = await res.json();
       if (res.ok) {
         pData.forEach(stat => {
