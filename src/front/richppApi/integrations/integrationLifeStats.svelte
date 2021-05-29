@@ -28,7 +28,7 @@
 
   async function loadChart() {
     const res = await fetch(
-      `https://sos2021-01.herokuapp.com/api/v2/life-stats`
+      `https://sos2021-01-life-stats.herokuapp.com/api/v2/life-stats/`
     );
     lifeData = await res.json();
     if (res.ok) {
@@ -100,12 +100,12 @@
 
 <svelte:head>
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/series-label.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/export-data.js"></script>
-  <script
-    src="https://code.highcharts.com/modules/accessibility.js"
-    on:load={loadChart}></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script
+        src="https://code.highcharts.com/modules/accessibility.js"
+        on:load={loadChart}></script>
 </svelte:head>
 
 <main>
