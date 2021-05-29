@@ -44,6 +44,9 @@
     console.log("Life Chart Data: " + lifeData);
 
     Highcharts.chart("container", {
+      chart: {
+        type: "area",
+      },
       title: {
         text: "Life-stats",
       },
@@ -100,12 +103,12 @@
 
 <svelte:head>
   <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script
-        src="https://code.highcharts.com/modules/accessibility.js"
-        on:load={loadChart}></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script
+    src="https://code.highcharts.com/modules/accessibility.js"
+    on:load={loadChart}></script>
 </svelte:head>
 
 <main>
@@ -121,7 +124,8 @@
     <figure class="highcharts-figure">
       <div id="container" />
       <p class="highcharts-description">
-        Gráfico de líneas básico que muestra los diferentes valores para los campos de life-stats.
+        Gráfico de líneas básico que muestra los diferentes valores para los
+        campos de life-stats.
       </p>
     </figure>
   </div>
@@ -136,8 +140,8 @@
     font-weight: 100;
   }
   .highcharts-figure {
-        min-width: 360px;
-        max-width: 800px;
-        margin: 1em auto;
-    }
+    min-width: 360px;
+    max-width: 800px;
+    margin: 1em auto;
+  }
 </style>
