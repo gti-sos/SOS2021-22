@@ -10,7 +10,7 @@
     let temperature_co2 = [];
     
     async function loadGraph(){  
-        const res = await fetch("https://sos2021-21.herokuapp.com/api/v2/temperature-stats");
+        const res = await fetch(`https://sos2021-21.herokuapp.com/api/v2/temperature-stats`);
         if(res.ok){
             temperatureData = await res.json();
             console.log(JSON.stringify(temperatureData, null, 2))
