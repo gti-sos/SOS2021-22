@@ -4,6 +4,7 @@ var path = require("path");
 var dbfile = path.join(__dirname, "richpp.db");
 var db = new Datastore({ filename: dbfile, autoload: true });
 
+const request = require("request");
 var BASE_API_PATH_RICHPP = '/api/v2';
 
 /*Codigo --- Manuel*/
@@ -474,5 +475,19 @@ module.exports.register = (app) => {
             console.log("Richpp is empty");
             return response.sendStatus(404);
         }
+    });
+
+    app.use("/proxyHeroku", function(req, res) {
+        console.log(`New Proxy call!`);
+
+        var apiServeHost = "https://sos2021-22.herokuapp.com/"
+        console.log(`apiServeHost = <${apiServeHost}>`);
+        console.log(`url = <${url}>`);
+
+        var url = apiServeHost + req.url;
+
+        console.log(`piped: ${req.BASE_API_PATH_RICHPP}${req.url} -> ${url}`);
+
+        req.pipe(request(url)).pipe(res);
     });
 }
