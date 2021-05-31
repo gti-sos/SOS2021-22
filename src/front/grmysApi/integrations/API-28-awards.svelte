@@ -36,6 +36,9 @@
       
       console.log("awards Chart DaTa: " + pChartData);
       Highcharts.chart("container", {
+        chart: {
+          type: 'pie'
+        },
         title: {
           text: "Grafica de Awards",
         },

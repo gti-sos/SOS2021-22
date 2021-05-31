@@ -24,6 +24,9 @@
             console.log("Error loading temperature");
         }
         Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
             title: {
                 text: 'Gráfico de temperaturas'
             },
