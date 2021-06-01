@@ -244,17 +244,20 @@
 
 <main>
     <Nav>
-        <NavItem>
+        <NavItem style="margin-right: 10px;">
             <Button outline color="secondary" href="/#/info">Volver</Button>
         </NavItem>
-        <NavItem>
+        <NavItem style="margin-right: 10px;">
             <NavLink href="#" on:click={botonCargar}>Cargar Richmen</NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem style="margin-right: 10px;">
             <NavLink href="#" on:click={botonBorrar}>Borrar Richmen</NavLink>
         </NavItem>
-        <NavItem>
-            <Button color="primary" href="#/richpp/RichppGraphic">Ver Gráfico Lineal</Button>
+        <NavItem style="margin-right: 10px;">
+            <Button color="warning" href="#/richpp/RichppGraphic1">Ver Gráfico HighCahrt</Button>
+        </NavItem>
+        <NavItem style="margin-right: 10px;">
+            <Button color="dark" href="#/richpp/RichppGraphic2">Ver Gráfico uvChart</Button>
         </NavItem>
     </Nav>
 
