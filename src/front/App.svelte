@@ -27,7 +27,7 @@
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import globalGraphic from './globalGraphic.svelte';
 	import RichmanGraph1 from './richppApi/RichppGraphic1.svelte';
-	import RichmanGraph2 from './richppApi/RichppGraphic1.svelte';
+	import RichmanGraph2 from './richppApi/RichppGraphic2.svelte';
 	const routes = {
 		"/":Home,
 		"/info":info,
