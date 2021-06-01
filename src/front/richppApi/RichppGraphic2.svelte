@@ -3,7 +3,7 @@
     import { Nav, NavItem, NavLink } from "sveltestrap";
     let BASE_API_PATH = "/api/v2";
 
-    async function loadGraph() {
+    async function load() {
         let listName = [];
         const data = await fetch(BASE_API_PATH + "/richpp");
         const richpp = await data.json();
@@ -34,32 +34,29 @@
                     if (richpp2 != null) {
                         richpp2.forEach((r) => {
                             if (r.name == billGates) {
-                                dataBillGates.push({
-                                    name: r.year,
-                                    data: parseFloat(r.fortune),
-                                });
+                                dataBillGates.push(parseFloat(r.fortune));
                             } else if (r.name == warren) {
-                                dataWarren.push({
-                                    name: r.year,
-                                    data: parseFloat(r.fortune),
-                                });
+                                dataWarren.push(parseFloat(r.fortune));
                             } else if (r.name == amancioOrtega) {
-                                dataAmancio.push({
-                                    name: r.year,
-                                    data: parseFloat(r.fortune),
-                                });
+                                dataAmancio.push(parseFloat(r.fortune));
                             } else if (r.name == jeffBezos) {
-                                dataJeffBezos.push({
-                                    name: r.year,
-                                    data: parseFloat(r.fortune),
-                                });
+                                dataJeffBezos.push(parseFloat(r.fortune));
                             } else if (r.name == bernard) {
-                                dataBernard.push({
-                                    name: r.year,
-                                    data: parseFloat(r.fortune),
-                                });
+                                dataBernard.push(parseFloat(r.fortune));
                             }
                         });
+                    }
+                } else {
+                    if (name == billGates) {
+                        dataBillGates.push(0);
+                    } else if (name == warren) {
+                        dataWarren.push(0);
+                    } else if (name == amancioOrtega) {
+                        dataAmancio.push(0);
+                    } else if (name == jeffBezos) {
+                        dataJeffBezos.push(0);
+                    } else if (name == bernard) {
+                        dataBernard.push(0);
                     }
                 }
             }
@@ -74,11 +71,11 @@
         var graphdef = {
             categories: [billGates, warren, amancioOrtega, jeffBezos, bernard],
             dataset: {
-                billGates: [dataBillGates],
-                warren: [dataWarren],
-                amancioOrtega: [dataAmancio],
-                jeffBezos: [dataJeffBezos],
-                bernard: [dataBernard],
+                billGates: dataBillGates,
+                warren: dataWarren,
+                amancioOrtega: dataAmancio,
+                jeffBezos: dataJeffBezos,
+                bernard: dataBernard,
             },
         };
 
@@ -123,7 +120,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.2/d3.v3.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/uvCharts/1.1.5/uvcharts.min.js"
-        on:load={loadGraph}></script>
+        on:load={load}></script>
 </svelte:head>
 
 <main>

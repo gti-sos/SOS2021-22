@@ -7,10 +7,12 @@
     async function loadGraph(){
         let paawardsGraph = [];
         let richppGraph = [];
+        let grmysGraph=[];
         var edad1 = 0;
         for (var año=2016; año<2021; año++){
             const res1 = await fetch(BASE_API_URL_PAAWARDS + `/paawards?year=${año}`);
             const res2 = await fetch(BASE_API_URL+`/richpp?year=${año}&top=1`);
+            const res3 = await fetch(BASE_API_URL+`/grmys?year=${año}`);
             //PAAWARDS
             if (res1.ok) {
                 const json1 = await res1.json();
@@ -37,6 +39,22 @@
             } 
             else {
                 richppGraph.push(0);
+            }
+            if (res3.ok) {
+                const json3 = await res3.json();
+                var cont = 0;
+                var suma = 0.0;
+                json1.forEach((p) => {
+                    var edad = parseInt(p.year);
+                    suma=suma+edad;
+                    cont=cont+1;
+                });
+                var resultado1 = suma/cont;
+                grmysGraph.push(resultado1);
+                
+            } 
+            else {
+                grmysGraph.push(0);
             }
         }
     
@@ -84,6 +102,10 @@
                         {
                           name: "Edad Top 1 en Fortuna",
                           data: richppGraph,
+                        },
+                        {
+                          name: "año de fundacion",
+                          data: grmysGraph,
                         }
             ],
 
