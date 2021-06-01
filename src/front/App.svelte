@@ -23,11 +23,13 @@
 	import paawardGraph1 from './paawardsApi/PaawardsGraphic1.svelte';
 	import paawardGraph2 from './paawardsApi/PaawardsGraphic2.svelte';
 	import integrationsPaawards1 from './paawardsApi/integrations/integrationsPaawardsFireStats.svelte';
-	import integrationsPaawards2 from './paawardsApi/integrations/integrationsPaawardsPlatforms.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import globalGraphic from './globalGraphic.svelte';
 	import RichmanGraph from './richppApi/RichppGraphic.svelte';
+	import RichmanGraph1 from './richppApi/RichppGraphic1.svelte';
+    import RichmanGraph2 from './richppApi/RichppGraphic2.svelte';
+
 	const routes = {
 		"/":Home,
 		"/info":info,
@@ -38,7 +40,6 @@
 		"/integrations/integrationExt1":integrationExt1,
 		"/integrations/integrationExt2":integrationExt2,
 		"/integrations/integrationsPaawardsANDFireStats":integrationsPaawards1,
-		"/integrations/integrationsPaawardsANDPlatforms":integrationsPaawards2,
 		"/integrations/API-11-Smoking":integrationsGrmys1,
 		"/integrations/API-21-Temperatures":integrationsGrmys2,
 		"/integrations/API-28-awards":integrationsGrmys3,
@@ -56,6 +57,8 @@
 		"/richpp/:name/:year": RichmanEdit,
 		"/globalGraphic":globalGraphic,
 		"/richpp/RichppGraphic": RichmanGraph,
+		"/richpp/RichppGraphic1": RichmanGraph1,
+        "/richpp/RichppGraphic2": RichmanGraph2,
 		"*":NotFound
     };
 </script>
@@ -63,4 +66,3 @@
 <main>
 	<Router {routes}> </Router>
 </main>
-
