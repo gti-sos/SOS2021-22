@@ -26,10 +26,8 @@
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import globalGraphic from './globalGraphic.svelte';
-	import RichmanGraph from './richppApi/RichppGraphic.svelte';
 	import RichmanGraph1 from './richppApi/RichppGraphic1.svelte';
-    import RichmanGraph2 from './richppApi/RichppGraphic2.svelte';
-
+	import RichmanGraph2 from './richppApi/RichppGraphic2.svelte';
 	const routes = {
 		"/":Home,
 		"/info":info,
@@ -56,9 +54,8 @@
 		"/richpp": Richpp,
 		"/richpp/:name/:year": RichmanEdit,
 		"/globalGraphic":globalGraphic,
-		"/richpp/RichppGraphic": RichmanGraph,
 		"/richpp/RichppGraphic1": RichmanGraph1,
-        "/richpp/RichppGraphic2": RichmanGraph2,
+		"/richpp/RichppGraphic2": RichmanGraph2,
 		"*":NotFound
     };
 </script>
