@@ -6,7 +6,7 @@
           let grmysData = [];
           let grmysGraph = [];
           let BASE_API_URL_GRMYS = "/api/v2";
-          const data = await fetch(BASE_API_URL_GRMYS + "/grmys?offset=0&limit=10");
+          const data = await fetch(BASE_API_URL_GRMYS + "/grmys");
           grmysData = await data.json();
           grmysData.forEach( (x) => {
           grmysGraph.push({name: x.name + " " + x.year, data: [parseInt(x.ranking), parseInt(x.award)], pointPlacement: 'on'});
@@ -28,7 +28,7 @@ chart.data = grmysData;
 
 var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
 categoryAxis.renderer.grid.template.location = 0;
-categoryAxis.dataFields.category = "name";
+categoryAxis.dataFields.category = "country";
 categoryAxis.renderer.labels.template.location = 0.5;
 categoryAxis.renderer.grid.template.strokeOpacity = 0.08;
 categoryAxis.renderer.tooltipLocation = 0.5;
@@ -60,7 +60,7 @@ hoverState.transitionDuration = 1500;
 axisBreak.defaultState.transitionDuration = 1000;
 
 var series = chart.series.push(new am4charts.RadarColumnSeries());
-series.dataFields.categoryX = "name";
+series.dataFields.categoryX = "country";
 series.dataFields.valueY = "award";
 series.columns.template.tooltipText = "{valueY.value}";
 series.columns.template.tooltipY = 0;
