@@ -19,6 +19,9 @@
   </script>
   
   <main>
+    <NavItem>
+      <NavLink href="/">Volver</NavLink>
+  </NavItem>
     <h1>Info-SOS2021-22</h1>
     
     <Container>

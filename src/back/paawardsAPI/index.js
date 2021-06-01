@@ -1,7 +1,8 @@
 var BASE_API_PATH_PAAWARDS = '/api/v1';
 var Datastore = require("nedb");
 var path = require ("path");
-const dbFile = path.join(__dirname,"paawards.db");   
+const dbFile = path.join(__dirname,"paawards.db");
+const request = require("request");   
 const dbPaawards = new Datastore({
     filename: dbFile,
     autoload:true
@@ -206,6 +207,15 @@ module.exports.register = (app) => {
 				}
 			}	
 		});
+	});
+
+	app.use("/proxyHeroku", function(req, res) {
+
+		var apiServerHost = 'https://sos2021-28.herokuapp.com';
+		var url = apiServerHost + req.url;
+		console.log(`piped: /proxyHeroku->(${url}`);
+		
+		req.pipe(request(url)).pipe(res);
 	});
 
 }
