@@ -9,8 +9,10 @@
     let pChartData = [];
     let countryData = [];
     let nameData = [];
+    let nameGrmys=[];
     let yearData = [];
     let nAwardData = [];
+    let grmysdata = [];
   
 
   let errorMsg = "";
@@ -23,44 +25,24 @@
   async function loadChart() {
     console.log("Fetching data...");
     const res = await fetch("proxyHeroku/api/v1/awards");
-    pDataAwards = await res.json();
+    const res1 = await fetch(BASE_CONTACT_API_PATH +`/grmys?offset=0&limit=10`);
+        
     
-    if (res.ok) {
-      pDataAwards.forEach(stat => {
-        if (stat.winner in nameData){
-            console.log("ya esta almacenado el country" + stat.winner)
-        }else{
-          nameData.push(stat.winner);
-        }
-        if (stat.year in yearData){
-            console.log("ya esta almacenado el year" + stat.year)
-        }else{
-            yearData.push(stat.year);
-        } 
-        nAwardData.push(stat["n-award"]);
-      
+    /*if(res.ok){
+        pDataAwards = await res.json();
+        pDataAwards.forEach(data => {
+          nAwardData.push(data["n-award"]);
+          nameData.push(data.winner);
+    });
+    }else{
+      nAwardData.push(0);
+    }*/if(res1.ok){
+        pDataGrmys = await res1.json();
+        grmysData.forEach( (x) => {
+          pDataGrmys.push({name: x.name + " " + x.year, data: [parseInt(x.ranking), parseInt(x.award)], pointPlacement: 'on'});
         });
-    }
-      const res1 = await fetch(BASE_CONTACT_API_PATH + "/grmys");
-      pDataGrmys = await res1.json();
-      
-      if (res1.ok) {
-        pDataGrmys.forEach(stat => {
-          if (stat.name in nameData){
-            console.log("ya hola")
-            console.log("ya esta almacenado el name" + stat.name)
-        }else{
-          nameData.push(stat.name);
-        }
-       
-        if (stat.year in yearData){
-            console.log("ya esta almacenado el year" + stat.year)
-        }else{
-            yearData.push(stat.year);
-        } 
-       
-        nAwardData.push(stat["award"]);
-        });
+    }else{
+      grmysdata.push(0);
     }
     
     console.log("awards Chart DaTa: " + pChartData);
@@ -69,18 +51,20 @@
             type: 'column'
         },
         title: {
-          text: "Grafica General",
+          text: "Grafica premios",
         },
         yAxis: {
           title: {
-            text: "Valor",
+            text: "premios",
           },
+          
         },
         xAxis: {
           title: {
             text: "nombre",
           },
-          categories: nameData,
+          categories: nameGrmys,
+          
         },
         legend: {
           layout: "vertical",
@@ -103,15 +87,23 @@
           },
         ],
         series: [
-          
           {
-            name: "premios",
-            data: nAwardData,
+            name: name,
+            data: grmysdata,
+          }, 
+       /* {
+            name: "nombre",
+            data: nameData,
           },
           {
-            name: "Numero de premios",
+            name: "premiosaward",
             data: nAwardData,
-          }
+          },
+         
+          {
+            name: "premiosgrmys",
+            data: grmysdata,
+          }*/
           
         ],
         responsive: {
@@ -131,7 +123,7 @@
           ],
         },
       });
-    }
+  }
 </script>
 <svelte:head>
   <script src="https://code.highcharts.com/highcharts.js"></script>

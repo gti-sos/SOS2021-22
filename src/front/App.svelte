@@ -11,6 +11,8 @@
 	import integrationsGrmys1 from "./grmysApi/integrations/API-11-Smoking.svelte";
 	import integrationsGrmys2 from "./grmysApi/integrations/API-21-Temperatures.svelte";
 	import integrationsGrmys3 from "./grmysApi/integrations/API-28-awards.svelte";
+	import integrationsGrmys4 from "./grmysApi/integrations/Api-externa1.svelte";
+	import integrationsGrmys5 from "./grmysApi/integrations/Api-Externa2.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
@@ -43,6 +45,8 @@
 		"/integrations/API-11-Smoking":integrationsGrmys1,
 		"/integrations/API-21-Temperatures":integrationsGrmys2,
 		"/integrations/API-28-awards":integrationsGrmys3,
+		"/integrations/Api-externa1":integrationsGrmys4,
+		"/integrations/Api-Externa2":integrationsGrmys5,
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
 		"/paawards/paawardsGraphic": paawardGraph,
