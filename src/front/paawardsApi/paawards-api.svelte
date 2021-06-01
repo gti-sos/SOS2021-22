@@ -218,6 +218,10 @@
             <NavLink href="#" on:click={botonBorrar}>Borrar paawards</NavLink>
         </NavItem>
     </Nav>
+    <br>
+    <Button href="/#/paawards/paawardsGraphic">Gráfico Highcharts v1</Button>
+    <Button href="/#/paawards/paawardsGraphic-Highcharts">Gráfico Highcharts v2</Button>
+    <Button href="/#/paawards/paawardsGraphic-Anychart">Gráfico Anychart</Button>
 
     {#if errorMessage}
         <p style="color: red">ERROR: {errorMessage}</p>
@@ -313,7 +317,6 @@
         </PaginationItem>
       </Pagination>
 
-      <Button href="/#/paawards/paawardsGraphic">Ver Gráfico</Button>
 </main>
 
 <style>

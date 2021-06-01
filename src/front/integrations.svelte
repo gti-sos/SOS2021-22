@@ -98,14 +98,34 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                            <a href="/#/integrations/integrationsPaawardsANDFireStats"><Button color="danger"><strong>Fire-Stats</strong></Button></a>
-                            <br><br>
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 2</strong></Button></a>
-                            <br><br>
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 3</strong></Button></a>
-                            <br><br>
-                            <a href="/#/grmys"><Button color="danger"><strong>Integracion 4</strong></Button></a>
-                            <br><br>
+                          <row>
+                            <a href="/#/integrations/integrationsPaawardsANDFireStats">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API Fire-Stats</strong>
+                              </Button>
+                            </a>
+                          </row>
+                          <row>
+                            <a href="/#/integrations/integrationsPaawardsANDPlatforms">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API Platforms</strong>
+                              </Button>
+                            </a>
+                          </row>
+                          <row>
+                            <a href="/#/integrations/integrationsPaawardsANDExternal1">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API Externa 1</strong>
+                              </Button>
+                            </a>
+                          </row>
+                          <row>
+                            <a href="/#/integrations/integrationsPaawardsANDExternal2">
+                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
+                                <strong>Integración API Externa 2</strong>
+                              </Button>
+                            </a>
+                          </row>
                         </div>
                       </div>
                     </CardBody>

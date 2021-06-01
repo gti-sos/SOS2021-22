@@ -8,26 +8,25 @@
     let paisesFireStats = ['Brazil','United States'];
     let paisesPaawards = ['Brasil','EE.UU']
     let Incendios = ['Incendios'];
+    let EspeciesVegetales = ['Especies Vegetales Afectadas'];
     let PremiosPA = ['Premios Princesa de Asturias'];
 
-    async function loadData(){
+    anychart.onDocumentReady(async function () {
         for (var i=0; i<paisesFireStats.length; i++){
-            const res1 = await fetch(`https://sos2021-21.herokuapp.com/api/v2/fire-stats?country=${paisesFireStats[i]}`, {
-                'mode': 'no-cors',
-	            'headers': {
-            	    'Access-Control-Allow-Origin': '*',
-        	    }
-    	    });
+            const res1 = await fetch(`https://sos2021-21.herokuapp.com/api/v2/fire-stats?country=${paisesFireStats[i]}`);
             if (res1.ok) {
                 const json1 = await res1.json();
                 var suma1 = 0;
+                var suma2 = 0;
                 json1.forEach((f) => {
                     console.log(f)
                     var fire = parseInt(f.fire_nfc);
-                    console.log(fire);
+                    var vegetales = parseInt(f.fire_nvs);
                     suma1=suma1+fire;
+                    suma2=suma2+vegetales;
                 });
                 Incendios.push(suma1);
+                EspeciesVegetales.push(suma2);
             } 
             else {
                 Incendios.push(0);
@@ -35,12 +34,7 @@
         }
         for (var j=0; j<paisesPaawards.length; j++){
             
-            const res2 = await fetch(BASE_API_URL_PAAWARDS + `/paawards?country=${paisesPaawards[j]}`,
-                {   'mode': 'no-cors',
-	                'headers': {
-            	        'Access-Control-Allow-Origin': '*',
-        	    }
-            });
+            const res2 = await fetch(BASE_API_URL_PAAWARDS + `/paawards?country=${paisesPaawards[j]}`);
             if (res2.ok) {
                 const json2 = await res2.json();
                 var suma2 = 0;
@@ -54,16 +48,14 @@
                 PremiosPA.push(0);
             }
         }
-    }
-
-    anychart.onDocumentReady(function () {
-      // create data set on our data
-      loadData();
+      console.log(Incendios);
+      console.log(PremiosPA);
       var chartData = {
-        title: 'Incendios y Premios Princesa de Asturias en Estados Unidos y Brasil',
+        title: 'Incendios, Especies Vegetales Afectadas y Premios Princesa de Asturias en Estados Unidos y Brasil',
         header: ['#', 'Brasil', 'Estados Unidos'],
         rows: [
           Incendios,
+          EspeciesVegetales,
           PremiosPA
         ]
       };

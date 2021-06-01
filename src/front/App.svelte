@@ -19,7 +19,9 @@
 	import grmysGraphAm from './grmysApi/grmysAmchart.svelte';
 	import paawards from './paawardsApi/paawards-api.svelte';
 	import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
-	import paawardGraph from './paawardsApi/PaawardsGraphic.svelte'
+	import paawardGraph from './paawardsApi/PaawardsGraphic.svelte';
+	import paawardGraph1 from './paawardsApi/PaawardsGraphic1.svelte';
+	import paawardGraph2 from './paawardsApi/PaawardsGraphic2.svelte';
 	import integrationsPaawards1 from './paawardsApi/integrations/integrationsPaawardsFireStats.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
@@ -41,6 +43,8 @@
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
 		"/paawards/paawardsGraphic": paawardGraph,
+		"/paawards/paawardsGraphic-Highcharts": paawardGraph1,
+		"/paawards/paawardsGraphic-Anychart": paawardGraph2,
 		"/grmys": grmys,
 		"/grmys/:ranking/:name": editGrmys,
 		"/grmys/grmysGraphic": grmysGraph,

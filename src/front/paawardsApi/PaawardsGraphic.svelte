@@ -2,7 +2,7 @@
     
     import { onMount } from "svelte";
     import {Nav,NavItem,NavLink} from "sveltestrap";
-    let BASE_API_URL_PAAWARDS = "/api/v1"
+    let BASE_API_URL_PAAWARDS = "/api/v1";
 
     //Obtenemos los paises
     let country = [];
