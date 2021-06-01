@@ -1,13 +1,14 @@
 <script>
     import { onMount } from "svelte";
-
+    import Button from "sveltestrap/src/Button.svelte";
+    import { pop } from "svelte-spa-router";
     async function loadGraph(){
 
         let grmysData = [];
         let grmysGraph = [];
         let BASE_API_URL_GRMYS = "/api/v2";
         
-        const data = await fetch(BASE_API_URL_GRMYS + "/grmys?offset=0&limit=10");
+        const data = await fetch(BASE_API_URL_GRMYS + "/grmys");
         grmysData = await data.json();
         grmysData.forEach( (x) => {
             grmysGraph.push({name: x.name + " " + x.year, data: [parseInt(x.ranking), parseInt(x.award)], pointPlacement: 'on'});
@@ -85,15 +86,25 @@
 </svelte:head>
 
 <main>
+    <h2>grmys Grafica</h2>
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
             Grafico que representa los ganadores de los Premios Gramys en toda la historia de este prestigioso trofeo de musica
         </p>
     </figure>
+    <Button outline color="secondary" on:click={pop}>
+        <i class="fas fa-arrow-circle-left" /> Volver
+    </Button>
 </main>
 
 <style>
     
-
+    h2 {
+    color: #ff9900;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+  }
 </style>

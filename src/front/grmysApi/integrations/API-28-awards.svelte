@@ -5,12 +5,12 @@
     let pData = [];
     let pChartData = [];
     
-  let countryWinnerData = [];
-  let awardData = [];
-  let yearData = [];
-  let galaData = [];
-  let nPlatformData = [];
-  let nAwardData = [];
+    let countryWinnerData = [];
+    let awardData = [];
+    let yearData = [];
+    let galaData = [];
+    let nPlatformData = [];
+    let nAwardData = [];
   
     let errorMsg = "";
     let okMsg = "";
@@ -123,9 +123,7 @@
   </svelte:head>
   <main>
     <div>
-      <h2>
-        Análiticas
-      </h2>
+      <h2>Integracion api-28 </h2>
     </div>
   
     <div>
@@ -146,3 +144,12 @@
       </figure>
     </div>
   </main>
+  <style>
+     h2 {
+    color: #ff9900;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+  }
+  </style>
