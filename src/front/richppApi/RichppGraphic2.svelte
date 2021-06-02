@@ -65,27 +65,27 @@
                     if (name == billGates) {
                         dataBillGates.push({
                             name: year.toString(),
-                            value: 0,
+                            value: null,
                         });
                     } else if (name == warren) {
                         dataWarren.push({
                             name: year.toString(),
-                            value: 0,
+                            value: null,
                         });
                     } else if (name == amancioOrtega) {
                         dataAmancio.push({
                             name: year.toString(),
-                            value: 0,
+                            value: null,
                         });
                     } else if (name == jeffBezos) {
                         dataJeffBezos.push({
                             name: year.toString(),
-                            value: 0,
+                            value: null,
                         });
                     } else if (name == bernard) {
                         dataBernard.push({
                             name: year.toString(),
-                            value: 0,
+                            value: null,
                         });
                     }
                 }
@@ -140,7 +140,7 @@
             },
         };
 
-        var chart = uv.chart("Line", graphdef, config);
+        var chart = uv.chart("Bar", graphdef, config);
     }
 </script>
 

@@ -48,15 +48,15 @@
                     }
                 } else {
                     if (name == billGates) {
-                        dataBillGates.push(0);
+                        dataBillGates.push(null);
                     } else if (name == warren) {
-                        dataWarren.push(0);
+                        dataWarren.push(null);
                     } else if (name == amancioOrtega) {
-                        dataAmancio.push(0);
+                        dataAmancio.push(null);
                     } else if (name == jeffBezos) {
-                        dataJeffBezos.push(0);
+                        dataJeffBezos.push(null);
                     } else if (name == bernard) {
-                        dataBernard.push(0);
+                        dataBernard.push(null);
                     }
                 }
             }
