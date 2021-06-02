@@ -43,7 +43,8 @@
                           <a href="/#/integrations/API-11-Smoking"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion Api smoking</strong></Button></a>
                           <a href="/#/integrations/API-21-Temperatures"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion Api temperaturas</strong></Button></a>
                           <a href="/#/integrations/API-28-awards"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion awards</strong></Button></a>
-                          <a href="/#/grmys"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion 4</strong></Button></a>
+                          <a href="/#/integrations/Api-externa1"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion API externa 1</strong></Button></a>
+                          <a href="/#/integrations/Api-Externa2"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion API externa 1</strong></Button></a>
                         </div>
                       </div>
                     </CardBody>
@@ -113,9 +114,9 @@
                             </a>
                           </row>
                           <row>
-                            <a href="/#/integrations/integrationsPaawardsANDExternal1">
+                            <a href="/#/integrations/integrationsPaawardsANDShazam">
                               <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
-                                <strong>Integración API Externa 1</strong>
+                                <strong>Integración API Shazam</strong>
                               </Button>
                             </a>
                           </row>

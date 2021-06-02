@@ -63,15 +63,16 @@
 </svelte:head>
 
 <main>
+    <NavItem>
+        <NavLink href="/#/paawards">Volver</NavLink>
+    </NavItem>
     <div id="container"></div>
 </main>
 
 <style>
-    html,
-    body,
     #container {
       width: 100%;
-      height: 100%;
+      height: 500px;
       margin: 0;
       padding: 0;
     }

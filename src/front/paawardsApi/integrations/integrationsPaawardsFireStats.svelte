@@ -116,15 +116,18 @@
 </svelte:head>
 
 <main>
+    <Nav>
+        <NavItem>
+            <NavLink href="/#/integrations">Volver</NavLink>
+        </NavItem>
+    </Nav>
     <div id="container"></div>
 </main>
 
 <style>
-    html,
-    body,
     #container {
       width: 100%;
-      height: 100%;
+      height: 500px;
       margin: 0;
       padding: 0;
     }

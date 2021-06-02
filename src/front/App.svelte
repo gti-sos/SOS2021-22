@@ -11,6 +11,8 @@
 	import integrationsGrmys1 from "./grmysApi/integrations/API-11-Smoking.svelte";
 	import integrationsGrmys2 from "./grmysApi/integrations/API-21-Temperatures.svelte";
 	import integrationsGrmys3 from "./grmysApi/integrations/API-28-awards.svelte";
+	import integrationsGrmys4 from "./grmysApi/integrations/Api-externa1.svelte";
+	import integrationsGrmys5 from "./grmysApi/integrations/Api-Externa2.svelte";
 	import NotFound from "./NotFound.svelte";
 	import grmys from './grmysApi/grmysApi.svelte';
 	import editGrmys from './grmysApi/editGrmys.svelte';
@@ -23,6 +25,8 @@
 	import paawardGraph1 from './paawardsApi/PaawardsGraphic1.svelte';
 	import paawardGraph2 from './paawardsApi/PaawardsGraphic2.svelte';
 	import integrationsPaawards1 from './paawardsApi/integrations/integrationsPaawardsFireStats.svelte';
+	import integrationsPaawards2 from './paawardsApi/integrations/integrationsPaawardsPlatforms.svelte';
+	import integrationsPaawards3 from './paawardsApi/integrations/integrationsPaawardsRapidApiFootball.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import globalGraphic from './globalGraphic.svelte';
@@ -39,9 +43,13 @@
 		"/integrations/integrationExt1":integrationExt1,
 		"/integrations/integrationExt2":integrationExt2,
 		"/integrations/integrationsPaawardsANDFireStats":integrationsPaawards1,
+		"/integrations/integrationsPaawardsANDPlatforms":integrationsPaawards2,
+		"/integrations/integrationsPaawardsANDFootball":integrationsPaawards3,
 		"/integrations/API-11-Smoking":integrationsGrmys1,
 		"/integrations/API-21-Temperatures":integrationsGrmys2,
 		"/integrations/API-28-awards":integrationsGrmys3,
+		"/integrations/Api-externa1":integrationsGrmys4,
+		"/integrations/Api-Externa2":integrationsGrmys5,
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
 		"/paawards/paawardsGraphic": paawardGraph,
@@ -65,4 +73,3 @@
 <main>
 	<Router {routes}> </Router>
 </main>
-
