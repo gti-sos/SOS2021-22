@@ -1,6 +1,4 @@
 <script>
-    import { error } from "node:console";
-
     import { onMount } from "svelte";
     import { Nav, NavItem, NavLink } from "sveltestrap";
     let BASE_API_PATH = "/api/v2";
@@ -37,28 +35,28 @@
                         richpp2.forEach((r) => {
                             if (r.name == billGates) {
                                 dataBillGates.push({
-                                    name: r.year,
-                                    value: parseFloat(r.fortune),
+                                    "name": r.year,
+                                    "value": parseFloat(r.fortune),
                                 });
                             } else if (r.name == warren) {
                                 dataWarren.push({
-                                    nanme: r.year,
-                                    value: parseFloat(r.fortune),
+                                    "name": r.year,
+                                    "value": parseFloat(r.fortune),
                                 });
                             } else if (r.name == amancioOrtega) {
                                 dataAmancio.push({
-                                    name: r.year,
-                                    value: parseFloat(r.fortune),
+                                    "name": r.year,
+                                    "value": parseFloat(r.fortune),
                                 });
                             } else if (r.name == jeffBezos) {
                                 dataJeffBezos.push({
-                                    name: r.year,
-                                    value: parseFloat(r.fortune),
+                                    "name": r.year,
+                                    "value": parseFloat(r.fortune),
                                 });
                             } else if (r.name == bernard) {
                                 dataBernard.push({
-                                    name: r.year,
-                                    value: parseFloat(r.fortune),
+                                    "name": r.year,
+                                    "value": parseFloat(r.fortune),
                                 });
                             }
                         });
@@ -66,27 +64,27 @@
                 } else {
                     if (name == billGates) {
                         dataBillGates.push({
-                            name: year,
+                            name: year.toString(),
                             value: 0,
                         });
                     } else if (name == warren) {
                         dataWarren.push({
-                            name: year,
+                            name: year.toString(),
                             value: 0,
                         });
                     } else if (name == amancioOrtega) {
                         dataAmancio.push({
-                            name: year,
+                            name: year.toString(),
                             value: 0,
                         });
                     } else if (name == jeffBezos) {
                         dataJeffBezos.push({
-                            name: year,
+                            name: year.toString(),
                             value: 0,
                         });
                     } else if (name == bernard) {
                         dataBernard.push({
-                            name: year,
+                            name: year.toString(),
                             value: 0,
                         });
                     }
@@ -136,7 +134,7 @@
             },
         };
 
-        var chart = uv.chart("Bar", graphdef, config);
+        var chart = uv.chart("Line", graphdef);
     }
 </script>
 
@@ -145,7 +143,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.2/d3.v3.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/uvCharts/1.1.5/uvcharts.min.js"
-        on:load={load}></script>
+        on:load="{load}"></script>
 </svelte:head>
 
 <main>

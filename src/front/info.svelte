@@ -19,9 +19,11 @@
   </script>
   
   <main>
-    <NavItem>
-      <NavLink href="/">Volver</NavLink>
-  </NavItem>
+    <Nav>
+      <NavItem>
+          <NavLink outline color="secondary" href="/">Volver</NavLink>
+      </NavItem>
+    </Nav>
     <h1>Info-SOS2021-22</h1>
     
     <Container>
@@ -250,12 +252,6 @@
         </Card>
       </Col>
     </Container>
-
-    <Nav>
-      <NavItem>
-          <NavLink outline color="secondary" href="/">Volver</NavLink>
-      </NavItem>
-    </Nav>
   </main>
   
   <style>

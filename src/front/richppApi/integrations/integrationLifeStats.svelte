@@ -41,8 +41,6 @@
       cargados = true;
     }
 
-    console.log("Life Chart Data: " + lifeData);
-
     Highcharts.chart("container", {
       chart: {
         type: "area",
@@ -118,7 +116,7 @@
     </NavItem>
   </Nav>
 
-  <h2>INTEGRATIONS WITH OTHER APIs</h2>
+  <h2>API LIVESTATS (GRUPO 01)</h2>
 
   <div>
     <figure class="highcharts-figure">
