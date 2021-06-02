@@ -104,10 +104,6 @@ loadGraph();
         font-size: 4em;
         font-weight: 100;
       }
-      #chartdiv {
-        width: 100%;
-        height: 700px;
-      }
      
     </style>
     
