@@ -3,16 +3,16 @@
   import { Table, Button, Nav, NavItem, NavLink } from "sveltestrap";
   
     const BASE_CONTACT_API_PATH = "/api/v2";
-    let pDataAwards = [];
-    let pDataGrmys = [];
-
+    let pData = [];
     let pChartData = [];
-    let countryData = [];
-    let nameData = [];
-    let nameGrmys=[];
+    
+    let countryWinnerData = [];
+    let awardData = [];
+    let winnerData = []
     let yearData = [];
+    let galaData = [];
+    let nPlatformData = [];
     let nAwardData = [];
-    let grmysdata = [];
   
 
   let errorMsg = "";
@@ -25,104 +25,77 @@
   async function loadChart() {
     console.log("Fetching data...");
     const res = await fetch("proxyHeroku/api/v1/awards");
-    const res1 = await fetch(BASE_CONTACT_API_PATH +`/grmys?offset=0&limit=10`);
+    pData = await res.json();
+      if (res.ok) {
+        pData.forEach(stat => {
+        countryWinnerData.push(stat.country +"-"+stat.winner);
+        //platChartData.push(stat.platform);
+        galaData.push(stat.gala)
+        yearData.push(stat.year);
+        nPlatformData.push(stat["n-platform"]);
+        nAwardData.push(stat["n-award"]);
         
-    
-    /*if(res.ok){
-        pDataAwards = await res.json();
-        pDataAwards.forEach(data => {
-          nAwardData.push(data["n-award"]);
-          nameData.push(data.winner);
-    });
-    }else{
-      nAwardData.push(0);
-    }*/if(res1.ok){
-        pDataGrmys = await res1.json();
-        grmysData.forEach( (x) => {
-          pDataGrmys.push({name: x.name + " " + x.year, data: [parseInt(x.ranking), parseInt(x.award)], pointPlacement: 'on'});
         });
-    }else{
-      grmysdata.push(0);
-    }
+      }
+      console.log("awards Chart DaTa: " + pChartData);
+      var colors = Highcharts.getOptions().colors;
+      Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'valores de la Api awards'
+    },
     
-    console.log("awards Chart DaTa: " + pChartData);
-    Highcharts.chart("container", {
-        chart: {
-            type: 'column'
-        },
+    xAxis: {
+        categories: countryWinnerData,
         title: {
-          text: "Grafica premios",
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'valores',
+            align: 'high'
         },
-        yAxis: {
-          title: {
-            text: "premios",
-          },
-          
-        },
-        xAxis: {
-          title: {
-            text: "nombre",
-          },
-          categories: nameGrmys,
-          
-        },
-        legend: {
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' millions'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
           layout: "vertical",
           align: "right",
           verticalAlign: "middle",
         },
-        annotations: [
-          {
-            labels: [
-              {
-                point: "date",
-                text: "",
-              },
-              {
-                point: "min",
-                text: "Min",
-                backgroundColor: "white",
-              },
-            ],
-          },
-        ],
-        series: [
-          {
-            name: name,
-            data: grmysdata,
-          }, 
-       /* {
-            name: "nombre",
-            data: nameData,
-          },
-          {
-            name: "premiosaward",
-            data: nAwardData,
-          },
-         
-          {
-            name: "premiosgrmys",
-            data: grmysdata,
-          }*/
-          
-        ],
-        responsive: {
-          rules: [
-            {
-              condition: {
-                maxWidth: 500,
-              },
-              chartOptions: {
-                legend: {
-                  layout: "horizontal",
-                  align: "center",
-                  verticalAlign: "bottom",
-                },
-              },
-            },
-          ],
-        },
-      });
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Año',
+        data: yearData
+        
+    }, {
+        name: 'Gala',
+        data: galaData
+    }, {
+        name: 'Numero de plataformas',
+        data: nPlatformData
+    }, {
+        name: 'Numero de premios',
+        data: nAwardData
+    }]
+  });
   }
 </script>
 <svelte:head>
