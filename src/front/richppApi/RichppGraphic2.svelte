@@ -35,28 +35,28 @@
                         richpp2.forEach((r) => {
                             if (r.name == billGates) {
                                 dataBillGates.push({
-                                    "name": r.year,
-                                    "value": parseFloat(r.fortune),
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
                                 });
                             } else if (r.name == warren) {
                                 dataWarren.push({
-                                    "name": r.year,
-                                    "value": parseFloat(r.fortune),
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
                                 });
                             } else if (r.name == amancioOrtega) {
                                 dataAmancio.push({
-                                    "name": r.year,
-                                    "value": parseFloat(r.fortune),
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
                                 });
                             } else if (r.name == jeffBezos) {
                                 dataJeffBezos.push({
-                                    "name": r.year,
-                                    "value": parseFloat(r.fortune),
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
                                 });
                             } else if (r.name == bernard) {
                                 dataBernard.push({
-                                    "name": r.year,
-                                    "value": parseFloat(r.fortune),
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
                                 });
                             }
                         });
@@ -99,7 +99,13 @@
         console.log("Datos de Bernard Arnault: ", dataBernard);
 
         var graphdef = {
-            categories: [billGates, warren, amancioOrtega, jeffBezos, bernard],
+            categories: [
+                "billGates",
+                "warren",
+                "amancioOrtega",
+                "jeffBezos",
+                "bernard",
+            ],
             dataset: {
                 billGates: dataBillGates,
                 warren: dataWarren,
@@ -134,7 +140,7 @@
             },
         };
 
-        var chart = uv.chart("Line", graphdef);
+        var chart = uv.chart("Line", graphdef, config);
     }
 </script>
 
@@ -143,7 +149,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.2/d3.v3.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/uvCharts/1.1.5/uvcharts.min.js"
-        on:load="{load}"></script>
+        on:load={load}></script>
 </svelte:head>
 
 <main>
