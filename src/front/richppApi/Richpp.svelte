@@ -254,7 +254,10 @@
             <NavLink href="#" on:click={botonBorrar}>Borrar Richmen</NavLink>
         </NavItem>
         <NavItem style="margin-right: 10px;">
-            <Button color="warning" href="#/richpp/RichppGraphic1">Ver Gráfico HighCahrt</Button>
+            <Button outline color="danger" href="#/richpp/RichppGraphicLine">Ver Gráfica HighCahrt Line</Button>
+        </NavItem>
+        <NavItem style="margin-right: 10px;">
+            <Button color="warning" href="#/richpp/RichppGraphic1">Ver Gráfico HighCahrt Column</Button>
         </NavItem>
         <NavItem style="margin-right: 10px;">
             <Button color="dark" href="#/richpp/RichppGraphic2">Ver Gráfico uvChart</Button>

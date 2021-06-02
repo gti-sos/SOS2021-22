@@ -1,4 +1,6 @@
 <script>
+    import { error } from "node:console";
+
     import { onMount } from "svelte";
     import { Nav, NavItem, NavLink } from "sveltestrap";
     let BASE_API_PATH = "/api/v2";
@@ -34,29 +36,59 @@
                     if (richpp2 != null) {
                         richpp2.forEach((r) => {
                             if (r.name == billGates) {
-                                dataBillGates.push(parseFloat(r.fortune));
+                                dataBillGates.push({
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
+                                });
                             } else if (r.name == warren) {
-                                dataWarren.push(parseFloat(r.fortune));
+                                dataWarren.push({
+                                    nanme: r.year,
+                                    value: parseFloat(r.fortune),
+                                });
                             } else if (r.name == amancioOrtega) {
-                                dataAmancio.push(parseFloat(r.fortune));
+                                dataAmancio.push({
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
+                                });
                             } else if (r.name == jeffBezos) {
-                                dataJeffBezos.push(parseFloat(r.fortune));
+                                dataJeffBezos.push({
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
+                                });
                             } else if (r.name == bernard) {
-                                dataBernard.push(parseFloat(r.fortune));
+                                dataBernard.push({
+                                    name: r.year,
+                                    value: parseFloat(r.fortune),
+                                });
                             }
                         });
                     }
                 } else {
                     if (name == billGates) {
-                        dataBillGates.push(0);
+                        dataBillGates.push({
+                            name: year,
+                            value: 0,
+                        });
                     } else if (name == warren) {
-                        dataWarren.push(0);
+                        dataWarren.push({
+                            name: year,
+                            value: 0,
+                        });
                     } else if (name == amancioOrtega) {
-                        dataAmancio.push(0);
+                        dataAmancio.push({
+                            name: year,
+                            value: 0,
+                        });
                     } else if (name == jeffBezos) {
-                        dataJeffBezos.push(0);
+                        dataJeffBezos.push({
+                            name: year,
+                            value: 0,
+                        });
                     } else if (name == bernard) {
-                        dataBernard.push(0);
+                        dataBernard.push({
+                            name: year,
+                            value: 0,
+                        });
                     }
                 }
             }
@@ -82,13 +114,6 @@
         var config = {
             graph: {
                 orientation: "Vertical",
-                custompalette: [
-                    "#A1A4A5",
-                    "#C80F98",
-                    "#5F0DCF",
-                    "#C80F90",
-                    "#5F0DCB",
-                ],
             },
 
             meta: {
@@ -111,7 +136,7 @@
             },
         };
 
-        var charObject = uv.chart("StackedBar", graphdef, config);
+        var chart = uv.chart("Bar", graphdef, config);
     }
 </script>
 
@@ -130,13 +155,16 @@
         </NavItem>
     </Nav>
 
-    <figure class="uv-figure">
-        <div id="uv-div" />
-        <p>
-            Gráfico que representa el top 3 de los hombre más ricos del mundo
-            desde 2016 junto con la edad que tienen cada año y su fortuna.
-        </p>
-    </figure>
+    <div>
+        <figure class="uv-figure">
+            <div id="uv-div" />
+            <p>
+                Gráfico que representa el top 3 de los hombre más ricos del
+                mundo desde 2016 junto con la edad que tienen cada año y su
+                fortuna.
+            </p>
+        </figure>
+    </div>
 </main>
 
 <style>
