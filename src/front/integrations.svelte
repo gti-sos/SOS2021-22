@@ -114,9 +114,9 @@
                             </a>
                           </row>
                           <row>
-                            <a href="/#/integrations/integrationsPaawardsANDExternal1">
+                            <a href="/#/integrations/integrationsPaawardsANDShazam">
                               <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
-                                <strong>Integración API Externa 1</strong>
+                                <strong>Integración API Shazam</strong>
                               </Button>
                             </a>
                           </row>
