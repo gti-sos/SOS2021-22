@@ -129,7 +129,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="#/globalGraphic"><Button color="warning"><strong>Común</strong></Button></a>
+                        <a href="#/analytics"><Button color="warning"><strong>Común</strong></Button></a>
                       </div>
                     </div>
                   </CardBody>

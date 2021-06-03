@@ -137,36 +137,6 @@
           </Card>
         </Col>
       </Container>
-      <Container>
-        <Col xs="auto">
-          <Card class="mb-3">
-            <CardBody>
-              <div class="row">
-                <div class="col-sm">
-                  <Card class="mb-3">
-                    <CardHeader class="bg-secondary">
-                      <CardTitle><h2>Gráfica Común</h2></CardTitle>
-                    </CardHeader>
-                    <CardBody>
-                      <div class="row">
-                        <div class="col-md">
-                          <row>
-                            <a href="/#/integrations/globalGraphic">
-                              <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
-                                <strong>Integración de las 3 APIs del grupo</strong>
-                              </Button>
-                            </a>
-                          </row>
-                        </div>
-                      </div>
-                    </CardBody>
-                  </Card>
-                </div>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Container>
 </main>
 
 <style>
