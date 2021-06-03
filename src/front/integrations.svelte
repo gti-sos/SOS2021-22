@@ -123,7 +123,7 @@
                           <row>
                             <a href="/#/integrations/integrationsPaawardsANDSeries">
                               <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
-                                <strong>Integración API Top Series IMDB</strong>
+                                <strong>Integración API Series IMDB</strong>
                               </Button>
                             </a>
                           </row>
