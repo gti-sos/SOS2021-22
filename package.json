@@ -46,6 +46,7 @@
     "newman": "^5.2.2",
     "node": "^15.10.0",
     "path": "^0.12.7",
+    "puppeteer": "^10.0.0",
     "request": "^2.88.2",
     "svelte-router-spa": "^6.0.2",
     "svelte-spa-router": "^3.1.0",
