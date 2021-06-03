@@ -116,7 +116,7 @@
                           <row>
                             <a href="/#/integrations/integrationsPaawardsANDFootball">
                               <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
-                                <strong>Integración API Goleadores Liga Santander</strong>
+                                <strong>Integración API Goleadores</strong>
                               </Button>
                             </a>
                           </row>
