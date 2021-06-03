@@ -27,6 +27,7 @@
 	import integrationsPaawards1 from './paawardsApi/integrations/integrationsPaawardsFireStats.svelte';
 	import integrationsPaawards2 from './paawardsApi/integrations/integrationsPaawardsPlatforms.svelte';
 	import integrationsPaawards3 from './paawardsApi/integrations/integrationsPaawardsRapidApiFootball.svelte';
+	import integrationsPaawards4 from './paawardsApi/integrations/integrationsPaawardsRapidApiSeries.svelte';
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import globalGraphic from './globalGraphic.svelte';
@@ -45,6 +46,7 @@
 		"/integrations/integrationsPaawardsANDFireStats":integrationsPaawards1,
 		"/integrations/integrationsPaawardsANDPlatforms":integrationsPaawards2,
 		"/integrations/integrationsPaawardsANDFootball":integrationsPaawards3,
+		"/integrations/integrationsPaawardsANDSeries":integrationsPaawards4,
 		"/integrations/API-11-Smoking":integrationsGrmys1,
 		"/integrations/API-21-Temperatures":integrationsGrmys2,
 		"/integrations/API-28-awards":integrationsGrmys3,

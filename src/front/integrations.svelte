@@ -114,16 +114,16 @@
                             </a>
                           </row>
                           <row>
-                            <a href="/#/integrations/integrationsPaawardsANDShazam">
+                            <a href="/#/integrations/integrationsPaawardsANDFootball">
                               <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
-                                <strong>Integración API Shazam</strong>
+                                <strong>Integración API Goleadores Liga Santander</strong>
                               </Button>
                             </a>
                           </row>
                           <row>
-                            <a href="/#/integrations/integrationsPaawardsANDExternal2">
+                            <a href="/#/integrations/integrationsPaawardsANDSeries">
                               <Button style="margin-bottom: 10px; border-color: darkorange; border-radius: 1em; border-width: 2px;" color="danger">
-                                <strong>Integración API Externa 2</strong>
+                                <strong>Integración API Top Series IMDB</strong>
                               </Button>
                             </a>
                           </row>
