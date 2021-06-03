@@ -141,6 +141,15 @@
         <NavItem>
             <NavLink href="/#/info">Volver</NavLink>
         </NavItem>
+        <NavItem>
+            <NavLink href="/#/paawards">Cargar Datos API Premios Princesa Asturias</NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink href="/#/richpp">Cargar Datos API Hombres más ricos del mundo</NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink href="/#/grmys">Cargar Datos API Premios Gramys</NavLink>
+        </NavItem>
     </Nav>
 
     <figure class="highcharts-figure">

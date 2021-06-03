@@ -64,7 +64,7 @@
 		"/grmys/grmysAmchart": grmysGraphAm,
 		"/richpp": Richpp,
 		"/richpp/:name/:year": RichmanEdit,
-		"/globalGraphic":globalGraphic,
+		"/integrations/globalGraphic":globalGraphic,
 		"/richpp/RichppGraphicLine": RichmanGraphLine,
 		"/richpp/RichppGraphic1": RichmanGraph1,
 		"/richpp/RichppGraphic2": RichmanGraph2,
