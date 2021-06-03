@@ -5,7 +5,9 @@
     const BASE_CONTACT_API_PATH = "/api/v2";
     let pData = [];
     let pChartData = [];
-    
+    let grmysData=[];
+    let grmysName=[];
+    let award=[];
     let countryWinnerData = [];
     let awardData = [];
     let winnerData = []
@@ -25,8 +27,10 @@
   async function loadChart() {
     console.log("Fetching data...");
     const res = await fetch("proxyHeroku/api/v1/awards");
-    pData = await res.json();
+    const res1 = await fetch(BASE_CONTACT_API_PATH+`/grmys`);
+    
       if (res.ok) {
+        pData = await res.json();
         pData.forEach(stat => {
         countryWinnerData.push(stat.country +"-"+stat.winner);
         //platChartData.push(stat.platform);
@@ -36,67 +40,64 @@
         nAwardData.push(stat["n-award"]);
         
         });
+      }else{
+        console.log("Error loading temperature");
+      }if(res1.ok){
+          grmysData = await res1.json();
+          console.log(JSON.stringify(grmysData, null, 2))
+          grmysData.forEach(data => {
+            countryWinnerData.push(data.country + "-" + data.name);
+              grmysName.push(data.name);
+              nAwardData.push(parseInt(data.award));
+          });
+      }else{
+          console.log("Error loading temperature");
       }
       console.log("awards Chart DaTa: " + pChartData);
-      var colors = Highcharts.getOptions().colors;
       Highcharts.chart('container', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: 'valores de la Api awards'
-    },
-    
-    xAxis: {
-        categories: countryWinnerData,
-        title: {
-            text: null
-        }
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: 'valores',
-            align: 'high'
-        },
-        labels: {
-            overflow: 'justify'
-        }
-    },
-    tooltip: {
-        valueSuffix: ' millions'
-    },
-    plotOptions: {
-        bar: {
-            dataLabels: {
-                enabled: true
-            }
-        }
-    },
-    legend: {
-          layout: "vertical",
-          align: "right",
-          verticalAlign: "middle",
-        },
-    credits: {
-        enabled: false
-    },
-    series: [{
-        name: 'Año',
-        data: yearData
-        
-    }, {
-        name: 'Gala',
-        data: galaData
-    }, {
-        name: 'Numero de plataformas',
-        data: nPlatformData
-    }, {
-        name: 'Numero de premios',
-        data: nAwardData
-    }]
-  });
-  }
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: 'Gráfico de temperaturas'
+          },
+          yAxis: {
+              title: {
+                  text: ''
+              }
+          },
+          xAxis: {
+              title: {
+                  text: 'País-Año'
+              },
+              categories: countryWinnerData
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'middle'
+          },
+          series: [{
+              name: 'premios award',
+              data: nAwardData
+          },
+         ],
+          responsive: {
+              rules: [{
+                  condition: {
+                      maxWidth: 500
+                  },
+                  chartOptions: {
+                      legend: {
+                          layout: 'horizontal',
+                          align: 'center',
+                          verticalAlign: 'bottom'
+                      }
+                  }
+              }]
+          }
+      });
+}
 </script>
 <svelte:head>
   <script src="https://code.highcharts.com/highcharts.js"></script>
