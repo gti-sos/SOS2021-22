@@ -15,40 +15,42 @@
 	  }
 });
          
-            ApiData = await res.json();
-          
+  ApiData = await res.json();
+  ApiData.forEach(data => {
+  ApiGraph.push(data.city)
+            });
           
          
  
-            am4core.ready(function() {
+am4core.ready(function() {
 
-// Themes begin
-am4core.useTheme(am4themes_animated);
-// Themes end
+      // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
 
-var chart = am4core.create("chartdiv", am4charts.PieChart);
-chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+      var chart = am4core.create("chartdiv", am4charts.PieChart);
+      chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-chart.data =ApiData;
-chart.radius = am4core.percent(70);
-chart.innerRadius = am4core.percent(40);
-chart.startAngle = 180;
-chart.endAngle = 360;  
+      chart.data =ApiData;
+      chart.radius = am4core.percent(70);
+      chart.innerRadius = am4core.percent(40);
+      chart.startAngle = 180;
+      chart.endAngle = 360;  
 
-var series = chart.series.push(new am4charts.PieSeries());
-series.dataFields.value = 3.0;
-series.dataFields.category = "city";
+      var series = chart.series.push(new am4charts.PieSeries());
+      series.dataFields.value = 3.0;
+      series.dataFields.category = "city";
 
-series.slices.template.cornerRadius = 10;
-series.slices.template.innerCornerRadius = 7;
-series.slices.template.draggable = true;
-series.slices.template.inert = true;
-series.alignLabels = false;
+      series.slices.template.cornerRadius = 10;
+      series.slices.template.innerCornerRadius = 7;
+      series.slices.template.draggable = true;
+      series.slices.template.inert = true;
+      series.alignLabels = false;
 
-series.hiddenState.properties.startAngle = 90;
-series.hiddenState.properties.endAngle = 90;
+      series.hiddenState.properties.startAngle = 90;
+      series.hiddenState.properties.endAngle = 90;
 
-chart.legend = new am4charts.Legend();
+      chart.legend = new am4charts.Legend();
 
 }); // end am4core.ready()
     }
