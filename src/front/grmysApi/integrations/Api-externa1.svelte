@@ -6,55 +6,58 @@
     let ApiGraph = [];
     let pais=[]
     let BASE_API_URL_GRMYS = "/api/v2";
+
     async function loadGraph() {
-          const res =await fetch("https://free-nba.p.rapidapi.com/teams?page=0", {
-            "method": "GET",
-            "headers": {
-              "x-rapidapi-key": "aa850122f4msha0e020e9b389efbp19540cjsne8f34e6ccc36",
-              "x-rapidapi-host": "free-nba.p.rapidapi.com"
-	  }
-});
-         
-  ApiData = await res.json();
-  ApiData.forEach(data => {
-  ApiGraph.push(data.city)
-            });
-          
-         
- 
-am4core.ready(function() {
+          const res =await fetch("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/europe", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "aa850122f4msha0e020e9b389efbp19540cjsne8f34e6ccc36",
+		"x-rapidapi-host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
+	}
+})
 
-      // Themes begin
-      am4core.useTheme(am4themes_animated);
-      // Themes end
+    ApiData= await res.json()
+    
+    console.log(ApiData);
+    ApiData.forEach(x => {
+      ApiGraph.push(x.Country)
+      
+        
+    });
+    am4core.ready(function() {
 
-      var chart = am4core.create("chartdiv", am4charts.PieChart);
-      chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
 
-      chart.data =ApiData;
-      chart.radius = am4core.percent(70);
-      chart.innerRadius = am4core.percent(40);
-      chart.startAngle = 180;
-      chart.endAngle = 360;  
+// Create chart instance
+var chart = am4core.create("chartdiv", am4charts.PieChart);
 
-      var series = chart.series.push(new am4charts.PieSeries());
-      series.dataFields.value = 3.0;
-      series.dataFields.category = "city";
+// Add data
+chart.data =ApiData;
 
-      series.slices.template.cornerRadius = 10;
-      series.slices.template.innerCornerRadius = 7;
-      series.slices.template.draggable = true;
-      series.slices.template.inert = true;
-      series.alignLabels = false;
+// Set inner radius
+chart.innerRadius = am4core.percent(50);
 
-      series.hiddenState.properties.startAngle = 90;
-      series.hiddenState.properties.endAngle = 90;
+// Add and configure Series
+var pieSeries = chart.series.push(new am4charts.PieSeries());
+pieSeries.dataFields.value = "rank";
+pieSeries.dataFields.category = "Country";
+pieSeries.slices.template.stroke = am4core.color("#fff");
+pieSeries.slices.template.strokeWidth = 2;
+pieSeries.slices.template.strokeOpacity = 1;
 
-      chart.legend = new am4charts.Legend();
+// This creates initial animation
+pieSeries.hiddenState.properties.opacity = 1;
+pieSeries.hiddenState.properties.endAngle = -90;
+pieSeries.hiddenState.properties.startAngle = -90;
 
 }); // end am4core.ready()
-    }
-loadGraph();
+}
+     
+          
+  loadGraph();       
+
 </script>
     
     
@@ -79,11 +82,11 @@ loadGraph();
     
     
     <main>
-      <h2>AmCharts</h2>
+      <h2>Integracion de api Externa 1</h2>
       
       <div id="chartdiv"></div>
       <p class="highcharts-description">
-        Gráfico donde mostramos las tempreaturas min de cada pais
+        Gráfico donde mostramos los datos de coronavirus en Europa
       </p>
       <Button outline color="secondary" on:click={pop}>
         <i class="fas fa-arrow-circle-left" /> Volver
