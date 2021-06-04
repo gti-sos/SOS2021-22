@@ -18,9 +18,9 @@
       const res = await fetch(`https://sos2021-21.herokuapp.com/api/v2/temperature-stats`);
      // const res1 = await fetch(BASE_API_URL+`/grmys`);
       if(res.ok){
-          temperatureData = await res.json();
-          console.log(JSON.stringify(temperatureData, null, 2))
-          temperatureData.forEach(data => {
+            temperatureData = await res.json();
+            console.log(JSON.stringify(temperatureData, null, 2))
+            temperatureData.forEach(data => {
               ejeX.push(data.country + "-" + data.year);
               
               temperature_min.push(data["temperature_min"]);

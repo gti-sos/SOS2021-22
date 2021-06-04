@@ -2,92 +2,56 @@
 <script>
     import Button from "sveltestrap/src/Button.svelte";
     import { pop } from "svelte-spa-router";
+    let ApiData = [];
+    let ApiGraph = [];
+    let pais=[]
+    let BASE_API_URL_GRMYS = "/api/v2";
     async function loadGraph() {
-          let grmysData = [];
-          let grmysGraph = [];
-          let BASE_API_URL_GRMYS = "/api/v2";
-          const data =fetch("https://gamerpower.p.rapidapi.com/api/worth", {
-	        "method": "GET",
-	        "headers": {
-		    "x-rapidapi-key": "aa850122f4msha0e020e9b389efbp19540cjsne8f34e6ccc36",
-		    "x-rapidapi-host": "gamerpower.p.rapidapi.com"
-	}
-
-})
-          grmysData = await data.json();
-          console.log(grmysData)
+          const res =await fetch("https://free-nba.p.rapidapi.com/teams?page=0", {
+            "method": "GET",
+            "headers": {
+              "x-rapidapi-key": "aa850122f4msha0e020e9b389efbp19540cjsne8f34e6ccc36",
+              "x-rapidapi-host": "free-nba.p.rapidapi.com"
+	  }
+});
+         
+            ApiData = await res.json();
+          
+          
          
  
-/*am4core.ready(function() {
+            am4core.ready(function() {
 
 // Themes begin
-    am4core.useTheme(am4themes_animated);
+am4core.useTheme(am4themes_animated);
 // Themes end
 
-    var chart = am4core.create("chartdiv", am4charts.RadarChart);
-    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-    chart.innerRadius = am4core.percent(50);
-    chart.startAngle = -80;
-    chart.endAngle = 260;
+var chart = am4core.create("chartdiv", am4charts.PieChart);
+chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-chart.data = grmysData;
+chart.data =ApiData;
+chart.radius = am4core.percent(70);
+chart.innerRadius = am4core.percent(40);
+chart.startAngle = 180;
+chart.endAngle = 360;  
 
-var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-categoryAxis.renderer.grid.template.location = 0;
-categoryAxis.dataFields.category = "name";
-categoryAxis.renderer.labels.template.location = 0.5;
-categoryAxis.renderer.grid.template.strokeOpacity = 0.08;
-categoryAxis.renderer.tooltipLocation = 0.5;
-categoryAxis.tooltip.disabled = true;
-categoryAxis.renderer.labels.template.bent = true;
-categoryAxis.renderer.labels.template.padding(0,0,0,0);
-categoryAxis.renderer.labels.template.radius = 7;
+var series = chart.series.push(new am4charts.PieSeries());
+series.dataFields.value = 3.0;
+series.dataFields.category = "city";
 
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-valueAxis.min = 0;
-valueAxis.max = 30;
-valueAxis.strictMinMax = true;
-valueAxis.renderer.minGridDistance = 30;
-valueAxis.renderer.grid.template.strokeOpacity = 0.08;
-valueAxis.tooltip.disabled = true;
+series.slices.template.cornerRadius = 10;
+series.slices.template.innerCornerRadius = 7;
+series.slices.template.draggable = true;
+series.slices.template.inert = true;
+series.alignLabels = false;
 
-// axis break
-var axisBreak = valueAxis.axisBreaks.create();
-axisBreak.startValue = 0;
-axisBreak.endValue = 50;
-axisBreak.breakSize = 0.02;
+series.hiddenState.properties.startAngle = 90;
+series.hiddenState.properties.endAngle = 90;
 
-// make break expand on hover
-var hoverState = axisBreak.states.create("hover");
-hoverState.properties.breakSize = 1;
-hoverState.properties.opacity = 0.1;
-hoverState.transitionDuration = 1500;
+chart.legend = new am4charts.Legend();
 
-axisBreak.defaultState.transitionDuration = 1000;
-
-var series = chart.series.push(new am4charts.RadarColumnSeries());
-series.dataFields.categoryX = "name";
-series.dataFields.valueY = "award";
-series.columns.template.tooltipText = "{valueY.value}";
-series.columns.template.tooltipY = 0;
-series.columns.template.strokeOpacity = 0;
-
-chart.seriesContainer.zIndex = -1;
-
-// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
-series.columns.template.adapter.add("fill", function(fill, target) {
-  return chart.colors.getIndex(target.dataItem.index);
-});
-
-let cursor = new am4charts.RadarCursor();
-cursor.innerRadius = am4core.percent(50);
-cursor.lineY.disabled = true;
-
-cursor.xAxis = categoryAxis;
-chart.cursor = cursor;
-
-}); // end am4core.ready()*/
-}
+}); // end am4core.ready()
+    }
 loadGraph();
 </script>
     
@@ -104,6 +68,10 @@ loadGraph();
         font-size: 4em;
         font-weight: 100;
       }
+      #chartdiv {
+  width: 100%;
+  height: 500px;
+}
      
     </style>
     
@@ -111,7 +79,13 @@ loadGraph();
     <main>
       <h2>AmCharts</h2>
       
-      
+      <div id="chartdiv"></div>
+      <p class="highcharts-description">
+        Gráfico donde mostramos las tempreaturas min de cada pais
+      </p>
+      <Button outline color="secondary" on:click={pop}>
+        <i class="fas fa-arrow-circle-left" /> Volver
+    </Button>
     
       
     </main>

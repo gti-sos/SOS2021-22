@@ -20,90 +20,55 @@
                 pointPlacement: "on",
             });
         });
-        Highcharts.chart("container", {
-            chart: {
-                type: "bar",
-            },
-            title: {
-                text: "Datos de Tabaquismo",
-            },
-            xAxis: {
-                categories: [
-                    "",
-                    "Datos de Tabaquismo de Hombre (radio/media)",
-                    "Datos de Tabaquismo de Mujer (radio/media)",
-                    "Datos de Tabaquismo de Poblacion (radio/media)",
-                    "",
-                ],
-                title: {
-                    text: null,
-                },
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: "miles",
-                    align: "high",
-                },
-                labels: {
-                    overflow: "justify",
-                },
-            },
-            tooltip: {
-                // valueSuffix: ' miles'
-            },
-            plotOptions: {
-                bar: {
-                    dataLabels: {
-                        enabled: true,
-                    },
-                },
-            },
-            legend: {
-                layout: "vertical",
-                align: "right",
-                verticalAlign: "top",
-                x: -40,
-                y: 80,
-                floating: false,
-                borderWidth: 1,
-                backgroundColor:
-                    Highcharts.defaultOptions.legend.backgroundColor ||
-                    "#FFFFFF",
-                shadow: true,
-            },
-            credits: {
-                enabled: false,
-            },
-            series: SmokingDataGraph,
-        });
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            var chart = am4core.create("chartdiv", am4charts.PieChart);
+            chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+            chart.data =SmokingData;
+            chart.radius = am4core.percent(100);
+            chart.innerRadius = am4core.percent(40);
+            chart.startAngle = 180;
+            chart.endAngle = 360;  
+
+            var series = chart.series.push(new am4charts.PieSeries());
+            series.dataFields.value ="smoking_population" ;
+            series.dataFields.category ="country" ;
+
+            series.slices.template.cornerRadius = 10;
+            series.slices.template.innerCornerRadius = 7;
+            series.slices.template.draggable = true;
+            series.slices.template.inert = true;
+            series.alignLabels = false;
+
+            series.hiddenState.properties.startAngle = 90;
+            series.hiddenState.properties.endAngle = 90;
+
+            chart.legend = new am4charts.Legend();
+
+}); // end am4core.ready()
     }
+loadGraph();
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script
-        src="https://code.highcharts.com/modules/accessibility.js"
-        on:load={loadGraph}></script>
+    
 </svelte:head>
 
 
 <main>
     <h2>INTEGRACION DE API 11</h2>
-    <figure class="highcharts-figure">
-        <div id="container" />
-        <p class="highcharts-description">
-            <i>
-                En esta simple gráfica de lineas podemos observar los datos de
-                Tabaquismo en los países de Europa en el año 2017.</i
-            >
-        </p>
-    </figure>
+    <div id="chartdiv"></div>
+    <p class="highcharts-description">
+      Gráfico donde mostramos los datos de la poblacion fumadora de cada pais
+    </p>
     <Button outline color="secondary" on:click={pop}>
-        <i class="fas fa-arrow-circle-left" /> Volver
-    </Button>
+      <i class="fas fa-arrow-circle-left" /> Volver
+  </Button>
 </main>
 
 <style>
@@ -114,14 +79,7 @@
     font-size: 4em;
     font-weight: 100;
   }
-    .highcharts-figure{
-        min-width: 310px;
-        max-width: 1000px;
-        margin: 1em auto;
-    }
-    #container {
-        height: 600px;
-    }
+   
     
     
    

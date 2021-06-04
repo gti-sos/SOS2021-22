@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { Table, Button, Nav, NavItem, NavLink } from "sveltestrap";
-  
+  import { pop } from "svelte-spa-router";
     const BASE_CONTACT_API_PATH = "/api/v2";
     let pData = [];
     let pChartData = [];
@@ -128,7 +128,11 @@
       <p class="highcharts-description">
         Gráfico de líneas básico que muestra los diferentes valores para los campos de awards.
       </p>
+      <Button outline color="secondary" on:click={pop}>
+        <i class="fas fa-arrow-circle-left" /> Volver
+    </Button>
     </figure>
+    
   </div>
 </main>
 <style>
