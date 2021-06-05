@@ -44,7 +44,7 @@
                           <a href="/#/integrations/API-21-Temperatures"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion Api temperaturas</strong></Button></a>
                           <a href="/#/integrations/API-28-awards"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion awards</strong></Button></a>
                           <a href="/#/integrations/Api-externa1"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion API externa 1</strong></Button></a>
-                          <a href="/#/integrations/Api-Externa2"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion API externa 1</strong></Button></a>
+                          <a href="/#/integrations/Api-Externa2"><Button style="margin-bottom: 10px; border-radius: 1em; border-width: 2px;" color="danger"><strong>Integracion API externa 2</strong></Button></a>
                         </div>
                       </div>
                     </CardBody>
