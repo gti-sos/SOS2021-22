@@ -44,9 +44,8 @@
                                         <div class="col-md">
                                             <row>
                                                 <a href="#/richpp/RichppGraphicLine"><Button id="line-chart" style="margin-bottom: 10px" color="warning"><strong>Highchart LINE</strong></Button></a>
-                                            </row>
-                                            <row>
-                                                <a href="#/richpp/RichppGraphic1"><Button id="spline-chart" color="warning"><strong>Highchart SPLINE</strong></Button></a>
+                                            
+                                                <a href="#/richpp/RichppGraphic1"><Button id="spline-chart" style="margin-bottom: 10px" color="warning"><strong>Highchart SPLINE</strong></Button></a>
                                             </row>
                                         </div>
                                     </div>
