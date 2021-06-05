@@ -109,7 +109,7 @@
 <main>
     <Nav>
         <NavItem>
-            <NavLink href="/#/richpp/">Volver</NavLink>
+            <NavLink id="nav-back" href="/#/richpp/">Volver</NavLink>
         </NavItem>
     </Nav>
 

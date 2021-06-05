@@ -31,6 +31,7 @@
 	import Richpp from './richppApi/Richpp.svelte';
 	import RichmanEdit from './richppApi/RichmanEdit.svelte';
 	import globalGraphic from './globalGraphic.svelte';
+	import RichppGraphics from './richppApi/richppGraphics.svelte';
 	import RichmanGraphLine from './richppApi/RichppGraphicLine.svelte';
 	import RichmanGraph1 from './richppApi/RichppGraphic1.svelte';
 	import RichmanGraph2 from './richppApi/RichppGraphic2.svelte';
@@ -65,6 +66,7 @@
 		"/richpp": Richpp,
 		"/richpp/:name/:year": RichmanEdit,
 		"/analytics":globalGraphic,
+		"/richpp/richppGraphics": RichppGraphics,
 		"/richpp/RichppGraphicLine": RichmanGraphLine,
 		"/richpp/RichppGraphic1": RichmanGraph1,
 		"/richpp/RichppGraphic2": RichmanGraph2,
