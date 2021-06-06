@@ -72,7 +72,7 @@ var counter = 0;
     // Capturamos pagina de grafica comun
     await page.click("#comun-chart");
     console.log("Pagina ANALITICA COMUN abierta");
-    await page.waitForTimeout(000);
+    await page.waitForTimeout(3000);
     console.log("> Grafica cargada...");
     await page.screenshot({ path: path + (counter++) + '_ANALITICA_COMUN.png'});
     console.log("> Captura tomada...");
@@ -112,6 +112,7 @@ var counter = 0;
     console.log("> Captura tomada...");
     await page.click("#nav-back"); // boton atras > Richpp Frontend page
     await page.click("#nav-back"); // boton atras > Info page
+    //insertar un nuevo elemento
 
     await browser.close();
 

@@ -19,6 +19,11 @@
   </script>
   
   <main>
+    <Nav>
+      <NavItem>
+          <NavLink id="nav-back" outline color="secondary" href="#/info">Volver</NavLink>
+      </NavItem>
+  </Nav>
     <h1>Visualizaciones</h1>
     
     <Container>
@@ -35,7 +40,7 @@
                 <CardTitle><h2>Highcharts</h2></CardTitle>
               </CardHeader>
               <CardBody>
-                <a href="#/grmys/grmysGraphic"><Button color="warning"><strong>grmysGraphic</strong></Button></a>
+                <a href="#/grmys/grmysGraphic"><Button id="highchart-line" color="warning"><strong>grmysGraphic</strong></Button></a>
               </CardBody>
             </Card>
           </div>
@@ -45,7 +50,7 @@
                 <CardTitle><h2>Amchart</h2></CardTitle>
               </CardHeader>
               <CardBody>
-                <a href="#/grmys/grmysAmchart"><Button color="warning" ><strong>AmChart</strong></Button></a>
+                <a href="#/grmys/grmysAmchart"><Button id="Amchart-bar" color="warning" ><strong>AmChart</strong></Button></a>
               </CardBody>
             </Card>
           </div>

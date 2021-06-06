@@ -1,0 +1,48 @@
+{"name":"Marc Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":30,"gender":"Masculino","trophy":7,"_id":"0v4oFcVX5Debcctf"}
+{"name":"Iker Casillas","year":2012,"sport":"Futbol","country":"Spain","age":31,"gender":"Masculino","trophy":26,"_id":"1H7xqsbtL9D01Fu8"}
+{"name":"Pau Gasol","year":2015,"sport":"Baloncesto","country":"Spain","age":35,"gender":"Masculino","trophy":19,"_id":"1IpLJ4MwKcknfomV"}
+{"name":"Tour de Francia","year":2003,"sport":"Ciclismo","country":"Francia","age":100,"gender":"Masculino","trophy":0,"_id":"7LItoaFpTI819AZo"}
+{"name":"Rafael Nadal","year":2008,"sport":"Tenis","country":"Spain","age":22,"gender":"Masculino","trophy":86,"_id":"CAojeUkRSMdFzVwX"}
+{"name":"Fernando Alonso","year":2005,"sport":"Automovilismo","country":"Spain","age":24,"gender":"Masculino","trophy":6,"_id":"CYdWpc2XXIY2GHOA"}
+{"name":"Lance Armstrong","year":2000,"sport":"Ciclismo","country":"EE.UU","age":29,"gender":"Masculino","trophy":11,"_id":"DQm4us91icadjMO0"}
+{"name":"Hicham El Guerrouj","year":2004,"sport":"Atletismo","country":"Marruecos","age":30,"gender":"Masculino","trophy":6,"_id":"Elyfq0Bp1GRp4VtT"}
+{"name":"Haile Gebrselassie","year":2011,"sport":"Atletismo","country":"Etiopia","age":38,"gender":"Masculino","trophy":6,"_id":"L114Wl3lwENzYHEQ"}
+{"name":"Xavi Hernandez","year":2012,"sport":"Futbol","country":"Spain","age":32,"gender":"Masculino","trophy":35,"_id":"QnKKYQmLYA3ildPq"}
+{"name":"Maraton de Nueva York","year":2014,"sport":"Atletismo","country":"EE.UU","age":44,"gender":"Mixto","trophy":0,"_id":"Xkm3g1EYsJbQ1uTN"}
+{"name":"Yelena Isinbayeva","year":2009,"sport":"Atletismo","country":"Rusia","age":27,"gender":"Femenino","trophy":6,"_id":"co9XZ0Eb8jC3LM5g"}
+{"name":"Krzysztof Wielicki","year":2018,"sport":"Alpinismo","country":"Polonia","age":68,"gender":"Masculino","trophy":0,"_id":"dVUFaPie33eShnx6"}
+{"name":"Reinhold Messner","year":2018,"sport":"Alpinismo","country":"Italia","age":74,"gender":"Masculino","trophy":0,"_id":"eWFbaty0fLsUpE86"}
+{"name":"Javier Gomez Noya","year":2016,"sport":"Triatlon","country":"Spain","age":33,"gender":"Masculino","trophy":12,"_id":"h50ZFt5hNvQmAtOD"}
+{"name":"Lindsey Vonn","year":2019,"sport":"Esqui alpino","country":"EE.UU","age":35,"gender":"Femenino","trophy":7,"_id":"lmdp9Wq4VTUy1bse"}
+{"name":"Jose Maria Olazabal","year":2013,"sport":"Golf","country":"Spain","age":47,"gender":"Masculino","trophy":29,"_id":"oLFhG9SiUMHHsUY6"}
+{"name":"Seleccion de futbol de Brasil","year":2002,"sport":"Futbol","country":"Brasil","age":88,"gender":"Masculino","trophy":21,"_id":"p7UWELc8pWg045Fe"}
+{"name":"Seleccion de baloncesto de España","year":2006,"sport":"Baloncesto","country":"Spain","age":72,"gender":"Masculino","trophy":8,"_id":"rQvENOcmcllRqrx6"}
+{"name":"Carlos Sainz","year":2020,"sport":"Rally","country":"Spain","age":58,"gender":"Masculino","trophy":10,"_id":"wOzT175hCXLGaBdq"}
+{"name":"Seleccion de rugby de Nueva Zelanda","year":2017,"sport":"Rugby","country":"Nueva Zelanda","age":125,"gender":"Masculino","trophy":100,"_id":"we1L0iYluMqmkqJn"}
+{"name":"Manel Estiarte","year":2001,"sport":"Waterpolo","country":"Spain","age":40,"gender":"Masculino","trophy":26,"_id":"xlb8MxHzWfshf7QU"}
+{"name":"Seleccion de futbol de España","year":2010,"sport":"Futbol","country":"Spain","age":90,"gender":"Masculino","trophy":4,"_id":"y0hgz8uEyQRpfRkb"}
+{"name":"Michael Schumacher","year":2007,"sport":"Automovilismo","country":"Alemania","age":38,"gender":"Masculino","trophy":7,"_id":"yXJRrAywgNDKsNnH"}
+{"$$deleted":true,"_id":"0v4oFcVX5Debcctf"}
+{"$$deleted":true,"_id":"1H7xqsbtL9D01Fu8"}
+{"$$deleted":true,"_id":"1IpLJ4MwKcknfomV"}
+{"$$deleted":true,"_id":"7LItoaFpTI819AZo"}
+{"$$deleted":true,"_id":"CAojeUkRSMdFzVwX"}
+{"$$deleted":true,"_id":"CYdWpc2XXIY2GHOA"}
+{"$$deleted":true,"_id":"DQm4us91icadjMO0"}
+{"$$deleted":true,"_id":"Elyfq0Bp1GRp4VtT"}
+{"$$deleted":true,"_id":"L114Wl3lwENzYHEQ"}
+{"$$deleted":true,"_id":"QnKKYQmLYA3ildPq"}
+{"$$deleted":true,"_id":"Xkm3g1EYsJbQ1uTN"}
+{"$$deleted":true,"_id":"co9XZ0Eb8jC3LM5g"}
+{"$$deleted":true,"_id":"dVUFaPie33eShnx6"}
+{"$$deleted":true,"_id":"eWFbaty0fLsUpE86"}
+{"$$deleted":true,"_id":"h50ZFt5hNvQmAtOD"}
+{"$$deleted":true,"_id":"lmdp9Wq4VTUy1bse"}
+{"$$deleted":true,"_id":"oLFhG9SiUMHHsUY6"}
+{"$$deleted":true,"_id":"p7UWELc8pWg045Fe"}
+{"$$deleted":true,"_id":"rQvENOcmcllRqrx6"}
+{"$$deleted":true,"_id":"wOzT175hCXLGaBdq"}
+{"$$deleted":true,"_id":"we1L0iYluMqmkqJn"}
+{"$$deleted":true,"_id":"xlb8MxHzWfshf7QU"}
+{"$$deleted":true,"_id":"y0hgz8uEyQRpfRkb"}
+{"$$deleted":true,"_id":"yXJRrAywgNDKsNnH"}

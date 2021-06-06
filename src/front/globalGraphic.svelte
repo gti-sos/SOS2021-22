@@ -59,6 +59,9 @@
         }
     
         Highcharts.chart('container', {
+            chart:{
+                type:'area'
+            },
             title: {
                 text: 'Analítica Común'
             },
