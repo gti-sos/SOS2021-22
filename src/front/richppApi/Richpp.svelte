@@ -73,21 +73,23 @@
 
     //  FUNCIONES
     async function loadRichmen() {
-        console.log("Loading richmen");
-        const res = await fetch(BASE_API_PATH + "/richpp/loadInitialData").then(
-            function (res) {
-                if (res.status == 200) {
-                    console.log("Ok");
-                    okMSG = "Richmen cargados correctamente";
-                    errorMSG = false;
-                    getRichmen();
-                } else {
-                    error = 404;
-                    console.log("Error");
-                    errorMSG = "Richmen no han podido ser cargados correctamente";
+        if(richpp.length == 0){
+            console.log("Loading richmen");
+            const res = await fetch(BASE_API_PATH + "/richpp/loadInitialData").then(
+                function (res) {
+                    if (res.status == 200) {
+                        console.log("Ok");
+                        okMSG = "Richmen cargados correctamente";
+                        errorMSG = false;
+                        getRichmen();
+                    } else {
+                        error = 404;
+                        console.log("Error");
+                        errorMSG = "Richmen no han podido ser cargados correctamente";
+                    }
                 }
-            }
-        );
+            );
+        }
     }
     
     async function getRichmen() {
@@ -117,7 +119,7 @@
                 method: "DELETE",
             }
         ).then(function (res) {
-            if (res.status == 200) {
+            if (res.ok) {
                 errorMSG = false;
                 okMSG = "Recurso borrado correctamente";
                 console.log("OK");
@@ -165,7 +167,7 @@
                 method: "DELETE",
             }
         ).then(function (res) {
-            if (res.status == 200) {
+            if (res.ok) {
                 okMSG = "Recurso borrado correctamente";
                 console.log("OK");
                 getRichmen();
@@ -254,19 +256,22 @@
             <NavLink href="#" on:click={botonBorrar}>Borrar Richmen</NavLink>
         </NavItem>
         <NavItem style="margin-right: 10px;">
-            <Button style="box-shadow: 10px 10px 10px 0 , 0 10px 50px 0"
-            color="danger"
-            href="#/richpp/RichppGraphicLine">Ver Gráfica HighCahrt Line</Button>
+            <Button
+                color="danger"
+                href="#/richpp/RichppGraphicLine">Ver Gráfica HighCahrt Line
+            </Button>
         </NavItem>
         <NavItem style="margin-right: 10px;">
-            <Button style="box-shadow: 10px 10px 10px 0 , 0 10px 50px 0" 
+            <Button 
                 color="warning"
-            href="#/richpp/RichppGraphic1">Ver Gráfico HighCahrt Spline</Button>
+                href="#/richpp/RichppGraphic1">Ver Gráfico HighCahrt Spline
+        </Button>
         </NavItem>
         <NavItem style="margin-right: 10px;">
-            <Button style="box-shadow: 10px 10px 10px 0 , 0 10px 50px 0"
+            <Button 
                 color="primary"  
-            href="#/richpp/RichppGraphic2">Ver Gráfico uvChart</Button>
+                href="#/richpp/RichppGraphic2">Ver Gráfico uvChart
+            </Button>
         </NavItem>
     </Nav>
 

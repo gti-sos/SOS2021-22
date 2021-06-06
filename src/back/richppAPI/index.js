@@ -378,11 +378,12 @@ module.exports.register = (app) => {
                 console.error("ERROR deleting DB resources");
                 response.sendStatus(500);
             } else {
-                if (remove == 0) {
-                    console.error("ERROR resources not found");
-                    response.sendStatus(404);
-                } else {
+                if (remove >= 1) {
+                    console.log('Deleted richmen');
                     response.sendStatus(200);
+                } else {
+                    response.sendStatus(404);
+                    console.error("ERROR deleting DB resources");
                 }
             }
         });
