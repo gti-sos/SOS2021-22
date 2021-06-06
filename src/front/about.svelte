@@ -57,7 +57,7 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                          <a href="/#/richpp"><Button color="danger"><strong>Richpp</strong></Button></a>
+                          <a href="https://youtu.be/yp9eH6HL0QQ"><Button color="danger"><strong>Richpp</strong></Button></a>
                         </div>
                       </div>
                     </CardBody>
