@@ -43,7 +43,7 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                          <a href="/#/grmys"><Button color="danger"><strong>Gramys</strong></Button></a>
+                          <a href="https://youtu.be/-7tIroHrkWE"><Button color="danger"><strong>Gramys</strong></Button></a>
                         </div>
                       </div>
                     </CardBody>
