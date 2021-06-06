@@ -71,7 +71,7 @@
                     <CardBody>
                       <div class="row">
                         <div class="col-md">
-                          <a href="/#/paawards"><Button color="danger"><strong>Paawards</strong></Button></a>
+                          <a href="https://youtu.be/iQYu6oz0au0"><Button color="danger"><strong>Paawards</strong></Button></a>
                         </div>
                       </div>
                     </CardBody>
