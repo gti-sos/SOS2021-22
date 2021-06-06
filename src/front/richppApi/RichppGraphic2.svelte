@@ -155,7 +155,7 @@
 <main>
     <Nav>
         <NavItem>
-            <NavLink color="secondary" href="/#/richpp">Volver</NavLink>
+            <NavLink id="nav-back" color="secondary" href="/#/richpp">Volver</NavLink>
         </NavItem>
     </Nav>
 

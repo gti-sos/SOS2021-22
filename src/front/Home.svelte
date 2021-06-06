@@ -62,11 +62,11 @@
     <Col xs="auto">
       <div class="row">
         <div class="col-md p-1">
-          <a href="/#/info"><Button color="dark">+Info</Button></a>
+          <a href="/#/info"><Button id="info" color="dark">+Info</Button></a>
           
-          <a href="/#/about"><Button color="warning">About</Button></a>
+          <a href="/#/about"><Button id="about" color="warning">About</Button></a>
 
-          <a href="/#/integrations"><Button color="danger">Integrations</Button></a>
+          <a href="/#/integrations"><Button id="integrations" color="danger">Integrations</Button></a>
         </div>
       </div>
     </Col>

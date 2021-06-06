@@ -21,7 +21,7 @@
   <main>
     <Nav>
       <NavItem>
-          <NavLink outline color="secondary" href="/">Volver</NavLink>
+          <NavLink id="nav-back" outline color="secondary" href="/">Volver</NavLink>
       </NavItem>
     </Nav>
     <h1>Info-SOS2021-22</h1>
@@ -101,7 +101,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="#/richpp/richppGraphic"><Button color="warning"><strong>Richpp</strong></Button></a>
+                        <a href="#/richpp/richppGraphics"><Button color="warning"><strong>Richpp</strong></Button></a>
                       </div>
                     </div>
                   </CardBody>
@@ -129,7 +129,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="#/analytics"><Button color="warning"><strong>Común</strong></Button></a>
+                        <a href="#/analytics"><Button id="comun-chart" color="warning"><strong>Común</strong></Button></a>
                       </div>
                     </div>
                   </CardBody>
@@ -161,7 +161,7 @@
                           <Button color="dark">Backend</Button>
                         </a>
                         <a href="/#/grmys">
-                          <Button color="dark">Frontend</Button>
+                          <Button id="grmys-frontend" color="dark">Frontend</Button>
                         </a>
                       </div>
                     </div>
@@ -196,7 +196,7 @@
                           <Button color="dark">Backend</Button>
                         </a>
                         <a href="/#/richpp">
-                          <Button color="dark">Frontend</Button>
+                          <Button id="richpp-frontend" color="dark">Frontend</Button>
                         </a>
                       </div>
                     </div>
@@ -230,7 +230,7 @@
                           <Button color="dark">Backend</Button>
                         </a>
                         <a href="/#/paawards">
-                          <Button color="dark">Frontend</Button>
+                          <Button id="paawards-frontend" color="dark">Frontend</Button>
                         </a>
                       </div>
                     </div>

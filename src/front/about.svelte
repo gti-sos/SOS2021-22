@@ -21,7 +21,7 @@
   <main>
     <Nav>
         <NavItem>
-            <NavLink href="/">Volver</NavLink>
+            <NavLink id="nav-back" href="/">Volver</NavLink>
         </NavItem>
     </Nav>
 

@@ -245,7 +245,7 @@
 <main>
     <Nav>
         <NavItem style="margin-right: 10px;">
-            <Button outline color="secondary" href="/#/info">Volver</Button>
+            <NavLink id="nav-back" outline color="secondary" href="/#/info">Volver</NavLink>
         </NavItem>
         <NavItem style="margin-right: 10px;">
             <NavLink href="#" on:click={botonCargar}>Cargar Richmen</NavLink>
