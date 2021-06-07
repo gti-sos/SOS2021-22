@@ -303,13 +303,13 @@
         </thead>
         <tbody>
             <tr>
-                <td><input bind:value={newGrmys.ranking} size="10"></td>
-                <td><input bind:value={newGrmys.name} size="10"></td>
-                <td><input bind:value={newGrmys.award} size="10"></td> 
-                <td><input bind:value={newGrmys.country} size="10"></td>    
-                <td><input bind:value={newGrmys.groupmember} size="10"></td>  
-                <td><input bind:value={newGrmys.style} size="10"></td> 
-                <td><input bind:value={newGrmys.year} size="10"></td>   
+                <td><input id="ranking" bind:value={newGrmys.ranking} size="10"></td>
+                <td><input id="name"bind:value={newGrmys.name} size="10"></td>
+                <td><input id="award"bind:value={newGrmys.award} size="10"></td> 
+                <td><input id="country"bind:value={newGrmys.country} size="10"></td>    
+                <td><input id="groupmember"bind:value={newGrmys.groupmember} size="10"></td>  
+                <td><input id="style"bind:value={newGrmys.style} size="10"></td> 
+                <td><input id="year"bind:value={newGrmys.year} size="10"></td>   
                 <td><Button outline color="primary" on:click={insertGrmys}>Insertar</Button></td>           
             </tr>
             {#each grmys as gramy}
