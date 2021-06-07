@@ -115,7 +115,7 @@
                   <CardBody>
                     <div class="row">
                       <div class="col-md">
-                        <a href="#/paawards/paawardsGraphic"><Button color="warning"><strong>Paawards</strong></Button></a>
+                        <a href="#/paawards/paawardsGraphics"><Button color="warning"><strong>Paawards</strong></Button></a>
                       </div>
                     </div>
                   </CardBody>

@@ -21,6 +21,7 @@
 	import grmysGraphAm from './grmysApi/grmysAmchart.svelte';
 	import paawards from './paawardsApi/paawards-api.svelte';
 	import paawardEdit from './paawardsApi/PaawardsEdit.svelte';
+	import paawardGraphics from './paawardsApi/PaawardsGraphics.svelte';
 	import paawardGraph from './paawardsApi/PaawardsGraphic.svelte';
 	import paawardGraph1 from './paawardsApi/PaawardsGraphic1.svelte';
 	import paawardGraph2 from './paawardsApi/PaawardsGraphic2.svelte';
@@ -55,6 +56,7 @@
 		"/integrations/Api-Externa2":integrationsGrmys5,
 		"/paawards": paawards,
 		"/paawards/:country/:year": paawardEdit,
+		"/paawards/paawardsGraphics":paawardGraphics,
 		"/paawards/paawardsGraphic": paawardGraph,
 		"/paawards/paawardsGraphic-Highcharts": paawardGraph1,
 		"/paawards/paawardsGraphic-Anychart": paawardGraph2,
