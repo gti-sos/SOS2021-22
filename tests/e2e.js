@@ -151,6 +151,22 @@ var counter = 0;
     await page.click("#nav-back"); // boton atras > Info page
     await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(3) > div > div.card-body > div > div > a > button > strong");
 
+    /*----->GRMYS<-----*/
+    // Capturamos pagina de analiticas GRMYS
+    await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(1) > div > div.card-body > div > div > a > button > strong");
+    console.log("Pagina ANALITICAS Grmys abierta");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICAS_GRMYS.png'});
+    console.log("> Captura tomada...");
+    // Grafica tipo bar GRMYS
+    await page.click("#highchart-line");
+    console.log("Pagina ANALITICA HIGHTCHARTS LINE GRMYS abierta");
+    await page.waitForTimeout(5000);
+    console.log("> Grafica cargada...");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICA_GRMYS_HIGHCHARTS_LINE.png'});
+    console.log("> Captura tomada...");
+    await page.click("#nav-back"); // boton atras > Paawards Frontend page
+    await page.click("#nav-back"); // boton atras > Info page
+    await page.click("#highchart-line > strong");
     //insertar un nuevo elemento
 
     await browser.close();
