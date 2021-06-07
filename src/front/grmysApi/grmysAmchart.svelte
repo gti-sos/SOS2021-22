@@ -2,6 +2,8 @@
 <script>
   import Button from "sveltestrap/src/Button.svelte";
   import { pop } from "svelte-spa-router";
+  import {Nav,NavItem,NavLink} from "sveltestrap";
+    let BASE_API_URL_PAAWARDS = "/api/v1";
   async function loadGraph() {
         let grmysData = [];
         let grmysGraph = [];
@@ -92,12 +94,14 @@
   
   
   <main>
+    <Nav>
+      <NavItem>
+          <NavLink id="nav-back" href="/#/grmys/grmysGraphics">Volver</NavLink>
+      </NavItem>
+  </Nav>
     <h2>AmCharts</h2>
     
     <div id="chartdiv"></div>
-    <Button outline color="secondary" on:click={pop}>
-      <i class="fas fa-arrow-circle-left" /> Volver
-  </Button>
   
     
   </main>

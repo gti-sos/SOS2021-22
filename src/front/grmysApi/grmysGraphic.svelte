@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import Button from "sveltestrap/src/Button.svelte";
     import { pop } from "svelte-spa-router";
+    import {Nav,NavItem,NavLink} from "sveltestrap";
     async function loadGraph(){
 
         let grmysData = [];
@@ -86,6 +87,11 @@
 </svelte:head>
 
 <main>
+    <Nav>
+        <NavItem>
+            <NavLink id="nav-back" href="/#/grmys/grmysGraphics">Volver</NavLink>
+        </NavItem>
+    </Nav>
     <h2>grmys Grafica</h2>
     <figure class="highcharts-figure">
         <div id="container"></div>
@@ -93,9 +99,7 @@
             Grafico que representa los ganadores de los Premios Gramys en toda la historia de este prestigioso trofeo de musica
         </p>
     </figure>
-    <Button outline color="secondary" on:click={pop}>
-        <i class="fas fa-arrow-circle-left" /> Volver
-    </Button>
+    
 </main>
 
 <style>

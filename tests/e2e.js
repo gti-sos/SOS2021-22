@@ -150,9 +150,34 @@ var counter = 0;
     await page.click("#nav-back"); // boton atras > Paawards Frontend page
     await page.click("#nav-back"); // boton atras > Info page
     await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(3) > div > div.card-body > div > div > a > button > strong");
-
-    /*----->GRMYS<-----*/
-    console.log("Inserting new data");
+    await page.click("#nav-back");
+    /*----->grmys<-----*/
+    // Capturamos pagina de analiticas GRMYS
+    await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(1) > div > div.card-body > div > div > a > button > strong");
+    console.log("Pagina ANALITICAS GRMYS abierta");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICAS_GRMYS.png'});
+    console.log("> Captura tomada...");
+    // Grafica tipo bar GRMYS
+    await page.click("#highchart-bar");
+    console.log("Pagina ANALITICA HIGHTCHARTS GRMYS abierta");
+    await page.waitForTimeout(5000);
+    console.log("> Grafica cargada...");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICA_GRMYS_HIGHCHARTS_BAR.png'});
+    console.log("> Captura tomada...");
+    await page.click("#nav-back"); // boton atras > Paawards Frontend page
+    await page.click("#nav-back"); // boton atras > Info page
+    await page.click("#highchart-bar > strong");
+    // Grafica tipo AMchart GRMYS
+    await page.click("#Amchart");
+    console.log("Pagina ANALITICA Amchart GRMYS abierta");
+    await page.waitForTimeout(5000);
+    console.log("> Grafica cargada...");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICA_GRMYS_AMCHARTS.png'});
+    console.log("> Captura tomada...");
+    await page.click("#nav-back"); // boton atras > Paawards Frontend page
+    await page.click("#nav-back"); // boton atras > Info page
+    await page.click("#Amchart > strong");
+   /*console.log("Inserting new data");
     await page.focus('#ranking');
     await page.keyboard.type("25");
 
@@ -174,7 +199,7 @@ var counter = 0;
     await page.focus('#year');
     await page.keyboard.type("2015");
     await page.waitForTimeout(1000);
-    await page.screenshot({path: path + (counter++) + '_INSERT_GRMYS.png' });
+    await page.screenshot({path: path + (counter++) + '_INSERT_GRMYS.png' });*/
     await browser.close();
 
     console.log("Navegador cerrado!");
