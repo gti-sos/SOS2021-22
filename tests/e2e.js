@@ -11,7 +11,8 @@ var counter = 0;
 
     const page = await browser.newPage();
     await page.setViewport({ width: 1980, height: 1280 });
-    await page.goto('http://localhost:10000/'); //await page.goto('https://sos2021-22.herokuapp.com');
+    //await page.goto('http://localhost:10000/'); 
+    await page.goto('https://sos2021-22.herokuapp.com');
 
     // Home page
     console.log("Pagina HOME abierta!");
@@ -112,6 +113,44 @@ var counter = 0;
     console.log("> Captura tomada...");
     await page.click("#nav-back"); // boton atras > Richpp Frontend page
     await page.click("#nav-back"); // boton atras > Info page
+
+    /*----->PAAWARDS<-----*/
+    // Capturamos pagina de analiticas PAAWARDS
+    await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(3) > div > div.card-body > div > div > a > button > strong");
+    console.log("Pagina ANALITICAS PAAWARDS abierta");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICAS_PAAWARDS.png'});
+    console.log("> Captura tomada...");
+    // Grafica tipo LINE PAAWARDS
+    await page.click("#line-paawards");
+    console.log("Pagina ANALITICA HIGHTCHARTS LINE PAAWARDS abierta");
+    await page.waitForTimeout(5000);
+    console.log("> Grafica cargada...");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICA_PAAWARDS_HIGHCHARTS_LINE.png'});
+    console.log("> Captura tomada...");
+    await page.click("#nav-back"); // boton atras > Paawards Frontend page
+    await page.click("#nav-back"); // boton atras > Info page
+    await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(3) > div > div.card-body > div > div > a > button > strong");
+    // Grafica tipo VARIABLEPIE PAAWARDS
+    await page.click("#variablepie-paawards");
+    console.log("Pagina ANALITICA HIGHTCHARTS VARIABLEPIE PAAWARDS abierta");
+    await page.waitForTimeout(5000);
+    console.log("> Grafica cargada...");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICA_PAAWARDS_HIGHCHARTS_VARIABLEPIE.png'});
+    console.log("> Captura tomada...");
+    await page.click("#nav-back"); // boton atras > Paawards Frontend page
+    await page.click("#nav-back"); // boton atras > Info page
+    await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(3) > div > div.card-body > div > div > a > button > strong");
+    // Grafica tipo DONUT PAAWARDS
+    await page.click("#donut-paawards");
+    console.log("Pagina ANALITICA ANYCHART DONUT-CHART PAAWARDS abierta");
+    await page.waitForTimeout(5000);
+    console.log("> Grafica cargada...");
+    await page.screenshot({ path: path + (counter++) + '_ANALITICA_PAAWARDS_ANYCHART_DONUTCHART.png'});
+    console.log("> Captura tomada...");
+    await page.click("#nav-back"); // boton atras > Paawards Frontend page
+    await page.click("#nav-back"); // boton atras > Info page
+    await page.click("body > main > main > div:nth-child(4) > div > div > div.card-body > div > div:nth-child(3) > div > div.card-body > div > div > a > button > strong");
+
     //insertar un nuevo elemento
 
     await browser.close();

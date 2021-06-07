@@ -109,7 +109,7 @@
 <main>
     <Nav>
         <NavItem>
-            <NavLink href="/#/paawards">Volver</NavLink>
+            <NavLink id="nav-back" href="/#/paawards">Volver</NavLink>
         </NavItem>
     </Nav>
 

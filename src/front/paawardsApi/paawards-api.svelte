@@ -209,7 +209,7 @@
 <main>
     <Nav>
         <NavItem>
-            <NavLink href="/#/info">Volver</NavLink>
+            <NavLink id="nav-back" href="/#/info">Volver</NavLink>
         </NavItem>
         <NavItem>
             <NavLink href="#" on:click={botonCargar}>Cargar paawards</NavLink>

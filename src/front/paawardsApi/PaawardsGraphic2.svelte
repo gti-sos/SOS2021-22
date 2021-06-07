@@ -64,7 +64,7 @@
 
 <main>
     <NavItem>
-        <NavLink href="/#/paawards">Volver</NavLink>
+        <NavLink id="nav-back" href="/#/paawards">Volver</NavLink>
     </NavItem>
     <div id="container"></div>
 </main>
